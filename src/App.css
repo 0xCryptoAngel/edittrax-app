@@ -12,20 +12,3 @@ body,
   padding: 0px;
   font-size: 1rem;
 }
-.main-board {
-  background-image: url("./assets/main.png");
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-}
-
-.footer-board {
-  background-image: url("./assets/footer.png");
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-}
-.mint-board {
-  background-image: url("./assets/mint.png");
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  height: calc(100vh - 72px);
-}

@@ -1,5 +1,4 @@
 import React, { Dispatch, SetStateAction, useState, useEffect } from "react";
-import logo from '../../assets/logo.svg'
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import ConnectButton from "../ConnectWallet";
@@ -33,12 +32,6 @@ const NavBar = ({
   return (
     <div className="bg-gray-660 py-2 flex items-center px-12 justify-between">
       <div className="flex items-center space-x-8">
-        <div className="flex items-center">
-          <Link to="/" >
-            <img src={logo} alt="logo" />
-          </Link>
-          <div className="text-white text-xl">Sunrise <br/> Games</div>
-        </div>
         <ul className="flex space-x-10 text-white">
           <Link to="/mint" >
             <li>Mint</li>
