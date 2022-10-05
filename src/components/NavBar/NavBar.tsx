@@ -2,7 +2,6 @@ import React, { Dispatch, SetStateAction, useState, useEffect } from "react";
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import ConnectButton from "../ConnectWallet";
-import { Link } from "react-router-dom";
 import logo from '../../assets/et_new_logo.png'
 
 type WalletProps = {

@@ -44,11 +44,11 @@ const ConnectButton = ({
       });
       // gets user's address
       const walletAddress = await wallet.getPKH();
-       // creates contract instance
-      const contract = await Tezos.wallet.at('KT1F3h2zgF8AKqWj2r4WsWaSNVVxCsHoeZYQ');
-      setContract(contract);
-      const storage: any = await contract.storage();
-      setStorage(storage);
+      //  // creates contract instance
+      // const contract = await Tezos.wallet.at('KT1F3h2zgF8AKqWj2r4WsWaSNVVxCsHoeZYQ');
+      // setContract(contract);
+      // const storage: any = await contract.storage();
+      // setStorage(storage);
       setUserAddress(walletAddress)
       setBeaconConnection(true)
     } catch (error) {
