@@ -1,4 +1,4 @@
-# WildLands NFT marketplace based on Tezos blockchain
+# NFT marketplace based on Tezos blockchain
 
 
 ## Getting Started

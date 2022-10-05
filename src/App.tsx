@@ -1,10 +1,8 @@
 import "./App.css";
 import React, { useState, useEffect, useContext } from "react";
 import { TezosToolkit } from '@taquito/taquito';
-
 import NavBar from "./components/NavBar/NavBar";
 import Dashboard from './views/Dashboard'
-import Mint from './views/Mint'
 import {
   BrowserRouter,
   Routes,
@@ -39,14 +37,6 @@ const App = () => {
           />
             <Routes>
               <Route path="/" element={<Dashboard/>} />
-              <Route path="/mint" element={<Mint 
-                Tezos={Tezos}
-                contract={contract}
-                userAddress={userAddress}
-                beaconConnection={beaconConnection}
-                storage={storage}
-                wallet={wallet}
-              />} />
             </Routes>
         </BrowserRouter>
     </div>
