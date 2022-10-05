@@ -38,8 +38,8 @@ const ConnectButton = ({
     try {
       await wallet.requestPermissions({
         network: {
-          type: NetworkType.MAINNET,
-          rpcUrl: "https://rpc.tzkt.io/ghostnet"
+          type: NetworkType.KATHMANDUNET,
+          rpcUrl: "https://rpc.kathmandunet.teztnets.xyz"
         }
       });
       // gets user's address
@@ -72,7 +72,7 @@ const ConnectButton = ({
       // creates a wallet instance
       const initWallet = new BeaconWallet({
         name: "WildLands",
-        preferredNetwork: NetworkType.MAINNET,
+        preferredNetwork: NetworkType.KATHMANDUNET,
         disableDefaultEvents: true, // Disable all events / UI. This also disables the pairing alert.
         eventHandlers: {
           // To keep the pairing alert, we have to add the following default event handlers back
@@ -96,11 +96,11 @@ const ConnectButton = ({
   return (
     <div className="">
       {!beaconConnection ? (
-        <button className="bg-indigo-700 rounded text-white  py-2 w-40 hover:bg-indigo-500" onClick={connectWallet}>
+        <button className="bg-black rounded text-white font-bold py-2 w-40 hover:text-gray-300" onClick={connectWallet}>
         Connect wallet
       </button>
       ) : (
-        <button className="bg-indigo-700 rounded text-white  py-2 w-40" onClick={disconnectWallet}>
+        <button className="bg-black rounded text-white  py-2 w-40" onClick={disconnectWallet}>
           <div>{`${userAddress.slice(0, -28)}...${userAddress.substring(30)}`}</div>
         </button>
       )}
