@@ -11,7 +11,7 @@ import {
 
 const App = () => {
   const [Tezos, setTezos] = useState<TezosToolkit>(
-    new TezosToolkit("https://rpc.kathmandunet.teztnets.xyz")
+    new TezosToolkit("https://mainnet.api.tez.ie")
   );
   const [contract, setContract] = useState<any>(undefined);
   const [wallet, setWallet] = useState<any>(null);

@@ -38,8 +38,9 @@ const ConnectButton = ({
     try {
       await wallet.requestPermissions({
         network: {
-          type: NetworkType.KATHMANDUNET,
-          rpcUrl: "https://rpc.kathmandunet.teztnets.xyz"
+          type: NetworkType.MAINNET,
+          // rpcUrl: "https://rpc.kathmandunet.teztnets.xyz"
+          rpcUrl: "https://mainnet.api.tez.ie"
         }
       });
       // gets user's address
@@ -72,7 +73,7 @@ const ConnectButton = ({
       // creates a wallet instance
       const initWallet = new BeaconWallet({
         name: "WildLands",
-        preferredNetwork: NetworkType.KATHMANDUNET,
+        preferredNetwork: NetworkType.MAINNET,
         disableDefaultEvents: true, // Disable all events / UI. This also disables the pairing alert.
         eventHandlers: {
           // To keep the pairing alert, we have to add the following default event handlers back
