@@ -12,3 +12,6 @@ body,
   padding: 0px;
   font-size: 1rem;
 }
+.h-iframe {
+  height: calc(100vh - 152px);
+}

@@ -1,7 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect, useContext } from "react";
 import { TezosToolkit } from '@taquito/taquito';
-import NavBar from "./components/NavBar/NavBar";
 import Dashboard from './views/Dashboard'
 import {
   BrowserRouter,
@@ -22,9 +21,10 @@ const App = () => {
   const [beaconConnection, setBeaconConnection] = useState<boolean>(false); // state varialble that show wallet connect state
   
   return (
-    <div className="">
+    <div className="bg-black">
       <BrowserRouter>
-          <NavBar
+        <Routes>
+          <Route path="/" element={<Dashboard
             Tezos={Tezos}
             setContract={setContract}
             setWallet={setWallet}
@@ -35,11 +35,9 @@ const App = () => {
             setUserBalance={setUserBalance}
             setBeaconConnection={setBeaconConnection}
             wallet={wallet}
-          />
-            <Routes>
-              <Route path="/" element={<Dashboard/>} />
-            </Routes>
-        </BrowserRouter>
+          />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
