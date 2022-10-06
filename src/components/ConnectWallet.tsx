@@ -34,29 +34,32 @@ const ConnectButton = ({
   wallet
 }: WalletProps): JSX.Element => {
 
+  // connect function for beacon wallet
   const connectWallet = async (): Promise<void> => {
     try {
       await wallet.requestPermissions({
         network: {
           type: NetworkType.MAINNET,
-          // rpcUrl: "https://rpc.kathmandunet.teztnets.xyz"
-          rpcUrl: "https://mainnet.api.tez.ie"
+          rpcUrl: "https://mainnet.smartpy.io"
         }
       });
       // gets user's address
       const walletAddress = await wallet.getPKH();
+
       //  // creates contract instance
       // const contract = await Tezos.wallet.at('KT1F3h2zgF8AKqWj2r4WsWaSNVVxCsHoeZYQ');
       // setContract(contract);
       // const storage: any = await contract.storage();
       // setStorage(storage);
+      
       setUserAddress(walletAddress)
       setBeaconConnection(true)
     } catch (error) {
       console.log(error);
     }
   };
-
+  
+  // disconnect function for beacon wallet
   const disconnectWallet = async (): Promise<void> => {
     setUserAddress("");
     setWallet(null);

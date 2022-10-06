@@ -11,15 +11,16 @@ import {
 
 const App = () => {
   const [Tezos, setTezos] = useState<TezosToolkit>(
-    new TezosToolkit("https://mainnet.api.tez.ie")
+    new TezosToolkit("https://mainnet.smartpy.io")
   );
-  const [contract, setContract] = useState<any>(undefined);
-  const [wallet, setWallet] = useState<any>(null);
+  const [contract, setContract] = useState<any>(undefined); // state variable for contract
+  const [wallet, setWallet] = useState<any>(null); // state variable for contract
   console.log("wallet", wallet)
-  const [userAddress, setUserAddress] = useState<string>("");
-  const [userBalance, setUserBalance] = useState<number>(0);
-  const [storage, setStorage] = useState<any>(null);
-  const [beaconConnection, setBeaconConnection] = useState<boolean>(false);
+  const [userAddress, setUserAddress] = useState<string>(""); // state variable for wallet address
+  const [userBalance, setUserBalance] = useState<number>(0); // state variable for user balance
+  const [storage, setStorage] = useState<any>(null); // state variable for storage of contract, you can see some information from storage like last tokenID
+  const [beaconConnection, setBeaconConnection] = useState<boolean>(false); // state varialble that show wallet connect state
+  
   return (
     <div className="">
       <BrowserRouter>
