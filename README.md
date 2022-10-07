@@ -19,9 +19,13 @@
 
 5. dependencies
 
-   "@airgap/beacon-sdk": "^3.1.4" // SDK for beacon wallet
+   "@airgap/beacon-sdk": "^3.1.4" // SDK for beacon wallet]
+
    "@craco/craco": "^6.4.5", //configuration to use Tailwind CSS in react-script 4
+   
    "@taquito/beacon-wallet": "^14.0.0", // Beacon wallet module of Taquito
+
    "@taquito/taquito": "^14.0.0" // module that integrate smart contract and frontend(web3react of Ethereum)
+   
    "@taquito/utils": "^14.0.0" // utils for taquito
 
