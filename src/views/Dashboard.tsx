@@ -51,7 +51,7 @@ const Dashboard = ({
         />
       </div>
       <div className="">
-        <iframe src="https://orbix360.mypinata.cloud/ipfs/QmaLQJCQ2HW514EUpzRfwKa7GuhFxXAHXKXgj9rxyZ26m1/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=612561&viewer=null" className="w-full h-iframe"></iframe>
+        <iframe src={`https://orbix360.mypinata.cloud/ipfs/QmaLQJCQ2HW514EUpzRfwKa7GuhFxXAHXKXgj9rxyZ26m1/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=612561&viewer=${userAddress}`} className="w-full h-iframe"></iframe>
       </div>
     </div>
   );
