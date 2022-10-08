@@ -40,7 +40,7 @@ const App = () => {
             setBeaconConnection={setBeaconConnection}
             wallet={wallet}
           />} />
-          <Route path="/test" element={<Test/>}/>
+          {/* <Route path="/test" element={<Test/>}/> */}
         </Routes>
       </BrowserRouter>
     </div>
