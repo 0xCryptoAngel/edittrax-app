@@ -8,6 +8,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  Navigate
 } from "react-router-dom";
 
 const App = () => {
@@ -26,7 +27,8 @@ const App = () => {
     <div className="bg-black">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Dashboard
+          <Route path="/" element={ <Navigate to="/edit-trax/:playerName"/> }/>
+          <Route path="/edit-trax/:playerName" element={<Dashboard
             Tezos={Tezos}
             setContract={setContract}
             setWallet={setWallet}

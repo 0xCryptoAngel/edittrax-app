@@ -3,7 +3,7 @@ import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import ConnectButton from "../components/ConnectWallet";
 import logo from '../assets/et_new_logo.png'
-import { useParams, useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 type WalletProps = {
   Tezos: TezosToolkit;
@@ -18,6 +18,18 @@ type WalletProps = {
   wallet: BeaconWallet;
 };
 
+const navbarMenu = [
+  {
+    player: "alpha-test",
+    imageUrl: "https://orbix360.mypinata.cloud/ipfs/QmaLQJCQ2HW514EUpzRfwKa7GuhFxXAHXKXgj9rxyZ26m1/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=612561&viewer=",
+  },
+  {
+    player: "burnt",
+    imageUrl: "https://orbix360.mypinata.cloud/ipfs/QmZ7DbkrLinWghpbDw2Ebn3FvJfPAn6yrJWjzkDe2bUxib/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=781875&viewer=",
+  },
+];
+
+
 const Dashboard = ({
   Tezos,
   setContract,
@@ -30,8 +42,13 @@ const Dashboard = ({
   setBeaconConnection,
   wallet
 }: WalletProps): JSX.Element => {
-  const { state } = useLocation();
   const param = useParams();
+  console.log("param", param.playerName)
+  const result = navbarMenu.find(item => item.player == param.playerName)
+  console.log("result", result)
+  // useEffect(()=>{
+
+  // }, [])
   return (
     <div className="max-w-5xl mx-auto h-screen py-12">
       <div className="bg-white py-2 flex items-center px-12 justify-between">
@@ -54,7 +71,7 @@ const Dashboard = ({
         />
       </div>
       <div className="">
-        <iframe src={`https://orbix360.mypinata.cloud/ipfs/QmaLQJCQ2HW514EUpzRfwKa7GuhFxXAHXKXgj9rxyZ26m1/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=612561&viewer=${userAddress}`} className="w-full h-iframe"></iframe>
+        <iframe src={`${result?.imageUrl}${userAddress}`} className="w-full h-iframe"></iframe>
       </div>
     </div>
   );
