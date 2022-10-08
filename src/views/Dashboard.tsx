@@ -48,7 +48,7 @@ const Dashboard = ({
   const result = navbarMenu.find(item => item.player == param.playerName)
   console.log("result", result)
   useEffect(()=>{
-    console.log("hello")
+    console.log("hello", userAddress)
     setUrl(`https://ipfs.io/ipfs/QmZ7DbkrLinWghpbDw2Ebn3FvJfPAn6yrJWjzkDe2bUxib/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=781875&viewer=${userAddress}`)
   }, [beaconConnection])
   return (
