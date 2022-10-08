@@ -17,7 +17,7 @@ const Test = () => {
   return (
     <div>
        <section className="container">
-        <Navbar/>
+        {/* <Navbar/> */}
         <div className="collectibles">
           <div className="edittrax">
             <iframe src="https://orbix360.mypinata.cloud/ipfs/QmaLQJCQ2HW514EUpzRfwKa7GuhFxXAHXKXgj9rxyZ26m1/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=612561&viewer=null"></iframe>
@@ -134,7 +134,7 @@ const Test = () => {
               </div>
           </div>
         </section>
-        <Footer/>
+        {/* <Footer/> */}
     </section>
     </div>
   );

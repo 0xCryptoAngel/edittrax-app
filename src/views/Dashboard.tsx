@@ -3,6 +3,7 @@ import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import ConnectButton from "../components/ConnectWallet";
 import logo from '../assets/et_new_logo.png'
+import { useParams, useLocation } from "react-router-dom";
 
 type WalletProps = {
   Tezos: TezosToolkit;
@@ -29,6 +30,8 @@ const Dashboard = ({
   setBeaconConnection,
   wallet
 }: WalletProps): JSX.Element => {
+  const { state } = useLocation();
+  const param = useParams();
   return (
     <div className="max-w-5xl mx-auto h-screen py-12">
       <div className="bg-white py-2 flex items-center px-12 justify-between">
