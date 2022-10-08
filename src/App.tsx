@@ -1,7 +1,9 @@
 import "./App.css";
+import "./style.css";
 import React, { useState, useEffect, useContext } from "react";
 import { TezosToolkit } from '@taquito/taquito';
 import Dashboard from './views/Dashboard'
+import Test from './views/Test'
 import {
   BrowserRouter,
   Routes,
@@ -36,6 +38,7 @@ const App = () => {
             setBeaconConnection={setBeaconConnection}
             wallet={wallet}
           />} />
+          <Route path="/test" element={<Test/>}/>
         </Routes>
       </BrowserRouter>
     </div>
