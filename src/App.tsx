@@ -3,7 +3,6 @@ import "./style.css";
 import React, { useState, useEffect, useContext } from "react";
 import { TezosToolkit } from '@taquito/taquito';
 import Dashboard from './views/Dashboard'
-import Test from './views/Test'
 import {
   BrowserRouter,
   Routes,
@@ -27,8 +26,8 @@ const App = () => {
     <div className="bg-black">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={ <Navigate to="/edit-trax/:playerName"/> }/>
-          <Route path="/edit-trax/:playerName" element={<Dashboard
+          {/* <Route path="/" element={ <Navigate to="/edit-trax/:playerName"/> }/> */}
+          <Route path="/" element={<Dashboard
             Tezos={Tezos}
             setContract={setContract}
             setWallet={setWallet}
@@ -40,7 +39,6 @@ const App = () => {
             setBeaconConnection={setBeaconConnection}
             wallet={wallet}
           />} />
-          {/* <Route path="/test" element={<Test/>}/> */}
         </Routes>
       </BrowserRouter>
     </div>
