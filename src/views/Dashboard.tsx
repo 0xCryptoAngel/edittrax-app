@@ -35,7 +35,7 @@ type WalletProps = {
 const navbarMenu = [
   {
     player: "alpha-test",
-    imageUrl: "https://ipfs.io/ipfs/QmaLQJCQ2HW514EUpzRfwKa7GuhFxXAHXKXgj9rxyZ26m1/",
+    imageUrl: "https://ipfs.io/ipfs/QmSqWNSGuPCfZQ8uJwhi94aXZDXRDbP5a75MtR7YBgDYDS/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=781874&viewer=",
   },
   {
     player: "burnt",
@@ -62,26 +62,25 @@ const Dashboard = ({
     <div>
       <section className="container">
         <header className="head">
-            <div className="logo">
-              <img src={et_new_logo} alt="logo"/>
-            </div>
-            {/* <button className="connect-wallet">Connect Wallet</button> */}
-            <ConnectButton
-              Tezos={Tezos}
-              setContract={setContract}
-              setWallet={setWallet}
-              setUserAddress={setUserAddress}
-              setUserBalance={setUserBalance}
-              setStorage={setStorage}
-              userAddress={userAddress}
-              beaconConnection={beaconConnection}
-              setBeaconConnection={setBeaconConnection}
-              wallet={wallet}
-                />
+          <div className="logo">
+            <img src={et_new_logo} alt="logo"/>
+          </div>
+          <ConnectButton
+            Tezos={Tezos}
+            setContract={setContract}
+            setWallet={setWallet}
+            setUserAddress={setUserAddress}
+            setUserBalance={setUserBalance}
+            setStorage={setStorage}
+            userAddress={userAddress}
+            beaconConnection={beaconConnection}
+            setBeaconConnection={setBeaconConnection}
+            wallet={wallet}
+          />
         </header>
         <div className="collectibles">
           <div className="edittrax">
-            <iframe src="https://orbix360.mypinata.cloud/ipfs/QmaLQJCQ2HW514EUpzRfwKa7GuhFxXAHXKXgj9rxyZ26m1/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=612561&viewer=null"></iframe>
+            <iframe src={`${result?.imageUrl}${userAddress}`} className="w-full h-iframe"/>
           </div>
           <button className="collect">Collect</button>
         </div>
