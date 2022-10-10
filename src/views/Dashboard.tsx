@@ -4,6 +4,7 @@ import { BeaconWallet } from "@taquito/beacon-wallet";
 import ConnectButton from "../components/ConnectWallet";
 import et_new_logo from '../assets/et_new_logo.png'
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import square_download_mechanism from '../assets/square_download_mechanism.jpg'
 import unlockable_download_mechanism from "../assets/unlockable_download_mechanism.png";
@@ -144,9 +145,13 @@ const Dashboard = ({
             <h1>GENESIS COLLECTION</h1>
           </div>
           <div className="image-collection">
-            <div className="open-source" id="open"><img src={QmRft7BBYvJLdVUmYRw9stoUAaomtvzxUL8n5JLqTCSMWj} alt="open-source"/></div>
+            <Link to="/edit-trax/mechanism">
+              <div className="open-source" id="open"><img src={QmRft7BBYvJLdVUmYRw9stoUAaomtvzxUL8n5JLqTCSMWj} alt="open-source"/></div>
+            </Link>
             <div className="acid-beach" id="acid"><img src={QmX6mLXAv3TgBBsP5Ahjiz9R3zV3sid2DnXQLsjNuo1vJ1} alt="acid beach"/></div>
-            <div className="burnt" id="burnt"><img src={QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX} alt="burnt"/></div>
+            <Link to="/edit-trax/burnt">
+              <div className="burnt" id="burnt"><img src={QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX} alt="burnt"/></div>
+            </Link>
             <div className="boxed" id="box"><img src={QmQDUgmJdguCMhK9NVvqWdYpTnXjDDZhmA5E7Di2U6BgVJ} alt="boxed"/></div>
           </div>            
         </section>
