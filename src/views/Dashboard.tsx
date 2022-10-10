@@ -152,7 +152,9 @@ const Dashboard = ({
             <Link to="/edit-trax/mechanism" className="open-source" id="open">
               <img src={QmRft7BBYvJLdVUmYRw9stoUAaomtvzxUL8n5JLqTCSMWj} alt="open-source"/>
             </Link>
-            <div className="acid-beach" id="acid"><img src={QmX6mLXAv3TgBBsP5Ahjiz9R3zV3sid2DnXQLsjNuo1vJ1} alt="acid beach"/></div>
+            <Link to="/edit-trax/alpha-test" className="acid-beach" id="acid">
+              <img src={QmX6mLXAv3TgBBsP5Ahjiz9R3zV3sid2DnXQLsjNuo1vJ1} alt="acid beach"/>
+            </Link>
             <Link to="/edit-trax/burnt" className="burnt" id="burnt">
               <img src={QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX} alt="burnt"/>
             </Link>
