@@ -25,7 +25,7 @@ const App = () => {
     <div className="bg-black">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={ <Navigate to="/edit-trax/:id"/> }/>
+          <Route path="/" element={ <Navigate to="/edit-trax/alpha-test"/> }/>
           <Route path="/edit-trax/:id" element={<Dashboard
             Tezos={Tezos}
             setContract={setContract}
