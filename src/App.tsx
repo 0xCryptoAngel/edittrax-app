@@ -1,5 +1,4 @@
 import "./App.css";
-import "./style.css";
 import React, { useState, useEffect, useContext } from "react";
 import { TezosToolkit } from '@taquito/taquito';
 import Dashboard from './views/Dashboard'
@@ -26,8 +25,8 @@ const App = () => {
     <div className="bg-black">
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/" element={ <Navigate to="/edit-trax/:playerName"/> }/> */}
-          <Route path="/" element={<Dashboard
+          <Route path="/" element={ <Navigate to="/edit-trax/:id"/> }/>
+          <Route path="/edit-trax/:id" element={<Dashboard
             Tezos={Tezos}
             setContract={setContract}
             setWallet={setWallet}

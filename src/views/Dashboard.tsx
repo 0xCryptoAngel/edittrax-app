@@ -17,7 +17,6 @@ import github_2 from '../assets/github_2.png';
 import square_alpha_test from '../assets/animation/square_alpha_test.jpg';
 
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 
 type WalletProps = {
   Tezos: TezosToolkit;
@@ -34,7 +33,7 @@ type WalletProps = {
 
 const navbarMenu = [
   {
-    player: "alpha-test",
+    player: "mechanism",
     imageUrl: "https://ipfs.io/ipfs/QmSqWNSGuPCfZQ8uJwhi94aXZDXRDbP5a75MtR7YBgDYDS/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=781874&viewer=",
   },
   {
@@ -57,7 +56,7 @@ const Dashboard = ({
   wallet
 }: WalletProps): JSX.Element => {
   const param = useParams();
-  const result = navbarMenu.find(item => item.player == param.playerName)
+  const result = navbarMenu.find(item => item.player == param.id)
   return (
     <div>
       <section className="container">
@@ -147,7 +146,7 @@ const Dashboard = ({
           <div className="image-collection">
             <div className="open-source" id="open"><img src={QmRft7BBYvJLdVUmYRw9stoUAaomtvzxUL8n5JLqTCSMWj} alt="open-source"/></div>
             <div className="acid-beach" id="acid"><img src={QmX6mLXAv3TgBBsP5Ahjiz9R3zV3sid2DnXQLsjNuo1vJ1} alt="acid beach"/></div>
-            <div className={QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX} id="burnt"><img src="" alt="burnt"/></div>
+            <div className="burnt" id="burnt"><img src={QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX} alt="burnt"/></div>
             <div className="boxed" id="box"><img src={QmQDUgmJdguCMhK9NVvqWdYpTnXjDDZhmA5E7Di2U6BgVJ} alt="boxed"/></div>
           </div>            
         </section>
