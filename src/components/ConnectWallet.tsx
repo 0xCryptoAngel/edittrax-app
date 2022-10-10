@@ -100,11 +100,11 @@ const ConnectButton = ({
   return (
     <div className="">
       {!beaconConnection ? (
-        <button className="connect-wallet" onClick={connectWallet}>
+        <button className="bg-black rounded text-white font-bold py-2 w-40 hover:text-gray-300" onClick={connectWallet}>
         Connect wallet
       </button>
       ) : (
-        <button className="connect-wallet" onClick={disconnectWallet}>
+        <button className="bg-black rounded text-white font-bold py-2 w-40 hover:text-gray-300" onClick={disconnectWallet}>
           <div>{`${userAddress.slice(0, -28)}...${userAddress.substring(30)}`}</div>
         </button>
       )}
