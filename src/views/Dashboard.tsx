@@ -9,10 +9,13 @@ import { Link } from "react-router-dom";
 import load from '../assets/load.gif'
 import square_download_mechanism from '../assets/square_download_mechanism.jpg'
 import unlockable_download_mechanism from "../assets/unlockable_download_mechanism.png";
+
+//IMPORT THUMBNAIL IMAGES FOR ADDITIONAL PLAYERS
 import QmRft7BBYvJLdVUmYRw9stoUAaomtvzxUL8n5JLqTCSMWj from "../assets/QmRft7BBYvJLdVUmYRw9stoUAaomtvzxUL8n5JLqTCSMWj.jpeg";
 import QmX6mLXAv3TgBBsP5Ahjiz9R3zV3sid2DnXQLsjNuo1vJ1 from "../assets/QmX6mLXAv3TgBBsP5Ahjiz9R3zV3sid2DnXQLsjNuo1vJ1.jpeg";
 import QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX from "../assets/QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX.jpeg";
 import QmQDUgmJdguCMhK9NVvqWdYpTnXjDDZhmA5E7Di2U6BgVJ from "../assets/QmQDUgmJdguCMhK9NVvqWdYpTnXjDDZhmA5E7Di2U6BgVJ.jpeg";
+
 import handbook_2 from "../assets/handbook_2.png";
 import marketplace_2 from "../assets/marketplace_2.png";
 import github_2 from '../assets/github_2.png';
@@ -33,6 +36,8 @@ type WalletProps = {
   wallet: BeaconWallet;
 };
 
+
+//ADD OBJCTS IPFS ADDY + CREATOR ADDY & OBJKT# 
 const navbarMenu = [
   {
     player: "mechanism",
@@ -45,9 +50,12 @@ const navbarMenu = [
   {
     player: "alpha-test",
     imageUrl: "https://ipfs.io/ipfs/QmYRBDjBixJczcXs6fNunG9EGPsHqQT62ifEBzYTS1SjGe/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=612561&viewer=",
+  },
+  {
+    player: "dapp",
+    imageUrl: "https://hic-af.infura-ipfs.io/ipfs/QmSHtBDT86HBpZTpTGbbEUVQcjGzmrQyW2RbNaXTTqDxYu?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=612561&viewer=",
   }
 ];
-
 
 const Dashboard = ({
   Tezos,
@@ -192,6 +200,7 @@ const Dashboard = ({
                     <img src={marketplace_2} alt="market place"/>
                 </div>
             </div>
+<<<<<<< HEAD
         </div>
         <div className="row2">
             <div className="column">
