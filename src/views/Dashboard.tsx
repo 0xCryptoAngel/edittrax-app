@@ -145,12 +145,12 @@ const Dashboard = ({
             <h1>GENESIS COLLECTION</h1>
           </div>
           <div className="image-collection">
-            <Link to="/edit-trax/mechanism">
-              <div className="open-source" id="open"><img src={QmRft7BBYvJLdVUmYRw9stoUAaomtvzxUL8n5JLqTCSMWj} alt="open-source"/></div>
+            <Link to="/edit-trax/mechanism" className="open-source" id="open">
+              <img src={QmRft7BBYvJLdVUmYRw9stoUAaomtvzxUL8n5JLqTCSMWj} alt="open-source"/>
             </Link>
             <div className="acid-beach" id="acid"><img src={QmX6mLXAv3TgBBsP5Ahjiz9R3zV3sid2DnXQLsjNuo1vJ1} alt="acid beach"/></div>
-            <Link to="/edit-trax/burnt">
-              <div className="burnt" id="burnt"><img src={QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX} alt="burnt"/></div>
+            <Link to="/edit-trax/burnt" className="burnt" id="burnt">
+              <img src={QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX} alt="burnt"/>
             </Link>
             <div className="boxed" id="box"><img src={QmQDUgmJdguCMhK9NVvqWdYpTnXjDDZhmA5E7Di2U6BgVJ} alt="boxed"/></div>
           </div>            
