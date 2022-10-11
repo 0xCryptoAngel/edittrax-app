@@ -15,6 +15,9 @@ module.exports = {
         110: '35rem',
         120: '45rem',
       },
+      fontSize: {
+        xxs: '0.6rem',
+      },
       colors: {
         blue: {
           450: '#3481F0',
