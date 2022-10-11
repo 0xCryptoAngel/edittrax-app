@@ -2,19 +2,19 @@ import React, { Dispatch, SetStateAction, useState, useEffect } from "react";
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import ConnectButton from "../components/ConnectWallet";
-import et_new_logo from '../assets/et_new_logo.png'
+import et_new_logo from "../assets/et_new_logo.png";
 import { useParams } from "react-router-dom";
 
-import load from '../assets/load.gif'
+import load from "../assets/load.gif";
 
-import square_download_mechanism from '../assets/square_download_mechanism.png';
+import square_download_mechanism from "../assets/square_download_mechanism.png";
 import square_boxxed from "../assets/square_boxxed.png";
-import square_burnt from '../assets/square_burnt.png';
+import square_burnt from "../assets/square_burnt.png";
 import square_alpha_test from "../assets/square_alpha_test.png";
 
-import unlockable_burnt from '../assets/unlockable_burnt.png';
+import unlockable_burnt from "../assets/unlockable_burnt.png";
 import unlockable_boxxed from "../assets/unlockable_boxxed.png";
-import unlockable_alpha_test from '../assets/unlockable_alpha_test.png';
+import unlockable_alpha_test from "../assets/unlockable_alpha_test.png";
 import unlockable_download_mechanism from "../assets/unlockable_download_mechanism.png";
 
 
