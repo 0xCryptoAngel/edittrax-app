@@ -44,7 +44,13 @@ const navbarMenu = [
     imageUrl: "https://ipfs.io/ipfs/QmSqWNSGuPCfZQ8uJwhi94aXZDXRDbP5a75MtR7YBgDYDS/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=781874&viewer=",
     square: 'https://i.postimg.cc/7ZtqTshG/square-download-mechanism.jpg',
     unlockable: 'https://i.postimg.cc/1XKQRMbz/unlockable-download-mechanism.png',
-    title: 'acid beach (editteraxdug)'
+    title: 'acid beach (editteraxdug)',
+    keyValue: ['DOWNLOAD', 'OPENSOURCE', 'INTERACTIVE','MUSIC', 'STREAM'],
+    description: "Bai-ee 'Acid Beach' (ET001) is a Detroit influenced House track set to 808 drums, 303 bassline and modular driven synth. Released as a full featured (ALPHA) test this interactive music collectible features an integrated looper and token gated download mechanism.",
+    rights: 'As the owner of this collectible, you are granted the right to perform its downloadable content in public. This includes playing in mix-tapes, online streams, social feeds, and live performances. You do NOT have the right to repackage downloaded content for resale or distribution. Assume NO other rights of ownership.',
+    mintedDate: '7/23/2022',
+    ipfs: '#',
+    address: '#',
   },
   {
     player: "burnt",
@@ -52,20 +58,38 @@ const navbarMenu = [
     square: 'https://i.postimg.cc/9M55GvhM/square-burnt.jpg',
     unlockable: 'https://i.postimg.cc/9Md31JmB/unlockable-burnt.png',
     title: 'burnt',
+    keyValue: ['DOWNLOAD', 'OPENSOURCE', 'INTERACTIVE', 'MUSIC', 'STREAM', 'HOUSE', 'ACID', 'RAVE', 'CHICAGO', 'BAI-EE', 'UNDERGROUND'],
+    description: "Bai-ee 'Acid Beach' (ET001) is a Detroit influenced House track set to 808 drums, 303 bassline and modular driven synth. Released as a full featured (ALPHA) test this interactive music collectible features an integrated looper and token gated download mechanism.",
+    rights: 'As the owner of this collectible, you are granted the right to perform its downloadable content in public. This includes playing in mix-tapes, online streams, social feeds, and live performances. You do NOT have the right to repackage downloaded content for resale or distribution. Assume NO other rights of ownership.',
+    mintedDate: '7/23/2022',
+    ipfs: '#',
+    address: '#',
   },
   {
     player: "alpha-test",
     imageUrl: "https://ipfs.io/ipfs/QmYRBDjBixJczcXs6fNunG9EGPsHqQT62ifEBzYTS1SjGe/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=612561&viewer=",
     square: 'https://i.postimg.cc/rFHCppZT/square-alpha-test.jpg',
     unlockable: 'https://i.postimg.cc/MTyqnXmF/unlockable-alpha-test.png',
-    title: 'acid beach'
+    title: 'acid beach',
+    keyValue: ['DOWNLOAD', 'OPENSOURCE', 'INTERACTIVE','MUSIC', 'STREAM'],
+    description: "Bai-ee 'Acid Beach' (ET001) is a Detroit influenced House track set to 808 drums, 303 bassline and modular driven synth. Released as a full featured (ALPHA) test this interactive music collectible features an integrated looper and token gated download mechanism.",
+    rights: 'As the owner of this collectible, you are granted the right to perform its downloadable content in public. This includes playing in mix-tapes, online streams, social feeds, and live performances. You do NOT have the right to repackage downloaded content for resale or distribution. Assume NO other rights of ownership.',
+    mintedDate: '7/23/2022',
+    ipfs: '#',
+    address: '#',
   },
   {
     player: "dapp",
     imageUrl: "https://hic-af.infura-ipfs.io/ipfs/QmSHtBDT86HBpZTpTGbbEUVQcjGzmrQyW2RbNaXTTqDxYu?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=612561&viewer=",
     square: 'https://i.postimg.cc/QdwR3RVb/square-boxxed.jpg',
     unlockable: 'https://i.postimg.cc/d3sf6FSq/unlockable-boxxed.png',
-    title: 'boxxed'
+    title: 'boxxed',
+    keyValue: ['DOWNLOAD', 'OPENSOURCE', 'INTERACTIVE', 'MUSIC', 'STREAM', 'HOUSE', 'BAI-EE', 'UNDERGROUND'],
+    description: "Bai-ee 'Acid Beach' (ET001) is a Detroit influenced House track set to 808 drums, 303 bassline and modular driven synth. Released as a full featured (ALPHA) test this interactive music collectible features an integrated looper and token gated download mechanism.",
+    rights: 'As the owner of this collectible, you are granted the right to perform its downloadable content in public. This includes playing in mix-tapes, online streams, social feeds, and live performances. You do NOT have the right to repackage downloaded content for resale or distribution. Assume NO other rights of ownership.',
+    mintedDate: '7/23/2022',
+    ipfs: '#',
+    address: '#',
   }
 ];
 
@@ -142,7 +166,17 @@ const Dashboard = ({
               <div>VOLUME</div>
             </div>
           </section>
-          <Content square={result?.square} unlockable={result?.unlockable} title={result?.title}/>
+          <Content 
+            square={result?.square} 
+            unlockable={result?.unlockable} 
+            title={result?.title} 
+            keyValue={result?.keyValue}
+            description={result?.description}
+            rights={result?.rights}
+            mintedDate={result?.mintedDate}
+            ipfs={result?.ipfs}
+            address={result?.address}
+          />
           <Collection/>
           <Miscellaneous/>
           <Footer/>
