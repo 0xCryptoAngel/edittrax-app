@@ -117,7 +117,9 @@ const Dashboard = ({
                 wallet={wallet}
               />
             </div>
-            <iframe src={`${result?.imageUrl}${userAddress}`} className="w-full h-iframe mx-4 md:mx-0"/>
+            <div className="mx-4 md:mx-0">
+              <iframe src={`${result?.imageUrl}${userAddress}`} className="w-full h-iframe "/>
+            </div>
             <div className="bg-white flex justify-center py-4 mx-4 md:mx-0">
               <button className="bg-black text-white font-bold rounded px-8 py-2">Collect</button>
             </div>
