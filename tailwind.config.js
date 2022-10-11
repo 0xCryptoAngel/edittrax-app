@@ -38,7 +38,7 @@ module.exports = {
         'laptop': '920px',
       },
       boxShadow: {
-        '5xl': '5px 10px 20px blue inset, -5px -10px 20px blue inset',
+        '5xl': '3px 3px 10px rgba(0, 0, 0, 0.6), -3px -3px 10px rgba(0, 0, 0, 0.6)',
       },
       variants: {
         backgroundColor: ['responsive', 'even'],

@@ -127,7 +127,7 @@ const Dashboard = ({
           <div>VOLUME</div>
         </div>
       </section>
-      {/* <section className="bai">
+      <section className="bg-white flex justify-between gap-4 px-8 pt-12 ">
         <div className="info">
           <div className="graphix">
             <img src={square_download_mechanism} alt="rotating head"/>
@@ -144,88 +144,81 @@ const Dashboard = ({
             </div>
           </div>
         </div>
-          <div className="description">
-            <div className="details">
-              <h2>MINTED 7/23/2022</h2>
-              <span><a href="#">LINK TO IPFS</a></span>
-              <span><a href="#">CONTACT ADDRESS</a></span>
+        <div className="description">
+          <div className="details">
+            <h2>MINTED 7/23/2022</h2>
+            <span><a href="#">LINK TO IPFS</a></span>
+            <span><a href="#">CONTACT ADDRESS</a></span>
+          </div>
+          <div className="description-info">
+            <div>
+              <h1>DESCRIPTION</h1>
+              <p>Bai-ee's "Acid Beach" (ET001) is a Detroit influenced House track set to 808 drums, 303 bassline and modular driven synth. Released as a full featured (ALPHA) test this interactive music collectible features an integrated looper and token gated download mechanism.</p>
             </div>
-            <div className="description-info">
-              <div>
-                <h1>DESCRIPTION</h1>
-                <p>Bai-ee's "Acid Beach" (ET001) is a Detroit influenced House track set to 808 drums, 303 bassline and modular driven synth. Released as a full featured (ALPHA) test this interactive music collectible features an integrated looper and token gated download mechanism.</p>
+            <div className="description-image">
+              <img src={unlockable_download_mechanism} alt="edittrax process"/>
+            </div>
+            <div>
+              <h1>RIGHTS</h1>
+              <p>As the owner of this collectible, you are granted the right to perform its downloadable content in public. This includes playing in mix-tapes, online streams, social feeds, and live performances. You do NOT have the right to repackage downloaded content for resale or distribution. Assume NO other rights of ownership.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white p-8">
+        <div className="font-mathias mb-4 text-center">
+          GENESIS COLLECTION
+        </div>
+        <div className="grid grid-cols-4 gap-4">
+          <Link to="/edit-trax/mechanism" id="open">
+            <img src={QmRft7BBYvJLdVUmYRw9stoUAaomtvzxUL8n5JLqTCSMWj} alt="open-source" className="shadow-5xl"/>
+          </Link>
+          <Link to="/edit-trax/alpha-test"  id="acid">
+            <img src={QmX6mLXAv3TgBBsP5Ahjiz9R3zV3sid2DnXQLsjNuo1vJ1} alt="acid beach" className="shadow-5xl"/>
+          </Link>
+          <Link to="/edit-trax/burnt" id="burnt">
+            <img src={QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX} alt="burnt" className="shadow-5xl"/>
+          </Link>
+          <div  id="box"><img src={QmQDUgmJdguCMhK9NVvqWdYpTnXjDDZhmA5E7Di2U6BgVJ} alt="boxed" className="shadow-5xl"/></div>
+        </div>            
+      </section>
+      <section className="bg-white px-8 pb-12 rounded-br">
+        <div className="grid grid-cols-2 gap-12">
+          <div className="mb-4">
+            <div className="font-mathias mb-4">HANDBOOK</div>
+            <div>
+              <img src={handbook_2} alt="handbook"/>
+            </div>
+          </div>
+          <div className="mb-4">
+            <div className="font-mathias mb-4">MARKETPLACE</div>
+            <div>
+              <img src={marketplace_2} alt="market place"/>
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-12">
+          <div className="column">
+            <div className="font-mathias mb-4">GITHUB</div>
+            <div>
+              <img src={github_2} alt="github"/>
+            </div>
+          </div>
+          <div className="">
+            <div className="font-mathias mb-4">CONTACT</div>
+            <div className="flex flex-col space-y-3">
+              <div className="flex justify-between gap-2">
+                <input type="text" placeholder="Full name" className="bg-black rounded-xl py-2 px-2 w-1/2"/>
+                <input type="email" placeholder="E-mail" className="bg-black rounded-xl py-2 px-2 w-1/2"/>
               </div>
-              <div className="description-image">
-                <img src={unlockable_download_mechanism} alt="edittrax process"/>
-              </div>
+              <textarea name="" id="" placeholder="Message" className="bg-black rounded-xl h-36 p-4" ></textarea>
               <div>
-                <h1>RIGHTS</h1>
-                <p>As the owner of this collectible, you are granted the right to perform its downloadable content in public. This includes playing in mix-tapes, online streams, social feeds, and live performances. You do NOT have the right to repackage downloaded content for resale or distribution. Assume NO other rights of ownership.</p>
+                <button className="bg-black text-white px-4  py-2 rounded-xl font-mathias">Submit</button>
               </div>
             </div>
           </div>
-      </section> */}
-      {/* <section className="genesis-collection">
-        <div className="genesis-heading">
-          <h1>GENESIS COLLECTION</h1>
         </div>
-        <div className="image-collection">
-          <Link to="/edit-trax/mechanism" className="open-source" id="open">
-            <img src={QmRft7BBYvJLdVUmYRw9stoUAaomtvzxUL8n5JLqTCSMWj} alt="open-source"/>
-          </Link>
-          <Link to="/edit-trax/alpha-test" className="acid-beach" id="acid">
-            <img src={QmX6mLXAv3TgBBsP5Ahjiz9R3zV3sid2DnXQLsjNuo1vJ1} alt="acid beach"/>
-          </Link>
-          <Link to="/edit-trax/burnt" className="burnt" id="burnt">
-            <img src={QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX} alt="burnt"/>
-          </Link>
-          <div className="boxed" id="box"><img src={QmQDUgmJdguCMhK9NVvqWdYpTnXjDDZhmA5E7Di2U6BgVJ} alt="boxed"/></div>
-        </div>            
-      </section> */}
-      {/* <section className="miscellaneous">
-        <div className="row1">
-            <div className="column">
-                <div>
-                    <h1>HANDBOOK</h1>
-                </div>
-                <div>
-                    <img src={handbook_2} alt="handbook"/>
-                </div>
-            </div>
-            <div className="column">
-                <div>
-                    <h1>MARKETPLACE</h1>
-                </div>
-                <div>
-                    <img src={marketplace_2} alt="market place"/>
-                </div>
-            </div>
-<<<<<<< HEAD
-        </div>
-        <div className="row2">
-            <div className="column">
-                <div>
-                    <h1>GITHUB</h1>
-                </div>
-                <div>
-                    <img src={github_2} alt="github"/>
-                </div>
-            </div>
-            <div className="column contact">
-                <div>
-                    <h1>CONTACT</h1>
-                </div>
-                        <div>
-                            <input type="text" placeholder="Full name"/>
-                            <input type="email" placeholder="E-mail"/>
-                        </div>
-                        <div>
-                            <textarea name="" id="" placeholder="Message"></textarea>
-                        </div>
-                        <button>Submit</button>
-            </div>
-        </div>
-      </section> */}
+      </section>
       <Footer/>
     </div>
       }

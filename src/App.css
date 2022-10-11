@@ -16,3 +16,11 @@ body,
 .h-iframe {
   height: calc(100vh - 224px);
 }
+
+@font-face {
+  font-family: mathias;
+  src: url(mathias-bold.ttf);
+}
+.font-mathias {
+  font-family: mathias;
+}
