@@ -42,29 +42,29 @@ const navbarMenu = [
   {
     player: "mechanism",
     imageUrl: "https://ipfs.io/ipfs/QmSqWNSGuPCfZQ8uJwhi94aXZDXRDbP5a75MtR7YBgDYDS/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=781874&viewer=",
-    square: square_download_mechanism,
-    unlockable: unlockable_download_mechanism,
+    square: 'https://i.postimg.cc/7ZtqTshG/square-download-mechanism.jpg',
+    unlockable: 'https://i.postimg.cc/1XKQRMbz/unlockable-download-mechanism.png',
     title: 'acid beach (editteraxdug)'
   },
   {
     player: "burnt",
     imageUrl: "https://ipfs.io/ipfs/QmTvcnqnBjcjMQ1gDoG5jSvap7id7t2nhvQLmLiCRqSFqq/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=781875&viewer=",
-    square: square_burnt,
-    unlockable: unlockable_burnt,
+    square: 'https://i.postimg.cc/9M55GvhM/square-burnt.jpg',
+    unlockable: 'https://i.postimg.cc/9Md31JmB/unlockable-burnt.png',
     title: 'burnt',
   },
   {
     player: "alpha-test",
     imageUrl: "https://ipfs.io/ipfs/QmYRBDjBixJczcXs6fNunG9EGPsHqQT62ifEBzYTS1SjGe/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=612561&viewer=",
-    square: square_alpha_test,
-    unlockable: unlockable_alpha_test,
+    square: 'https://i.postimg.cc/rFHCppZT/square-alpha-test.jpg',
+    unlockable: 'https://i.postimg.cc/MTyqnXmF/unlockable-alpha-test.png',
     title: 'acid beach'
   },
   {
     player: "dapp",
     imageUrl: "https://hic-af.infura-ipfs.io/ipfs/QmSHtBDT86HBpZTpTGbbEUVQcjGzmrQyW2RbNaXTTqDxYu?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=612561&viewer=",
-    square: square_boxxed,
-    unlockable: unlockable_boxxed,
+    square: 'https://i.postimg.cc/QdwR3RVb/square-boxxed.jpg',
+    unlockable: 'https://i.postimg.cc/d3sf6FSq/unlockable-boxxed.png',
     title: 'boxxed'
   }
 ];
