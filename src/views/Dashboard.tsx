@@ -118,7 +118,7 @@ const Dashboard = ({
     <div className="bg-black">
       {isload? 
       <div className="w-full h-screen flex justify-center items-center">
-        <img src={load} alt="load" className="w-80 h-80"/>
+        <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className="w-80 h-80"/>
       </div>:
         <div className="max-w-5xl mx-auto  py-12">
           <div className="h-screen">
