@@ -3,7 +3,7 @@ import React, { Dispatch, SetStateAction, useState, useEffect } from "react";
 const Footer = () => {
   return (
     <footer className="text-white py-12">
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
         <div className="text-center">
           <div className="font-bold text-lg pb-4">DOCUMENTATION</div>
           <div className="text-xs">
@@ -22,12 +22,11 @@ const Footer = () => {
         </div>
       </div>  
       <hr className="my-4"/>                       
-      <div className="text-center">
-        <p>NFT Created by 
-          <a href="https://tell.ie/bai_ee/link-in-bio" className="border-b border-white ml-2">Bai-ee</a> 
-          <span className="text-4xl px-2 align-middle">&#x1f91d;</span>               
-            Marketplace Created by Minterverse
-        </p>                    
+      <div className="flex flex-col justify-center items-center md:flex-row">
+        <p>NFT Created by<a href="https://tell.ie/bai_ee/link-in-bio" className="border-b border-white ml-2">Bai-ee</a></p> 
+        <span className="text-4xl px-2 hidden md:inline">&#x1f91d;</span>               
+        <p>Marketplace Created by Minterverse</p> 
+        <span className="text-4xl px-2 align-middle inline md:hidden">&#x1f91d;</span> 
       </div>
     </footer>
   );
