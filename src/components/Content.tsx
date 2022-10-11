@@ -6,6 +6,7 @@ type WalletProps = {
 };
 
 const Content = (props:WalletProps) => {
+  console.log("props", props)
   return (
     <section className="bg-white flex flex-col  items-center gap-8 px-8 py-12 mb-4 mx-4 md:mb-0 md:pb-0 md:mx-0">
       <div className="flex flex-col items-center gap-8 md:flex-row md:w-full md:gap-8 md:items-end">
