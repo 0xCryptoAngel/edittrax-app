@@ -112,7 +112,7 @@ const Dashboard = ({
     setTimeout(async ()=>{
       console.log("Delayed for 1 second.");
       setIsload(false);
-    }, 1000)
+    }, 3000)
   }, [])
   return (
     <div className="bg-black">
