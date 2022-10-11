@@ -1,5 +1,3 @@
-import React, { Dispatch, SetStateAction, useState, useEffect } from "react";
-
 const Footer = () => {
   return (
     <footer className="text-white py-12">

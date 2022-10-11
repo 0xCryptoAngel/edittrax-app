@@ -1,12 +1,5 @@
-import React, { Dispatch, SetStateAction, useState, useEffect } from "react";
-
 import { Link } from "react-router-dom";
-import handbook_2 from "../assets/handbook_2.png";
-import marketplace_2 from "../assets/marketplace_2.png";
-import github_2 from '../assets/github_2.png';
-import square_alpha_test from '../assets/animation/square_alpha_test.jpg';
 
-//IMPORT THUMBNAIL IMAGES FOR ADDITIONAL PLAYERS
 import QmRft7BBYvJLdVUmYRw9stoUAaomtvzxUL8n5JLqTCSMWj from "../assets/QmRft7BBYvJLdVUmYRw9stoUAaomtvzxUL8n5JLqTCSMWj.jpeg";
 import QmX6mLXAv3TgBBsP5Ahjiz9R3zV3sid2DnXQLsjNuo1vJ1 from "../assets/QmX6mLXAv3TgBBsP5Ahjiz9R3zV3sid2DnXQLsjNuo1vJ1.jpeg";
 import QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX from "../assets/QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX.jpeg";

@@ -1,7 +1,4 @@
 
-
-import React from "react";
-
 type WalletProps = {
   square: any,
   unlockable: any,

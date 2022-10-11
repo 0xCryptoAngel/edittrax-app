@@ -1,8 +1,6 @@
-import React, { Dispatch, SetStateAction, useState, useEffect } from "react";
 import handbook_2 from "../assets/handbook_2.png";
 import marketplace_2 from "../assets/marketplace_2.png";
 import github_2 from '../assets/github_2.png';
-import square_alpha_test from '../assets/animation/square_alpha_test.jpg';
 
 const miscellaneous = () => {
   return (

@@ -18,7 +18,6 @@ import unlockable_alpha_test from '../assets/unlockable_alpha_test.png'
 import unlockable_download_mechanism from "../assets/unlockable_download_mechanism.png";
 
 
-
 import Content from "../components/Content";
 import Footer from "../components/Footer";
 import Miscellaneous from "../components/miscellaneous";
