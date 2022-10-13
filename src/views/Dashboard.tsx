@@ -82,20 +82,18 @@ const Dashboard = ({
     }
   ];
   const [isload, setIsload] = useState<boolean>(true)
+  const [result, setResult] = useState<any>()
   const [metaData, setMetaData] = useState<any>()
   const param = useParams();
-  const result = navbarMenu.find(item => item.player == param.id)
   useEffect(()=>{
-    fetchMetadata(result?.tokendId);
+    const searchResult = navbarMenu.find(item => item.player == param.id)
+    setResult(searchResult)
+    fetchMetadata(searchResult?.tokendId);
     setIsload(false);
-    // setTimeout(async ()=>{
-    //   console.log("Delayed for 1 second.");
-    //   setIsload(false);
-    // }, 3000)
   }, [])
 
-  const fetchMetadata =async (_tokenId:number) => {
-    const res = await axios.get('https://api.tzkt.io/v1/tokens?tokenId=781874&contract=KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton')
+  const fetchMetadata =async (_tokenId:number | undefined) => {
+    const res = await axios.get(`https://api.tzkt.io/v1/tokens?tokenId=${_tokenId}&contract=KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton`)
     console.log("res.data[0]", res.data[0])
     setMetaData(res.data[0])
   }
