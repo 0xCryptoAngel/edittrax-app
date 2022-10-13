@@ -88,9 +88,10 @@ const Dashboard = ({
   useEffect(()=>{
     const searchResult = navbarMenu.find(item => item.player == param.id)
     setResult(searchResult)
+    console.log("searchResult", searchResult)
     fetchMetadata(searchResult?.tokendId);
     setIsload(false);
-  }, [])
+  }, [param])
 
   const fetchMetadata =async (_tokenId:number | undefined) => {
     const res = await axios.get(`https://api.tzkt.io/v1/tokens?tokenId=${_tokenId}&contract=KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton`)
@@ -137,7 +138,7 @@ const Dashboard = ({
               <div>PRICE</div>
             </div>
             <div className="text-center space-y-3 font-bold">
-              <div className="text-5xl">75</div>
+              <div className="text-5xl">{metaData?.totalSupply}</div>
               <div>EDITIONS</div>
             </div>
             <div className="text-center space-y-3 font-bold">

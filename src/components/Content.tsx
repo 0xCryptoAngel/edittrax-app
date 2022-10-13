@@ -11,7 +11,7 @@ type WalletProps = {
 };
 
 const Content = (props:WalletProps) => {
-  console.log("props.mintedDate", props.mintedDate)
+  console.log("props.mintedDate", props.description)
   return (
     <section className="bg-white flex flex-col  items-center gap-8 px-8 py-12 mb-4 mx-4 md:mb-0 md:pb-0 md:mx-0">
       <div className="flex flex-col items-center gap-8 md:flex-row md:w-full md:gap-8 md:items-end">
@@ -37,7 +37,7 @@ const Content = (props:WalletProps) => {
       <div className="flex flex-col">
         <div>
           <h1 className="font-mathias text-center">DESCRIPTION</h1>
-          <div>{props.description}</div>
+          <div className="test">{props.description}</div>
           </div>
           <img src={props.unlockable} alt="edittrax process"/>
         </div>

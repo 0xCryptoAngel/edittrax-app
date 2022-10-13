@@ -24,3 +24,7 @@ body,
 .font-mathias {
   font-family: mathias;
 }
+
+.test {
+  white-space: pre-line;
+}
