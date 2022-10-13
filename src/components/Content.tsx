@@ -5,13 +5,13 @@ type WalletProps = {
   title: string | undefined,
   keyValue: string[] | undefined,
   description: string | undefined,
-  rights: string | undefined,
   mintedDate: string | undefined,
   ipfs: string | undefined,
   address: string | undefined,
 };
 
 const Content = (props:WalletProps) => {
+  console.log("props.mintedDate", props.mintedDate)
   return (
     <section className="bg-white flex flex-col  items-center gap-8 px-8 py-12 mb-4 mx-4 md:mb-0 md:pb-0 md:mx-0">
       <div className="flex flex-col items-center gap-8 md:flex-row md:w-full md:gap-8 md:items-end">
@@ -31,8 +31,8 @@ const Content = (props:WalletProps) => {
       <div className="flex flex-col gap-5 md:flex-row md:gap-5">
       <div className="font-mathias text-xs text-center space-y-4 md:text-left">
         <h2 className="w-52 mx-auto">MINTED {props.mintedDate}</h2>
-        <div className="w-52 mx-auto"><a href={props.ipfs} className="border-b border-black">LINK TO IPFS</a></div>
-        <div className="w-52 mx-auto"><a href={props.address} className="border-b border-black">CONTACT ADDRESS</a></div>
+        <div className="w-52 mx-auto"><a href={`https://ipfs.io/${props.ipfs}`} target="_blank" rel="noopener noreferrer" className="border-b border-black">LINK TO IPFS</a></div>
+        <div className="w-52 mx-auto"><a href={`https://tzkt.io/${props.address}`} target="_blank" rel="noopener noreferrer" className="border-b border-black">CONTACT ADDRESS</a></div>
       </div>
       <div className="flex flex-col">
         <div>
@@ -40,11 +40,7 @@ const Content = (props:WalletProps) => {
           <div>{props.description}</div>
           </div>
           <img src={props.unlockable} alt="edittrax process"/>
-          <div>
-          <h1 className="font-mathias text-center">RIGHTS</h1>
-          <div>{props.rights}</div>
         </div>
-      </div>
       </div>
     </section>
   );

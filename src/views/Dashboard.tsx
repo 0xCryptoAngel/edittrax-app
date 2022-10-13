@@ -4,7 +4,7 @@ import { BeaconWallet } from "@taquito/beacon-wallet";
 import ConnectButton from "../components/ConnectWallet";
 import et_new_logo from "@images/et_new_logo.png";
 import { useParams } from "react-router-dom";
-
+import axios from "axios";
 import load from "@images/load.gif";
 
 import square_download_mechanism from "@images/square_download_mechanism.png";
@@ -37,61 +37,7 @@ type WalletProps = {
 };
 
 
-//ADD OBJCTS IPFS ADDY + CREATOR ADDY & OBJKT# 
-const navbarMenu = [
-  {
-    player: "mechanism",
-    imageUrl: "https://ipfs.io/ipfs/QmSqWNSGuPCfZQ8uJwhi94aXZDXRDbP5a75MtR7YBgDYDS/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=781874&viewer=",
-    square: 'https://i.postimg.cc/7ZtqTshG/square-download-mechanism.jpg',
-    unlockable: 'https://i.postimg.cc/1XKQRMbz/unlockable-download-mechanism.png',
-    title: 'acid beach (editteraxdug)',
-    keyValue: ['DOWNLOAD', 'OPENSOURCE', 'INTERACTIVE','MUSIC', 'STREAM'],
-    description: "Bai-ee 'Acid Beach' (ET001) is a Detroit influenced House track set to 808 drums, 303 bassline and modular driven synth. Released as a full featured (ALPHA) test this interactive music collectible features an integrated looper and token gated download mechanism.",
-    rights: 'As the owner of this collectible, you are granted the right to perform its downloadable content in public. This includes playing in mix-tapes, online streams, social feeds, and live performances. You do NOT have the right to repackage downloaded content for resale or distribution. Assume NO other rights of ownership.',
-    mintedDate: '7/23/2022',
-    ipfs: '#',
-    address: '#',
-  },
-  {
-    player: "burnt",
-    imageUrl: "https://ipfs.io/ipfs/QmTvcnqnBjcjMQ1gDoG5jSvap7id7t2nhvQLmLiCRqSFqq/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=781875&viewer=",
-    square: 'https://i.postimg.cc/9M55GvhM/square-burnt.jpg',
-    unlockable: 'https://i.postimg.cc/9Md31JmB/unlockable-burnt.png',
-    title: 'burnt',
-    keyValue: ['DOWNLOAD', 'OPENSOURCE', 'INTERACTIVE', 'MUSIC', 'STREAM', 'HOUSE', 'ACID', 'RAVE', 'CHICAGO', 'BAI-EE', 'UNDERGROUND'],
-    description: "Bai-ee 'Acid Beach' (ET001) is a Detroit influenced House track set to 808 drums, 303 bassline and modular driven synth. Released as a full featured (ALPHA) test this interactive music collectible features an integrated looper and token gated download mechanism.",
-    rights: 'As the owner of this collectible, you are granted the right to perform its downloadable content in public. This includes playing in mix-tapes, online streams, social feeds, and live performances. You do NOT have the right to repackage downloaded content for resale or distribution. Assume NO other rights of ownership.',
-    mintedDate: '7/23/2022',
-    ipfs: '#',
-    address: '#',
-  },
-  {
-    player: "alpha-test",
-    imageUrl: "https://ipfs.io/ipfs/QmYRBDjBixJczcXs6fNunG9EGPsHqQT62ifEBzYTS1SjGe/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=612561&viewer=",
-    square: 'https://i.postimg.cc/rFHCppZT/square-alpha-test.jpg',
-    unlockable: 'https://i.postimg.cc/MTyqnXmF/unlockable-alpha-test.png',
-    title: 'acid beach',
-    keyValue: ['DOWNLOAD', 'OPENSOURCE', 'INTERACTIVE','MUSIC', 'STREAM'],
-    description: "Bai-ee 'Acid Beach' (ET001) is a Detroit influenced House track set to 808 drums, 303 bassline and modular driven synth. Released as a full featured (ALPHA) test this interactive music collectible features an integrated looper and token gated download mechanism.",
-    rights: 'As the owner of this collectible, you are granted the right to perform its downloadable content in public. This includes playing in mix-tapes, online streams, social feeds, and live performances. You do NOT have the right to repackage downloaded content for resale or distribution. Assume NO other rights of ownership.',
-    mintedDate: '7/23/2022',
-    ipfs: '#',
-    address: '#',
-  },
-  {
-    player: "dapp",
-    imageUrl: "https://hic-af.infura-ipfs.io/ipfs/QmSHtBDT86HBpZTpTGbbEUVQcjGzmrQyW2RbNaXTTqDxYu?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=612561&viewer=",
-    square: 'https://i.postimg.cc/QdwR3RVb/square-boxxed.jpg',
-    unlockable: 'https://i.postimg.cc/d3sf6FSq/unlockable-boxxed.png',
-    title: 'boxxed',
-    keyValue: ['DOWNLOAD', 'OPENSOURCE', 'INTERACTIVE', 'MUSIC', 'STREAM', 'HOUSE', 'BAI-EE', 'UNDERGROUND'],
-    description: "Bai-ee 'Acid Beach' (ET001) is a Detroit influenced House track set to 808 drums, 303 bassline and modular driven synth. Released as a full featured (ALPHA) test this interactive music collectible features an integrated looper and token gated download mechanism.",
-    rights: 'As the owner of this collectible, you are granted the right to perform its downloadable content in public. This includes playing in mix-tapes, online streams, social feeds, and live performances. You do NOT have the right to repackage downloaded content for resale or distribution. Assume NO other rights of ownership.',
-    mintedDate: '7/23/2022',
-    ipfs: '#',
-    address: '#',
-  }
-];
+
 
 const Dashboard = ({
   Tezos,
@@ -105,15 +51,54 @@ const Dashboard = ({
   setBeaconConnection,
   wallet
 }: WalletProps): JSX.Element => {
-  const [isload, setIsload] = useState(true)
+  const navbarMenu = [
+    {
+      player: "mechanism",
+      imageUrl: "https://ipfs.io/ipfs/QmSqWNSGuPCfZQ8uJwhi94aXZDXRDbP5a75MtR7YBgDYDS/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=781874&viewer=",
+      square: 'https://i.postimg.cc/7ZtqTshG/square-download-mechanism.jpg',
+      unlockable: 'https://i.postimg.cc/1XKQRMbz/unlockable-download-mechanism.png',
+      tokendId: 781874,
+    },
+    {
+      player: "burnt",
+      imageUrl: "https://ipfs.io/ipfs/QmTvcnqnBjcjMQ1gDoG5jSvap7id7t2nhvQLmLiCRqSFqq/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=781875&viewer=",
+      square: 'https://i.postimg.cc/9M55GvhM/square-burnt.jpg',
+      unlockable: 'https://i.postimg.cc/9Md31JmB/unlockable-burnt.png',
+      tokendId: 781875,
+    },
+    {
+      player: "alpha-test",
+      imageUrl: "https://ipfs.io/ipfs/QmYRBDjBixJczcXs6fNunG9EGPsHqQT62ifEBzYTS1SjGe/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=612561&viewer=",
+      square: 'https://i.postimg.cc/rFHCppZT/square-alpha-test.jpg',
+      unlockable: 'https://i.postimg.cc/MTyqnXmF/unlockable-alpha-test.png',
+      tokendId: 612561,
+    },
+    {
+      player: "dapp",
+      imageUrl: "https://hic-af.infura-ipfs.io/ipfs/QmSHtBDT86HBpZTpTGbbEUVQcjGzmrQyW2RbNaXTTqDxYu?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=612561&viewer=",
+      square: 'https://i.postimg.cc/QdwR3RVb/square-boxxed.jpg',
+      unlockable: 'https://i.postimg.cc/d3sf6FSq/unlockable-boxxed.png',
+      tokendId: 612561,
+    }
+  ];
+  const [isload, setIsload] = useState<boolean>(true)
+  const [metaData, setMetaData] = useState<any>()
   const param = useParams();
   const result = navbarMenu.find(item => item.player == param.id)
   useEffect(()=>{
-    setTimeout(async ()=>{
-      console.log("Delayed for 1 second.");
-      setIsload(false);
-    }, 3000)
+    fetchMetadata(result?.tokendId);
+    setIsload(false);
+    // setTimeout(async ()=>{
+    //   console.log("Delayed for 1 second.");
+    //   setIsload(false);
+    // }, 3000)
   }, [])
+
+  const fetchMetadata =async (_tokenId:number) => {
+    const res = await axios.get('https://api.tzkt.io/v1/tokens?tokenId=781874&contract=KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton')
+    console.log("res.data[0]", res.data[0])
+    setMetaData(res.data[0])
+  }
   return (
     <div className="bg-black">
       {isload? 
@@ -158,24 +143,23 @@ const Dashboard = ({
               <div>EDITIONS</div>
             </div>
             <div className="text-center space-y-3 font-bold">
-              <div className="text-5xl">55</div>
+              <div className="text-5xl">{metaData?.totalSupply}</div>
               <div>COLLECTORS</div>
             </div>
             <div className="text-center space-y-3 font-bold">
-              <div className="text-5xl">112</div>
+              <div className="text-5xl">{metaData?.totalSupply}</div>
               <div>VOLUME</div>
             </div>
           </section>
           <Content 
             square={result?.square} 
             unlockable={result?.unlockable} 
-            title={result?.title} 
-            keyValue={result?.keyValue}
-            description={result?.description}
-            rights={result?.rights}
-            mintedDate={result?.mintedDate}
-            ipfs={result?.ipfs}
-            address={result?.address}
+            title={metaData?.metadata.name} 
+            keyValue={metaData?.metadata?.tags}
+            description={metaData?.metadata?.description}
+            mintedDate={new Date(metaData?.firstTime).toLocaleDateString()}
+            ipfs={metaData?.metadata?.artifactUri?.replace(":/", "")}
+            address={metaData?.contract?.address}
           />
           <Collection/>
           <Miscellaneous/>
