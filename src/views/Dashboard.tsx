@@ -5,18 +5,6 @@ import ConnectButton from "../components/ConnectWallet";
 import et_new_logo from "@images/et_new_logo.png";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import load from "@images/load.gif";
-
-import square_download_mechanism from "@images/square_download_mechanism.png";
-import square_boxxed from "@images/square_boxxed.png";
-import square_burnt from "@images/square_burnt.png";
-import square_alpha_test from "@images/square_alpha_test.png";
-
-import unlockable_burnt from "@images/unlockable_burnt.png";
-import unlockable_boxxed from "@images/unlockable_boxxed.png";
-import unlockable_alpha_test from "@images/unlockable_alpha_test.png";
-import unlockable_download_mechanism from "@images/unlockable_download_mechanism.png";
-
 
 import Content from "../components/Content";
 import Footer from "../components/Footer";
@@ -35,9 +23,6 @@ type WalletProps = {
   setBeaconConnection: Dispatch<SetStateAction<boolean>>;
   wallet: BeaconWallet;
 };
-
-
-
 
 const Dashboard = ({
   Tezos,
