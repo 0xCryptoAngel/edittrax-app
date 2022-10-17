@@ -5,7 +5,6 @@ import ConnectButton from "../components/ConnectWallet";
 import et_new_logo from "@images/et_new_logo.png";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-
 import Content from "../components/Content";
 import Footer from "../components/Footer";
 import Miscellaneous from "../components/miscellaneous";
