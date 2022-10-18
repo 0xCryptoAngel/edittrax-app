@@ -88,12 +88,12 @@ const Dashboard = ({
       <div className="w-full h-screen flex justify-center items-center">
         <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className="w-80 h-80"/>
       </div>:
-        <div className="max-w-5xl mx-auto  py-12">
+        <div className="max-w-5xl mx-auto py-12">
           <div className="h-screen">
-            <div className="bg-white py-2 flex items-center px-12 justify-between mx-4 md:mx-0">
+            <div className="bg-white rounded-t-lg py-2 flex items-center px-12 justify-between mx-4 md:mx-0">
               <div className="flex items-center space-x-8">
                 <ul className="flex space-x-10 text-white">
-                <img src={et_new_logo} alt="logo" className="w-16 h-10"/>
+                <img src={et_new_logo} alt="logo" className="w-12"/>
                 </ul>
               </div>
               <ConnectButton
@@ -117,20 +117,20 @@ const Dashboard = ({
             </div>
           </div>
           <section className="text-white grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16">
-            <div className="text-center space-y-3 font-bold">
-              <div className="text-5xl">1.5</div>
+            <div className="text-center space-y-0 font-bold">
+              <div className="text-7xl">1.5</div>
               <div>PRICE</div>
             </div>
-            <div className="text-center space-y-3 font-bold">
-              <div className="text-5xl">{metaData?.totalSupply}</div>
+            <div className="text-center space-y-0 font-bold">
+              <div className="text-7xl">{metaData?.totalSupply}</div>
               <div>EDITIONS</div>
             </div>
-            <div className="text-center space-y-3 font-bold">
-              <div className="text-5xl">{metaData?.totalSupply}</div>
+            <div className="text-center space-y-0 font-bold">
+              <div className="text-7xl">{metaData?.totalSupply}</div>
               <div>COLLECTORS</div>
             </div>
-            <div className="text-center space-y-3 font-bold">
-              <div className="text-5xl">{metaData?.totalSupply}</div>
+            <div className="text-center space-y-0 font-bold">
+              <div className="text-7xl">{metaData?.totalSupply}</div>
               <div>VOLUME</div>
             </div>
           </section>
