@@ -98,13 +98,13 @@ const ConnectButton = ({
   }, [Tezos, beaconConnection, setBeaconConnection, setUserAddress, setWallet]);
 
   return (
-    <div className="">
+    <div className="sm:py-4">
       {!beaconConnection ? (
-        <button className="bg-black rounded text-white font-bold py-2 w-40 hover:text-gray-300" onClick={connectWallet}>
+        <button className="bg-black rounded text-yellow-75 font-bold py-2 w-40 hover:text-gray-300" onClick={connectWallet}>
         Connect wallet
       </button>
       ) : (
-        <button className="bg-black rounded text-white font-bold py-2 w-40 hover:text-gray-300" onClick={disconnectWallet}>
+        <button className="bg-black rounded text-yellow-75 font-bold py-2 w-40 hover:text-gray-300" onClick={disconnectWallet}>
           <div>{`${userAddress.slice(0, -28)}...${userAddress.substring(30)}`}</div>
         </button>
       )}
