@@ -88,11 +88,11 @@ const Dashboard = ({
       <div className="w-full h-screen flex justify-center items-center">
         <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className="w-80 h-80"/>
       </div>:
-        <div className="max-w-5xl mx-auto py-12">
+        <div className="md:px-4 mx-auto py-4">
           <div className="h-screen">
-            <div className="bg-white rounded-t-lg py-2 flex items-center px-12 justify-between mx-4 md:mx-0">
+            <div className="bg-yellow-75 rounded-t-lg py-2 flex items-center px-12 justify-between mx-4 md:mx-0">
               <div className="flex items-center space-x-8">
-                <ul className="flex space-x-10 text-white">
+                <ul className="flex space-x-10 text-bg-yellow-75">
                 <img src={et_new_logo} alt="logo" className="w-12"/>
                 </ul>
               </div>
@@ -112,11 +112,11 @@ const Dashboard = ({
             <div className="mx-4 md:mx-0">
               <iframe src={`${result?.imageUrl}${userAddress}`} className="w-full h-iframe "/>
             </div>
-            <div className="bg-white flex justify-center py-4 mx-4 md:mx-0">
-              <button className="bg-black text-white font-bold rounded px-8 py-2">Collect</button>
+            <div className="bg-yellow-75 flex justify-center py-8 mx-4 md:mx-0 max-w-full">
+              <button className="bg-black text-yellow-75 font-bold rounded px-16 md:px-64 py-4">Collect</button>
             </div>
           </div>
-          <section className="text-white grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16">
+          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 mt-12">
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">1.5</div>
               <div>PRICE</div>
