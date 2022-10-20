@@ -1,7 +1,10 @@
 import "./App.css";
 import React, { useState, useEffect, useContext } from "react";
 import { TezosToolkit } from '@taquito/taquito';
-import Dashboard from './views/Dashboard'
+import Dashboard from './views/Dashboard';
+import { Web3ReactProvider } from '@web3-react/core';
+import { getLibrary } from './wallet/wallet';
+import MetamaskProvider from './wallet/useEagerConnect';
 import {
   BrowserRouter,
   Routes,
@@ -23,23 +26,27 @@ const App = () => {
   
   return (
     <div className="bg-black">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={ <Navigate to="/edit-trax/alpha-test"/> }/>
-          <Route path="/edit-trax/:id" element={<Dashboard
-            Tezos={Tezos}
-            setContract={setContract}
-            setWallet={setWallet}
-            setStorage={setStorage}
-            setUserAddress={setUserAddress}
-            userAddress={userAddress}
-            beaconConnection={beaconConnection}
-            setUserBalance={setUserBalance}
-            setBeaconConnection={setBeaconConnection}
-            wallet={wallet}
-          />} />
-        </Routes>
-      </BrowserRouter>
+      <Web3ReactProvider getLibrary={getLibrary}>
+        <MetamaskProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={ <Navigate to="/edit-trax/alpha-test"/> }/>
+              <Route path="/edit-trax/:id" element={<Dashboard
+                Tezos={Tezos}
+                setContract={setContract}
+                setWallet={setWallet}
+                setStorage={setStorage}
+                setUserAddress={setUserAddress}
+                userAddress={userAddress}
+                beaconConnection={beaconConnection}
+                setUserBalance={setUserBalance}
+                setBeaconConnection={setBeaconConnection}
+                wallet={wallet}
+              />} />
+            </Routes>
+          </BrowserRouter>
+        </MetamaskProvider>
+      </Web3ReactProvider>
     </div>
   );
 };
