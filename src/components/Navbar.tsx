@@ -30,10 +30,20 @@ const Navbar = ({
   wallet
 }: WalletProps): JSX.Element => {
   return (
+    
     <header className="head">
+
+<div className="App">
+      <button>
+        Modal
+      </button>
+</div>
+      
+      
       <div className="logo">
         <img src={et_new_logo} alt="logo"/>
       </div>
+      
       <ConnectButton
         Tezos={Tezos}
         setContract={setContract}

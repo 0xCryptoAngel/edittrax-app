@@ -26,6 +26,8 @@ const App = () => {
   
   return (
     <div className="bg-black">
+
+      
       <Web3ReactProvider getLibrary={getLibrary}>
         <MetamaskProvider>
           <BrowserRouter>
