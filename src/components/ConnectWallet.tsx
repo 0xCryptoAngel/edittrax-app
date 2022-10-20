@@ -101,7 +101,7 @@ const ConnectButton = ({
     <div className="sm:py-4">
       {!beaconConnection ? (
         <button className="bg-black rounded text-yellow-75 font-bold py-2 w-40 hover:text-gray-300" onClick={connectWallet}>
-        Connect wallet
+        Tezos
       </button>
       ) : (
         <button className="bg-black rounded text-yellow-75 font-bold py-2 w-40 hover:text-gray-300" onClick={disconnectWallet}>

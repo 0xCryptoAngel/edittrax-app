@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState, useEffect, useContext } from "react";
 import { TezosToolkit } from '@taquito/taquito';
 import Dashboard from './views/Dashboard';
+import DashEther from "./views/DashEther";
 import { Web3ReactProvider } from '@web3-react/core';
 import { getLibrary } from './wallet/wallet';
 import MetamaskProvider from './wallet/useEagerConnect';
@@ -43,6 +44,7 @@ const App = () => {
                 setBeaconConnection={setBeaconConnection}
                 wallet={wallet}
               />} />
+              <Route path="/test" element={<DashEther/>}/>
             </Routes>
           </BrowserRouter>
         </MetamaskProvider>
