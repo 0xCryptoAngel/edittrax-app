@@ -1,3 +1,5 @@
+import et_new_logo from "@images/et_new_logo.png";
+
 const Footer = () => {
   return (
     <footer className="text-yellow-75 py-12">
@@ -5,17 +7,17 @@ const Footer = () => {
         <div className="text-center">
           <div className="font-bold text-lg pb-4">DOCUMENTATION</div>
           <div className="text-xs">
-          <a href="https://tell.ie/bai_ee/link-in-bio">
+          <a href="https://iris-termite-e82.notion.site/OBJKT-612561-824dbe0144744143b43ee26f79f6c50a">
             <p>WIKI</p>
             </a> 
 
-            <a href="https://tell.ie/bai_ee/link-in-bio">
+            {/* <a href="https://tell.ie/bai_ee/link-in-bio">
             <p>WEBSITE</p>
             </a> 
 
             <a href="https://tell.ie/bai_ee/link-in-bio">
             <p>HANDBOOK</p>
-            </a> 
+            </a>  */}
           </div>
         </div>
         <div className="text-center">
@@ -24,7 +26,7 @@ const Footer = () => {
           <div className="text-lg font-bold  pb-4">COMMUNITY</div>
           </a> 
 
-          <a href="https://tell.ie/bai_ee/link-in-bio">
+          <a href="https://twitter.com/edittrax">
           <div className="text-xs">TWITTER</div>
           </a>  
         
@@ -37,9 +39,16 @@ const Footer = () => {
           </a>
         </div>
       </div>  
-      <hr className="my-4"/>                       
-      <div className="flex flex-col justify-center items-center md:flex-row">
-        <p>EditTrax by<a href="https://tell.ie/bai_ee/link-in-bio" className="border-b border-black ml-2">Bai-ee</a></p> 
+      {/* <hr className="my-4"/>                        */}
+      <div className="flex flex-col mt-16 justify-center items-center md:flex-row text-xs">
+        
+      <div className="flex items-center space-x-8">
+                <ul className="flex space-x-10 text-bg-yellow-75">
+                <img src={et_new_logo} alt="logo" className="w-12"/>
+                </ul>
+        </div>
+        
+        {/* <p>DjEditTrax.com<a href="https://tell.ie/bai_ee/link-in-bio" className="text-xs border-b border-black ml-2"></a></p>  */}
         {/* <span className="text-4xl px-2 hidden md:inline">&#x1f91d;</span>                */}
         {/* <p>Marketplace Created by Minterverse</p>  */}
         {/* <span className="text-4xl px-2 align-middle inline md:hidden">&#x1f91d;</span>  */}

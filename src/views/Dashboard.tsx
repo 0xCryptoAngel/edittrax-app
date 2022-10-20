@@ -141,28 +141,28 @@ const Dashboard = ({
               </div>
             </div>
             <div className="mx-4 md:mx-0">
-              <iframe src={`${result?.imageUrl}${userAddress}`} className="w-full h-iframe "/>
+              <iframe src={`${result?.imageUrl}${userAddress}`} className="w-full h-iframe"/>
             </div>
-            <div className="bg-yellow-75 flex justify-center py-8 mx-4 md:mx-0 max-w-full">
-              <button className="bg-black text-yellow-75 font-bold rounded px-16 md:px-64 py-4">Collect</button>
+            <div className="bg-yellow-75 flex justify-center py-2 md:py-8 mx-4 md:mx-0 max-w-full">
+              <button className="bg-black text-yellow-75 font-bold rounded px-16 md:px-64 py-4">Collect Music Player</button>
             </div>
           </div>
-          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 mt-12">
+          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 md:mt-12">
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">1.5</div>
               <div>PRICE</div>
             </div>
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">{metaData?.totalMinted}</div>
-              <div>EDITIONS</div>
+              <div>MINTED</div>
             </div>
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">{metaData?.totalSupply}</div>
-              <div>COLLECTORS</div>
+              <div>SUPPLY</div>
             </div>
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">{metaData?.holdersCount}</div>
-              <div>Holders</div>
+              <div>HOLDERS</div>
             </div>
           </section>
           <Content 

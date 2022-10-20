@@ -17,6 +17,10 @@ body,
   height: calc(100vh - 224px);
 }
 
+.h-iframe-mobile {
+  height: calc(90vh);
+}
+
 @font-face {
   font-family: mathias;
   src: url(mathias-bold.ttf);
