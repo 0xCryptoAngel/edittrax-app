@@ -122,7 +122,7 @@ const Dashboard = ({
               <div>PRICE</div>
             </div>
             <div className="text-center space-y-0 font-bold">
-              <div className="text-7xl">{metaData?.totalSupply}</div>
+              <div className="text-7xl">{metaData?.totalMinted}</div>
               <div>EDITIONS</div>
             </div>
             <div className="text-center space-y-0 font-bold">
@@ -130,8 +130,8 @@ const Dashboard = ({
               <div>COLLECTORS</div>
             </div>
             <div className="text-center space-y-0 font-bold">
-              <div className="text-7xl">{metaData?.totalSupply}</div>
-              <div>VOLUME</div>
+              <div className="text-7xl">{metaData?.holdersCount}</div>
+              <div>Holders</div>
             </div>
           </section>
           <Content 
