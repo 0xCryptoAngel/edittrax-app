@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useState, useEffect } from "react";
+import React, { Dispatch, SetStateAction, useState, useEffect, useCallback } from "react";
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import ConnectButton from "../components/ConnectWallet";
@@ -9,6 +9,9 @@ import Content from "../components/Content";
 import Footer from "../components/Footer";
 import Miscellaneous from "../components/miscellaneous";
 import Collection from "../components/Collection";
+
+import { useWeb3React, UnsupportedChainIdError } from '@web3-react/core'
+import { MetaMaskconnector } from '../wallet/wallet'
 
 type WalletProps = {
   Tezos: TezosToolkit;
@@ -82,6 +85,26 @@ const Dashboard = ({
     console.log("res.data[0]", res.data[0])
     setMetaData(res.data[0])
   }
+
+  const { active, activate, deactivate, account, error } = useWeb3React()
+
+  const isUnsupportedChain = error instanceof UnsupportedChainIdError
+  useEffect(() => {
+    if (active) {
+      localStorage.setItem('shouldEagerConnect', true.toString())
+    }
+  }, [active])
+  const handleConnectMetaMask = useCallback(() => {
+    activate(MetaMaskconnector)
+  }, [activate])
+
+  const handleDisconnect = () => {
+    deactivate()
+    localStorage.removeItem('shouldEagerConnect')
+    window.location.reload()
+  }
+
+
   return (
     <div className="bg-black">
       {isload? 
@@ -95,6 +118,13 @@ const Dashboard = ({
                 <ul className="flex space-x-10 text-bg-yellow-75">
                 <img src={et_new_logo} alt="logo" className="w-12"/>
                 </ul>
+              </div>
+              <div>
+                {active? <button onClick={()=>handleDisconnect()}>{account}</button>: 
+                  <button className="font-bold hover:text-gray-300" onClick={()=>{
+                    handleConnectMetaMask()
+                  }}>MetasMask</button>
+                }
               </div>
               <ConnectButton
                 Tezos={Tezos}
