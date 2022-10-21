@@ -92,6 +92,7 @@ const Dashboard = ({
 
   const dashboard = useRef(null);
   const loader = useRef(null);
+  const scroll = useRef(null);
 
   useEffect(() => {
 
@@ -101,11 +102,39 @@ const Dashboard = ({
 
     const db = dashboard.current;
     const ld = loader.current;
+    const srl = scroll.current;
 
     //WITH Timelines (cleaner, more versatile)
 var tlMain = gsap.timeline({repeat: 0, repeatDelay: 0});
 tlMain.fromTo(ld, {opacity:1}, {opacity:0, height:0, y:-5000, delay:1.25, duration:.025});
 tlMain.fromTo(db, {opacity:0, y:20}, {opacity:1, y:0, duration:.25});
+
+gsap.fromTo(srl, {opacity:0, y:75}, {opacity:1, y:0, duration:.75,
+
+  scrollTrigger: {
+  
+        trigger:srl
+    
+    }
+
+
+
+});
+
+
+
+    // gsap.fromTo(scroll, {opacity:1, y:0}, {opacity:1, duration:.75});
+
+
+  //     scrollTrigger: {
+  
+  //     trigger:srl
+  
+  // }
+
+// });
+
+
 
 // then we can control the whole thing easily...
 // tl.pause();
@@ -113,7 +142,7 @@ tlMain.fromTo(db, {opacity:0, y:20}, {opacity:1, y:0, duration:.25});
 // tl.seek(1.5);
 // tl.reverse();
 
-    // gsap.fromTo(db, {opacity:0, y:30}, {opacity:0, y:0, duration:.75, 
+    // gsap.fromTo(scroll, {opacity:0, y:30}, {opacity:0, y:0, duration:.75, 
     //   scrollTrigger: {
   
     //   trigger:el
@@ -194,6 +223,8 @@ tlMain.fromTo(db, {opacity:0, y:20}, {opacity:1, y:0, duration:.25});
                 />
               </div>
             </div>
+
+
             <div className="mx-4 md:mx-0">
               <iframe src={`${result?.imageUrl}${userAddress}`} className="w-full h-iframe"/>
             </div>
@@ -201,7 +232,9 @@ tlMain.fromTo(db, {opacity:0, y:20}, {opacity:1, y:0, duration:.25});
               <button className="bg-black text-yellow-75 font-bold rounded px-16 md:px-64 py-4">Collect Music Player</button>
             </div>
           </div>
-          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 md:mt-12">
+
+
+          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 md:mt-12" ref={scroll}>
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">1.5</div>
               <div>PRICE</div>

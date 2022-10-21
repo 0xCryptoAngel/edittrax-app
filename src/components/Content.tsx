@@ -1,4 +1,9 @@
 
+import React, { Dispatch, SetStateAction, useState, useRef, useEffect, useCallback } from "react";
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger)
+
 type WalletProps = {
   square:  string | undefined,
   unlockable:  string | undefined,
@@ -12,8 +17,67 @@ type WalletProps = {
 
 const Content = (props:WalletProps) => {
   console.log("props.mintedDate", props.description)
+
+
+
+
+
+  const data = useRef(null);
+
+  useEffect(() => {
+
+    const dat = data.current;
+
+    //WITH Timelines (cleaner, more versatile)
+// var tlMain = gsap.timeline({repeat: 0, repeatDelay: 0});
+// tlMain.fromTo(ld, {opacity:1}, {opacity:0, height:0, y:-5000, delay:1.25, duration:.025});
+// tlMain.fromTo(db, {opacity:0, y:20}, {opacity:1, y:0, duration:.25});
+
+gsap.fromTo(dat, {opacity:0, y:75}, {opacity:1, y:0, duration:.75,
+
+  scrollTrigger: {
+  
+            trigger:dat
+        
+        }
+
+
+
+
+
+
+
+});
+
+// gsap.fromTo(dat, {opacity:0, y:75}, {opacity:1, y:0, duration:.75,
+
+//   scrollTrigger: {
+  
+//         trigger:dat
+    
+//     }
+
+
+
+}
+
+);
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
   return (
-    <section className="bg-yellow-75 flex flex-col items-center gap-16 px-14 py-14 mb-0 mx-4 md:mb-0 md:pb-0 md:mx-0">
+    <section className="bg-yellow-75 flex flex-col items-center gap-16 px-14 py-14 mb-0 mx-4 md:mb-0 md:pb-0 md:mx-0" ref={data}>
       
       <div className="flex flex-col items-center gap-8 md:flex-row md:gap-8">
 
