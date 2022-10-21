@@ -75,7 +75,7 @@ const ConnectButton = ({
     (async () => {
       // creates a wallet instance
       const initWallet = new BeaconWallet({
-        name: "WildLands",
+        name: "Dj EditTrax",
         preferredNetwork: NetworkType.MAINNET,
         disableDefaultEvents: true, // Disable all events / UI. This also disables the pairing alert.
         eventHandlers: {
@@ -98,11 +98,18 @@ const ConnectButton = ({
   }, [Tezos, beaconConnection, setBeaconConnection, setUserAddress, setWallet]);
 
   return (
+
+
+
+
     <div className="sm:py-4">
+
+      
+
       {!beaconConnection ? (
         <button className="bg-black rounded text-yellow-75 font-bold py-2 w-40 hover:text-gray-300" onClick={connectWallet}>
-        Tezos
-      </button>
+        Unlock Downloads
+        </button>
       ) : (
         <button className="bg-black rounded text-yellow-75 font-bold py-2 w-40 hover:text-gray-300" onClick={disconnectWallet}>
           <div>{`${userAddress.slice(0, -28)}...${userAddress.substring(30)}`}</div>
