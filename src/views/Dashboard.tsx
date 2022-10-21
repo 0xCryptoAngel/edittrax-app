@@ -13,6 +13,8 @@ import { useWeb3React, UnsupportedChainIdError } from '@web3-react/core'
 import { MetaMaskconnector } from '../wallet/wallet'
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import Modal from "../Modal/Modal"
+
 gsap.registerPlugin(ScrollTrigger)
 
 type WalletProps = {
@@ -109,11 +111,12 @@ var tlMain = gsap.timeline({repeat: 0, repeatDelay: 0});
 tlMain.fromTo(ld, {opacity:1}, {opacity:0, height:0, y:-5000, delay:1.25, duration:.025});
 tlMain.fromTo(db, {opacity:0, y:20}, {opacity:1, y:0, duration:.25});
 
-gsap.fromTo(srl, {opacity:0, y:75}, {opacity:1, y:0, duration:.75,
+gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
 
   scrollTrigger: {
   
-        trigger:srl
+        trigger:srl,
+        scrub: 2,
     
     }
 
@@ -167,10 +170,12 @@ gsap.fromTo(srl, {opacity:0, y:75}, {opacity:1, y:0, duration:.75,
   // console.log(imgRef + "HEEERE")
 
 
-
+  const [show, setShow] = useState(false)
 
   return (
+    
     <div className="bg-black">
+
       {/* {
       
       isload? 
@@ -193,23 +198,32 @@ gsap.fromTo(srl, {opacity:0, y:75}, {opacity:1, y:0, duration:.75,
 
 
           <div className="h-screen">
-            <div className="bg-yellow-75 rounded-t-lg py-2 flex items-center px-12 justify-between mx-4 md:mx-0">
+
+            <div className="bg-yellow-75 rounded-t-lg sm:py-2 md:py-6 flex items-center px-12 justify-between mx-4 md:mx-0">
               <div className="flex items-center space-x-8">
                 <ul className="flex space-x-10 text-bg-yellow-75">
 
-                <img src={et_new_logo} alt="logo" id="logo_test" className="w-12"/>
+                <img src={et_new_logo} alt="logo" id="logo_test" className="w-4 sm:w-10"/>
                 
                 </ul>
               </div>
               <div className="flex gap-4 items-center">
-                <div>
-                  {active? <button className="bg-black rounded text-yellow-75 font-bold py-2 w-40 hover:text-gray-300" onClick={()=>handleDisconnect()}>{`${account?.slice(0, -36)}...${account?.substring(38)}`}</button>: 
+
+              <button className="font-mathias sm:bg-black sm:rounded sm:text-yellow-75 sm:font-bold sm:py-2 sm:w-40 hover:text-gray-300" onClick={()=>
+                setShow(true)}>Unlock
+              </button>
+              <Modal onClose = {() => setShow(false)} show={show}/>
+
+
+                <div className="hidden">
+                  {active? <button className="bg-black rounded text-yellow-75 font-bold py-2 w-40 hover:text-gray-300" onClick={()=>
+                  handleDisconnect()}>{`${account?.slice(0, -36)}...${account?.substring(38)}`}</button>: 
                     <button className="bg-black rounded text-yellow-75 font-bold py-2 w-40 hover:text-gray-300" onClick={()=>{
                       handleConnectMetaMask()
                     }}>Etereum</button>
                   }
                 </div>
-                <ConnectButton
+                <ConnectButton 
                   Tezos={Tezos}
                   setContract={setContract}
                   setWallet={setWallet}
@@ -222,6 +236,8 @@ gsap.fromTo(srl, {opacity:0, y:75}, {opacity:1, y:0, duration:.75,
                   wallet={wallet}
                 />
               </div>
+
+
             </div>
 
 
@@ -229,27 +245,27 @@ gsap.fromTo(srl, {opacity:0, y:75}, {opacity:1, y:0, duration:.75,
               <iframe src={`${result?.imageUrl}${userAddress}`} className="w-full h-iframe"/>
             </div>
             <div className="bg-yellow-75 flex justify-center py-2 md:py-8 mx-4 md:mx-0 max-w-full">
-              <button className="bg-black text-yellow-75 font-bold rounded px-16 md:px-64 py-4">Collect Music Player</button>
+              <button className="font-mathias text-sm bg-black text-yellow-75 font-bold rounded px-16 md:px-64 sm:py-4">Collect To Download</button>
             </div>
           </div>
 
 
-          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 md:mt-12" ref={scroll}>
+          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 md:mt-0" ref={scroll}>
             <div className="text-center space-y-0 font-bold">
-              <div className="text-7xl">1.5</div>
-              <div>PRICE</div>
-            </div>
-            <div className="text-center space-y-0 font-bold">
-              <div className="text-7xl">{metaData?.totalMinted}</div>
-              <div>MINTED</div>
+              <div className="text-7xl">10</div>
+              <div>Floor Price (Tez)</div>
             </div>
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">{metaData?.totalSupply}</div>
-              <div>SUPPLY</div>
+              <div>Sold</div>
+            </div>
+            <div className="text-center space-y-0 font-bold">
+              <div className="text-7xl">{metaData?.totalMinted}</div>
+              <div>Minted</div>
             </div>
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">{metaData?.holdersCount}</div>
-              <div>HOLDERS</div>
+              <div>Collectors</div>
             </div>
           </section>
           <Content 

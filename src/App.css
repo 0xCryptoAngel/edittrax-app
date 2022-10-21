@@ -19,8 +19,50 @@ body,
   background-color: yellow;
 }
 
+.modal {
+position:fixed;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background-color:rgba(0, 0, 0, 0.735);
+opacity:1;
+display: flex;
+align-items: center;
+justify-content: center;
+max-height:100vh;
+}
+
+.modal-content {
+  background-color: #E6E9E0;
+  width:500px;
+}
+
+.modal-header, .modal-footer {
+  padding:10px
+}
+
+.modal-tile {
+  margin:0
+}
+
+.modal-body {
+  padding:10px;
+  /* border-top: 1px solid white; */
+  /* border-bottom: 1px solid white; */
+}
+
 .h-iframe {
   height: calc(100vh - 224px);
+}
+
+@media (max-width: 635px) {
+
+  .h-iframe {
+    height: 85vh;
+    max-height:800px
+  }
+
 }
 
 .h-iframe-mobile {
@@ -58,3 +100,4 @@ body,
   justify-content: center;
   min-height: 100vh;
 }
+

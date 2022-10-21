@@ -6,7 +6,24 @@ import QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX from "../assets/QmPgdPxBpe
 import QmQDUgmJdguCMhK9NVvqWdYpTnXjDDZhmA5E7Di2U6BgVJ from "../assets/QmQDUgmJdguCMhK9NVvqWdYpTnXjDDZhmA5E7Di2U6BgVJ.jpeg";
 
 
+import React, { Dispatch, SetStateAction, useState, useRef, useEffect, useCallback } from "react";
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger)
+
 const Collection = () => {
+
+  const collection = useRef(null);
+  useEffect(() => {
+    const col = collection.current;
+    gsap.fromTo(col, {opacity:1, y:75}, {opacity:1, y:0, duration:0.25,
+      scrollTrigger: {  
+        trigger:col,
+        scrub: 1,
+      }
+    });
+  });
+
   return (
     <section className="bg-yellow p-24 sm:p-8 mx-0 mb-12 mt-12 md:mx-0 items-center flex flex-col justify-center">
 

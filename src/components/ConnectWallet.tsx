@@ -102,7 +102,7 @@ const ConnectButton = ({
 
 
 
-    <div className="sm:py-4">
+    <div className="sm:py-4 hidden">
 
       
 
