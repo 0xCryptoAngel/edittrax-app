@@ -88,7 +88,6 @@ const Dashboard = ({
 
   const { active, activate, deactivate, account, error } = useWeb3React()
 
-  const isUnsupportedChain = error instanceof UnsupportedChainIdError
   useEffect(() => {
     if (active) {
       localStorage.setItem('shouldEagerConnect', true.toString())
@@ -119,25 +118,27 @@ const Dashboard = ({
                 <img src={et_new_logo} alt="logo" className="w-12"/>
                 </ul>
               </div>
-              <div>
-                {active? <button onClick={()=>handleDisconnect()}>{account}</button>: 
-                  <button className="font-bold hover:text-gray-300" onClick={()=>{
-                    handleConnectMetaMask()
-                  }}>MetasMask</button>
-                }
+              <div className="flex gap-4 items-center">
+                <div>
+                  {active? <button className="bg-black rounded text-yellow-75 font-bold py-2 w-40 hover:text-gray-300" onClick={()=>handleDisconnect()}>{`${account?.slice(0, -36)}...${account?.substring(38)}`}</button>: 
+                    <button className="bg-black rounded text-yellow-75 font-bold py-2 w-40 hover:text-gray-300" onClick={()=>{
+                      handleConnectMetaMask()
+                    }}>Etereum</button>
+                  }
+                </div>
+                <ConnectButton
+                  Tezos={Tezos}
+                  setContract={setContract}
+                  setWallet={setWallet}
+                  setUserAddress={setUserAddress}
+                  setUserBalance={setUserBalance}
+                  setStorage={setStorage}
+                  userAddress={userAddress}
+                  beaconConnection={beaconConnection}
+                  setBeaconConnection={setBeaconConnection}
+                  wallet={wallet}
+                />
               </div>
-              <ConnectButton
-                Tezos={Tezos}
-                setContract={setContract}
-                setWallet={setWallet}
-                setUserAddress={setUserAddress}
-                setUserBalance={setUserBalance}
-                setStorage={setStorage}
-                userAddress={userAddress}
-                beaconConnection={beaconConnection}
-                setBeaconConnection={setBeaconConnection}
-                wallet={wallet}
-              />
             </div>
             <div className="mx-4 md:mx-0">
               <iframe src={`${result?.imageUrl}${userAddress}`} className="w-full h-iframe"/>

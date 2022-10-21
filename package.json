@@ -20,6 +20,7 @@
     "@web3-react/core": "^6.1.9",
     "@web3-react/injected-connector": "^6.0.7",
     "axios": "^1.1.2",
+    "gsap": "^3.11.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^6.3.0",
