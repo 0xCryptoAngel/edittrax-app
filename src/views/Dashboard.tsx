@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useState, useEffect, useCallback } from "react";
+import React, { Dispatch, SetStateAction, useState, useRef, useEffect, useCallback } from "react";
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import ConnectButton from "../components/ConnectWallet";
@@ -9,9 +9,11 @@ import Content from "../components/Content";
 import Footer from "../components/Footer";
 import Miscellaneous from "../components/miscellaneous";
 import Collection from "../components/Collection";
-
 import { useWeb3React, UnsupportedChainIdError } from '@web3-react/core'
 import { MetaMaskconnector } from '../wallet/wallet'
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger)
 
 type WalletProps = {
   Tezos: TezosToolkit;
@@ -88,10 +90,38 @@ const Dashboard = ({
 
   const { active, activate, deactivate, account, error } = useWeb3React()
 
+  const dashboard = useRef(null);
+  const loader = useRef(null);
+
   useEffect(() => {
+
     if (active) {
       localStorage.setItem('shouldEagerConnect', true.toString())
     }
+
+    const db = dashboard.current;
+    const ld = loader.current;
+
+    //WITH Timelines (cleaner, more versatile)
+var tlMain = gsap.timeline({repeat: 0, repeatDelay: 0});
+tlMain.fromTo(ld, {opacity:1}, {opacity:0, height:0, y:-5000, delay:1.25, duration:.025});
+tlMain.fromTo(db, {opacity:0, y:20}, {opacity:1, y:0, duration:.25});
+
+// then we can control the whole thing easily...
+// tl.pause();
+// tl.resume();
+// tl.seek(1.5);
+// tl.reverse();
+
+    // gsap.fromTo(db, {opacity:0, y:30}, {opacity:0, y:0, duration:.75, 
+    //   scrollTrigger: {
+  
+    //   trigger:el
+  
+    // }
+
+
+
   }, [active])
   const handleConnectMetaMask = useCallback(() => {
     activate(MetaMaskconnector)
@@ -104,18 +134,42 @@ const Dashboard = ({
   }
 
 
+
+  // console.log(imgRef + "HEEERE")
+
+
+
+
   return (
     <div className="bg-black">
-      {isload? 
+      {/* {
+      
+      isload? 
+
+
       <div className="w-full h-screen flex justify-center items-center">
         <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className="w-80 h-80"/>
-      </div>:
-        <div className="md:px-4 mx-auto py-4">
+      </div>
+      
+      : */}
+
+      <div className="w-full h-screen flex justify-center items-center" ref={loader}>
+        <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className="w-80 h-80"/>
+      </div>
+
+      <div className="md:px-4 mx-auto py-4" ref={dashboard}>
+
+
+{/* <div className="helper">dd</div>   */}
+
+
           <div className="h-screen">
             <div className="bg-yellow-75 rounded-t-lg py-2 flex items-center px-12 justify-between mx-4 md:mx-0">
               <div className="flex items-center space-x-8">
                 <ul className="flex space-x-10 text-bg-yellow-75">
-                <img src={et_new_logo} alt="logo" className="w-12"/>
+
+                <img src={et_new_logo} alt="logo" id="logo_test" className="w-12"/>
+                
                 </ul>
               </div>
               <div className="flex gap-4 items-center">
@@ -179,7 +233,7 @@ const Dashboard = ({
           <Miscellaneous/>
           <Footer/>
         </div>
-      }
+      {/* } */}
     </div>
   );
 };

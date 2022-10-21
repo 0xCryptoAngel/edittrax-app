@@ -1,11 +1,12 @@
 import "./App.css";
-import React, { useState, useEffect, useContext } from "react";
+import React, { useRef, useState, useEffect, useContext } from "react";
 import { TezosToolkit } from '@taquito/taquito';
 import Dashboard from './views/Dashboard';
 import DashEther from "./views/DashEther";
 import { Web3ReactProvider } from '@web3-react/core';
 import { getLibrary } from './wallet/wallet';
 import MetamaskProvider from './wallet/useEagerConnect';
+
 import {
   BrowserRouter,
   Routes,
@@ -14,6 +15,7 @@ import {
 } from "react-router-dom";
 
 const App = () => {
+
   const [Tezos, setTezos] = useState<TezosToolkit>(
     new TezosToolkit("https://mainnet.smartpy.io")
   );
@@ -51,6 +53,7 @@ const App = () => {
           </BrowserRouter>
         </MetamaskProvider>
       </Web3ReactProvider>
+
     </div>
   );
 };
