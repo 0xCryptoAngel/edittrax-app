@@ -95,6 +95,8 @@ const Dashboard = ({
   const dashboard = useRef(null);
   const loader = useRef(null);
   const scroll = useRef(null);
+  const loaderIframe = useRef(null);
+  const Iframe = useRef(null);
 
   useEffect(() => {
 
@@ -105,11 +107,15 @@ const Dashboard = ({
     const db = dashboard.current;
     const ld = loader.current;
     const srl = scroll.current;
+    const loa = loaderIframe.current;
+    const Ifr = Iframe.current;
 
     //WITH Timelines (cleaner, more versatile)
 var tlMain = gsap.timeline({repeat: 0, repeatDelay: 0});
 tlMain.fromTo(ld, {opacity:1}, {opacity:0, height:0, y:-5000, delay:1.25, duration:.025});
 tlMain.fromTo(db, {opacity:0, y:20}, {opacity:1, y:0, duration:.25});
+// tlMain.fromTo(loa, {opacity:1}, {opacity:0, delay:1, duration:.25});
+tlMain.fromTo(Ifr, {opacity:0}, {opacity:1, duration:.25});
 
 gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
 
@@ -176,9 +182,12 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
     
     <div className="bg-black">
 
+      {/* { isload? true : false } */}
+
       {/* {
       
       isload? 
+      text-sm
 
 
       <div className="w-full h-screen flex justify-center items-center">
@@ -199,17 +208,17 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
 
           <div className="h-screen">
 
-            <div className="bg-yellow-75 rounded-t-lg sm:py-2 md:py-6 flex items-center px-12 justify-between mx-4 md:mx-0">
+            <div className="bg-yellow-75 rounded-t-lg py-2 md:py-6 flex items-center px-4 justify-between mx-4 md:mx-0">
               <div className="flex items-center space-x-8">
                 <ul className="flex space-x-10 text-bg-yellow-75">
 
-                <img src={et_new_logo} alt="logo" id="logo_test" className="w-4 sm:w-10"/>
+                <img src={et_new_logo} alt="logo" id="logo_test" className="w-6 sm:w-10"/>
                 
                 </ul>
               </div>
               <div className="flex gap-4 items-center">
 
-              <button className="font-mathias sm:bg-black sm:rounded sm:text-yellow-75 sm:font-bold sm:py-2 sm:w-40 hover:text-gray-300" onClick={()=>
+              <button className="font-mathias sm:bg-black sm:rounded sm:text-yellow-75 sm:font-bold sm:py-2 sm:w-40 hover:text-gray-300 text-sm" onClick={()=>
                 setShow(true)}>Unlock
               </button>
               <Modal onClose = {() => setShow(false)} show={show}/>
@@ -241,8 +250,13 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
             </div>
 
 
-            <div className="mx-4 md:mx-0">
-              <iframe src={`${result?.imageUrl}${userAddress}`} className="w-full h-iframe"/>
+            <div className="mx-4 md:mx-0 h-iframeLoad">
+
+            {/* <div className="h-iframeLoad" ref={loaderIframe}></div> */}
+
+            <iframe src={`${result?.imageUrl}${userAddress}`} className="w-full h-iframe" ref={Iframe}/>
+
+
             </div>
             <div className="bg-yellow-75 flex justify-center py-2 md:py-8 mx-4 md:mx-0 max-w-full">
               <button className="font-mathias text-sm bg-black text-yellow-75 font-bold rounded px-16 md:px-64 sm:py-4">Collect To Download</button>
