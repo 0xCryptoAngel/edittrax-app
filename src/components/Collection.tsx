@@ -6,12 +6,29 @@ import QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX from "../assets/QmPgdPxBpe
 import QmQDUgmJdguCMhK9NVvqWdYpTnXjDDZhmA5E7Di2U6BgVJ from "../assets/QmQDUgmJdguCMhK9NVvqWdYpTnXjDDZhmA5E7Di2U6BgVJ.jpeg";
 
 
-const Collection = () => {
-  return (
-    <section className="bg-yellow p-24 sm:p-8 mx-0 mb-12 mt-12 md:mx-0 items-center flex flex-col justify-center">
+import React, { Dispatch, SetStateAction, useState, useRef, useEffect, useCallback } from "react";
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger)
 
-      <div className="font-mathias mb-10 text-center text-2xl text-yellow-75">
-        EXPLORE GENESIS COLLECTION
+const Collection = () => {
+
+  const collection = useRef(null);
+  useEffect(() => {
+    const col = collection.current;
+    gsap.fromTo(col, {opacity:1, y:75}, {opacity:1, y:0, duration:0.25,
+      scrollTrigger: {  
+        trigger:col,
+        scrub: 1,
+      }
+    });
+  });
+
+  return (
+    <section className="bg-yellow p-24 sm:p-8 mx-0 mb-12 sm:mt-12 md:mx-0 items-center flex flex-col justify-center">
+
+      <div className="font-mathias mb-14 text-center text-6xl text-yellow-75">
+        BROWSE TRAX
       </div>
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 max-w-screen-lg hover:scale-75">

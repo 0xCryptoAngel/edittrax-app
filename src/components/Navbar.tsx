@@ -4,6 +4,7 @@ import { BeaconWallet } from "@taquito/beacon-wallet";
 import ConnectButton from "../components/ConnectWallet";
 import et_new_logo from '../assets/et_new_logo.png'
 
+
 type WalletProps = {
   Tezos: TezosToolkit;
   setContract: Dispatch<SetStateAction<any>>;
@@ -33,13 +34,12 @@ const Navbar = ({
     
     <header className="head">
 
-<div className="App">
+{/* <div className="App">
       <button>
         Modal
       </button>
-</div>
-      
-      
+</div> */}
+
       <div className="logo">
         <img src={et_new_logo} alt="logo"/>
       </div>
