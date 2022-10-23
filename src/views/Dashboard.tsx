@@ -63,6 +63,7 @@ const Dashboard = ({
       square: 'https://i.postimg.cc/rFHCppZT/square-alpha-test.jpg',
       unlockable: 'https://i.postimg.cc/MTyqnXmF/unlockable-alpha-test.png',
       tokendId: 612561,
+      titleHardCode:"ACID BEACH"
     },
     {
       player: "dapp",
@@ -218,7 +219,7 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
               </div>
               <div className="flex gap-4 items-center">
 
-              <button className="font-mathias sm:bg-black sm:rounded sm:text-yellow-75 sm:font-bold sm:py-2 sm:w-40 hover:text-gray-300 text-sm" onClick={()=>
+              <button className="font-mathias sm:bg-black sm:rounded sm:text-yellow-75 px-2 sm:font-bold sm:py-2 sm:w-40 hover:text-gray-300 text-md" onClick={()=>
                 setShow(true)}>Unlock
               </button>
               <Modal onClose = {() => setShow(false)} show={show}/>
@@ -255,16 +256,15 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
             {/* <div className="h-iframeLoad" ref={loaderIframe}></div> */}
 
             <iframe src={`${result?.imageUrl}${userAddress}`} className="w-full h-iframe" ref={Iframe}/>
-
-
+            
             </div>
             <div className="bg-yellow-75 flex justify-center py-2 md:py-8 mx-4 md:mx-0 max-w-full">
-              <button className="font-mathias text-sm bg-black text-yellow-75 font-bold rounded px-16 md:px-64 sm:py-4">Collect To Download</button>
+              <button className="font-mathias text-md bg-black text-yellow-75 font-bold rounded px-16 md:px-64 sm:py-4">Collect Music NFT</button>
             </div>
           </div>
 
 
-          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 md:mt-0" ref={scroll}>
+          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 mt-10 -sm:mt-8 ">
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">10</div>
               <div>Floor Price (Tez)</div>
@@ -283,6 +283,7 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
             </div>
           </section>
           <Content 
+            titleHardCode={result?.titleHardCode} 
             square={result?.square} 
             unlockable={result?.unlockable} 
             title={metaData?.metadata.name} 
