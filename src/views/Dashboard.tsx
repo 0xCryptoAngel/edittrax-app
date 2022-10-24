@@ -28,6 +28,7 @@ type WalletProps = {
   setUserBalance: Dispatch<SetStateAction<number>>;
   setBeaconConnection: Dispatch<SetStateAction<boolean>>;
   wallet: BeaconWallet;
+
 };
 
 const Dashboard = ({
@@ -56,6 +57,8 @@ const Dashboard = ({
       square: 'https://i.postimg.cc/9M55GvhM/square-burnt.jpg',
       unlockable: 'https://i.postimg.cc/9Md31JmB/unlockable-burnt.png',
       tokendId: 781875,
+      titleHardCode:"'BURNT'",
+      artist:"Producer: BAI-EE"
     },
     {
       player: "alpha-test",
@@ -63,7 +66,13 @@ const Dashboard = ({
       square: 'https://i.postimg.cc/rFHCppZT/square-alpha-test.jpg',
       unlockable: 'https://i.postimg.cc/MTyqnXmF/unlockable-alpha-test.png',
       tokendId: 612561,
-      titleHardCode:"ACID BEACH"
+      titleHardCode:"'ACID BEACH'",
+      artist:"Producer: BAI-EE",
+      origEdit: 'https://i.postimg.cc/rFHCppZT/original.png',
+      // loopPlay: 'https://i.postimg.cc/rFHCppZT/loop_play.png',
+      // editLoop: 'https://i.postimg.cc/rFHCppZT/edit_loop.png',
+      // masterPlay: 'https://i.postimg.cc/rFHCppZT/master_play.png',
+      // lock: 'https://i.postimg.cc/rFHCppZT/lock.png'
     },
     {
       player: "dapp",
@@ -132,35 +141,6 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
 });
 
 
-
-    // gsap.fromTo(scroll, {opacity:1, y:0}, {opacity:1, duration:.75});
-
-
-  //     scrollTrigger: {
-  
-  //     trigger:srl
-  
-  // }
-
-// });
-
-
-
-// then we can control the whole thing easily...
-// tl.pause();
-// tl.resume();
-// tl.seek(1.5);
-// tl.reverse();
-
-    // gsap.fromTo(scroll, {opacity:0, y:30}, {opacity:0, y:0, duration:.75, 
-    //   scrollTrigger: {
-  
-    //   trigger:el
-  
-    // }
-
-
-
   }, [active])
   const handleConnectMetaMask = useCallback(() => {
     activate(MetaMaskconnector)
@@ -174,38 +154,17 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
 
 
 
-  // console.log(imgRef + "HEEERE")
-
-
   const [show, setShow] = useState(false)
 
   return (
     
     <div className="bg-black">
 
-      {/* { isload? true : false } */}
-
-      {/* {
-      
-      isload? 
-      text-sm
-
-
-      <div className="w-full h-screen flex justify-center items-center">
-        <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className="w-80 h-80"/>
-      </div>
-      
-      : */}
-
       <div className="w-full h-screen flex justify-center items-center" ref={loader}>
         <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className="w-80 h-80"/>
       </div>
 
       <div className="md:px-4 mx-auto py-4" ref={dashboard}>
-
-
-{/* <div className="helper">dd</div>   */}
-
 
           <div className="h-screen">
 
@@ -247,13 +206,9 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
                 />
               </div>
 
-
             </div>
 
-
             <div className="mx-4 md:mx-0 h-iframeLoad">
-
-            {/* <div className="h-iframeLoad" ref={loaderIframe}></div> */}
 
             <iframe src={`${result?.imageUrl}${userAddress}`} className="w-full h-iframe" ref={Iframe}/>
             
@@ -283,6 +238,8 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
             </div>
           </section>
           <Content 
+            tokendId={result?.tokendId} 
+            artist={result?.artist} 
             titleHardCode={result?.titleHardCode} 
             square={result?.square} 
             unlockable={result?.unlockable} 
@@ -292,6 +249,12 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
             mintedDate={new Date(metaData?.firstTime).toLocaleDateString()}
             ipfs={metaData?.metadata?.artifactUri?.replace(":/", "")}
             address={metaData?.contract?.address}
+            // origEdit={result?.origEdit} 
+            // origEdit={result?.origEdit} 
+            // loopPlay={result?.loopPlay} 
+            // editLoop={result?.editLoop} 
+            // masterPlay={result?.masterPlay} 
+            // lock={result?.lock}
           />
           <Collection/>
           <Miscellaneous/>

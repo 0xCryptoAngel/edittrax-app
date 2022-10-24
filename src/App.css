@@ -88,10 +88,24 @@ width: 100%;
 
 .h-iframeLoad {
   /* height: calc(100vh - 224px); */
-  background-color:rgb(158, 43, 43);
+  /* background-color:rgb(158, 43, 43); */
   background-image: url(assets/loader_bg.jpg);
   background-position: center; 
   background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.origImg {
+  width: 110px;
+}
+
+.play_bg {
+  /* height: calc(100vh - 224px); */
+  /* background-color:rgb(158, 43, 43); */
+  background-image: url(assets/play_bg.jpg);
+  background-position: center; 
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .h-iframe-mobile {
