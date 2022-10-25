@@ -95,6 +95,14 @@ width: 100%;
   background-repeat: no-repeat;
 }
 
+.outline_button {
+  border: solid black 2px;
+  padding:10px
+  /* text-decoration: underline; */
+
+
+}
+
 .origImg {
   width: 110px;
 }

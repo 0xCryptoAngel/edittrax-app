@@ -13,7 +13,10 @@ import { useWeb3React, UnsupportedChainIdError } from '@web3-react/core'
 import { MetaMaskconnector } from '../wallet/wallet'
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import Modal from "../Modal/Modal"
+import Modal from "../Modal/Modal";
+import lockt_612561 from "@images/et001_loct.jpg";
+
+
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -69,6 +72,8 @@ const Dashboard = ({
       titleHardCode:"'ACID BEACH'",
       artist:"Producer: BAI-EE",
       origEdit: 'https://i.postimg.cc/rFHCppZT/original.png',
+      lokt_612561:lockt_612561,
+      
       // loopPlay: 'https://i.postimg.cc/rFHCppZT/loop_play.png',
       // editLoop: 'https://i.postimg.cc/rFHCppZT/edit_loop.png',
       // masterPlay: 'https://i.postimg.cc/rFHCppZT/master_play.png',
@@ -238,6 +243,7 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
             </div>
           </section>
           <Content 
+            lokt_612561={result?.lokt_612561} 
             tokendId={result?.tokendId} 
             artist={result?.artist} 
             titleHardCode={result?.titleHardCode} 
@@ -256,6 +262,8 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
             // masterPlay={result?.masterPlay} 
             // lock={result?.lock}
           />
+
+          
           <Collection/>
           <Miscellaneous/>
           <Footer/>
