@@ -92,11 +92,12 @@ const Collection = () => {
             setIdx={setIdx} 
             idx={idx} 
           />
-          <div className="w-full flex justify-center items-center gap-1">
-            <div>0:00</div>
-            <div className="h-1 w-3/5 bg-black rounded-full"></div>
-            <div>0:00</div>
-          </div>
+          <Control 
+            setIdx={setIdx} 
+            idx={idx}  
+            playState={playState} 
+            setPlayState={setPlayState}
+          />
           <div className="flex justify-center items-center border-4 border-black rounded-full p-1"><BsPlayFill className="text-3xl"/></div>
           <div className="border-4 border-black rounded-md px-3 py-1">
             <button className="uppercase">edit this track</button>
@@ -111,13 +112,15 @@ const Progress = (props:any) => {
   let [currLength, setCurrLength] = useState<number>(0)
 	let [length, setLength] = useState<number>(0)
 	let options = useContext(userOptions)
-	const progressBar: any = document.querySelector('.progressBar')
+	const progressBar = document.querySelector('.progressBar') as HTMLDivElement
 	
 	const updateProgress = (e:any) =>{
 		let offset = e.target.getBoundingClientRect().left
 		let newOffSet = e.clientX
 		let newWidth = newOffSet - offset
-		progressBar.style.width = newWidth+"px"
+    if (progressBar != null) {
+      progressBar.style.width = newWidth+"px"
+    }
 		let secPerPx = length / 280
 		player.currentTime = secPerPx * newWidth
 	}
@@ -127,7 +130,9 @@ const Progress = (props:any) => {
 		setCurrLength(Math.ceil(player.currentTime))
 		let secPerPx = Math.ceil(player.duration) / 280
 		let newWidth = player.currentTime / secPerPx
-		progressBar.style.width = newWidth+"px"
+    if (progressBar != null) {
+      progressBar.style.width = newWidth+"px"
+    }
 		if(player.currentTime === player.duration){
 			if(options.shuffle === true){
 				props.setIdx((Math.floor(Math.random()*1000))%9)
@@ -159,6 +164,40 @@ const Progress = (props:any) => {
 			<div className="songLength">
 				<p>{formatTime(length)}</p>
 			</div>
+		</div>
+	);
+}
+
+
+const Control = (props:any) => {
+	
+	return(
+		<div className="controls">
+			<button 
+				className="controlButton"
+				onClick={
+					x => props.setIdx(props.idx-1 < 0 ? 8 : props.idx-1)
+				}>
+				asdasd
+			</button>
+			{
+				props.playState === true ? 
+					<button 
+						className="centerButton"
+						onClick={x => props.setPlayState(false)}>
+						<BsPauseFill /> ,  
+					</button> : 
+					<button
+						className="centerButton"
+						onClick={x => props.setPlayState(true)}>
+						<BsPlayFill />
+					</button>
+			}
+			<button
+				className="controlButton"
+				onClick={x => props.setIdx((props.idx+1)%9)}>
+          asdas
+			</button>
 		</div>
 	);
 }
