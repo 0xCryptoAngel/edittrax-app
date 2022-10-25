@@ -84,10 +84,8 @@ const Collection = () => {
         <div className="text-black rounded-md border-4 border-black flex flex-col items-center font-mathias gap-y-3 justify-center py-4 px-2">
           <img src={icon0} alt="icon0" className="w-11 h-4"/>
           <img src={icon1} alt="icon1" className="w-36 h-36"/>
-          <div className="uppercase">
-            <div>track name</div>
-            <div>artist name</div>
-          </div>
+        
+          <Avatar idx={idx}/>
           <Progress 
             setIdx={setIdx} 
             idx={idx} 
@@ -98,7 +96,6 @@ const Collection = () => {
             playState={playState} 
             setPlayState={setPlayState}
           />
-          <div className="flex justify-center items-center border-4 border-black rounded-full p-1"><BsPlayFill className="text-3xl"/></div>
           <div className="border-4 border-black rounded-md px-3 py-1">
             <button className="uppercase">edit this track</button>
           </div>
@@ -107,6 +104,17 @@ const Collection = () => {
     </section>
   );
 };
+
+const Avatar = (props:any) => {	
+	return(
+		<>
+      <div className="uppercase text-center">
+        <div>{tracks[props.idx].artist}</div>
+        <div>{tracks[props.idx].name}</div>
+      </div>
+		</>
+	);
+}
 
 const Progress = (props:any) => {
   let [currLength, setCurrLength] = useState<number>(0)
@@ -168,36 +176,22 @@ const Progress = (props:any) => {
 	);
 }
 
-
 const Control = (props:any) => {
-	
 	return(
-		<div className="controls">
-			<button 
-				className="controlButton"
-				onClick={
-					x => props.setIdx(props.idx-1 < 0 ? 8 : props.idx-1)
-				}>
-				asdasd
-			</button>
+		<div className="flex justify-center items-center border-4 border-black rounded-full p-1">
 			{
 				props.playState === true ? 
 					<button 
-						className="centerButton"
+						className=""
 						onClick={x => props.setPlayState(false)}>
-						<BsPauseFill /> ,  
+						<BsPauseFill className="text-3xl"/>
 					</button> : 
 					<button
-						className="centerButton"
+						className=""
 						onClick={x => props.setPlayState(true)}>
-						<BsPlayFill />
+						<BsPlayFill className="text-3xl"/>
 					</button>
 			}
-			<button
-				className="controlButton"
-				onClick={x => props.setIdx((props.idx+1)%9)}>
-          asdas
-			</button>
 		</div>
 	);
 }
