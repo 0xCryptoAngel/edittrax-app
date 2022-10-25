@@ -121,7 +121,7 @@ const Content = (props:WalletProps) => {
                 </div>
               </div>
             </div>
-          </dl> 
+          </dl>
           <dl className="w-full md:w-2/3">
             <h2 className="font-mathias mr-8 mt-16 md:mt-0 w-full md:w-1/3 text-3xl font-extrabold leading-9">Description</h2>
             <dt className="mb-4">
