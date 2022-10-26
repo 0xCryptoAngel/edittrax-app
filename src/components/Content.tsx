@@ -14,6 +14,9 @@ import utility from "@images/utility.png";
 import play_bg from "@images/play_bg.jpg";
 import canIuse from "@images/canIuse.jpg";
 import howToImage from "../Modal/image_popup_howTo";
+import useAnalyticsEventTracker from 'Modal/analytics';
+
+
 
 
 
@@ -59,7 +62,8 @@ const Content = (props:WalletProps) => {
     });
   });
 
-  
+  const gaEventTracker = useAnalyticsEventTracker('Contact us');
+
   const [show, setShow] = useState(false)
 
   const features = [
@@ -95,14 +99,14 @@ const Content = (props:WalletProps) => {
           </h2>
 
           <h2 className="font-mathias mr-8 mt-0 sm:mt-6 md:mt-0 w-full text-2xl sm:text-2xl lg:text-4xl xl:text-4xl font-extrabold align-middle mb-12">
-            <a href="https://objkt.com/asset/hicetnunc/612561" className="bg-red-900 text-center px-4 py-4 text-yellow-75 rounded-md hover:opacity-50">
+            <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" className="bg-red-900 text-center px-4 py-4 text-yellow-75 rounded-md hover:opacity-50" onClick={()=>gaEventTracker('Collect')}>
               Collect
             </a>
             &nbsp; To Unlock
           </h2>
 
           <h2 className=" font-mathias mr-8 md:mt-0 w-full text-lg text-2xl sm:text-2xl lg:text-4xl xl:text-4xl font-extrabold align-middle mb-12">
-            <a href="https://objkt.com/asset/hicetnunc/612561" className="bg-orange-900 text-center px-4 py-4 mt-8 text-yellow-75 rounded-md hover:opacity-50 mb-12">
+            <a href="https://objkt.com/asset/hicetnunc/612561" target="_blank" className="bg-orange-900 text-center px-4 py-4 mt-8 text-yellow-75 rounded-md hover:opacity-50 mb-12" onClick={()=>gaEventTracker('Connect')}>
             Connect
             </a>
             &nbsp; To Download

@@ -19,6 +19,8 @@ const TRACKING_ID = "G-X7FDGNLGYJ"; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 ReactGA.pageview(window.location.pathname);
 
+
+
 const App = () => {
 
   const [Tezos, setTezos] = useState<TezosToolkit>(
