@@ -14,6 +14,30 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger)
 
 
+const tracks = [
+  {
+    name: "Mekanın Sahibi",
+    artist: "Norm Ender",
+    cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/1.jpg",
+    source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/1.mp3",
+    url: "https://www.youtube.com/watch?v=z3wAjJXbYzA",
+  },
+  {
+    name: "Rag'n'Bone Man",
+    artist: "Human",
+    cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/9.jpg",
+    source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/9.mp3",
+    url: "https://www.youtube.com/watch?v=L3wKzyIN1yk",
+  }]
+  
+const player = new Audio(tracks[0].source)
+player.setAttribute('preload', 'metadata')
+const userOptions = createContext({
+  shuffle: false,
+  repeat: false,
+})
+
+
 const Collection = () => {
   const collection = useRef(null);
   useEffect(() => {
@@ -70,7 +94,7 @@ const Collection = () => {
 
 
   
-      <div className="font-mathias mb-14 text-center text-6xl text-yellow-75">
+      <div className="font-mathias mb-14 text-center text-6xl text-yellow-75 text-8xl">
         BROWSE TRAX
       </div>
       {/* <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 max-w-screen-lg hover:scale-75">
