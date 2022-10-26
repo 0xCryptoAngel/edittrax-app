@@ -18,7 +18,7 @@ import howToImage from "../Modal/image_popup_howTo";
 
 
 
-
+gsap.registerPlugin(ScrollTrigger)
 
 
 type WalletProps = {
@@ -70,6 +70,7 @@ const Content = (props:WalletProps) => {
 
 
 
+
     
     <section className="bg-yellow-75 flex flex-col items-center gap-0 px-4 py-14 mb-0 mx-4 md:mb-0 md:pb-0 md:mx-0 order-last" >
       
@@ -78,13 +79,8 @@ const Content = (props:WalletProps) => {
         <img src={props.square} alt="rotating head" className="w-md max-w-xs rounded-md"/>
         <div className="flex flex-col items-center md:items-start md:justify-end md:h-full">
           <div className="font-mathias text-7xl font-extrabold text-center">{props.titleHardCode}</div>
-          {/* <div className="font-mathias text-2xl mt-4 text-2xl text-black text-center" >"{props.title}"</div> */}
           <div className="font-mathias text-2xl mt-0 text-4xl text-black text-center" >{props.artist}</div>
           <img src={props.unlockable} alt="rotating head" className="w-md mb-10"/>
-          {/* <h3 className="font-mathias text-xl mt-4 text-xl text-black text-center">
-            OBJKT #{props.tokendId}
-          </h3> */}
-
         </div>
       </div>
       
@@ -93,13 +89,8 @@ const Content = (props:WalletProps) => {
 
 
 <div className="bg-lightblue py-4 px-0 mb-0">
-  
-
-
-<div className="mx-auto max-w-6xl gap-16 flex flex-col md:flex-row sm:mt-10">
-
-
-        <dl className="w-full md:w-2/3">
+  <div className="mx-auto max-w-6xl gap-16 flex flex-col md:flex-row sm:mt-10">
+    <dl className="w-full md:w-2/3">
 
 
 
@@ -117,14 +108,7 @@ const Content = (props:WalletProps) => {
   &nbsp; To Download
 </h2>
 
-       
-{/* <h2 className=" font-mathias mr-8 md:mt-0 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle mb-12">
-  <a href="#" className="bg-black text-center px-4 py-4 mt-8 text-yellow-75 rounded-md hover:opacity-50">
-  Edit
-  </a>
-  &nbsp;Trax
-</h2>  */}
-
+      
 <h2 className="font-mathias mr-0 mt-0 md:mt-0 w-full text-sm sm:text-md lg:text-lg xl:text-2xl font-extrabold align-middle">
 CREATE UNLIMITED EDITS OF {props.titleHardCode}
 </h2>
@@ -140,30 +124,16 @@ CREATE UNLIMITED EDITS OF {props.titleHardCode}
     How To
 </h2>
   
-
 <img src={props.player_thumbnail}  alt="" className=""/> 
 
+<dd className="mb-8">
 
-{/* <button className="font-mathias sm:bg-black sm:rounded sm:text-yellow-75 px-2 sm:font-bold sm:py-2 sm:w-40 hover:text-gray-300 text-md"
-onClick={()=> setShow(true)}>
-  Unlock
-</button> */}
-
-{/* <howToImage onClose = {() => setShow(false)} show={show}/> */}
-
-
-
-    <dd className="mb-8">
-
-
-      
-    <blockquote className="p-4 my-4 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">
+<blockquote className="p-4 my-4 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">
 
 </blockquote>
 
-
 <h2 className="font-mathias mr-0 mt-6 md:mt-0 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
-            Rights
+      Rights
         </h2>
         <blockquote className="p-4 my-4 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">
         <p>
@@ -176,22 +146,18 @@ onClick={()=> setShow(true)}>
         <dd className="mb-0 text-justify">
       
   
- 
-
+</dd>
+          
+</blockquote>
 
 
 
 </dd>
-          </blockquote>
-
-
-
-    </dd>
 
 
 
 
-      </dl> 
+</dl> 
         
         
 
@@ -426,6 +392,10 @@ An additional way to download Bai-ee’s “Acid Beach” (Original, Dub and Rad
 
 
 
+
+      
+      
+      
     </section>
 
 
