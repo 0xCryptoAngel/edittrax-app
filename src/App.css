@@ -148,7 +148,13 @@ width: 100%;
 	cursor: pointer;
 }
 
-.progressBar{
+.progressBar0{
+	width: 0px;
+	height: 7px;
+	border-radius: 10px;
+	background-color: #000000;
+}
+.progressBar1{
 	width: 0px;
 	height: 7px;
 	border-radius: 10px;
