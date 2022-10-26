@@ -61,6 +61,15 @@ const Content = (props:WalletProps) => {
 
   
   const [show, setShow] = useState(false)
+
+  const features = [
+    { name: 'FOR DJS', description: 'Download multiple edits (.wavs) of a track and rapidly edit it for your own content creation/performance use. ' },
+    { name: 'FOR PRODUCERS', description: 'Remove 3rd-party download platforms (all layers seperate of the Collectible), when distributing tracks for download.' },
+    { name: 'FOR COLLABS', description: 'An accessible build framework for musicians, designers and developers to create meaningful collaborations.' },
+    { name: 'FOR CULTURE', description: 'Supports 1 of 1 selector djs, unique dance-floor experiences and building the bottom of a funnel for independent producer/djs.' },
+    // { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
+    // { name: 'Considerations', description: 'Made from natural materials. Grain and color vary with each item.' },
+  ]
   
   return (
 
@@ -89,27 +98,35 @@ const Content = (props:WalletProps) => {
 
 
 <div className="bg-lightblue py-4 px-0 mb-0">
-  <div className="mx-auto max-w-6xl gap-16 flex flex-col md:flex-row sm:mt-10">
+  <div className="mx-auto max-w-6xl gap-0 sm:gap-16 flex flex-col md:flex-row sm:mt-10">
     <dl className="w-full md:w-2/3">
 
+    <h2 className=" font-mathias mr-8 md:mt-0 w-full text-lg text-2xl sm:text-2xl lg:text-4xl xl:text-4xl font-extrabold align-middle mb-12">
+  <a href="https://objkt.com/asset/hicetnunc/612561" className="outline_button text-center px-4 py-4 mt-8 text-black rounded-md hover:opacity-50 mb-12">
+  EDIT
+  </a>
+  &nbsp; The Track
+</h2>
 
-
-<h2 className="font-mathias mr-8 mt-6 md:mt-0 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle mb-12">
+<h2 className="font-mathias mr-8 mt-0 sm:mt-6 md:mt-0 w-full text-2xl sm:text-2xl lg:text-4xl xl:text-4xl font-extrabold align-middle mb-12">
   <a href="https://objkt.com/asset/hicetnunc/612561" className="bg-red-900 text-center px-4 py-4 text-yellow-75 rounded-md hover:opacity-50">
   Collect
   </a>
   &nbsp; To Unlock
 </h2>
 
-<h2 className=" font-mathias mr-8 md:mt-0 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle mb-12">
+<h2 className=" font-mathias mr-8 md:mt-0 w-full text-lg text-2xl sm:text-2xl lg:text-4xl xl:text-4xl font-extrabold align-middle mb-12">
   <a href="https://objkt.com/asset/hicetnunc/612561" className="bg-orange-900 text-center px-4 py-4 mt-8 text-yellow-75 rounded-md hover:opacity-50 mb-12">
   Connect
   </a>
   &nbsp; To Download
 </h2>
 
-      
-<h2 className="font-mathias mr-0 mt-0 md:mt-0 w-full text-sm sm:text-md lg:text-lg xl:text-2xl font-extrabold align-middle">
+
+
+
+
+{/* <h2 className="font-mathias mr-0 mt-0 md:mt-0 w-full text-sm sm:text-md lg:text-lg xl:text-2xl font-extrabold align-middle">
 CREATE UNLIMITED EDITS OF {props.titleHardCode}
 </h2>
 
@@ -117,12 +134,17 @@ CREATE UNLIMITED EDITS OF {props.titleHardCode}
   <h3 className="mt-2 text-md">
   Extend parts of this track you like, remove parts of this track you don't like.<br></br><br></br>
   </h3>
-</dt>
+</dt> */}
   
 
 <h2 className="font-mathias mr-0 mb-4 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
     How To
 </h2>
+
+<blockquote className="p-4 my-4 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">
+
+</blockquote>
+
   
 <img src={props.player_thumbnail}  alt="" className=""/> 
 
@@ -143,10 +165,10 @@ CREATE UNLIMITED EDITS OF {props.titleHardCode}
         {/* {props.description} */}
         </p>
 
-        <dd className="mb-0 text-justify">
+        {/* <dd className="mb-0 text-justify">
       
   
-</dd>
+</dd> */}
           
 </blockquote>
 
@@ -165,7 +187,7 @@ CREATE UNLIMITED EDITS OF {props.titleHardCode}
 
       <dl className="w-full md:w-2/3">
 
-      <h2 className="font-mathias mr-8 mt-6 md:mt-0 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle mb-12">
+      <h2 className="font-mathias mr-8 mb-0 sm:mt-6 md:mt-0 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle mb-12">
             {/* Description
              */}
 <div className="">
@@ -175,7 +197,7 @@ CREATE UNLIMITED EDITS OF {props.titleHardCode}
    
         </a>
 </div>
-        <div className="mt-4 flex flex-wrap mb-20 pt-0 justify-left h-auto">
+        <div className="mt-4 flex flex-wrap mb-0 sm:mb-20 pt-0 justify-left h-auto">
               { 
                 props.keyValue?.map((item, i)=>
                 <button className="bg-black mt-0 rounded-full px-6 py-1 text-yellow-75 text-xs gap-y-1.5 ml-2 mt-2" key={i}>{item}</button>
@@ -185,25 +207,7 @@ CREATE UNLIMITED EDITS OF {props.titleHardCode}
 
         </h2>
 
-           
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 
     <h2 className="font-mathias mr-0 mt-6 md:mt-0 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
     Metadata
@@ -229,11 +233,7 @@ CREATE UNLIMITED EDITS OF {props.titleHardCode}
     OBJKT #{props.tokendId}
     </a>
   
-  
-              {/* <a href={`https://tzkt.io/${props.address}`} target="_blank" rel="noopener noreferrer" className="border-b border-black" ref={data}>CONTRACT ADDRESS
-              </a> */}
-              
-              
+
               </div>
 
     <div className="font-mathias w-52 mt-8">
@@ -241,146 +241,32 @@ CREATE UNLIMITED EDITS OF {props.titleHardCode}
             <a href="https://objkt.com/asset/hicetnunc/612561" className="bg-black text-center px-4 py-2 text-yellow-75 rounded-md hover:opacity-50">
     Contract on Tkz
     </a>
-  
-  
-              {/* <a href={`https://tzkt.io/${props.address}`} target="_blank" rel="noopener noreferrer" className="border-b border-black" ref={data}>CONTRACT ADDRESS
-              </a> */}
-              
-              
-              </div>
-  
-  
-              <div className="font-mathias w-52 mt-6">
-              
-              <a href="https://objkt.com/asset/hicetnunc/612561" className="bg-black text-center px-4 py-2 text-yellow-75 rounded-md hover:opacity-50">
-    Creative on IPFS
-    </a>       
-                
-                </div>
+      
+</div>
 
 
-         {/* <h2 className="font-mathias w-52 md:mt-2 font-red-900 mb:2" ref={data}>MINTED {props.mintedDate}</h2>
-          <div className="font-mathias w-52 mt-2"><a href={`https://tzkt.io/${props.address}`} target="_blank" rel="noopener noreferrer" className="border-b border-black" ref={data}>CONTRACT ADDRESS</a></div>
-          <div className="font-mathias w-52 mt-2"><a href={`https://ipfs.io/${props.ipfs}`} target="_blank" rel="noopener noreferrer" className="border-b border-black" ref={data}>LINK TO CREATIVE ON IPFS</a></div> */}
-          <div className="font-mathias w-52 mt-2 mb-2 text-lg mt-10">DESCRIPTION</div>
+<div className="font-mathias w-52 mt-6">
+
+<a href="https://objkt.com/asset/hicetnunc/612561" className="bg-black text-center px-4 py-2 text-yellow-75 rounded-md hover:opacity-50">
+Creative on IPFS
+</a>       
+
+</div>
+
+<div className="font-mathias w-52 mt-2 mb-2 text-lg mt-10">DESCRIPTION</div>
 
 <p>
-{props.description}ts
+{props.description}
 </p>
-  
-
 
 </blockquote>
 
-
-
-    {/* <blockquote className="p-4 my-4 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">  
-      <div className="container py-0 mx-auto">
-        <div className="mt-0 lg:-mx-0 lg:flex lg:items-top">
-          <img src={handbookCover}  alt="" className="w-60"/> 
-          <div className="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 ">
-            <p className="font-mathias text-sm text-red-900 uppercase">interactive music collectible</p>
-            <a href="#" className="font-mathias mr-0 mt-6 md:mt-0 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
-              How it works
-            </a>
-          </div>
-          <a href="#" className="inline-block mt-2 text-blue-500 underline hover:text-blue-400">Read more</a>
-        </div>
-      </div>
-    </blockquote> */}
-     
-  </dd>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            {/* <dt className="mb-4">
-              <h3 className="mt-8 text-justify">
-              (1) Directly from your the music collectible when connected to this website or preferred Tezos marketplace. See below for limitations (EditTrax provides the best overall experience for this rapid-edit tool). <b>(2) While EditTrax players allow for the download of its content directly, collectors are provided an additional way to access content via LOCKT.IO</b>
-              </h3>
-            </dt>
-            <dd className="mb-0 text-justify">
-            <img src={props.lokt_612561} alt="rotating head" className="rounded-md"/>
-            </dd>
-
-            <dt className="mb-4">
-
-
-            <dt className="mb-4 justify">
-              <h3 className="mt-8 justify">
-
-1) Navigate to: [https://lockt.io/u/804228b4-a553-4945-a8a5-947b09f9cc19](https://lockt.io/u/804228b4-a553-4945-a8a5-947b09f9cc19)
-<br></br>
-2) Sync your wallet holding OBJKT #612561
-<br></br>
-3) Download available content
-
-An additional way to download Bai-ee’s “Acid Beach” (Original, Dub and Radio edits) PLUS the Alpha Test Players source code. 
-
-#
-
-              </h3>
-            </dt>
-
-
-
-
-
-            </dt> */}
-
-            
-            {/* <dd className="mb-0 text-justify">
-            <img src={canIuse} alt="rotating head" className="rounded-md"/>
-            </dd> */}
-
-
-
-
-
-
-
-
+</dd>
 
 </dl>
 
+</div>
 
-
-    </div>
-
-
-
-
-    
-
-
-
-
-
-
-    
 </div>
 
 
@@ -388,17 +274,132 @@ An additional way to download Bai-ee’s “Acid Beach” (Original, Dub and Rad
 
 
 
+<div className="bg-black mb-14 rounded-lg p-10">
+            <div className="font-mathias mb-8 text-center text-8xl text-yellow-75">
+          FAQ
+          </div>
+
+      <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-0 px-4 sm:px-6 sm:py-0 lg:max-w-7xl lg:grid-cols-2 lg:px-8 mt-0 mb-0">
+        <div>
+          {/* <div className="font-mathias mb-0 text-center text-4xl text-yellow-75 mt-8">
+          For A Head Full of Loops
+          </div> */}
+          {/* <p className="mt-4 text-gray-500">
+            The walnut wood card tray is precision milled to perfectly fit a stack of Focus cards. The powder coated
+            steel divider separates active cards from new ones, or can be used to archive important task lists.
+          </p> */}
+
+          <dl className="mt-0 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+            {features.map((feature) => (
+              <div key={feature.name} className="">
+                <dt className="font-mathias text-2xl text-yellow-75 ">{feature.name}</dt>
+                <dd className="mt-2 text-sm text-gray-500 text-justify">{feature.description}</dd>
+              </div>
+            ))}
+          </dl>
+
+          {/* <img src={utility}  alt="" className="mt-8"/> */}
+          
+        </div>
+        
+        <div className="">
+
+        {/* <div className="font-mathias mb-0 text-center text-4xl text-yellow-75 mt-8">
+          For A Head Full of Loops
+          </div> */}
+          {/* <p className="mt-4 text-gray-500">
+            The walnut wood card tray is precision milled to perfectly fit a stack of Focus cards. The powder coated
+            steel divider separates active cards from new ones, or can be used to archive important task lists.
+          </p> */}
+
+          <dl className="mt-0 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+            {features.map((feature) => (
+              <div key={feature.name} className="border-tpt-4">
+                <dt className="font-mathias text-2xl text-yellow-75">{feature.name}</dt>
+                <dd className="mt-2 text-sm text-gray-500">{feature.description}</dd>
+              </div>
+            ))}
+          </dl>
+
+
+
+        </div>
+
+
+
+      </div>
+    </div>
 
 
 
 
 
-      
-      
-      
-    </section>
 
 
+
+
+
+
+
+
+
+
+
+
+
+{/* <div className="p-4 text-gray-600">
+	<h1 className="mb-8 text-center text-3xl font-bold text-indigo-900">This is - what we do :</h1>
+
+	<ul className="grid place-content-center sm:grid-cols-2 gap-8">
+		<li className="flex">
+			<div className="px-4 text-5xl font-extralight text-indigo-700">01.</div>
+			<div>
+				<div className="text-xl font-bold text-indigo-800">Research</div>
+				<p className="max-w-xs py-2 text-sm text-indigo-900">We love numbers! We collect data and insights, analyze
+					them then take the time to learn about your objectives, ask the right questions to understand your
+					business.</p>
+			</div>
+		</li>
+		<li className="flex">
+			<div className="px-4 text-5xl font-extralight text-indigo-700">02.</div>
+			<div>
+				<div className="text-xl font-bold text-indigo-800">Strategey</div>
+				<p className="max-w-xs py-2 text-sm text-indigo-900">Solutions are born from proper research, hard work, and
+					strong strategy. We build data-driven roadmaps for every project to make pave the way to success.
+				</p>
+			</div>
+		</li>
+		<li className="flex">
+			<div className="px-4 text-5xl font-extralight text-indigo-700">03.</div>
+			<div>
+				<div className="text-xl font-bold text-indigo-800">Design</div>
+				<p className="max-w-xs py-2 text-sm text-indigo-900">We design the right solution for your business. We
+					craft beautiful, intuitive, and user-friendly interfaces that are easy to use and easy to maintain.
+				</p>
+			</div>
+		</li>
+		<li className="flex">
+			<div className="px-4 text-5xl font-extralight text-indigo-700">04.</div>
+			<div>
+				<div className="text-xl font-bold text-indigo-800">Development</div>
+				<p className="max-w-xs py-2 text-sm text-indigo-900">We build the right solution for your business. We
+					craft beautiful, intuitive, and user-friendly interfaces that are easy to use and easy to maintain.
+				</p>
+			</div>
+		</li>
+		<li className="flex">
+			<div className="px-4 text-5xl font-extralight text-indigo-700">05.</div>
+			<div>
+				<div className="text-xl font-bold text-indigo-800">Deployment</div>
+				<p className="max-w-xs py-2 text-sm text-indigo-900">We build the right solution for your business. We
+					craft beautiful, intuitive, and user-friendly interfaces that are easy to use and easy to maintain.
+				</p>
+			</div>
+		</li>
+	</ul>
+</div> */}
+
+</section>
 
 );
 };

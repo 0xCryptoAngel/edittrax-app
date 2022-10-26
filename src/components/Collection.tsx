@@ -29,6 +29,7 @@ const tracks = [
     source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/9.mp3",
     url: "https://www.youtube.com/watch?v=L3wKzyIN1yk",
   }]
+  
 const player = new Audio(tracks[0].source)
 player.setAttribute('preload', 'metadata')
 const userOptions = createContext({
@@ -81,7 +82,7 @@ const Collection = () => {
 
 
   
-      <div className="font-mathias mb-14 text-center text-6xl text-yellow-75">
+      <div className="font-mathias mb-14 text-center text-6xl text-yellow-75 text-8xl">
         BROWSE TRAX
       </div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 max-w-screen-lg hover:scale-75">
