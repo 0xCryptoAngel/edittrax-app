@@ -7,12 +7,12 @@ import QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX from "../assets/QmPgdPxBpe
 import icon0 from "../assets/icon0.png";
 import icon1 from "../assets/icon1.png";
 
-import React, { Dispatch, SetStateAction, useState, useRef, useEffect, useCallback, useContext, createContext } from "react";
+import React, { useState, useRef, useEffect, useCallback, useContext, createContext } from "react";
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-import { BsPauseFill, BsPlayFill } from 'react-icons/bs';
 gsap.registerPlugin(ScrollTrigger)
+
 
 const tracks = [
   {
@@ -37,6 +37,7 @@ const userOptions = createContext({
   repeat: false,
 })
 
+
 const Collection = () => {
   const collection = useRef(null);
   useEffect(() => {
@@ -49,6 +50,35 @@ const Collection = () => {
     });
   });
 
+  // let [idx0, setIdx0] = useState<number>(0);
+  // let [idx1, setIdx1] = useState<number>(1);
+  // let [idx2, setIdx2] = useState<number>(2);
+  // let [idx3, setIdx3] = useState<number>(3);
+	// let [playState1, setPlayState1] = useState<boolean>(false);
+  // let [playState2, setPlayState2] = useState<boolean>(false);
+  // let [playState3, setPlayState3] = useState<boolean>(false);
+  // let [playState4, setPlayState4] = useState<boolean>(false);
+	// useEffect(() => {
+	// 	if(playState1 === true)
+	// 		player.play()
+	// 	else
+	// 		player.pause()
+    
+  //   if(playState2 === true)
+	// 		player.play()
+	// 	else
+	// 		player.pause()
+    
+  //   if(playState3 === true)
+	// 		player.play()
+	// 	else
+	// 		player.pause()
+
+  //   if(playState4 === true)
+	// 		player.play()
+	// 	else
+	// 		player.pause()
+	// })
 
   const features = [
     { name: 'FOR DJS', description: 'Download preset stereo edits (.wavs) of a track, or create your own edits for public use/performance. ' },
@@ -58,24 +88,6 @@ const Collection = () => {
     // { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
     // { name: 'Considerations', description: 'Made from natural materials. Grain and color vary with each item.' },
   ]
-  
-          let [idx, setIdx] = useState<number>(0);
-	let [playState, setPlayState] = useState<boolean>(false);
-	let oldIdx = useRef(idx)
-	useEffect(() => {
-		if(playState === true)
-			player.play()
-		else
-			player.pause()
-		if(idx !== oldIdx.current){
-			player.pause()
-			player.src = tracks[idx].source
-			player.load()
-			player.play()
-			setPlayState(true)
-			oldIdx.current = idx
-		}
-	})
 
   return (
     <section className="bg-yellow p-24 sm:p-8 mx-0 mb-12 sm:mt-12 md:mx-0 items-center flex flex-col justify-center">
@@ -85,127 +97,44 @@ const Collection = () => {
       <div className="font-mathias mb-14 text-center text-6xl text-yellow-75 text-8xl">
         BROWSE TRAX
       </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 max-w-screen-lg hover:scale-75">
-        {/* <Link to="/edit-trax/mechanism" id="open"> */}
-          {/* <img src={QmRft7BBYvJLdVUmYRw9stoUAaomtvzxUL8n5JLqTCSMWj} alt="open-source" className="hover:w-2xl rounded-md"/> */}
-        {/* </Link>
-        <Link to="/edit-trax/alpha-test"  id="acid"> */}
-          {/* <img src={QmX6mLXAv3TgBBsP5Ahjiz9R3zV3sid2DnXQLsjNuo1vJ1} alt="acid beach" className="hover:shadow-2xl rounded-md"/> */}
-        {/* </Link>
-        <Link to="/edit-trax/burnt" id="burnt"> */}
-          {/* <img src={QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX} alt="burnt" className="hover:shadow-2xl rounded-md"/> */}
-        {/* </Link> */}
+      {/* <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 max-w-screen-lg hover:scale-75">
         <div className="text-black rounded-md border-4 border-black flex flex-col items-center font-mathias gap-y-3 justify-center py-4 px-2">
           <img src={icon0} alt="icon0" className="w-11 h-4"/>
           <img src={icon1} alt="icon1" className="w-36 h-36"/>
-          <Avatar idx={idx}/>
+          <Data idx={idx0}/>
           <Progress 
-            setIdx={setIdx} 
-            idx={idx} 
+            setIdx={setIdx0} 
+            idx={idx0} 
           />
           <Control 
-            setIdx={setIdx} 
-            idx={idx}  
-            playState={playState} 
-            setPlayState={setPlayState}
+            playState={playState1} 
+            setPlayState={setPlayState1}
           />
           <div className="border-4 border-black rounded-md px-3 py-1">
             <button className="uppercase">edit this track</button>
           </div>
         </div>
-      </div>     
+
+        <div className="text-black rounded-md border-4 border-black bg-red-900 flex flex-col items-center font-mathias gap-y-3 justify-center py-4 px-2">
+          <img src={icon0} alt="icon0" className="w-11 h-4"/>
+          <img src={icon1} alt="icon1" className="w-36 h-36"/>
+          <Data idx={idx1}/>
+          <Progress 
+            setIdx={setIdx1} 
+            idx={idx1} 
+          />
+          <Control 
+            playState={playState2} 
+            setPlayState={setPlayState2}
+          />
+          <div className="border-4 border-black rounded-md px-3 py-1">
+            <button className="uppercase">edit this track</button>
+          </div>
+        </div>
+      </div>      */}
     </section>
   );
 };
 
-const Avatar = (props:any) => {	
-	return(
-		<>
-      <div className="uppercase text-center">
-        <div>{tracks[props.idx].artist}</div>
-        <div>{tracks[props.idx].name}</div>
-      </div>
-		</>
-	);
-}
 
-const Progress = (props:any) => {
-  let [currLength, setCurrLength] = useState<number>(0)
-	let [length, setLength] = useState<number>(0)
-	let options = useContext(userOptions)
-	const progressBar = document.querySelector('.progressBar') as HTMLDivElement
-	
-	const updateProgress = (e:any) =>{
-		let offset = e.target.getBoundingClientRect().left
-		let newOffSet = e.clientX
-		let newWidth = newOffSet - offset
-    if (progressBar != null) {
-      progressBar.style.width = newWidth+"px"
-    }
-		let secPerPx = length / 280
-		player.currentTime = secPerPx * newWidth
-	}
-	
-	setInterval(() => {
-		setLength(Math.ceil(player.duration))
-		setCurrLength(Math.ceil(player.currentTime))
-		let secPerPx = Math.ceil(player.duration) / 280
-		let newWidth = player.currentTime / secPerPx
-    if (progressBar != null) {
-      progressBar.style.width = newWidth+"px"
-    }
-		if(player.currentTime === player.duration){
-			if(options.shuffle === true){
-				props.setIdx((Math.floor(Math.random()*1000))%9)
-			}
-			else if(options.repeat === true){
-				player.play()
-			}
-			else{
-				props.setIdx((props.idx+1)%9)
-			}
-		}
-	}, 1000);
-	
-	const formatTime = (s:any) => {
-		return Number.isNaN(s) ? '0:00' : (s-(s%=60))/60+(9<s?':':':0')+s
-	}
-	
-	return(
-		<div className="progress">
-			<div className="currentTime">
-				<p>{formatTime(currLength)}</p>
-			</div>
-			<div 
-			className="progressCenter" 
-			onClick={(e) => updateProgress(e)}>
-				<div className="progressBar">
-				</div>
-			</div>
-			<div className="songLength">
-				<p>{formatTime(length)}</p>
-			</div>
-		</div>
-	);
-}
-
-const Control = (props:any) => {
-	return(
-		<div className="flex justify-center items-center border-4 border-black rounded-full p-1">
-			{
-				props.playState === true ? 
-					<button 
-						className=""
-						onClick={x => props.setPlayState(false)}>
-						<BsPauseFill className="text-3xl"/>
-					</button> : 
-					<button
-						className=""
-						onClick={x => props.setPlayState(true)}>
-						<BsPlayFill className="text-3xl"/>
-					</button>
-			}
-		</div>
-	);
-}
 export default Collection;
