@@ -48,7 +48,17 @@ const Collection = () => {
     });
   });
 
-  let [idx, setIdx] = useState<number>(0);
+
+  const features = [
+    { name: 'FOR DJS', description: 'Download preset stereo edits (.wavs) of a track, or create your own edits for public use/performance. ' },
+    { name: 'FOR PRODUCERS', description: 'Removes 3rd-party digital service providers (and any layer other than the Collectible) when distributing tracks for download.' },
+    { name: 'FOR COLLABS', description: 'An accessible build framework for musicians, designers and developers to create meaningful collaborations.' },
+    { name: 'FOR CULTURE', description: 'Supporting 1 of 1 selector djs, unique dance-floor experiences and building the bottom of a funnel for independent producer/djs.' },
+    // { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
+    // { name: 'Considerations', description: 'Made from natural materials. Grain and color vary with each item.' },
+  ]
+  
+          let [idx, setIdx] = useState<number>(0);
 	let [playState, setPlayState] = useState<boolean>(false);
 	let oldIdx = useRef(idx)
 	useEffect(() => {
@@ -67,7 +77,10 @@ const Collection = () => {
 	})
 
   return (
-    <section className="bg-yellow p-24 sm:p-8 mx-0 mb-12 sm:mt-12 md:mx-0 items-center flex flex-col justify-center bg-white">
+    <section className="bg-yellow p-24 sm:p-8 mx-0 mb-12 sm:mt-12 md:mx-0 items-center flex flex-col justify-center">
+
+
+  
       <div className="font-mathias mb-14 text-center text-6xl text-yellow-75">
         BROWSE TRAX
       </div>
