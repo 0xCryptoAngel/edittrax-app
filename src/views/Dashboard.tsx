@@ -15,6 +15,8 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Modal from "../Modal/Modal";
 import lockt_612561 from "@images/et001_loct.jpg";
+import et_player_thumb from "@images/et_how_to_player.png";
+import downArrow from "@images/arrovw_down.svg";
 
 
 
@@ -73,6 +75,7 @@ const Dashboard = ({
       artist:"Producer: BAI-EE",
       origEdit: 'https://i.postimg.cc/rFHCppZT/original.png',
       lokt_612561:lockt_612561,
+      player_thumbnail: et_player_thumb
       
       // loopPlay: 'https://i.postimg.cc/rFHCppZT/loop_play.png',
       // editLoop: 'https://i.postimg.cc/rFHCppZT/edit_loop.png',
@@ -112,6 +115,7 @@ const Dashboard = ({
   const scroll = useRef(null);
   const loaderIframe = useRef(null);
   const Iframe = useRef(null);
+  const dwnArrow = useRef(null);
 
   useEffect(() => {
 
@@ -124,11 +128,14 @@ const Dashboard = ({
     const srl = scroll.current;
     const loa = loaderIframe.current;
     const Ifr = Iframe.current;
+    const dArrow = dwnArrow.current
 
     //WITH Timelines (cleaner, more versatile)
 var tlMain = gsap.timeline({repeat: 0, repeatDelay: 0});
 tlMain.fromTo(ld, {opacity:1}, {opacity:0, height:0, y:-5000, delay:1.25, duration:.025});
 tlMain.fromTo(db, {opacity:0, y:20}, {opacity:1, y:0, duration:.25});
+tlMain.fromTo(dArrow, {opacity:0, y:-20}, {opacity:1, y:0, duration:.25});
+
 // tlMain.fromTo(loa, {opacity:1}, {opacity:0, delay:1, duration:.25});
 tlMain.fromTo(Ifr, {opacity:0}, {opacity:1, duration:.25});
 
@@ -189,6 +196,8 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
               <Modal onClose = {() => setShow(false)} show={show}/>
 
 
+
+
                 <div className="hidden">
                   {active? <button className="bg-black rounded text-yellow-75 font-bold py-2 w-40 hover:text-gray-300" onClick={()=>
                   handleDisconnect()}>{`${account?.slice(0, -36)}...${account?.substring(38)}`}</button>: 
@@ -219,11 +228,17 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
             
             </div>
             <div className="bg-yellow-75 flex justify-center py-2 md:py-8 mx-4 md:mx-0 max-w-full">
-              <button className="font-mathias text-md bg-black text-yellow-75 font-bold rounded px-16 md:px-64 sm:py-4">Collect Music NFT</button>
+              {/* <button className="font-mathias text-md bg-black text-yellow-75 font-bold rounded px-16 md:px-64 sm:py-4"> */}
+
+
+              <img src={downArrow} alt="logo" id="logo_test" className="w-6 sm:w-10" ref={dwnArrow}/>
+              
+              
+              
+              
+              {/* </button> */}
             </div>
           </div>
-
-
           <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 mt-10 -sm:mt-8 ">
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">10</div>
@@ -243,6 +258,7 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
             </div>
           </section>
           <Content 
+          player_thumbnail={result?.player_thumbnail} 
             lokt_612561={result?.lokt_612561} 
             tokendId={result?.tokendId} 
             artist={result?.artist} 

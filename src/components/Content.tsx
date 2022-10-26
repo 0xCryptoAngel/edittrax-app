@@ -1,5 +1,6 @@
 
 import React, { Dispatch, SetStateAction, useState, useRef, useEffect, useCallback } from "react";
+
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import handbookCover from "@images/handbookCover.jpg";
@@ -12,11 +13,13 @@ import original from "@images/original.png";
 import utility from "@images/utility.png";
 import play_bg from "@images/play_bg.jpg";
 import canIuse from "@images/canIuse.jpg";
+import howToImage from "../Modal/image_popup_howTo";
 
 
 
 
-gsap.registerPlugin(ScrollTrigger)
+
+
 
 type WalletProps = {
   // origEdit: string | undefined,
@@ -26,6 +29,7 @@ type WalletProps = {
   // lock:  string | undefined,
   // lokt_612561={result?.lokt_612561} 
   lokt_612561:string | undefined,
+  player_thumbnail:string | undefined,
   tokendId: string | undefined,
   artist: string | undefined,
   titleHardCode: string | undefined,
@@ -54,6 +58,9 @@ const Content = (props:WalletProps) => {
       }
     });
   });
+
+  
+  const [show, setShow] = useState(false)
   
   return (
 
@@ -97,14 +104,14 @@ const Content = (props:WalletProps) => {
 
 
 <h2 className="font-mathias mr-8 mt-6 md:mt-0 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle mb-12">
-  <a href="https://objkt.com/asset/hicetnunc/612561" className="bg-black text-center px-4 py-4 text-yellow-75 rounded-md hover:opacity-50">
+  <a href="https://objkt.com/asset/hicetnunc/612561" className="bg-red-900 text-center px-4 py-4 text-yellow-75 rounded-md hover:opacity-50">
   Collect
   </a>
   &nbsp; To Unlock
 </h2>
 
 <h2 className=" font-mathias mr-8 md:mt-0 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle mb-12">
-  <a href="https://objkt.com/asset/hicetnunc/612561" className="bg-black text-center px-4 py-4 mt-8 text-yellow-75 rounded-md hover:opacity-50 mb-12">
+  <a href="https://objkt.com/asset/hicetnunc/612561" className="bg-orange-900 text-center px-4 py-4 mt-8 text-yellow-75 rounded-md hover:opacity-50 mb-12">
   Connect
   </a>
   &nbsp; To Download
@@ -133,67 +140,24 @@ CREATE UNLIMITED EDITS OF {props.titleHardCode}
     How To
 </h2>
   
-    
+
+<img src={props.player_thumbnail}  alt="" className=""/> 
+
+
+{/* <button className="font-mathias sm:bg-black sm:rounded sm:text-yellow-75 px-2 sm:font-bold sm:py-2 sm:w-40 hover:text-gray-300 text-md"
+onClick={()=> setShow(true)}>
+  Unlock
+</button> */}
+
+{/* <howToImage onClose = {() => setShow(false)} show={show}/> */}
+
+
+
     <dd className="mb-8">
 
-        <blockquote className="p-2 my-0 bg-black rounded-lg p-8 play_bg">
-    <div className="flex items-start rounded-xlp-4 mt-2 justify-between">
-    <div className="flex h-12 w-12 items-center justify-center origImg">
-      <img src={original} alt="" className=""/> 
-    </div>
-    <div className="ml-4">
-      <h2 className="text-xs text-black bg-yellow-75 rounded-xl text-right border-black border-2 p-3">Select A Pre Set Track Arrangement</h2>
-    </div>
-  </div>
-    <div className="flex items-start rounded-xlp-4 mt-2 justify-between">
-      <div className="flex h-12 w-12 items-center justify-center">
-      <img src={loopPlay}  alt="" className="w-60"/> 
-      </div>
-      <div className="ml-4">
-        <h2 className="font-semibold text-right text-xs text-black bg-yellow-75 text-right rounded-xl border-black p-3">Preview Different Sections of the Track</h2>
-        {/* <p className="mt-2 text-xs text-gray-500 text-right">These loops play back to back creating a track</p> */}
-      </div>
-    </div>
-    <div className="flex items-start rounded-xlp-4 mt-2 justify-between">
-      <div className="flex h-12 w-12 items-center justify-center">
-      <img src={editLoop}  alt="" className="w-60"/> 
-      </div>
-    <div className="ml-4">
-      <h2 className="font-semibold text-right text-xs text-black bg-yellow-75 text-right rounded-xl border-black p-3">Adjust Loop Count To Create New Tracks</h2>
-      {/* <p className="mt-2 text-xs text-gray-500 text-right">Remove or extend parts of this track</p> */}
-    </div>
-    </div>
 
-    <div className="flex items-start rounded-xlp-4 mt-2 justify-between">
-      <div className="flex h-12 w-12 items-center justify-center">
-      <img src={masterPlay}  alt="" className="w-60"/> 
-      </div>
-    <div className="ml-4">
-      <h2 className="font-semibold text-right text-black text-xs bg-yellow-75 text-right rounded-xl border-black p-3">Preview Master Track / Edit You Created</h2>
-      {/* <p className="mt-2 text-xs text-gray-500 text-right">Last checked 3 days ago</p> */}
-    </div>
-    </div>
-
-    <div className="flex items-start rounded-xlp- mt-2 justify-between">
-      <div className="flex h-12 w-12 items-center justify-center">
-      <img src={lock}  alt="" className="w-60"/> 
-      </div>
-    <div className="ml-4">
-      <h2 className="font-semibold text-right text-xs text-black bg-yellow-75 text-right rounded-xl border-black p-3">Collect to Unlock Unlimited Downloads </h2>
-      {/* <p className="mt-2 text-xs text-gray-500 text-right">Last checked 3 days ago</p> */}
-    </div>
-  </div>
-    <img src={utility}  alt="" className="w-2/3 mt-6 ml-auto"/> 
-  </blockquote>
       
     <blockquote className="p-4 my-4 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">
-
-
-
-
-
-  
-
 
 </blockquote>
 
@@ -203,7 +167,9 @@ CREATE UNLIMITED EDITS OF {props.titleHardCode}
         </h2>
         <blockquote className="p-4 my-4 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">
         <p>
-        As the owner of this collectible, you are granted the right to perform its downloadable content in public. This includes playing in mix-tapes, online streams, social feeds, and live performances. You do NOT have the right to repackage downloaded content for resale or distribution. Assume NO other rights of ownership.
+        You do NOT have the right to repackage edits for profit or distribution.
+        As the owner of this collectible music player you are free to dj its content in public, online and most preferably abandoned warehouses.
+        Assume NO other rights of ownership than if you had downloaded it off Bandcamp or Digital Service Provider.
         {/* {props.description} */}
         </p>
 
