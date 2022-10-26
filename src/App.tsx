@@ -15,13 +15,11 @@ import {
   Navigate
 } from "react-router-dom";
 
-const TRACKING_ID = "G-X7FDGNLGYJ"; // OUR_TRACKING_ID
-ReactGA.initialize(TRACKING_ID);
-ReactGA.pageview(window.location.pathname);
-
-
-
 const App = () => {
+
+  const TRACKING_ID = "G-X7FDGNLGYJ"; // OUR_TRACKING_ID
+  ReactGA.initialize(TRACKING_ID);
+  ReactGA.pageview(window.location.pathname);
 
   const [Tezos, setTezos] = useState<TezosToolkit>(
     new TezosToolkit("https://mainnet.smartpy.io")
