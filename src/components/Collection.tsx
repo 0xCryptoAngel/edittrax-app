@@ -84,7 +84,6 @@ const Collection = () => {
         <div className="text-black rounded-md border-4 border-black flex flex-col items-center font-mathias gap-y-3 justify-center py-4 px-2">
           <img src={icon0} alt="icon0" className="w-11 h-4"/>
           <img src={icon1} alt="icon1" className="w-36 h-36"/>
-        
           <Avatar idx={idx}/>
           <Progress 
             setIdx={setIdx} 
