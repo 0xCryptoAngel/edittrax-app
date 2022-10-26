@@ -40,6 +40,10 @@ module.exports = {
         yellow: {
           75: '#E6E9E0',
         },
+        orange: {
+          900: '#8D713F',
+        },
+
       },
       screens: {
         'laptop': '920px',

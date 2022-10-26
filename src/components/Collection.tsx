@@ -26,14 +26,14 @@ const Collection = () => {
     });
   });
 
-  let [idx0, setIdx0] = useState<number>(0);
-  let [idx1, setIdx1] = useState<number>(1);
-  let [idx2, setIdx2] = useState<number>(2);
-  let [idx3, setIdx3] = useState<number>(3);
-	let [playState1, setPlayState1] = useState<boolean>(false);
-  let [playState2, setPlayState2] = useState<boolean>(false);
-  let [playState3, setPlayState3] = useState<boolean>(false);
-  let [playState4, setPlayState4] = useState<boolean>(false);
+  // let [idx0, setIdx0] = useState<number>(0);
+  // let [idx1, setIdx1] = useState<number>(1);
+  // let [idx2, setIdx2] = useState<number>(2);
+  // let [idx3, setIdx3] = useState<number>(3);
+	// let [playState1, setPlayState1] = useState<boolean>(false);
+  // let [playState2, setPlayState2] = useState<boolean>(false);
+  // let [playState3, setPlayState3] = useState<boolean>(false);
+  // let [playState4, setPlayState4] = useState<boolean>(false);
 	// useEffect(() => {
 	// 	if(playState1 === true)
 	// 		player.play()
@@ -56,8 +56,20 @@ const Collection = () => {
 	// 		player.pause()
 	// })
 
+  const features = [
+    { name: 'FOR DJS', description: 'Download preset stereo edits (.wavs) of a track, or create your own edits for public use/performance. ' },
+    { name: 'FOR PRODUCERS', description: 'Removes 3rd-party digital service providers (and any layer other than the Collectible) when distributing tracks for download.' },
+    { name: 'FOR COLLABS', description: 'An accessible build framework for musicians, designers and developers to create meaningful collaborations.' },
+    { name: 'FOR CULTURE', description: 'Supporting 1 of 1 selector djs, unique dance-floor experiences and building the bottom of a funnel for independent producer/djs.' },
+    // { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
+    // { name: 'Considerations', description: 'Made from natural materials. Grain and color vary with each item.' },
+  ]
+
   return (
-    <section className="bg-yellow p-24 sm:p-8 mx-0 mb-12 sm:mt-12 md:mx-0 items-center flex flex-col justify-center bg-white">
+    <section className="bg-yellow p-24 sm:p-8 mx-0 mb-12 sm:mt-12 md:mx-0 items-center flex flex-col justify-center">
+
+
+  
       <div className="font-mathias mb-14 text-center text-6xl text-yellow-75">
         BROWSE TRAX
       </div>

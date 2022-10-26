@@ -13,7 +13,12 @@ import { useWeb3React, UnsupportedChainIdError } from '@web3-react/core'
 import { MetaMaskconnector } from '../wallet/wallet'
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import Modal from "../Modal/Modal"
+import Modal from "../Modal/Modal";
+import lockt_612561 from "@images/et001_loct.jpg";
+import et_player_thumb from "@images/et_how_to_player.png";
+import downArrow from "@images/arrovw_down.svg";
+
+
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -28,6 +33,7 @@ type WalletProps = {
   setUserBalance: Dispatch<SetStateAction<number>>;
   setBeaconConnection: Dispatch<SetStateAction<boolean>>;
   wallet: BeaconWallet;
+
 };
 
 const Dashboard = ({
@@ -56,6 +62,8 @@ const Dashboard = ({
       square: 'https://i.postimg.cc/9M55GvhM/square-burnt.jpg',
       unlockable: 'https://i.postimg.cc/9Md31JmB/unlockable-burnt.png',
       tokendId: 781875,
+      titleHardCode:"'BURNT'",
+      artist:"Producer: BAI-EE"
     },
     {
       player: "alpha-test",
@@ -63,7 +71,16 @@ const Dashboard = ({
       square: 'https://i.postimg.cc/rFHCppZT/square-alpha-test.jpg',
       unlockable: 'https://i.postimg.cc/MTyqnXmF/unlockable-alpha-test.png',
       tokendId: 612561,
-      titleHardCode:"ACID BEACH"
+      titleHardCode:"'ACID BEACH'",
+      artist:"Producer: BAI-EE",
+      origEdit: 'https://i.postimg.cc/rFHCppZT/original.png',
+      lokt_612561:lockt_612561,
+      player_thumbnail: et_player_thumb
+      
+      // loopPlay: 'https://i.postimg.cc/rFHCppZT/loop_play.png',
+      // editLoop: 'https://i.postimg.cc/rFHCppZT/edit_loop.png',
+      // masterPlay: 'https://i.postimg.cc/rFHCppZT/master_play.png',
+      // lock: 'https://i.postimg.cc/rFHCppZT/lock.png'
     },
     {
       player: "dapp",
@@ -98,6 +115,7 @@ const Dashboard = ({
   const scroll = useRef(null);
   const loaderIframe = useRef(null);
   const Iframe = useRef(null);
+  const dwnArrow = useRef(null);
 
   useEffect(() => {
 
@@ -110,11 +128,14 @@ const Dashboard = ({
     const srl = scroll.current;
     const loa = loaderIframe.current;
     const Ifr = Iframe.current;
+    const dArrow = dwnArrow.current
 
     //WITH Timelines (cleaner, more versatile)
 var tlMain = gsap.timeline({repeat: 0, repeatDelay: 0});
 tlMain.fromTo(ld, {opacity:1}, {opacity:0, height:0, y:-5000, delay:1.25, duration:.025});
 tlMain.fromTo(db, {opacity:0, y:20}, {opacity:1, y:0, duration:.25});
+tlMain.fromTo(dArrow, {opacity:0, y:-20}, {opacity:1, y:0, duration:.25});
+
 // tlMain.fromTo(loa, {opacity:1}, {opacity:0, delay:1, duration:.25});
 tlMain.fromTo(Ifr, {opacity:0}, {opacity:1, duration:.25});
 
@@ -132,35 +153,6 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
 });
 
 
-
-    // gsap.fromTo(scroll, {opacity:1, y:0}, {opacity:1, duration:.75});
-
-
-  //     scrollTrigger: {
-  
-  //     trigger:srl
-  
-  // }
-
-// });
-
-
-
-// then we can control the whole thing easily...
-// tl.pause();
-// tl.resume();
-// tl.seek(1.5);
-// tl.reverse();
-
-    // gsap.fromTo(scroll, {opacity:0, y:30}, {opacity:0, y:0, duration:.75, 
-    //   scrollTrigger: {
-  
-    //   trigger:el
-  
-    // }
-
-
-
   }, [active])
   const handleConnectMetaMask = useCallback(() => {
     activate(MetaMaskconnector)
@@ -174,38 +166,17 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
 
 
 
-  // console.log(imgRef + "HEEERE")
-
-
   const [show, setShow] = useState(false)
 
   return (
     
     <div className="bg-black">
 
-      {/* { isload? true : false } */}
-
-      {/* {
-      
-      isload? 
-      text-sm
-
-
-      <div className="w-full h-screen flex justify-center items-center">
-        <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className="w-80 h-80"/>
-      </div>
-      
-      : */}
-
       <div className="w-full h-screen flex justify-center items-center" ref={loader}>
         <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className="w-80 h-80"/>
       </div>
 
       <div className="md:px-4 mx-auto py-4" ref={dashboard}>
-
-
-{/* <div className="helper">dd</div>   */}
-
 
           <div className="h-screen">
 
@@ -223,6 +194,8 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
                 setShow(true)}>Unlock
               </button>
               <Modal onClose = {() => setShow(false)} show={show}/>
+
+
 
 
                 <div className="hidden">
@@ -247,23 +220,25 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
                 />
               </div>
 
-
             </div>
 
-
             <div className="mx-4 md:mx-0 h-iframeLoad">
-
-            {/* <div className="h-iframeLoad" ref={loaderIframe}></div> */}
 
             <iframe src={`${result?.imageUrl}${userAddress}`} className="w-full h-iframe" ref={Iframe}/>
             
             </div>
             <div className="bg-yellow-75 flex justify-center py-2 md:py-8 mx-4 md:mx-0 max-w-full">
-              <button className="font-mathias text-md bg-black text-yellow-75 font-bold rounded px-16 md:px-64 sm:py-4">Collect Music NFT</button>
+              {/* <button className="font-mathias text-md bg-black text-yellow-75 font-bold rounded px-16 md:px-64 sm:py-4"> */}
+
+
+              <img src={downArrow} alt="logo" id="logo_test" className="w-6 sm:w-10" ref={dwnArrow}/>
+              
+              
+              
+              
+              {/* </button> */}
             </div>
           </div>
-
-
           <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 mt-10 -sm:mt-8 ">
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">10</div>
@@ -283,6 +258,10 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
             </div>
           </section>
           <Content 
+          player_thumbnail={result?.player_thumbnail} 
+            lokt_612561={result?.lokt_612561} 
+            tokendId={result?.tokendId} 
+            artist={result?.artist} 
             titleHardCode={result?.titleHardCode} 
             square={result?.square} 
             unlockable={result?.unlockable} 
@@ -292,7 +271,15 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
             mintedDate={new Date(metaData?.firstTime).toLocaleDateString()}
             ipfs={metaData?.metadata?.artifactUri?.replace(":/", "")}
             address={metaData?.contract?.address}
+            // origEdit={result?.origEdit} 
+            // origEdit={result?.origEdit} 
+            // loopPlay={result?.loopPlay} 
+            // editLoop={result?.editLoop} 
+            // masterPlay={result?.masterPlay} 
+            // lock={result?.lock}
           />
+
+          
           <Collection/>
           <Miscellaneous/>
           <Footer/>
