@@ -35,9 +35,14 @@ const Collection = () => {
   // let [playState4, setPlayState4] = useState<boolean>(false);
 	useEffect(() => {
 		if(playState1 === true)
-			player.play()
-		else
+    {
+      player.play()
+      console.log("play")
+     }
+		else {
 			player.pause()
+      console.log("pause")
+    }
     
   //   if(playState2 === true)
 	// 		player.play()
