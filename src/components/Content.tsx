@@ -14,12 +14,7 @@ import utility from "@images/utility.png";
 import play_bg from "@images/play_bg.jpg";
 import canIuse from "@images/canIuse.jpg";
 import howToImage from "../Modal/image_popup_howTo";
-
-
-
-
-gsap.registerPlugin(ScrollTrigger)
-
+import useAnalyticsEventTracker from 'Modal/analytics';
 
 type WalletProps = {
   // origEdit: string | undefined,
@@ -43,13 +38,13 @@ type WalletProps = {
   address: string | undefined,
 };
 
+gsap.registerPlugin(ScrollTrigger)
+
 const Content = (props:WalletProps) => {
-  console.log("props.mintedDate", props.description)
 
   const data = useRef(null);
 
   useEffect(() => {
-
     const dat = data.current;
     gsap.fromTo(dat, {opacity:1, y:75}, {opacity:1, y:0, duration:0.25,
       scrollTrigger: {
@@ -59,14 +54,23 @@ const Content = (props:WalletProps) => {
     });
   });
 
-  
+  const gaEventTracker = useAnalyticsEventTracker('Contact us');
+
   const [show, setShow] = useState(false)
 
-  const features = [
-    { name: 'FOR DJS', description: 'Download multiple edits (.wavs) of a track and rapidly edit it for your own content creation/performance use. ' },
-    { name: 'FOR PRODUCERS', description: 'Remove 3rd-party download platforms (all layers seperate of the Collectible), when distributing tracks for download.' },
-    { name: 'FOR COLLABS', description: 'An accessible build framework for musicians, designers and developers to create meaningful collaborations.' },
-    { name: 'FOR CULTURE', description: 'Supports 1 of 1 selector djs, unique dance-floor experiences and building the bottom of a funnel for independent producer/djs.' },
+  const features1 = [
+    { name: 'FOR DJS', description: 'Download multiple edits (.wavs) of a track and rapidly edit it for your own dj performance, content creation, public use. *See collector rights ' },
+    { name: 'FOR PRODUCERS', description: 'No 3rd party required. Removes all layers seperate of the collectible and marketplace when distributing token gated downloads. ' },
+    { name: 'FOR COLLABS', description: 'An accessible build framework for musicians, designers and developers to use individual strengths to create meaningful collaborations ' },
+    { name: 'FOR CULTURE', description: 'Supports 1 of 1 selector djs, unique dance-floor experiences and building the bottom of a funnel for independent music producers.' },
+    // { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
+    // { name: 'Considerations', description: 'Made from natural materials. Grain and color vary with each item.' },
+  ]
+  const features2 = [
+    { name: 'BLOCKCHAIN', description: 'TEZOS is a proof-of-steak protocol providing decentralized, trustless ledger technology in an energy efficient way.'},
+    { name: 'CONTRACT', description: 'Minted on Hic Et Nunc (Teia), an FA2 Objkt Standard you own in your wallet like any self-custodied NFT'},
+    { name: 'MEDIA TYPE', description: 'HTML / Zip on IPFS following all best practices for interactive OBJKT development and aggregation as described on Hic Et Nunc Github.' },
+    { name: 'BUY, SELL & DL', description: 'As a self-custodied token *Anywhere' },
     // { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
     // { name: 'Considerations', description: 'Made from natural materials. Grain and color vary with each item.' },
   ]
@@ -95,21 +99,21 @@ const Content = (props:WalletProps) => {
           </h2>
 
           <h2 className="font-mathias mr-8 mt-0 sm:mt-6 md:mt-0 w-full text-2xl sm:text-2xl lg:text-4xl xl:text-4xl font-extrabold align-middle mb-12">
-            <a href="https://objkt.com/asset/hicetnunc/612561" className="bg-red-900 text-center px-4 py-4 text-yellow-75 rounded-md hover:opacity-50">
+            <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" className="bg-red-900 text-center px-4 py-4 text-yellow-75 rounded-md hover:opacity-50" onClick={()=>gaEventTracker('Collect')}>
               Collect
             </a>
             &nbsp; To Unlock
           </h2>
 
           <h2 className=" font-mathias mr-8 md:mt-0 w-full text-lg text-2xl sm:text-2xl lg:text-4xl xl:text-4xl font-extrabold align-middle mb-12">
-            <a href="https://objkt.com/asset/hicetnunc/612561" className="bg-orange-900 text-center px-4 py-4 mt-8 text-yellow-75 rounded-md hover:opacity-50 mb-12">
+            <a href="https://objkt.com/asset/hicetnunc/612561" target="_blank" className="bg-orange-900 text-center px-4 py-4 mt-8 text-yellow-75 rounded-md hover:opacity-50 mb-12" onClick={()=>gaEventTracker('Connect')}>
             Connect
             </a>
             &nbsp; To Download
           </h2>
 
           <h2 className="font-mathias mr-0 mb-4 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
-              How To
+              How To Track Out
           </h2>
 
           <blockquote className="p-4 my-4 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">
@@ -123,14 +127,13 @@ const Content = (props:WalletProps) => {
             </blockquote>
 
             <h2 className="font-mathias mr-0 mt-6 md:mt-0 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
-              Rights
+              Collector Rights
             </h2>
 
             <blockquote className="p-4 my-4 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">    
               <p>
-                  You do NOT have the right to repackage edits for profit or distribution.
-                  As the owner of this collectible music player you are free to dj its content in public, online and most preferably abandoned warehouses.
-                  Assume NO other rights of ownership than if you had downloaded it off Bandcamp or Digital Service Provider.
+                  As the owner of this collectible music player you are free to dj its content strictly within abandoned warehouse environments.
+                  No other rights of ownership can be assumed seperate than if you had downloaded this off Bandcamp.
               </p>          
             </blockquote>
           </dd>
@@ -138,7 +141,7 @@ const Content = (props:WalletProps) => {
     
         <dl className="w-full md:w-2/3">
         <h2 className="font-mathias mr-8 mb-0 sm:mt-6 md:mt-0 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle mb-12">
-          <div className="">
+          <div className="text-justify">
             <a href="https://objkt.com/asset/hicetnunc/612561" className="">
               Interactive Music OBJKT #{props.tokendId} comes integrated with a looper, token gate and download button.
             </a>
@@ -147,7 +150,7 @@ const Content = (props:WalletProps) => {
           <div className="mt-4 flex flex-wrap mb-0 sm:mb-20 pt-0 justify-left h-auto">
           { 
             props.keyValue?.map((item, i)=>
-            <button className="bg-black mt-0 rounded-full px-6 py-1 text-yellow-75 text-xs gap-y-1.5 ml-2 mt-2" key={i}>{item}</button>
+            <button className="mt-0 rounded-3xl text-black px-0 py-0 text-xs gap-y-1.5 ml-2 mt-2 outline_button" key={i}>{item}</button>
             )
           }
           </div>
@@ -180,7 +183,7 @@ const Content = (props:WalletProps) => {
 
           <div className="font-mathias w-52 mt-2 mb-2 text-lg mt-10">DESCRIPTION</div>
 
-          <p>
+          <p className="text-justify">
           {props.description}
           </p>
           </blockquote>
@@ -196,7 +199,7 @@ const Content = (props:WalletProps) => {
 
       <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-0 px-4 sm:px-6 sm:py-0 lg:max-w-7xl lg:grid-cols-2 lg:px-8 mt-0 mb-0"><div>
       <dl className="mt-0 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
-        {features.map((feature) => (
+        {features1.map((feature) => (
           <div key={feature.name} className="">
             <dt className="font-mathias text-2xl text-yellow-75 ">{feature.name}</dt>
             <dd className="mt-2 text-sm text-gray-500 text-justify">{feature.description}</dd>
@@ -207,7 +210,7 @@ const Content = (props:WalletProps) => {
             
       <div className="">
         <dl className="mt-0 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
-          {features.map((feature) => (
+          {features2.map((feature) => (
             <div key={feature.name} className="border-tpt-4">
               <dt className="font-mathias text-2xl text-yellow-75">{feature.name}</dt>
               <dd className="mt-2 text-sm text-gray-500">{feature.description}</dd>
