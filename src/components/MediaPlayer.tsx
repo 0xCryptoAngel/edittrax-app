@@ -33,7 +33,7 @@ const tracks = [
     source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/9.mp3",
     url: "https://www.youtube.com/watch?v=L3wKzyIN1yk",
   }]
-const player = new Audio(tracks[0].source)
+export const player = new Audio(tracks[0].source)
 player.setAttribute('preload', 'metadata')
 const userOptions = createContext({
   shuffle: false,
@@ -56,7 +56,7 @@ export const Progress = (props:any) => {
   let [currLength, setCurrLength] = useState<number>(0)
 	let [length, setLength] = useState<number>(0)
 	let options = useContext(userOptions)
-	const progressBar = document.querySelector(`.progressBar${props.idx}`) as HTMLDivElement
+	const progressBar = document.querySelector(`.progressBar`) as HTMLDivElement
 	const updateProgress = (e:any) =>{
 		let offset = e.target.getBoundingClientRect().left
 		let newOffSet = e.clientX
@@ -101,7 +101,7 @@ export const Progress = (props:any) => {
 			<div 
 			className="progressCenter" 
 			onClick={(e) => updateProgress(e)}>
-        <div className={`progressBar${props.idx}`} >
+        <div className="progressBar" >
 				</div>
 			</div>
 			<div className="songLength">

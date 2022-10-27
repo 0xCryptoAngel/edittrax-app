@@ -131,28 +131,20 @@ const Dashboard = ({
     const dArrow = dwnArrow.current
 
     //WITH Timelines (cleaner, more versatile)
-var tlMain = gsap.timeline({repeat: 0, repeatDelay: 0});
-tlMain.fromTo(ld, {opacity:1}, {opacity:0, height:0, y:-5000, delay:1.25, duration:.025});
-tlMain.fromTo(db, {opacity:0, y:20}, {opacity:1, y:0, duration:.25});
-tlMain.fromTo(dArrow, {opacity:0, y:-20}, {opacity:1, y:0, duration:.25});
+    let tlMain = gsap.timeline({repeat: 0, repeatDelay: 0});
+    tlMain.fromTo(ld, {opacity:1}, {opacity:0, height:0, y:-5000, delay:1.25, duration:.025});
+    tlMain.fromTo(db, {opacity:0, y:20}, {opacity:1, y:0, duration:.25});
+    tlMain.fromTo(dArrow, {opacity:0, y:-20}, {opacity:1, y:0, duration:.25});
 
-// tlMain.fromTo(loa, {opacity:1}, {opacity:0, delay:1, duration:.25});
-tlMain.fromTo(Ifr, {opacity:0}, {opacity:1, duration:.25});
+    // tlMain.fromTo(loa, {opacity:1}, {opacity:0, delay:1, duration:.25});
+    tlMain.fromTo(Ifr, {opacity:0}, {opacity:1, duration:.25});
 
-gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
-
-  scrollTrigger: {
-  
+    gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
+      scrollTrigger: {
         trigger:srl,
         scrub: 2,
-    
-    }
-
-
-
-});
-
-
+      }
+    });
   }, [active])
   const handleConnectMetaMask = useCallback(() => {
     activate(MetaMaskconnector)
@@ -164,28 +156,19 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
     window.location.reload()
   }
 
-
-
   const [show, setShow] = useState(false)
-
   return (
     
     <div className="bg-black">
-
       <div className="w-full h-screen flex justify-center items-center" ref={loader}>
         <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className="w-80 h-80"/>
       </div>
-
       <div className="md:px-4 mx-auto py-4" ref={dashboard}>
-
           <div className="h-screen">
-
             <div className="bg-yellow-75 rounded-t-lg py-2 md:py-6 flex items-center px-4 justify-between mx-4 md:mx-0">
               <div className="flex items-center space-x-8">
                 <ul className="flex space-x-10 text-bg-yellow-75">
-
                 <img src={et_new_logo} alt="logo" id="logo_test" className="w-6 sm:w-10"/>
-                
                 </ul>
               </div>
               <div className="flex gap-4 items-center">
@@ -194,10 +177,6 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
                 setShow(true)}>Unlock
               </button>
               <Modal onClose = {() => setShow(false)} show={show}/>
-
-
-
-
                 <div className="hidden">
                   {active? <button className="bg-black rounded text-yellow-75 font-bold py-2 w-40 hover:text-gray-300" onClick={()=>
                   handleDisconnect()}>{`${account?.slice(0, -36)}...${account?.substring(38)}`}</button>: 
@@ -219,23 +198,13 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
                   wallet={wallet}
                 />
               </div>
-
             </div>
-
             <div className="mx-4 md:mx-0 h-iframeLoad">
-
             <iframe src={`${result?.imageUrl}${userAddress}`} className="w-full h-iframe" ref={Iframe}/>
-            
             </div>
             <div className="bg-yellow-75 flex justify-center py-2 md:py-8 mx-4 md:mx-0 max-w-full">
               {/* <button className="font-mathias text-md bg-black text-yellow-75 font-bold rounded px-16 md:px-64 sm:py-4"> */}
-
-
               <img src={downArrow} alt="logo" id="logo_test" className="w-6 sm:w-10" ref={dwnArrow}/>
-              
-              
-              
-              
               {/* </button> */}
             </div>
           </div>
@@ -278,8 +247,6 @@ gsap.fromTo(srl, {opacity:1, y:25}, {opacity:1, y:0, duration:.75,
             // masterPlay={result?.masterPlay} 
             // lock={result?.lock}
           />
-
-          
           <Collection/>
           <Miscellaneous/>
           <Footer/>

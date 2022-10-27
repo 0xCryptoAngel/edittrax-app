@@ -10,7 +10,7 @@ import icon1 from "../assets/icon1.png";
 import React, { useState, useRef, useEffect, useCallback, useContext, createContext } from "react";
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-
+import {player, Data, Progress, Control} from './MediaPlayer'
 gsap.registerPlugin(ScrollTrigger)
 
 
@@ -26,19 +26,19 @@ const Collection = () => {
     });
   });
 
-  // let [idx0, setIdx0] = useState<number>(0);
+  let [idx0, setIdx0] = useState<number>(0);
   // let [idx1, setIdx1] = useState<number>(1);
   // let [idx2, setIdx2] = useState<number>(2);
   // let [idx3, setIdx3] = useState<number>(3);
-	// let [playState1, setPlayState1] = useState<boolean>(false);
+	let [playState1, setPlayState1] = useState<boolean>(false);
   // let [playState2, setPlayState2] = useState<boolean>(false);
   // let [playState3, setPlayState3] = useState<boolean>(false);
   // let [playState4, setPlayState4] = useState<boolean>(false);
-	// useEffect(() => {
-	// 	if(playState1 === true)
-	// 		player.play()
-	// 	else
-	// 		player.pause()
+	useEffect(() => {
+		if(playState1 === true)
+			player.play()
+		else
+			player.pause()
     
   //   if(playState2 === true)
 	// 		player.play()
@@ -54,7 +54,7 @@ const Collection = () => {
 	// 		player.play()
 	// 	else
 	// 		player.pause()
-	// })
+	})
 
   const features = [
     { name: 'FOR DJS', description: 'Download preset stereo edits (.wavs) of a track, or create your own edits for public use/performance. ' },
@@ -66,14 +66,14 @@ const Collection = () => {
   ]
 
   return (
-    <section className="bg-yellow p-24 sm:p-8 mx-0 mb-12 sm:mt-12 md:mx-0 items-center flex flex-col justify-center">
+    <section className="bg-yellow p-24 sm:p-8 mx-0 mb-12 sm:mt-12 md:mx-0 items-center flex flex-col justify-center bg-white">
 
 
   
       <div className="font-mathias mb-14 text-center text-6xl text-yellow-75">
         BROWSE TRAX
       </div>
-      {/* <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 max-w-screen-lg hover:scale-75">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 max-w-screen-lg hover:scale-75">
         <div className="text-black rounded-md border-4 border-black flex flex-col items-center font-mathias gap-y-3 justify-center py-4 px-2">
           <img src={icon0} alt="icon0" className="w-11 h-4"/>
           <img src={icon1} alt="icon1" className="w-36 h-36"/>
@@ -90,24 +90,7 @@ const Collection = () => {
             <button className="uppercase">edit this track</button>
           </div>
         </div>
-
-        <div className="text-black rounded-md border-4 border-black bg-red-900 flex flex-col items-center font-mathias gap-y-3 justify-center py-4 px-2">
-          <img src={icon0} alt="icon0" className="w-11 h-4"/>
-          <img src={icon1} alt="icon1" className="w-36 h-36"/>
-          <Data idx={idx1}/>
-          <Progress 
-            setIdx={setIdx1} 
-            idx={idx1} 
-          />
-          <Control 
-            playState={playState2} 
-            setPlayState={setPlayState2}
-          />
-          <div className="border-4 border-black rounded-md px-3 py-1">
-            <button className="uppercase">edit this track</button>
-          </div>
-        </div>
-      </div>      */}
+      </div>     
     </section>
   );
 };
