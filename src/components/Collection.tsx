@@ -11,7 +11,7 @@ import React, { useState, useRef, useEffect, useCallback, useContext, createCont
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import {player, Data, Progress, Control} from './MediaPlayer'
-player.load();
+player.muted = false;
 gsap.registerPlugin(ScrollTrigger)
 
 const Collection = () => {
