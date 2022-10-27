@@ -13,31 +13,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import {player, Data, Progress, Control} from './MediaPlayer'
 gsap.registerPlugin(ScrollTrigger)
 
-
-const tracks = [
-  {
-    name: "Mekanın Sahibi",
-    artist: "Norm Ender",
-    cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/1.jpg",
-    source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/1.mp3",
-    url: "https://www.youtube.com/watch?v=z3wAjJXbYzA",
-  },
-  {
-    name: "Rag'n'Bone Man",
-    artist: "Human",
-    cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/9.jpg",
-    source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/9.mp3",
-    url: "https://www.youtube.com/watch?v=L3wKzyIN1yk",
-  }]
-  
-const player = new Audio(tracks[0].source)
-player.setAttribute('preload', 'metadata')
-const userOptions = createContext({
-  shuffle: false,
-  repeat: false,
-})
-
-
 const Collection = () => {
   const collection = useRef(null);
   useEffect(() => {

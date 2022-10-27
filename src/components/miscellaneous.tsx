@@ -4,16 +4,12 @@ import React, { Dispatch, SetStateAction, useState, useRef, useEffect, useCallba
 import handbook_2 from "../assets/handbook_2.png";
 import marketplace_2 from "../assets/marketplace_2.png";
 import github_2 from '../assets/github_2.png';
-
-
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import handbookCover from "@images/handbookCover.jpg";
 import utility from "@images/utility.png";
 
 gsap.registerPlugin(ScrollTrigger)
-
-
 
 const miscellaneous = () => {
 
