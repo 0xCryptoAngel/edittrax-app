@@ -39,10 +39,14 @@ module.exports = {
         },
         yellow: {
           75: '#E6E9E0',
+          125: '#A6752B',
         },
         orange: {
           900: '#8D713F',
         },
+        brown: {
+          100: '#AC3434',
+        }
 
       },
       screens: {
