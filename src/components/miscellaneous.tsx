@@ -46,54 +46,7 @@ const miscellaneous = () => {
 
     
 
-  <section className="bg-black pt-0 px-8 pb-0 rounded-br mx-4 md:mx-0">  
-
-<div className="bg-black">
-      <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-0 px-4 sm:px-6 sm:py-0 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
-        <div>
-          <div className="font-mathias mb-0 text-center text-6xl text-yellow-75">
-          {/* For A Head Full of Loops */}
-          <img src={utility}  alt="" className=""/> 
-          </div>
-          {/* <p className="mt-4 text-gray-500">
-            The walnut wood card tray is precision milled to perfectly fit a stack of Focus cards. The powder coated
-            steel divider separates active cards from new ones, or can be used to archive important task lists.
-          </p> */}
-          <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
-            {features.map((feature) => (
-              <div key={feature.name} className="border-t border-yellow-75 pt-4">
-                <dt className="font-mathias text-2xl text-yellow-75">{feature.name}</dt>
-                <dd className="mt-2 text-sm text-gray-500">{feature.description}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-        <div className="">
-        {/* <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8"> */}
-                    <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className="m-auto"/>
-          {/* <img
-            src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-01.jpg"
-            alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
-            className="rounded-lg bg-gray-100"
-          />
-          <img
-            src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-02.jpg"
-            alt="Top down view of walnut card tray with embedded magnets and card groove."
-            className="rounded-lg bg-gray-100"
-          />
-          <img
-            src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-03.jpg"
-            alt="Side of walnut card tray with card groove and recessed card area."
-            className="rounded-lg bg-gray-100"
-          />
-          <img
-            src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-04.jpg"
-            alt="Walnut card tray filled with cards and card angled in dedicated groove."
-            className="rounded-lg bg-gray-100"
-          /> */}
-        </div>
-      </div>
-    </div>
+  <section className="bg-black pt-0 px-8 pb-0 rounded-br mt-48 mx-4 md:mx-0">  
 
   
 
@@ -105,28 +58,29 @@ const miscellaneous = () => {
     
 
 
-        <dl className="w-full md:w-1/2 flex align-middle items-center">
+        <dl className="w-full h-full md:w-1/2 flex align-middle items-center">
 
 
         <div className="container mx-auto">
-        <div className="max-w-md mx-auto my-10p-5 rounded-md shadow-sm">
+        <div className=" mx-auto my-auto flex rounded-md shadow-sm">
           {/* <img classNameName="object-cover w-full lg:mx-6 lg:w-1/2 rounded-xl h-72 lg:h-96" src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"alt=""> */}
           {/* <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className="mb-8 ms:mb-0 w-60"/> */}
           {/* import handbookCover from "@images/handbookCover.jpg"; */}
-<img src={handbookCover}  alt="" className=""/> 
+{/* <img src={handbookCover}  alt="" className=""/>  */}
+<img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className=""/>
   </div>
 
     </div>  
 
 
         </dl>
-        <dl className="w-full md:w-1/2">
+        <dl className="w-full h-full md:w-1/2 flex align-middle items-center email">
 
 
 
-        <div className="container mx-auto">
-        <div className="max-w-md mx-auto my-10 p-5 rounded-md shadow-sm">
-            <div className="text-center">
+
+
+            {/* <div className="text-center">
 
 
 
@@ -138,14 +92,19 @@ const miscellaneous = () => {
 
                 </h1>
 
-            </div>
-            <div className="m-7">
+            </div> */}
+
+
+
+
+
+            <iframe height="1000px" src="https://cc76d0e7.sibforms.com/serve/MUIEAN0HS4VjA9Ip3AUNlVmAoJjDCZ4U4UKrdLhbWTy9-xNEjrJelQRNtZB8S8zXC56TOray5tzAoJsfRKuQmhjOe_tBgnennH2klXsHBvKo0GeuuL2UUU6T8f2aoAivDIUiSFzAYeID1F5NZOUMNnlDBTqhCT432sUxx3-kA6kVBnBo7ypPL1uG-ts_tfRUq6pgVg1zCmtVrHS6" scrolling="auto" className="block ml-auto mr-auto w-full h-full"></iframe>
+
+
+
+
+            {/* <div className="m-7">
                 <div id="form">
-
-                    {/* <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE">
-                    <input type="hidden" name="subject" value="New Submission from Web3Forms">
-                    <input type="checkbox" name="botcheck" id="" style="display: none;"> */}
-
 
                     <div className="mb-6">
                         <label className="block mb-2 text-sm text-gray-600 dark:text-gray-400">Full Name</label>
@@ -171,9 +130,8 @@ const miscellaneous = () => {
                     <p className="text-base text-center text-gray-400" id="result">
                     </p>
                 </div>
-            </div>
-        </div>
-    </div>
+            </div> */}
+
 
 
 
