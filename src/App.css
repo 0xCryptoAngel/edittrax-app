@@ -185,6 +185,20 @@ width: 100%;
 	background-color: #000000;
 }
 
-.player-text {
-  font-size: 5px !important;
+.rhap_container {
+  box-shadow: none !important;
+  padding: 0px !important;
+}
+.rhap_time {
+  font-size: 10px !important;
+}
+.rhap_progress-indicator {
+  width: 0px !important;
+  height: 0px !important;
+}
+.rhap_main-controls-button {
+  color: black !important;
+}
+.rhap_progress-filled {
+  background-color: #000000 !important;
 }

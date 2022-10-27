@@ -88,7 +88,7 @@ const handleClickNext = () => {
         <div className="text-black rounded-md border-4 border-black flex flex-col items-center font-mathias gap-y-3 justify-center py-4 px-2">
           <img src={icon0} alt="icon0" className="w-11 h-4"/>
           <img src={icon1} alt="icon1" className="w-36 h-36"/>
-          <Data idx={idx0}/>
+          {/* <Data idx={idx0}/>
           <Progress 
             setIdx={setIdx0} 
             idx={idx0} 
@@ -96,16 +96,15 @@ const handleClickNext = () => {
           <Control 
             playState={playState1} 
             setPlayState={setPlayState1}
+          /> */}
+          <AudioPlayer
+            autoPlay
+            src={musicTracks[trackIndex].src}
+            showJumpControls={false}
+            showFilledProgress={true}
+            customVolumeControls={[]}
+            customAdditionalControls={[]}
           />
-          {/* <div className="player-text">
-            <AudioPlayer
-              autoPlay
-              src={musicTracks[trackIndex].src}
-              showJumpControls={false}
-              customVolumeControls={[]}
-              customAdditionalControls={[]}
-            />
-          </div> */}
           <div className="border-4 border-black rounded-md px-3 py-1">
             <button className="uppercase">edit this track</button>
           </div>
