@@ -6,6 +6,7 @@ import DashEther from "./views/DashEther";
 import { Web3ReactProvider } from '@web3-react/core';
 import { getLibrary } from './wallet/wallet';
 import MetamaskProvider from './wallet/useEagerConnect';
+import ReactGA from 'react-ga';
 
 import {
   BrowserRouter,
@@ -13,6 +14,10 @@ import {
   Route,
   Navigate
 } from "react-router-dom";
+
+const TRACKING_ID = "G-X7FDGNLGYJ"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
+ReactGA.pageview(window.location.pathname);
 
 const App = () => {
 
