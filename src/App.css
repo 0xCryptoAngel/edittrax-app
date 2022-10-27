@@ -173,7 +173,12 @@ width: 100%;
 .progressCenter:hover{
 	cursor: pointer;
 }
-
+.progressBar{
+	width: 0px;
+	height: 7px;
+	border-radius: 10px;
+	background-color: #000000;
+}
 .progressBar0{
 	width: 0px;
 	height: 7px;

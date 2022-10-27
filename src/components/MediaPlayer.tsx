@@ -39,7 +39,6 @@ const userOptions = createContext({
   shuffle: false,
   repeat: false,
 })
-player.load();
 
 
 export const Data = (props:any) => {	

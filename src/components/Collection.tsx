@@ -11,6 +11,7 @@ import React, { useState, useRef, useEffect, useCallback, useContext, createCont
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import {player, Data, Progress, Control} from './MediaPlayer'
+player.load();
 gsap.registerPlugin(ScrollTrigger)
 
 const Collection = () => {
@@ -35,19 +36,12 @@ const Collection = () => {
   // let [playState4, setPlayState4] = useState<boolean>(false);
 	useEffect(() => {
 		if(playState1 === true)
+    
     {
-      player.oncanplaythrough = () => {
-        console.log("CAN PLAY!");
-        player.play();
-      }
-      player.load();
+      player.play();
      }
 		else {
-      player.oncanplaythrough = () => {
-        console.log("CAN PLAY!");
-        player.pause();
-      }
-      player.load();
+      player.pause();
     }
     
   //   if(playState2 === true)
