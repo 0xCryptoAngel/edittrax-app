@@ -7,7 +7,7 @@ const tracks = [
     name: "Mekanın Sahibi",
     artist: "Norm Ender",
     cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/1.jpg",
-    source: "https://raw.githubusercontent.com/CryptoAngel1024/edittrax_beta_dapp/blob/master/src/assets/test.mp3",
+    source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/1.mp3",
     url: "https://www.youtube.com/watch?v=z3wAjJXbYzA",
   },
   {
