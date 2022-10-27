@@ -12,8 +12,6 @@ import 'react-h5-audio-player/lib/styles.css';
 import React, { useState, useRef, useEffect, useCallback, useContext, createContext } from "react";
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import {player, Data, Progress, Control} from './MediaPlayer'
-
 gsap.registerPlugin(ScrollTrigger)
 const musicTracks = [
   {
@@ -48,25 +46,6 @@ const handleClickNext = () => {
       }
     });
   });
-
-  let [idx0, setIdx0] = useState<number>(0);
-  // let [idx1, setIdx1] = useState<number>(1);
-  // let [idx2, setIdx2] = useState<number>(2);
-  // let [idx3, setIdx3] = useState<number>(3);
-	let [playState1, setPlayState1] = useState<boolean>(false);
-  // let [playState2, setPlayState2] = useState<boolean>(false);
-  // let [playState3, setPlayState3] = useState<boolean>(false);
-  // let [playState4, setPlayState4] = useState<boolean>(false);
-	useEffect(() => {
-		if(playState1 === true)
-    {
-      player.play();
-     }
-		else {
-      player.pause();
-    }
-	})
-
   const features = [
     { name: 'FOR DJS', description: 'Download preset stereo edits (.wavs) of a track, or create your own edits for public use/performance. ' },
     { name: 'FOR PRODUCERS', description: 'Removes 3rd-party digital service providers (and any layer other than the Collectible) when distributing tracks for download.' },
@@ -88,15 +67,6 @@ const handleClickNext = () => {
         <div className="text-black rounded-md border-4 border-black flex flex-col items-center font-mathias gap-y-3 justify-center py-4 px-2">
           <img src={icon0} alt="icon0" className="w-11 h-4"/>
           <img src={icon1} alt="icon1" className="w-36 h-36"/>
-          {/* <Data idx={idx0}/>
-          <Progress 
-            setIdx={setIdx0} 
-            idx={idx0} 
-          />
-          <Control 
-            playState={playState1} 
-            setPlayState={setPlayState1}
-          /> */}
           <AudioPlayer
             autoPlay
             src={musicTracks[trackIndex].src}
