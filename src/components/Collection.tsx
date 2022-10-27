@@ -69,6 +69,7 @@ const Collection = () => {
         BROWSE TRAX
       </div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 max-w-screen-xl hover:scale-75">
+      
         <div className="text-black rounded-md border-4 border-black flex flex-col items-center font-mathias gap-y-3 justify-center py-4 px-2 bg-brown-100">
           <img src={icon0} alt="icon0" className="w-11 h-4"/>
           <img src={icon1} alt="icon1" className="w-36 h-36"/>
@@ -85,12 +86,14 @@ const Collection = () => {
             customVolumeControls={[]}
             customAdditionalControls={[]}
           />
-          <div className="border-4 border-black rounded-md px-3 py-1">
-            <button className="uppercase">edit this track</button>
+          <div className="border-4 border-black rounded-md px-3 py-1 hover:text-gray-300">
+            <Link to="/edit-trax/burnt">
+              <button className="uppercase">edit this track</button>
+            </Link>
           </div>
         </div>
 
-        <div className="text-black rounded-md border-4 border-black flex flex-col items-center font-mathias gap-y-3 justify-center py-4 px-2 bg-gray-400">
+        <div className="text-black rounded-md border-4 border-black flex flex-col items-center font-mathias gap-y-3 justify-center py-4 px-2 bg-gray-500">
           <img src={icon0} alt="icon0" className="w-11 h-4"/>
           <img src={icon1} alt="icon1" className="w-36 h-36"/>
           <div className="text-center">
@@ -99,15 +102,17 @@ const Collection = () => {
           </div>
           <AudioPlayer
             autoPlay
-            style={{ backgroundColor: "#9CA3AF" }}
+            style={{ backgroundColor: "#6B7280" }}
             src={musicTracks[1].src}
             showJumpControls={false}
             showFilledProgress={true}
             customVolumeControls={[]}
             customAdditionalControls={[]}
           />
-          <div className="border-4 border-black rounded-md px-3 py-1">
-            <button className="uppercase">edit this track</button>
+          <div className="border-4 border-black rounded-md px-3 py-1 hover:text-gray-300">
+            <Link to="/edit-trax/mechanism">
+              <button className="uppercase">edit this track</button>
+            </Link>
           </div>
         </div>
 
@@ -126,8 +131,10 @@ const Collection = () => {
             customVolumeControls={[]}
             customAdditionalControls={[]}
           />
-          <div className="border-4 border-black rounded-md px-3 py-1">
-            <button className="uppercase">edit this track</button>
+          <div className="border-4 border-black rounded-md px-3 py-1 hover:text-gray-300">
+            <Link to="/edit-trax/alpha-test">
+              <button className="uppercase">edit this track</button>
+            </Link>
           </div>
         </div>
 
@@ -147,8 +154,10 @@ const Collection = () => {
             customVolumeControls={[]}
             customAdditionalControls={[]}
           />
-          <div className="border-4 border-black rounded-md px-3 py-1">
-            <button className="uppercase">edit this track</button>
+          <div className="border-4 border-black rounded-md px-3 py-1 hover:text-gray-300">
+            <Link to="/edit-trax/dapp">
+              <button className="uppercase">edit this track</button>
+            </Link>
           </div>
         </div>
       </div>     
