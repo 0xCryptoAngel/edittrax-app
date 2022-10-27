@@ -36,10 +36,12 @@ const Collection = () => {
 	useEffect(() => {
 		if(playState1 === true)
     {
+      player.load();
       player.play()
       console.log("play")
      }
 		else {
+      player.load();
 			player.pause()
       console.log("pause")
     }
