@@ -6,13 +6,42 @@ import QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX from "../assets/QmPgdPxBpe
 // import QmQDUgmJdguCMhK9NVvqWdYpTnXjDDZhmA5E7Di2U6BgVJ from "../assets/QmQDUgmJdguCMhK9NVvqWdYpTnXjDDZhmA5E7Di2U6BgVJ.jpeg";
 import icon0 from "../assets/icon0.png";
 import icon1 from "../assets/icon1.png";
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 
-import React, { useState, useRef, useEffect, useCallback, useContext, createContext } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import {player, Data, Progress, Control} from './MediaPlayer'
-player.load();
+import { type } from "os";
 gsap.registerPlugin(ScrollTrigger)
+type musicData = {
+  trackName: string;
+  artistName: string;
+  src: string;
+}
+const musicTracks: musicData[] = [
+  {
+    trackName: "Memories",
+    artistName: 'test',
+    src: "https://www.bensound.com/bensound-music/bensound-memories.mp3"
+  },
+  {
+    trackName: "qweqwe",
+    artistName: 'teqweqwest',
+    src: "https://www.bensound.com/bensound-music/bensound-memories.mp3"
+  },
+  {
+    trackName: "sdfsdf",
+    artistName: 'dfsdf',
+    src: "https://www.bensound.com/bensound-music/bensound-memories.mp3"
+  },
+  {
+    trackName: "fghfg",
+    artistName: 'tasdfsdest',
+    src: "https://www.bensound.com/bensound-music/bensound-memories.mp3"
+  }
+]
+
 
 const Collection = () => {
   const collection = useRef(null);
@@ -25,41 +54,6 @@ const Collection = () => {
       }
     });
   });
-
-  let [idx0, setIdx0] = useState<number>(0);
-  // let [idx1, setIdx1] = useState<number>(1);
-  // let [idx2, setIdx2] = useState<number>(2);
-  // let [idx3, setIdx3] = useState<number>(3);
-	let [playState1, setPlayState1] = useState<boolean>(false);
-  // let [playState2, setPlayState2] = useState<boolean>(false);
-  // let [playState3, setPlayState3] = useState<boolean>(false);
-  // let [playState4, setPlayState4] = useState<boolean>(false);
-	useEffect(() => {
-		if(playState1 === true)
-    
-    {
-      player.play();
-     }
-		else {
-      player.pause();
-    }
-    
-  //   if(playState2 === true)
-	// 		player.play()
-	// 	else
-	// 		player.pause()
-    
-  //   if(playState3 === true)
-	// 		player.play()
-	// 	else
-	// 		player.pause()
-
-  //   if(playState4 === true)
-	// 		player.play()
-	// 	else
-	// 		player.pause()
-	})
-
   const features = [
     { name: 'FOR DJS', description: 'Download preset stereo edits (.wavs) of a track, or create your own edits for public use/performance. ' },
     { name: 'FOR PRODUCERS', description: 'Removes 3rd-party digital service providers (and any layer other than the Collectible) when distributing tracks for download.' },
@@ -71,30 +65,103 @@ const Collection = () => {
 
   return (
     <section className="bg-yellow p-24 sm:p-8 mx-0 mb-12 sm:mt-12 md:mx-0 items-center flex flex-col justify-center bg-white">
-
-
-  
-      <div className="font-mathias mb-14 text-center text-6xl text-yellow-75 text-8xl">
+      <div className="font-mathias mb-14 text-center text-yellow-75 text-8xl">
         BROWSE TRAX
       </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 max-w-screen-lg hover:scale-75">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 max-w-screen-xl hover:scale-75">
+      
+        <div className="text-black rounded-md border-4 border-black flex flex-col items-center font-mathias gap-y-3 justify-center py-4 px-2 bg-brown-100">
+          <img src={icon0} alt="icon0" className="w-11 h-4"/>
+          <img src={icon1} alt="icon1" className="w-36 h-36"/>
+          <div className="text-center">
+            <div>{musicTracks[0].trackName}</div>
+            <div>{musicTracks[0].artistName}</div>
+          </div>
+          <AudioPlayer
+            autoPlay
+            style={{ backgroundColor: "#AC3434" }}
+            src={musicTracks[0].src}
+            showJumpControls={false}
+            showFilledProgress={true}
+            customVolumeControls={[]}
+            customAdditionalControls={[]}
+          />
+          <div className="border-4 border-black rounded-md px-3 py-1 hover:text-gray-300">
+            <Link to="/edit-trax/burnt">
+              <button className="uppercase">edit this track</button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="text-black rounded-md border-4 border-black flex flex-col items-center font-mathias gap-y-3 justify-center py-4 px-2 bg-gray-500">
+          <img src={icon0} alt="icon0" className="w-11 h-4"/>
+          <img src={icon1} alt="icon1" className="w-36 h-36"/>
+          <div className="text-center">
+            <div>{musicTracks[1].trackName}</div>
+            <div>{musicTracks[1].artistName}</div>
+          </div>
+          <AudioPlayer
+            autoPlay
+            style={{ backgroundColor: "#6B7280" }}
+            src={musicTracks[1].src}
+            showJumpControls={false}
+            showFilledProgress={true}
+            customVolumeControls={[]}
+            customAdditionalControls={[]}
+          />
+          <div className="border-4 border-black rounded-md px-3 py-1 hover:text-gray-300">
+            <Link to="/edit-trax/mechanism">
+              <button className="uppercase">edit this track</button>
+            </Link>
+          </div>
+        </div>
+
         <div className="text-black rounded-md border-4 border-black flex flex-col items-center font-mathias gap-y-3 justify-center py-4 px-2">
           <img src={icon0} alt="icon0" className="w-11 h-4"/>
           <img src={icon1} alt="icon1" className="w-36 h-36"/>
-          <Data idx={idx0}/>
-          <Progress 
-            setIdx={setIdx0} 
-            idx={idx0} 
+          <div className="text-center">
+            <div>{musicTracks[2].trackName}</div>
+            <div>{musicTracks[2].artistName}</div>
+          </div>
+          <AudioPlayer
+            autoPlay
+            src={musicTracks[2].src}
+            showJumpControls={false}
+            showFilledProgress={true}
+            customVolumeControls={[]}
+            customAdditionalControls={[]}
           />
-          <Control 
-            playState={playState1} 
-            setPlayState={setPlayState1}
+          <div className="border-4 border-black rounded-md px-3 py-1 hover:text-gray-300">
+            <Link to="/edit-trax/alpha-test">
+              <button className="uppercase">edit this track</button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="text-black rounded-md border-4 border-black flex flex-col items-center font-mathias gap-y-3 justify-center py-4 px-2 bg-yellow-125">
+          <img src={icon0} alt="icon0" className="w-11 h-4"/>
+          <img src={icon1} alt="icon1" className="w-36 h-36"/>
+          <div className="text-center">
+            <div>{musicTracks[3].trackName}</div>
+            <div>{musicTracks[3].artistName}</div>
+          </div>
+          <AudioPlayer
+            autoPlay
+            style={{ backgroundColor: "#A6752B" }}
+            src={musicTracks[3].src}
+            showJumpControls={false}
+            showFilledProgress={true}
+            customVolumeControls={[]}
+            customAdditionalControls={[]}
           />
-          <div className="border-4 border-black rounded-md px-3 py-1">
-            <button className="uppercase">edit this track</button>
+          <div className="border-4 border-black rounded-md px-3 py-1 hover:text-gray-300">
+            <Link to="/edit-trax/dapp">
+              <button className="uppercase">edit this track</button>
+            </Link>
           </div>
         </div>
       </div>     
+ 
     </section>
   );
 };
