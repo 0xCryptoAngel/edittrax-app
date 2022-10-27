@@ -34,7 +34,8 @@ const tracks = [
     url: "https://www.youtube.com/watch?v=L3wKzyIN1yk",
   }]
 export const player = new Audio(tracks[0].source)
-player.setAttribute('preload', 'metadata')
+player.setAttribute('preload', 'auto')
+player.muted = false;
 const userOptions = createContext({
   shuffle: false,
   repeat: false,
@@ -56,10 +57,12 @@ export const Progress = (props:any) => {
   let [currLength, setCurrLength] = useState<number>(0)
 	let [length, setLength] = useState<number>(0)
 	let options = useContext(userOptions)
-	const progressBar = document.querySelector(`.progressBar`) as HTMLDivElement
+	const progressBar = document.querySelector(".progressBar") as HTMLDivElement
 	const updateProgress = (e:any) =>{
+    console.log("e", e.target.getBoundingClientRect())
 		let offset = e.target.getBoundingClientRect().left
 		let newOffSet = e.clientX
+    console.log("newOffSet", newOffSet)
 		let newWidth = newOffSet - offset
     if (progressBar != null) {
       progressBar.style.width = newWidth+"px"

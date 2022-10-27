@@ -184,3 +184,7 @@ width: 100%;
 	border-radius: 10px;
 	background-color: #000000;
 }
+
+.player-text {
+  font-size: 5px !important;
+}

@@ -6,15 +6,38 @@ import QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX from "../assets/QmPgdPxBpe
 // import QmQDUgmJdguCMhK9NVvqWdYpTnXjDDZhmA5E7Di2U6BgVJ from "../assets/QmQDUgmJdguCMhK9NVvqWdYpTnXjDDZhmA5E7Di2U6BgVJ.jpeg";
 import icon0 from "../assets/icon0.png";
 import icon1 from "../assets/icon1.png";
+import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 
 import React, { useState, useRef, useEffect, useCallback, useContext, createContext } from "react";
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import {player, Data, Progress, Control} from './MediaPlayer'
-player.muted = false;
+
 gsap.registerPlugin(ScrollTrigger)
+const musicTracks = [
+  {
+    name: "Memories",
+    src: "https://www.bensound.com/bensound-music/bensound-memories.mp3"
+  }
+]
+
 
 const Collection = () => {
+
+  const [trackIndex, setTrackIndex] = useState(0);
+
+const handleClickPrevious = () => {
+  setTrackIndex((currentTrack) =>
+    currentTrack === 0 ? musicTracks.length - 1 : currentTrack - 1
+  );
+};
+
+const handleClickNext = () => {
+  setTrackIndex((currentTrack) =>
+    currentTrack < musicTracks.length - 1 ? currentTrack + 1 : 0
+  );
+};
   const collection = useRef(null);
   useEffect(() => {
     const col = collection.current;
@@ -36,28 +59,12 @@ const Collection = () => {
   // let [playState4, setPlayState4] = useState<boolean>(false);
 	useEffect(() => {
 		if(playState1 === true)
-    
     {
       player.play();
      }
 		else {
       player.pause();
     }
-    
-  //   if(playState2 === true)
-	// 		player.play()
-	// 	else
-	// 		player.pause()
-    
-  //   if(playState3 === true)
-	// 		player.play()
-	// 	else
-	// 		player.pause()
-
-  //   if(playState4 === true)
-	// 		player.play()
-	// 	else
-	// 		player.pause()
 	})
 
   const features = [
@@ -77,7 +84,7 @@ const Collection = () => {
       <div className="font-mathias mb-14 text-center text-6xl text-yellow-75 text-8xl">
         BROWSE TRAX
       </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 max-w-screen-lg hover:scale-75">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 max-w-screen-xl hover:scale-75">
         <div className="text-black rounded-md border-4 border-black flex flex-col items-center font-mathias gap-y-3 justify-center py-4 px-2">
           <img src={icon0} alt="icon0" className="w-11 h-4"/>
           <img src={icon1} alt="icon1" className="w-36 h-36"/>
@@ -90,11 +97,21 @@ const Collection = () => {
             playState={playState1} 
             setPlayState={setPlayState1}
           />
+          {/* <div className="player-text">
+            <AudioPlayer
+              autoPlay
+              src={musicTracks[trackIndex].src}
+              showJumpControls={false}
+              customVolumeControls={[]}
+              customAdditionalControls={[]}
+            />
+          </div> */}
           <div className="border-4 border-black rounded-md px-3 py-1">
             <button className="uppercase">edit this track</button>
           </div>
         </div>
       </div>     
+ 
     </section>
   );
 };
