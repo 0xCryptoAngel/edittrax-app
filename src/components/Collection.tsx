@@ -36,14 +36,18 @@ const Collection = () => {
 	useEffect(() => {
 		if(playState1 === true)
     {
+      player.oncanplaythrough = () => {
+        console.log("CAN PLAY!");
+        player.play();
+      }
       player.load();
-      player.play()
-      console.log("play")
      }
 		else {
+      player.oncanplaythrough = () => {
+        console.log("CAN PLAY!");
+        player.pause();
+      }
       player.load();
-			player.pause()
-      console.log("pause")
     }
     
   //   if(playState2 === true)
