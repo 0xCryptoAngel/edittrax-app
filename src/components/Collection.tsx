@@ -194,7 +194,7 @@ const Collection = () => {
           </div>
           <AudioPlayer 
             autoPlay
-            style={{ backgroundColor:"#E6E9E1" }} // media player background color 
+            style={{ backgroundColor:"#ffffff" }} // media player background color 
             src={musicTracks[0].src} // media source
             showJumpControls={false} // Jump control remove
             showFilledProgress={false} // show filled process color
