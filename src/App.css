@@ -157,7 +157,8 @@ width: 100%;
   width:40px !important;
   height:40px !important;
   border-radius: 27px !important;
-  margin-top: 12px !important;
+  
+  /* margin-top: 12px !important; */
   /* padding-left: -3px !important; */
 }
 
