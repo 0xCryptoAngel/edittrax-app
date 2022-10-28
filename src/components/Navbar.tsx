@@ -34,15 +34,12 @@ const Navbar = ({
     
     <header className="head">
 
-{/* <div className="App">
-      <button>
-        Modal
-      </button>
-</div> */}
+        <div className="logo">
+        <a href="https://edittraxnft.on.fleek.co/" target="_blank" className="">
+          <img src={et_new_logo} alt="logo"/>
+          </a>
+        </div>
 
-      <div className="logo">
-        <img src={et_new_logo} alt="logo"/>
-      </div>
       
       <ConnectButton
         Tezos={Tezos}
