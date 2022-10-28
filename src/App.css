@@ -151,12 +151,24 @@ width: 100%;
 
 /* Media player style overwrite start */
 
+.rhap_stacked .rhap_controls-section {
+
+  margin-top:0 !important
+}
+
+.rhap_main-controls-button {
+
+  margin:0 !important
+}
+
 .rhap_container {
   box-shadow: none !important;
   padding: 0px !important;
   width:40px !important;
   height:40px !important;
   border-radius: 27px !important;
+  margin-top:auto;
+  margin-bottom:auto;
   
   /* margin-top: 12px !important; */
   /* padding-left: -3px !important; */

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import QmRft7BBYvJLdVUmYRw9stoUAaomtvzxUL8n5JLqTCSMWj from "../assets/QmRft7BBYvJLdVUmYRw9stoUAaomtvzxUL8n5JLqTCSMWj.jpeg";
 import QmX6mLXAv3TgBBsP5Ahjiz9R3zV3sid2DnXQLsjNuo1vJ1 from "../assets/QmX6mLXAv3TgBBsP5Ahjiz9R3zV3sid2DnXQLsjNuo1vJ1.jpeg";
 import QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX from "../assets/QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX.jpeg";
-import founder from "../assets/founder.jpg";
+import founder from "../assets/founder.png";
 // import QmQDUgmJdguCMhK9NVvqWdYpTnXjDDZhmA5E7Di2U6BgVJ from "../assets/QmQDUgmJdguCMhK9NVvqWdYpTnXjDDZhmA5E7Di2U6BgVJ.jpeg";
 import icon0 from "../assets/icon0.png";
 import icon1 from "../assets/icon1.png";
@@ -75,17 +75,48 @@ const Collection = () => {
       </div>
 
 
-<div className="relative max-w-lg mx-auto md:max-w-2xl sm:mt-12 min-w-0 break-words gap-24 bg-black w-full mb-6 shadow-lg rounded-xl mt-4 text-yellow-75 flex flex-row">
+<div className="relative sm:mt-12 min-w-0 break-words gap-0 bg-black w-full mb-6 shadow-lg rounded-xl mt-4 text-yellow-75 flex flex-col lg:flex-row content-center">
 
-      <div className="px-0 flex flex-col sm:flex-row">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div className="px-0 flex flex-col sm:flex-row w-full lg:w-2/3">
 
         <div className="flex flex-wrap justify-center flex-col">
           
           <div className="mr-auto ml-auto mt-0 mb-0 ml-0 gap-2 flex w-auto flex-col mx-0 h-auto items-center">
 
-            <img src={founder} alt="founder_pic" className="rounded-full h-auto"/>
+            <img src={founder} alt="founder_pic" className="rounded-full h-auto w-lg lg:w-md"/>
 
-            <div className="w-full text-center mt-0 opacity-0 h-0">
+            <div className="w-full text-center mt-0 opacity-0 h-0 md:ml-12">
 
                 <div className="flex justify-center lg:pt-4 pt-8 pb-0">
                     <div className="p-3 text-center">
@@ -107,9 +138,9 @@ const Collection = () => {
         
       </div>
 
-      <div className="mr-auto mt-0 mb-0 ml-0 gap-2 flex flex-col mx-0 h-auto items-center">
+      <div className="mr-auto mt-0 mb-0 ml-0 gap-2 flex flex-col mx-0 h-auto items-center lg:items-left">
 
-        <div className="w-full px-4">
+        <div className="w-full lg:w-2/3 lg:px-0">
 
           <div className="pl-0 gap-0 flex flex-row items-center">
 
@@ -123,29 +154,21 @@ const Collection = () => {
 
           </div>
 
+          <p className="font-light leading-relaxed text-slate-600 mb-4 text-justify text-xs ">   Bai-ee is a House Dj/producer, Live Performance Act and Record Label Owner based in Chicago. His Genesis Collection consists of 4 original tracks available for the first time as collectible music. Customize each track fro your own performance within within these interactive Music OBJKTs.</p>
 
+          <div className="pl-0 gap-1 flex flex-row lg:content-left">
+            <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className="font-mathias bg-yellow-75 w-auto text-center px-4 py-1 text-black text-xs rounded-md hover:opacity-50">
+              Website
+            </a>
+            <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className="font-mathias bg-yellow-75 w-auto text-center px-4 py-1 text-black text-xs rounded-md hover:opacity-50">
+              Twitter
+            </a>
+            <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className="font-mathias bg-yellow-75  w-auto text-center px-4  py-1 text-black text-xs rounded-md hover:opacity-50">
+              Discogs
+            </a>
+          </div>
 
-
-
-
-
-
-    <p className="font-light leading-relaxed text-slate-600 mb-4 text-justify text-xs ">   Bai-ee is a House Dj/producer, Live Performance Act and Record Label Owner based in Chicago. His Genesis Collection consists of 4 original tracks available for the first time as collectible music. Customize each track fro your own performance within within these interactive Music OBJKTs.</p>
-
-
-    <div className="pl-0 gap-1 flex flex-row">
-              <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className="font-mathias bg-yellow-75 w-auto text-center px-4 py-1 text-black text-xs rounded-md hover:opacity-50">
-                Website
-              </a>
-              <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className="font-mathias bg-yellow-75 w-auto text-center px-4 py-1 text-black text-xs rounded-md hover:opacity-50">
-                Twitter
-              </a>
-              <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className="font-mathias bg-yellow-75  w-auto text-center px-4  py-1 text-black text-xs rounded-md hover:opacity-50">
-                Discogs
-              </a>
-            </div>
-
-</div>
+        </div>
 
 
 
@@ -156,37 +179,23 @@ const Collection = () => {
 
 
       </div>
-</div>
 
 
-
-
-
-
-
-
-
-
-     <div className="bg-black mx-0 mb-4 w-auto rounded-sm px-0 mt-8">
-
-
-
-
-
-
+      <div className="bg-black mx-0 mb-4 w-auto rounded-sm px-0 mt-24 lg:mt-8">
+      
       {/* Players */}
       {/* <div className="grid md:grid-cols-3 gap-x-6 lg:gap-x-12"> */}
-      <div className="grid grid-cols-1 gap-6 mx-0 sm:grid-cols-1 md:grid-cols-2 max-w-screen-xl hover:scale-75 h-auto">
+      <div className="grid grid-cols-1 gap-6 mx-0 max-w-screen-xl hover:scale-75 h-auto">
 
       {/* Player 1 */}
 
       <div className="mb-0 lg:mb-0 border-5 border-yellow-75 ">
       {/* <div className="bg-white block rounded-lg shadow-lg">  */}
-        <div className="text-yellow-75 h-24 sm:h-28 md:h-96 border-2 border-yellow-75 flex flex-row rounded-lg md:flex-col items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
+        <div className="text-yellow-75 h-24 sm:h-28 border-0 border-yellow-75 flex flex-row rounded-lg items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
           {/* <img alt="icon0" className="w-full h-auto"/> */}
-          <img src={et01} alt="icon1" className="w-20 md:w-auto md:h-3/4 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
+          <img src={et01} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
 
-          <div className="flex-row flex m-0 w-96 justify-around md:mt-4">
+          <div className="flex-row flex m-0 w-96 justify-around md:mt-0">
           <div className="text-left w-auto pl-0">
             <div>{musicTracks[0].trackName}</div>
             <div>{musicTracks[0].artistName}</div>
@@ -289,6 +298,23 @@ const Collection = () => {
 
       </div>     
     </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+     
     </section>
   );
 };
