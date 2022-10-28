@@ -67,10 +67,13 @@ const Collection = () => {
 
     <section className="bg-black m-0 mb-12 sm:mt-0 md:mx-0 items-center flex flex-col justify-center pl-4 pr-4">
 
-     <div className="bg-black mx-0 mb-14 w-auto rounded-sm px-0">
-      <div className="font-mathias mt-14 mb-24 mx-6 text-center text-yellow-75 text-5xl">
+     <div className="bg-black mx-0 mb-4 w-auto rounded-sm px-0">
+      <div className="font-mathias mt-14 mb-0 mx-6 text-center text-yellow-75 text-5xl">
         GENESIS COLLECTION
       </div>
+
+      <dt className="mt-2 text-sm text-gray-500 p-4 text-justify ">
+        Bai-ee is a House Dj/producer, Live Performance Act and Record Label Owner based in Chicago. His Genesis Collection consists of 4 original tracks available for the first time as collectible music. Customize each track fro your own performance within within these interactive Music OBJKTs. </dt>
 
       {/* Players */}
       {/* <div className="grid md:grid-cols-3 gap-x-6 lg:gap-x-12"> */}

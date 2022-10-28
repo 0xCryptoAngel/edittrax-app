@@ -16,27 +16,23 @@ const features1 = [
   { name: 'FOR PRODUCERS', description: 'No 3rd party required. Removes all layers seperate of the collectible and marketplace when distributing token gated downloads. ' },
   { name: 'FOR COLLABS', description: 'An accessible build framework for musicians, designers and developers to use individual strengths to create meaningful collaborations ' },
   { name: 'FOR CULTURE', description: 'Supports 1 of 1 selector djs, unique dance-floor experiences and building the bottom of a funnel for independent music producers.' },
-  // { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
-  // { name: 'Considerations', description: 'Made from natural materials. Grain and color vary with each item.' },
 ]
 const features2 = [
   { name: 'BLOCKCHAIN', description: 'TEZOS is a proof-of-steak protocol providing decentralized, trustless ledger technology in an energy efficient way. blah blah blah'},
   { name: 'CONTRACT', description: 'Minted on Hic Et Nunc (Teia), an FA2 Objkt Standard you own in your wallet like any self-custodied NFT'},
   { name: 'MEDIA TYPE', description: 'HTML / Zip on IPFS following all best practices for interactive OBJKT development and aggregation as described on Hic Et Nunc Github.' },
   { name: 'BUY, SELL & DL', description: 'As a self-custodied token *Anywhere' },
-  // { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
-  // { name: 'Considerations', description: 'Made from natural materials. Grain and color vary with each item.' },
 ]
 
 const miscellaneous = () => {
 
   return (
 
-  <section className="bg-black pt-0 px-8 pb-0 rounded-br mt-8 mx-4 md:mx-0">  
+  <section className="bg-black pt-0 px-0 pb-0 rounded-br mt-8 mx-4 md:mx-0">  
 
 
-<div className="bg-black mb-14 rounded-lg py-14">
-      <div className="font-mathias mb-8 text-center text-7xl text-yellow-75">
+<div className="bg-black mb-14 rounded-lg py-4">
+      <div className="font-mathias mb-8 text-center text-5xl text-yellow-75">
       FAQ
       </div>
 
