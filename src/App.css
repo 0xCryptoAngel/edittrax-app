@@ -55,13 +55,13 @@ max-height:100vh;
 }
 
 .h-iframe {
-  height: calc(100vh - 224px);
+  height: calc(100vh - 200px);
 }
 
 @media (max-width: 635px) {
 
   .h-iframe {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 250px); 
   }
 
 }

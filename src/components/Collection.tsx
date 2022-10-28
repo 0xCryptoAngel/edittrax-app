@@ -114,7 +114,7 @@ const Collection = () => {
           
           <div className="mr-auto ml-auto mt-0 mb-0 ml-0 gap-2 flex w-auto flex-col mx-0 h-auto items-center">
 
-            <img src={founder} alt="founder_pic" className="rounded-full h-auto w-lg lg:w-md"/>
+            <img src={founder} alt="founder_pic" className="h-sm lg:h-sm max-w-xs"/>
 
             <div className="w-full text-center mt-0 opacity-0 h-0 md:ml-12">
 
@@ -210,10 +210,10 @@ const Collection = () => {
             customVolumeControls={[]} // Volume control remove
             customAdditionalControls={[]} // addition control remove
           />
-          <div className="border-0 border-black bg-yellow-75 text-black shadow-4xl rounded-md px-3 py-1 p-7 hover:text-gray-300">
+          <div className="border-0 border-black bg-orange-900 text-white shadow-4xl rounded-md px-3 py-1 p-7 mt-auto mb-auto hover:text-gray-300">
             <Link to="/edit-trax/burnt">
-              <button className="uppercase leading-tight mt-5">
-              more info
+              <button className="uppercase leading-tight h-8 mt-0">
+              launch player
               </button>
             </Link>
           </div>
