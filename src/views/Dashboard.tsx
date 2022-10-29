@@ -15,6 +15,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import Modal from "../Modal/Modal";
 import lockt_612561 from "@images/et001_loct.jpg";
 import et_player_thumb from "@images/et_how_to_player.png";
+import et2_player_thumb from "../assets/et2_player.png";
 import downArrow from "@images/arrovw_down.svg";
 import { useTezosCollectStore } from "store";
 import { disableScroll, enableScroll } from "utils/scroll";
@@ -37,7 +38,10 @@ const Dashboard = (): JSX.Element => {
       unlockable: 'https://i.postimg.cc/9Md31JmB/unlockable-burnt.png',
       tokendId: 781875,
       titleHardCode:"'BURNT'",
-      artist:"Producer: BAI-EE"
+      artist:"Producer: BAI-EE",
+      origEdit: 'https://i.postimg.cc/rFHCppZT/original.png',
+      lokt_612561:lockt_612561,
+      player_thumbnail: et2_player_thumb
     },
     {
       player: "alpha-test",
@@ -168,7 +172,7 @@ const Dashboard = (): JSX.Element => {
               {/* </button> */}
             </div>
           </div>
-          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 -mt-20">
+          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 lg:mt-20 mt-0">
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">10</div>
               <div>Floor Price (Tez)</div>
