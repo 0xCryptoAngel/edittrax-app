@@ -17,6 +17,8 @@ import React, { useState, useRef, useEffect } from "react";
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { type } from "os";
+
+import { scrollTop } from "utils/scroll";
 gsap.registerPlugin(ScrollTrigger)
 
 // media player data Type
@@ -73,41 +75,7 @@ const Collection = () => {
 <div className="font-mathias mt-24 mb-0 mx-6 text-center text-yellow-75 text-5xl sm:text-7xl">
         GENESIS COLLECTION
       </div>
-
-
 <div className="relative sm:mt-12 min-w-0 break-words gap-0 bg-black w-full mb-6 shadow-lg rounded-xl mt-4 text-yellow-75 flex flex-col lg:flex-row content-center">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <div className="px-0 flex flex-col sm:flex-row w-full lg:w-2/3">
 
         <div className="flex flex-wrap justify-center flex-col">
@@ -212,7 +180,7 @@ const Collection = () => {
           />
           <div className="border-0 border-black bg-orange-900 text-white shadow-4xl rounded-md px-3 py-1 p-7 mt-auto mb-auto hover:text-gray-300">
             <Link to="/edit-trax/burnt">
-              <button className="uppercase leading-tight h-8 mt-0">
+              <button className="uppercase leading-tight h-8 mt-0" onClick={()=>scrollTop()}>
               launch player
               </button>
             </Link>

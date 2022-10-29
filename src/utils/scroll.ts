@@ -12,3 +12,7 @@ export const disableScroll = () => {
 export const enableScroll = () => {
   (window as any).onscroll = function() {};
 }
+
+export const scrollTop = () => {
+  (window as any).scrollTo(0, 0);
+}
