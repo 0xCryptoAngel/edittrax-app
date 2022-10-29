@@ -180,7 +180,7 @@ const Dashboard = (): JSX.Element => {
               {/* </button> */}
             </div>
           </div>
-          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 mt-10 -sm:mt-8 ">
+          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 -mt-20">
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">10</div>
               <div>Floor Price (Tez)</div>

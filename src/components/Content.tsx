@@ -57,23 +57,6 @@ const Content = (props:WalletProps) => {
   const gaEventTracker = useAnalyticsEventTracker('Contact us');
 
   const [show, setShow] = useState(false)
-
-  const features1 = [
-    { name: 'FOR DJS', description: 'Download multiple edits (.wavs) of a track and rapidly edit it for your own dj performance, content creation, public use. *See collector rights ' },
-    { name: 'FOR PRODUCERS', description: 'No 3rd party required. Removes all layers seperate of the collectible and marketplace when distributing token gated downloads. ' },
-    { name: 'FOR COLLABS', description: 'An accessible build framework for musicians, designers and developers to use individual strengths to create meaningful collaborations ' },
-    { name: 'FOR CULTURE', description: 'Supports 1 of 1 selector djs, unique dance-floor experiences and building the bottom of a funnel for independent music producers.' },
-    // { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
-    // { name: 'Considerations', description: 'Made from natural materials. Grain and color vary with each item.' },
-  ]
-  const features2 = [
-    { name: 'BLOCKCHAIN', description: 'TEZOS is a proof-of-steak protocol providing decentralized, trustless ledger technology in an energy efficient way.'},
-    { name: 'CONTRACT', description: 'Minted on Hic Et Nunc (Teia), an FA2 Objkt Standard you own in your wallet like any self-custodied NFT'},
-    { name: 'MEDIA TYPE', description: 'HTML / Zip on IPFS following all best practices for interactive OBJKT development and aggregation as described on Hic Et Nunc Github.' },
-    { name: 'BUY, SELL & DL', description: 'As a self-custodied token *Anywhere' },
-    // { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
-    // { name: 'Considerations', description: 'Made from natural materials. Grain and color vary with each item.' },
-  ]
   
   return (
 
@@ -191,35 +174,6 @@ const Content = (props:WalletProps) => {
       </dl>
     </div>
     </div>
-
-    <div className="bg-black mb-14 rounded-lg p-10">
-      <div className="font-mathias mb-8 text-center text-8xl text-yellow-75">
-      FAQ
-      </div>
-
-      <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-0 px-4 sm:px-6 sm:py-0 lg:max-w-7xl lg:grid-cols-2 lg:px-8 mt-0 mb-0"><div>
-      <dl className="mt-0 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
-        {features1.map((feature) => (
-          <div key={feature.name} className="">
-            <dt className="font-mathias text-2xl text-yellow-75 ">{feature.name}</dt>
-            <dd className="mt-2 text-sm text-gray-500 text-justify">{feature.description}</dd>
-          </div>
-        ))}
-      </dl>
-      </div>
-            
-      <div className="">
-        <dl className="mt-0 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
-          {features2.map((feature) => (
-            <div key={feature.name} className="border-tpt-4">
-              <dt className="font-mathias text-2xl text-yellow-75">{feature.name}</dt>
-              <dd className="mt-2 text-sm text-gray-500">{feature.description}</dd>
-            </div>
-          ))}
-        </dl>
-      </div>
-    </div>
-  </div>
   
 </section>
 
