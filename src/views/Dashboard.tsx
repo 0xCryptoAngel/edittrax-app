@@ -1,7 +1,6 @@
 import React, { Dispatch, SetStateAction, useState, useRef, useEffect, useCallback } from "react";
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import ConnectButton from "../components/ConnectWallet";
 import et_new_logo from "@images/et_new_logo.png";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -17,37 +16,11 @@ import Modal from "../Modal/Modal";
 import lockt_612561 from "@images/et001_loct.jpg";
 import et_player_thumb from "@images/et_how_to_player.png";
 import downArrow from "@images/arrovw_down.svg";
-
-
-
+import { useTezosCollectStore } from "store";
 gsap.registerPlugin(ScrollTrigger)
 
-type WalletProps = {
-  Tezos: TezosToolkit;
-  setContract: Dispatch<SetStateAction<any>>;
-  setWallet: Dispatch<SetStateAction<any>>;
-  userAddress: string;
-  beaconConnection: boolean;
-  setStorage: Dispatch<SetStateAction<any>>;
-  setUserAddress: Dispatch<SetStateAction<string>>;
-  setUserBalance: Dispatch<SetStateAction<number>>;
-  setBeaconConnection: Dispatch<SetStateAction<boolean>>;
-  wallet: BeaconWallet;
-
-};
-
-const Dashboard = ({
-  Tezos,
-  setContract,
-  setWallet,
-  setUserAddress,
-  setStorage,
-  userAddress,
-  beaconConnection,
-  setUserBalance,
-  setBeaconConnection,
-  wallet
-}: WalletProps): JSX.Element => {
+const Dashboard = (): JSX.Element => {
+  const { activeAddress } = useTezosCollectStore();
   const navbarMenu = [
     {
       player: "mechanism",
@@ -172,7 +145,6 @@ const Dashboard = ({
                 </ul>
               </div>
               <div className="flex gap-4 items-center">
-
               <button className="font-mathias sm:bg-black sm:rounded sm:text-yellow-75 px-2 sm:font-bold sm:py-2 sm:w-40 hover:text-gray-300 text-md" onClick={()=>
                 setShow(true)}>Unlock
               </button>
@@ -185,7 +157,7 @@ const Dashboard = ({
                     }}>Etereum</button>
                   }
                 </div>
-                <ConnectButton 
+                {/* <ConnectButton 
                   Tezos={Tezos}
                   setContract={setContract}
                   setWallet={setWallet}
@@ -196,11 +168,11 @@ const Dashboard = ({
                   beaconConnection={beaconConnection}
                   setBeaconConnection={setBeaconConnection}
                   wallet={wallet}
-                />
+                /> */}
               </div>
             </div>
             <div className="mx-4 md:mx-0 h-iframeLoad">
-            <iframe src={`${result?.imageUrl}${userAddress}`} className="w-full h-iframe" ref={Iframe}/>
+            <iframe src={`${result?.imageUrl}${activeAddress}`} className="w-full h-iframe" ref={Iframe}/>
             </div>
             <div className="bg-yellow-75 flex justify-center py-2 md:py-8 mx-4 md:mx-0 max-w-full">
               {/* <button className="font-mathias text-md bg-black text-yellow-75 font-bold rounded px-16 md:px-64 sm:py-4"> */}
