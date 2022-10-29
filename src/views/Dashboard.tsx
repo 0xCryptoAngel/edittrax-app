@@ -17,6 +17,7 @@ import lockt_612561 from "@images/et001_loct.jpg";
 import et_player_thumb from "@images/et_how_to_player.png";
 import downArrow from "@images/arrovw_down.svg";
 import { useTezosCollectStore } from "store";
+import { disableScroll, enableScroll } from "utils/scroll";
 gsap.registerPlugin(ScrollTrigger)
 
 const Dashboard = (): JSX.Element => {
@@ -129,7 +130,7 @@ const Dashboard = (): JSX.Element => {
     window.location.reload()
   }
 
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState<boolean>(false)
   return (
     
     <div className="bg-black">
@@ -145,10 +146,9 @@ const Dashboard = (): JSX.Element => {
                 </ul>
               </div>
               <div className="flex gap-4 items-center">
-              <button className="font-mathias sm:bg-black sm:rounded sm:text-yellow-75 px-2 sm:font-bold sm:py-2 sm:w-40 hover:text-gray-300 text-md" onClick={()=>
-                setShow(true)}>Unlock
+              <button className="font-mathias sm:bg-black sm:rounded sm:text-yellow-75 px-2 sm:font-bold sm:py-2 sm:w-40 hover:text-gray-300 text-md" onClick={()=> {setShow(true); disableScroll();}}>Unlock
               </button>
-              <Modal onClose = {() => setShow(false)} show={show}/>
+              <Modal onClose = {() => {setShow(false); enableScroll()}} show={show}/>
                 <div className="hidden">
                   {active? <button className="bg-black rounded text-yellow-75 font-bold py-2 w-40 hover:text-gray-300" onClick={()=>
                   handleDisconnect()}>{`${account?.slice(0, -36)}...${account?.substring(38)}`}</button>: 
@@ -157,18 +157,6 @@ const Dashboard = (): JSX.Element => {
                     }}>Etereum</button>
                   }
                 </div>
-                {/* <ConnectButton 
-                  Tezos={Tezos}
-                  setContract={setContract}
-                  setWallet={setWallet}
-                  setUserAddress={setUserAddress}
-                  setUserBalance={setUserBalance}
-                  setStorage={setStorage}
-                  userAddress={userAddress}
-                  beaconConnection={beaconConnection}
-                  setBeaconConnection={setBeaconConnection}
-                  wallet={wallet}
-                /> */}
               </div>
             </div>
             <div className="mx-4 md:mx-0 h-iframeLoad">

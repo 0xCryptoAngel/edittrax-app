@@ -15,6 +15,8 @@ import play_bg from "@images/play_bg.jpg";
 import canIuse from "@images/canIuse.jpg";
 import howToImage from "../Modal/image_popup_howTo";
 import useAnalyticsEventTracker from 'Modal/analytics';
+import Modal from "../Modal/Modal";
+import { disableScroll, enableScroll } from "utils/scroll";
 
 type WalletProps = {
   // origEdit: string | undefined,
@@ -56,7 +58,7 @@ const Content = (props:WalletProps) => {
 
   const gaEventTracker = useAnalyticsEventTracker('Contact us');
 
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState<boolean>(false)
   
   return (
 
@@ -82,18 +84,18 @@ const Content = (props:WalletProps) => {
           </h2>
 
           <h2 className="font-mathias mr-8 mt-0 sm:mt-6 md:mt-0 w-full text-2xl sm:text-2xl lg:text-4xl xl:text-4xl font-extrabold align-middle mb-12">
-            <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" className="bg-red-900 text-center px-4 py-4 text-yellow-75 rounded-md hover:opacity-50" onClick={()=>gaEventTracker('Collect')}>
+            <button className="bg-red-900 text-center px-4 py-4 text-yellow-75 rounded-md hover:opacity-50" onClick={()=> {setShow(true); disableScroll();}}>
               Collect
-            </a>
+            </button>
             &nbsp; To Unlock
           </h2>
-
           <h2 className=" font-mathias mr-8 md:mt-0 w-full text-lg text-2xl sm:text-2xl lg:text-4xl xl:text-4xl font-extrabold align-middle mb-12">
-            <a href="https://objkt.com/asset/hicetnunc/612561" target="_blank" className="bg-orange-900 text-center px-4 py-4 mt-8 text-yellow-75 rounded-md hover:opacity-50 mb-12" onClick={()=>gaEventTracker('Connect')}>
+            <button className="bg-orange-900 text-center px-4 py-4 mt-8 text-yellow-75 rounded-md hover:opacity-50 mb-12" onClick={()=> {setShow(true); disableScroll();}}>
             Connect
-            </a>
+            </button>
             &nbsp; To Download
           </h2>
+          <Modal onClose = {() => {setShow(false); enableScroll()}} show={show}/>
 
           <h2 className="font-mathias mr-0 mb-4 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
               How To Track Out

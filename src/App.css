@@ -24,22 +24,32 @@ body,
 }
 
 .modal {
-position:fixed;
-top:0;
-left:0;
-right:0;
-bottom:0;
-background-color:rgba(0, 0, 0, 0.735);
-opacity:1;
-display: flex;
-align-items: center;
-justify-content: center;
-max-height:100vh;
+  position:fixed;
+  top:0;
+  left:0;
+  background-color:rgba(0, 0, 0, 0.735);
+  opacity:1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
 }
-
+.modal-bg {
+  position:fixed;
+  top:0;
+  left:0;
+  opacity:1;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+}
 .modal-content {
   background-color: #E6E9E0;
   width:500px;
+  position: relative;
+  z-index: 9999;
 }
 
 .modal-header, .modal-footer {
