@@ -15,7 +15,9 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import Modal from "../Modal/Modal";
 import lockt_612561 from "@images/et001_loct.jpg";
 import et_player_thumb from "@images/et01_instructions.png";
+import et01_thumb from "@images/et001_thumbnail.jpg";
 import et2_player_thumb from "../assets/et2_player.png";
+import { scrollTop } from "utils/scroll";
 
 import downArrow from "@images/arrovw_down.svg";
 import { useTezosCollectStore } from "store";
@@ -42,7 +44,7 @@ const Dashboard = (): JSX.Element => {
       artist:"Producer: BAI-EE",
       origEdit: 'https://i.postimg.cc/rFHCppZT/original.png',
       lokt_612561:lockt_612561,
-      player_thumbnail: et2_player_thumb
+      player_thumbnail: et01_thumb
     },
     {
       player: "alpha-test",
@@ -54,7 +56,7 @@ const Dashboard = (): JSX.Element => {
       artist:"Producer: BAI-EE",
       origEdit: 'https://i.postimg.cc/rFHCppZT/original.png',
       lokt_612561:lockt_612561,
-      player_thumbnail: et_player_thumb
+      player_thumbnail: et01_thumb
       
       // loopPlay: 'https://i.postimg.cc/rFHCppZT/loop_play.png',
       // editLoop: 'https://i.postimg.cc/rFHCppZT/edit_loop.png',

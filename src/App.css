@@ -108,9 +108,16 @@ width: 100%;
 }
 
 .outline_button, .outline_tag {
-  border: solid black 2px;
-  padding:10px
+  border: solid black 0px;
+  background-color: black;
 }
+
+.outline_button_main {
+  border: solid black 2px;
+  /* background-color: black; */
+}
+
+
 
 .outline_tag {
   padding:5px;

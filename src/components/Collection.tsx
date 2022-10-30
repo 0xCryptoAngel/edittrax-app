@@ -14,6 +14,7 @@ import et00 from "../assets/square_alpha_test.png";
 import AudioPlayer from 'react-h5-audio-player'; // import react audio module 
 import 'react-h5-audio-player/lib/styles.css'; //css of it
 import thumb from "@images/thumbnail.jpg";
+import et01_thumb from "@images/et001_thumbnail.jpg";
 
 
 import React, { useState, useRef, useEffect } from "react";
@@ -22,6 +23,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import { type } from "os";
 
 import { scrollTop } from "utils/scroll";
+
 gsap.registerPlugin(ScrollTrigger)
 
 // media player data Type

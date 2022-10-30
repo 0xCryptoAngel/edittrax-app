@@ -1,6 +1,7 @@
 
 import DropDown from "../components/DropDown";
 import ConnectWallet from "../components/ConnectWallet";
+
 type modalProps = {
   onClose: () => void;
   show: boolean;
