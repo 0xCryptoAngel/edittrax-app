@@ -16,6 +16,10 @@ import canIuse from "@images/canIuse.jpg";
 import howToImage from "../Modal/image_popup_howTo";
 import useAnalyticsEventTracker from 'Modal/analytics';
 import Modal from "../Modal/Modal";
+import DropDown from "../components/DropDown";
+
+
+// import Marketplaces from "../Modal/Marketplaces";
 import { disableScroll, enableScroll } from "utils/scroll";
 
 type WalletProps = {
@@ -84,6 +88,8 @@ const Content = (props:WalletProps) => {
           </h2>
 
           <h2 className="font-mathias mr-8 mt-0 sm:mt-6 md:mt-0 w-full text-2xl sm:text-2xl lg:text-4xl xl:text-4xl font-extrabold align-middle mb-4">
+          {/* <Marketplaces onClose = {() => {setShow(false); enableScroll()}} show={show}/> */}
+          
             <button className="bg-red-900 text-center px-4 py-4 shadow text-yellow-75 rounded-md  hover:opacity-50" onClick={()=> {setShow(true); disableScroll();}}>
               Collect 
             </button>
@@ -97,14 +103,39 @@ const Content = (props:WalletProps) => {
           </h2>
           <Modal onClose = {() => {setShow(false); enableScroll()}} show={show}/>
 
-          <h2 className="font-mathias mr-0 mb-4 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
-          Interactive Music OBJKT #{props.tokendId} comes integrated with a looper, token gate and download button.
+          <h2 className="font-mathias mt-2 mr-0 mb-0 w-full text-6xl text-center sm:text-2xl lg:text-xl xl:text-3xl font-extrabold align-middle uppercase">
+          {/* Interactive Music OBJKT #{props.tokendId} comes integrated with a looper, token gate and download button. */}
+        BE A 1 OF 1 SELECTOR
           </h2>
+          
+ 
+          <blockquote className="p-4 mt-0 mb-4 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">
+          </blockquote>
+          <h2 className="font-mathias text-center mr-0 mt-0 md:mt-0 w-full text-4xl sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
+          EDIT THIS TRACK
+        </h2>
+        <img src={props.player_thumbnail}  alt="" className=""/> 
 
-          <blockquote className="p-4 my-4 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">
+        <blockquote className="p-4 my-4 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">
           </blockquote>
 
-          <img src={props.player_thumbnail}  alt="" className=""/> 
+        <h2 className="font-mathias text-center mr-0 mt-6 md:mt-0 w-full text-4xl sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
+        DOWNLOAD HERE, OR A TEZOS DAPP
+        </h2>
+        <h2 className=" mr-0 mb-2 md:mt-0 text-center w-full text-sm sm:text-lg lg:text-xl xl:text-3xl align-middle">
+        EditTrax provides the best UX
+            </h2>
+
+        
+        <img src={canIuse} alt="rotating head" className="w-md mb-10"/>
+        <blockquote className="p-4 my-4 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">
+          </blockquote>
+
+        <h2 className="font-mathias mr-0 mt-6 md:mt-0 w-full text-4xl sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
+          AND ACROSS ALL DEVICES
+        </h2>
+
+
           
           <dd className="mb-8">
 
@@ -124,9 +155,9 @@ const Content = (props:WalletProps) => {
         </dl> 
     
         <dl className="w-full md:w-2/3">
-        <h2 className="font-mathias mr-8 mb-0 sm:mt-6 md:mt-0 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle mb-12">
+        <h2 className="font-mathias mr-8 mb-0 sm:mt-6 md:mt-0 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle mb-0">
           <div className="text-justify">
-            <a href="https://objkt.com/asset/hicetnunc/612561" className="">
+            <a href="https://objkt.com/asset/hicetnunc/612561" className="uppercase">
               Interactive Music OBJKT #{props.tokendId} comes integrated with a looper, token gate and download button.
             </a>
           </div>
@@ -139,6 +170,14 @@ const Content = (props:WalletProps) => {
           }
           </div>
         </h2>
+        <blockquote className="p-4 my-4 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">
+          </blockquote>
+
+
+       
+        <blockquote className="p-4 my-4 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">
+          </blockquote>
+
 
         <h2 className="font-mathias mr-0 mt-6 md:mt-0 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
           Metadata
@@ -146,12 +185,12 @@ const Content = (props:WalletProps) => {
     
         <dd className="mb-8">
 
-          <blockquote className="p-4 my-4 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">
-          <div className="font-mathias w-52 mt-2">    
+          <blockquote className="p-4 my-0 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">
+          {/* <div className="font-mathias w-52 mt-2">    
             <a href="https://objkt.com/asset/hicetnunc/612561" className="text-left px-0 py-0 text-black rounded-md hover:opacity-50 text-lg">
             OBJKT #{props.tokendId}
             </a>
-          </div>
+          </div> */}
 
           <div className="font-mathias w-52 mt-8">          
             <a href="https://objkt.com/asset/hicetnunc/612561" className="bg-black text-center px-4 py-2 text-yellow-75 rounded-md hover:opacity-50">

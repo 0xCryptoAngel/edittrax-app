@@ -16,6 +16,7 @@ import Modal from "../Modal/Modal";
 import lockt_612561 from "@images/et001_loct.jpg";
 import et_player_thumb from "@images/et_how_to_player.png";
 import et2_player_thumb from "../assets/et2_player.png";
+
 import downArrow from "@images/arrovw_down.svg";
 import { useTezosCollectStore } from "store";
 import { disableScroll, enableScroll } from "utils/scroll";
@@ -191,7 +192,7 @@ const Dashboard = (): JSX.Element => {
             </div>
           </section>
           <Content 
-          player_thumbnail={result?.player_thumbnail} 
+            player_thumbnail={result?.player_thumbnail} 
             lokt_612561={result?.lokt_612561} 
             tokendId={result?.tokendId} 
             artist={result?.artist} 
