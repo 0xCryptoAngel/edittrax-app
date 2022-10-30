@@ -17,6 +17,10 @@ import howToImage from "../Modal/image_popup_howTo";
 import useAnalyticsEventTracker from 'Modal/analytics';
 import Modal from "../Modal/Modal";
 import DropDown from "../components/DropDown";
+import thumb from "@images/thumbnail.jpg";
+import all_markets from "@images/all_markets.png";
+import all_devices from "@images/all_devices.png";
+
 
 
 // import Marketplaces from "../Modal/Marketplaces";
@@ -111,31 +115,45 @@ const Content = (props:WalletProps) => {
  
           <blockquote className="p-4 mt-0 mb-4 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">
           </blockquote>
-          <h2 className="font-mathias text-center mr-0 mt-0 md:mt-0 w-full text-4xl sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
-          EDIT THIS TRACK
+          <h2 className="font-mathias text-center mr-0 mt-6 md:mt-0 w-full text-4xl sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
+        USE ON ANY TEZOS MARKETPLACE
         </h2>
-        <img src={props.player_thumbnail}  alt="" className=""/> 
 
-        <blockquote className="p-4 my-4 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">
-          </blockquote>
-
-        <h2 className="font-mathias text-center mr-0 mt-6 md:mt-0 w-full text-4xl sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
-        DOWNLOAD HERE, OR A TEZOS DAPP
-        </h2>
-        <h2 className=" mr-0 mb-2 md:mt-0 text-center w-full text-sm sm:text-lg lg:text-xl xl:text-3xl align-middle">
+            <img src={all_markets}  alt="" className=""/> 
+            <h2 className=" mr-0 mb-2 md:mt-0 text-center w-full text-sm sm:text-lg lg:text-xl xl:text-3xl align-middle">
         EditTrax provides the best UX
             </h2>
-
         
-        <img src={canIuse} alt="rotating head" className="w-md mb-10"/>
+
+        <h2 className=" mr-0 mb-2 md:mt-0 text-center w-full text-xxs sm:text-lg lg:text-xl xl:text-3xl align-middle">
+        {/* EditTrax provides the best UX */}
+            </h2>
+        <blockquote className="p-4 mt-8 mb-4 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">
+          </blockquote>
+
+          <h2 className="font-mathias text-center mr-0 mt-0 md:mt-0 w-full text-4xl sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
+          CREATE & PERFORM <br></br>ORIGINAL EDITS
+        </h2>
+        <h2 className=" mr-0 mb-2 md:mt-0 text-center w-full text-sm sm:text-lg lg:text-xl xl:text-3xl align-middle">
+        TEAI.ART | RARIBLE
+            </h2>
+
+        <img src={props.player_thumbnail}  alt="" className=""/> 
+
+       
         <blockquote className="p-4 my-4 bg-yellow-75 border-l-4 border-black dark:border-gray-500 dark:bg-gray-800">
           </blockquote>
 
-        <h2 className="font-mathias mr-0 mt-6 md:mt-0 w-full text-4xl sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
-          AND ACROSS ALL DEVICES
+        <h2 className="text-center font-mathias mr-0 mt-0 md:mt-0 w-full text-4xl sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
+          DOWNLOAD ON <br></br>ANY DEVICE
         </h2>
 
 
+
+            <img src={all_devices} alt="rotating head" className="w-md mb-2 mt-2 "/>
+            <h2 className=" mr-0 mb-2 md:mt-0 text-center w-full text-sm sm:text-lg lg:text-xl xl:text-3xl align-middle">
+        EditTrax provides the best UX
+            </h2>
           
           <dd className="mb-8">
 

@@ -17,6 +17,10 @@ body,
   height:auto;
 }
 
+.player_name {
+  min-width:100px;
+}
+
 .helper {
   height:100vh;
   width:100vw;

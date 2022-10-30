@@ -14,7 +14,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Modal from "../Modal/Modal";
 import lockt_612561 from "@images/et001_loct.jpg";
-import et_player_thumb from "@images/et_how_to_player.png";
+import et_player_thumb from "@images/et01_instructions.png";
 import et2_player_thumb from "../assets/et2_player.png";
 
 import downArrow from "@images/arrovw_down.svg";
@@ -173,7 +173,7 @@ const Dashboard = (): JSX.Element => {
               {/* </button> */}
             </div>
           </div>
-          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 lg:mt-20 mt-0">
+          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 lg:mt-20 -mt-16">
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">10</div>
               <div>Floor Price (Tez)</div>

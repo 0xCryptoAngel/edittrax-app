@@ -13,6 +13,8 @@ import et01 from "../assets/square_burnt.png";
 import et00 from "../assets/square_alpha_test.png";
 import AudioPlayer from 'react-h5-audio-player'; // import react audio module 
 import 'react-h5-audio-player/lib/styles.css'; //css of it
+import thumb from "@images/thumbnail.jpg";
+
 
 import React, { useState, useRef, useEffect } from "react";
 import gsap from 'gsap';
@@ -92,7 +94,7 @@ const Collection = () => {
           <img src={et00} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
 
           <div className="flex-row flex m-0 w-96 justify-around md:mt-0">
-          <div className="text-left w-auto pl-2">
+          <div className="text-left w-auto pl-2 player_name">
             <div>{musicTracks[0].trackName}</div>
             <div>{musicTracks[0].artistName}</div>
             <div className="text-xxs">Acid Techno</div>
@@ -108,8 +110,8 @@ const Collection = () => {
           />
           <div className="border-0 border-black bg-white text-black shadow-4xl rounded-md px-2 py-1 p-7 mt-auto mb-auto hover:text-gray-300">
             <Link to="/edit-trax/burnt">
-              <button className="uppercase leading-tight h-8 mt-auto text-xxs" onClick={()=>scrollTop()}>
-              launch player
+              <button className="uppercase leading-tight h-8 mt-auto text-sm" onClick={()=>scrollTop()}>
+              LAUNCH<br></br>PLAYER
               </button>
             </Link>
           </div>
@@ -125,7 +127,7 @@ const Collection = () => {
           <img src={et01} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
 
           <div className="flex-row flex m-0 w-96 justify-around md:mt-0">
-          <div className="text-left pl-2 w-auto">
+          <div className="text-left w-auto pl-2 player_name">
             <div>{musicTracks[1].trackName}</div>
             <div>{musicTracks[1].artistName}</div>
             <div className="text-xxs">House</div>
@@ -139,10 +141,10 @@ const Collection = () => {
             customVolumeControls={[]} // Volume control remove
             customAdditionalControls={[]} // addition control remove
           />
-          <div className="border-0 border-black bg-red-900 text-white shadow-4xl rounded-md px-2 py-1 p-7 mt-auto mb-auto hover:text-gray-300">
+          <div className="border-0 border-black bg-red-900 text-white rounded-md px-2 py-1 p-7 mt-auto mb-auto hover:text-gray-300">
             <Link to="/edit-trax/burnt">
-              <button className="uppercase leading-tight h-8 mt-auto text-xxs" onClick={()=>scrollTop()}>
-              launch player
+              <button className="uppercase leading-tight h-8 mt-auto text-sm" onClick={()=>scrollTop()}>
+              launch<br></br>player
               </button>
             </Link>
           </div>
@@ -236,7 +238,7 @@ const Collection = () => {
           
           <div className="mr-auto ml-auto mt-0 mb-0 ml-0 gap-2 flex w-auto flex-col mx-0 h-auto items-center">
 
-            <img src={founder} alt="founder_pic" className="h-sm lg:h-sm max-w-1/2"/>
+            <img src={thumb} alt="founder_pic" className="w-2xl"/>
 
             <div className="w-full text-center mt-0 opacity-0 h-0 md:ml-12">
 
