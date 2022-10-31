@@ -130,6 +130,12 @@ width: 100%;
   /* background-color: black; */
 }
 
+.outline_button_all {
+
+  border: solid black 2px;
+
+}
+
 
 
 .outline_tag {

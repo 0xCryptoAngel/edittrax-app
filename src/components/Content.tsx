@@ -60,7 +60,7 @@ const musicTracks: musicData[] = [
     src: "https://www.bensound.com/bensound-music/bensound-memories.mp3"
   },
   {
-    trackName: "UNTITLED",
+    trackName: "NO MILLS",
     artistName: 'Bai-ee',
     src: "https://www.bensound.com/bensound-music/bensound-memories.mp3"
   },
@@ -135,7 +135,7 @@ const data = useRef(null);
       <div className="mx-auto max-w-6xl gap-0 sm:gap-16 flex flex-col lg:flex-row ">
       <dl className="w-full lg:w-2/3 pt-16">
 
-<Collapsible className="outline_button_meta bg-yellow-75 text-center w-34 text-black rounded-md mb-4 shadow-2xl mt-36" trigger="Metadata">
+<Collapsible className="outline_button_meta bg-yellow-75 text-center w-34 text-black rounded-md mb-4 shadow-2xl mt-36 hover:opacity-50 cursor-pointer" trigger="Metadata">
 
   <div className="font-mathias mt-8 ">          
     <a href="https://objkt.com/asset/hicetnunc/612561" className="bg-black text-center px-4 py-2 text-yellow-75 rounded-md hover:opacity-50">
@@ -184,8 +184,8 @@ const data = useRef(null);
     </h2> */}
 
     <h2 className="font-mathias align-middle flex content-center col mt-0 md:mt-0 text-3xl lg:text-4xl xl:text-4xl font-extrabold mb-0">
-      <button className="bg-red-900 w-34 text-center py-4 w-full px-6 text-yellow-75 rounded-md  hover:opacity-50 shadow-2xl mb-0" onClick={()=> {setShow(true); disableScroll();}}>
-        Edit The Track
+      <button className="outline_button_all bg-red-900 w-34 text-center py-4 w-full px-6 text-yellow-75 rounded-md  hover:opacity-50 shadow-2xl mb-0" onClick={()=> {setShow(true); disableScroll();}}>
+        Edit
       </button>
     </h2>
 
@@ -257,7 +257,7 @@ const data = useRef(null);
               </button> */}
             </Link>
           </div>
-          <AudioPlayer 
+          {/* <AudioPlayer 
             autoPlay
             style={{ backgroundColor:"#ffffff" }} // media player background color 
             src={musicTracks[0].src} // media source
@@ -265,7 +265,7 @@ const data = useRef(null);
             showFilledProgress={false} // show filled process color
             customVolumeControls={[]} // Volume control remove
             customAdditionalControls={[]} // addition control remove
-          />
+          /> */}
           </div>
         </div>
         </div>
@@ -276,8 +276,8 @@ const data = useRef(null);
 
           <div className="flex-row flex m-0 w-96 justify-around md:mt-0">
           <div className="text-left w-auto pl-2 player_name">
-            <div>{musicTracks[1].trackName}</div>
-            <div>{musicTracks[1].artistName}</div>
+            <div>{musicTracks[2].trackName}</div>
+            <div>{musicTracks[2].artistName}</div>
             <div className="text-xxs">Acid Techno</div>
           </div>
           <div className="border-0 border-black bg-yellow-75 text-black shadow-4xl leading-3 rounded-md px-1 py-1 mt-auto mb-auto hover:text-gray-300">
@@ -287,7 +287,7 @@ const data = useRef(null);
               </button> */}
             </Link>
           </div>
-          <AudioPlayer 
+          {/* <AudioPlayer 
             autoPlay
             style={{ backgroundColor:"#ffffff" }} // media player background color 
             src={musicTracks[0].src} // media source
@@ -295,7 +295,7 @@ const data = useRef(null);
             showFilledProgress={false} // show filled process color
             customVolumeControls={[]} // Volume control remove
             customAdditionalControls={[]} // addition control remove
-          />
+          /> */}
           </div>
         </div>
         </div>
@@ -306,8 +306,8 @@ const data = useRef(null);
 
           <div className="flex-row flex m-0 w-96 justify-around md:mt-0">
           <div className="text-left w-auto pl-2 player_name">
-            <div>{musicTracks[1].trackName}</div>
-            <div>{musicTracks[1].artistName}</div>
+            <div>{musicTracks[3].trackName}</div>
+            <div>{musicTracks[3].artistName}</div>
             <div className="text-xxs">Acid Techno</div>
           </div>
           <div className="border-0 border-black bg-yellow-75 text-black shadow-4xl leading-3 rounded-md px-1 py-1 mt-auto mb-auto hover:text-gray-300">
@@ -317,7 +317,7 @@ const data = useRef(null);
               </button> */}
             </Link>
           </div>
-          <AudioPlayer 
+          {/* <AudioPlayer 
             autoPlay
             style={{ backgroundColor:"#ffffff" }} // media player background color 
             src={musicTracks[0].src} // media source
@@ -325,7 +325,7 @@ const data = useRef(null);
             showFilledProgress={false} // show filled process color
             customVolumeControls={[]} // Volume control remove
             customAdditionalControls={[]} // addition control remove
-          />
+          /> */}
           </div>
         </div>
         </div>

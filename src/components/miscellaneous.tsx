@@ -4,7 +4,7 @@ import React, { Dispatch, SetStateAction, useState, useRef, useEffect, useCallba
 import handbook_2 from "../assets/handbook_2.png";
 import marketplace_2 from "../assets/marketplace_2.png";
 import github_2 from '../assets/github_2.png';
-import thumb from '../assets/thumbnail.jpg';
+import thumb from '../assets/founder.jpg';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import handbookCover from "@images/handbookCover.jpg";
@@ -32,7 +32,11 @@ const miscellaneous = () => {
 
   <section className="bg-black pt-0 px-0 pb-0 rounded-br mt-0 mx-2 md:mx-0">  
 
-              <img src={thumb} alt="founder_pic" className="max-w-sm ml-auto mr-auto"/>
+<div className=" mx-auto my-auto flex rounded-md shadow-sm align-middle center sm:max-w-sm">
+            <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className=""/>
+          </div>
+
+
 
 
 <div className="mb-14 mx-3 py-3 lg:mx-24 rounded-lg lg:py-12">
@@ -89,7 +93,7 @@ Teia.art (Github)
       <dl className="w-full h-full md:w-1/2 flex align-middle items-center">
         <div className="container mx-auto">
           <div className=" mx-auto my-auto flex rounded-md shadow-sm align-middle center sm:max-w-sm">
-            <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className=""/>
+          <img src={thumb} alt="founder_pic" className="max-w-sm ml-auto mr-auto"/>
           </div>
       </div>  
       </dl>
