@@ -69,13 +69,13 @@ body,
 }
 
 .h-iframe {
-  height: calc(100vh - 200px);
+  height: calc(100vh - 100px);
 }
 
 @media (max-width: 635px) {
 
   .h-iframe {
-    height: calc(100vh - 200px); 
+    height: calc(100vh - 220px); 
   }
 
 }

@@ -169,9 +169,10 @@ const Dashboard = (): JSX.Element => {
             <div className="mx-4 md:mx-0 h-iframeLoad">
             <iframe src={`${result?.imageUrl}${activeAddress}`} className="w-full h-iframe" ref={Iframe}/>
             </div>
-            <div className="bg-yellow-75 flex justify-center py-4 md:py-8 mx-4 md:mx-0 max-w-full font-bold text-xs" ref={dwnArrow}>
+            <div className="bg-yellow-75 flex justify-center py-6 md:py-8 mx-4 md:mx-0 max-w-full font-bold text-lg" ref={dwnArrow}>
               {/* <button className="font-mathias text-md bg-black text-yellow-75 font-bold rounded px-16 md:px-64 sm:py-4"> */}
-              TRACK INFO &nbsp;<img src={downArrow} alt="logo" id="logo_test" className="w-3" ref={dwnArrow}/>
+              ••• 
+              {/* <img src={downArrow} alt="logo" id="logo_test" className="w-3" ref={dwnArrow}/> */}
               {/* </button> */}
             </div>
           </div>

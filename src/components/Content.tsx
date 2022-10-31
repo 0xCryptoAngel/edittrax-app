@@ -138,10 +138,11 @@ const data = useRef(null);
         
     <div className="bg-lightblue py-4 px-0 mb-0">
       <div className="mx-auto max-w-6xl gap-0 sm:gap-16 flex flex-col md:flex-row sm:mt-10">
-        <dl className="w-full md:w-2/3">
+        <dl className="w-full md:w-2/3 pt-16">
 
 
-        <Collapsible className="outline_button_meta bg-yellow-75 text-center w-34 mt-14 text-black rounded-md mb-4 shadow-2xl" trigger="Metadata">
+        <Collapsible className="outline_button_meta bg-yellow-75 text-center w-34 text-black rounded-md mb-4 shadow-2xl mt-36" trigger="Metadata">
+
 
 
 
@@ -191,19 +192,107 @@ const data = useRef(null);
 
 
 
-        <div className="bg-transparent mx-0 rounded-lg mb-4 w-auto rounded-sm px-0 mt-4 px-0 lg:mt-8 mt-24">  
+        <div className="bg-transparent mx-0 rounded-lg mb-4 w-auto rounded-sm px-0 mt-4 px-0 lg:mt-8 mt-42">  
       
+
+
+
       
-      
+        
       {/* Players */}
       {/* <div className="grid md:grid-cols-3 gap-x-6 lg:gap-x-12"> */}
       <div className="grid grid-cols-1 gap-2 mx-0 max-w-screen-xl hover:scale-75 h-auto">
+
+
+
+
+      <h2 className="font-mathias mb-4 mt-8 md:mt-0 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
+          {/* Metadata */}
+          <br></br>
+        </h2>
+
+
+          <h2 className="font-mathias md:mt-0 w-full text-3xl sm:text-2xl w-full lg:text-4xl xl:text-4xl font-extrabold align-middle mb-0 ">
+            <button className="outline_button_main bg-yellow-75 w-full text-center w-34 py-4 px-11 mt-0 text-black rounded-md mb-0 shadow-2xl" onClick={()=> {scrollTop();}}>
+            Collect On Tezos
+            </button>
+
+          </h2>
+
+          <h2 className="font-mathias align-middle flex content-center col mt-0 sm:mt-6 md:mt-0 text-3xl sm:text-2xl lg:text-4xl xl:text-4xl font-extrabold mb-0">
+          {/* <Marketplaces onClose = {() => {setShow(false); enableScroll()}} show={show}/> */}
+          
+            <button className="bg-red-900 w-34 text-center py-4 w-full px-6 text-yellow-75 rounded-md  hover:opacity-50 shadow-2xl mb-0" onClick={()=> {setShow(true); disableScroll();}}>
+            Edit The Track
+            </button>
+
+          </h2>
+
+          <h2 className="font-mathias w-full text-3xl sm:text-2xl lg:text-4xl xl:text-4xl font-extrabold align-middle mb-4">
+            <button className="bg-orange-900 w-34 text-center w-full py-4 px-4  text-yellow-75 rounded-md hover:opacity-50 shadow-2xl" onClick={()=> {setShow(true); disableScroll();}}>
+            Connect & Download
+            </button>
+            &nbsp;<br></br> 
+          </h2>
+
+          <Modal onClose = {() => {setShow(false); enableScroll()}} show={show}/>
+
+
+
+
+
+        {/* <DropDown/> */}
+
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+    
+        <dd className="mb-8">
+
+
+          
+        </dd>
+
+
+
+        <h2 className="font-mathias  bg-yellow-75 text-center w-34 mt-1 text-black rounded-md mb-2 shadow-2xl">
+          Explore Genesis Trax
+   
+        </h2>
+
+
+
+
+
+
+
+
+
+
 
       {/* Player 1 */}
 
       <div className="mb-0 bg-black lg:mb-0 rounded-xl border-5 px-2 border-yellow-75 shadow-2xl">
       {/* <div className="bg-white block rounded-lg shadow-lg">  */}
-        <div className="text-yellow-75 h-24 sm:h-28 border-0 border-yellow-75 flex flex-row rounded-lg items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
+        <div className="text-yellow-75 h-24 sm:h-28 border-0 border-yellow-75 flex flex-row rounded-md items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
           {/* <img alt="icon0" className="w-full h-auto"/> */}
           <img src={et00} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
 
@@ -236,7 +325,7 @@ const data = useRef(null);
 
         <div className="mb-0 bg-black lg:mb-0 rounded-xl border-5 px-2 border-yellow-75 shadow-2xl">
       {/* <div className="bg-white block rounded-lg shadow-lg">  */}
-        <div className="text-yellow-75 h-24 sm:h-28 border-0 border-yellow-75 flex flex-row rounded-lg items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
+        <div className="text-yellow-75 h-24 sm:h-28 border-0 border-yellow-75 flex flex-row rounded-md items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
           {/* <img alt="icon0" className="w-full h-auto"/> */}
           <img src={et03} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
 
@@ -269,7 +358,7 @@ const data = useRef(null);
 
         <div className="mb-0 bg-black lg:mb-0 rounded-xl border-5 px-2 border-yellow-75 shadow-2xl">
       {/* <div className="bg-white block rounded-lg shadow-lg">  */}
-        <div className="text-yellow-75 h-24 sm:h-28 border-0 border-yellow-75 flex flex-row rounded-lg items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
+        <div className="text-yellow-75 h-24 sm:h-28 border-0 border-yellow-75 flex flex-row rounded-md items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
           {/* <img alt="icon0" className="w-full h-auto"/> */}
           <img src={et01} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
 
@@ -425,70 +514,10 @@ const data = useRef(null);
     
         <dl className="w-full md:w-2/3 ">
 
-        <h2 className="font-mathias mb-4 mt-6 md:mt-0 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
-          {/* Metadata */}
-          <br></br>
-        </h2>
-
-
-          <h2 className="font-mathias md:mt-0 w-full text-3xl sm:text-2xl w-full lg:text-4xl xl:text-4xl font-extrabold align-middle mb-0 ">
-            <button className="outline_button_main bg-yellow-75 w-full text-center w-34 py-4 px-11 mt-0 text-black rounded-md mb-4 shadow-2xl" onClick={()=> {scrollTop();}}>
-            Edit The Track
-            </button>
-
-          </h2>
-
-          <h2 className="font-mathias align-middle flex content-center col mt-4 sm:mt-6 md:mt-0 text-3xl sm:text-2xl lg:text-4xl xl:text-4xl font-extrabold mb-4">
-          {/* <Marketplaces onClose = {() => {setShow(false); enableScroll()}} show={show}/> */}
-          
-            <button className="bg-red-900 w-34 text-center py-4 w-full px-6 text-yellow-75 rounded-md  hover:opacity-50 shadow-2xl mb-0" onClick={()=> {setShow(true); disableScroll();}}>
-              Collect  On Tezos
-            </button>
-
-          </h2>
-
-          <h2 className="font-mathias mt-4 w-full text-3xl sm:text-2xl lg:text-4xl xl:text-4xl font-extrabold align-middle mb-0">
-            <button className="bg-orange-900 w-34 text-center w-full py-4 px-4 mt-0 text-yellow-75 rounded-md hover:opacity-50 mb-4  shadow-2xl" onClick={()=> {setShow(true); disableScroll();}}>
-            Connect & Download
-            </button>
-            &nbsp;<br></br> 
-          </h2>
-
-          <Modal onClose = {() => {setShow(false); enableScroll()}} show={show}/>
+        
 
 
 
-
-
-        {/* <DropDown/> */}
-
-
-         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       
-
-
-    
-        <dd className="mb-8">
-
-
-          
-        </dd>
       </dl>
 
       
@@ -498,24 +527,24 @@ const data = useRef(null);
 
 
         
-    <h2 className="font-mathias mt-4 mr-0 mb-0 w-full text-6xl text-center sm:text-2xl lg:text-xl xl:text-3xl font-extrabold align-middle uppercase">
+    <h2 className="font-mathias mt-20  mr-0 mb-0 w-full text-7xl text-center sm:text-2xl lg:text-xl xl:text-3xl font-extrabold align-middle uppercase">
           {/* Interactive Music OBJKT #{props.tokendId} comes integrated with a looper, token gate and download button. */}
         BE A 1 OF 1 SELECTOR
           </h2>
 
-          <div className="text-left text-mathias mt-2 mb-2 leading-tight bg-black p-5 text-yellow-75 rounded-lg">
+          <div className="text-left text-mathias mt-2 mb-1 leading-tight bg-black p-5 text-yellow-75 rounded-lg">
             <a href="https://objkt.com/asset/hicetnunc/612561" className="uppercase font-mathias">
               Interactive Music OBJKT #{props.tokendId} comes integrated with a looper, token gate and download button.
             </a>
           </div>
           
-          <h2 className="font-mathias text-center mr-0 mt-16 md:mt-0 w-full text-4xl sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
-        Create 1 of 1 Edits
+          <h2 className="font-mathias text-center mr-0 mt-20 md:mt-0 w-full text-4xl sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle mb-6">
+        Rapidly Edit <br></br>This Track
         </h2>
 
             <img src={player_thumbnail}  alt="" className=""/> 
-            <h2 className=" mr-0 mb-0 mt-6 md:mt-0 text-center w-full text-sm sm:text-lg lg:text-xl xl:text-3xl align-middle">
-        EditTrax provides the best UX
+            <h2 className=" mr-0 mb-0 mt-6 md:mt-0 text-center w-full text-xxs sm:text-lg lg:text-xl xl:text-3xl align-middle">
+        *See embedded EditTrax Player above
             </h2>
         
                    
@@ -529,8 +558,8 @@ const data = useRef(null);
         </h2>
 
             <img src={all_markets}  alt="" className=""/> 
-            <h2 className=" mr-0 mb-0 md:mt-0 text-center w-full text-sm sm:text-lg lg:text-xl xl:text-3xl align-middle">
-        EditTrax provides the best UX
+            <h2 className=" mr-0 mb-0 md:mt-0 text-center w-full text-xxs sm:text-lg lg:text-xl xl:text-3xl align-middle">
+        *EditTrax.com provides the best cross-device UX
             </h2>
         
 
@@ -542,7 +571,7 @@ const data = useRef(null);
 
 
           <h2 className="font-mathias mt-16 text-center mr-0 md:mt-0 w-full text-4xl sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
-          On Any Device
+          Download Edits <br></br>On Any Device
         </h2>
 
 
@@ -551,8 +580,8 @@ const data = useRef(null);
 
 
 
-            <h2 className=" mr-0 mb-2 md:mt-0 text-center w-full text-sm sm:text-lg lg:text-xl xl:text-3xl align-middle">
-        EditTrax provides the best UX
+            <h2 className=" mr-0 mb-2 md:mt-0 text-center w-full text-xxs sm:text-lg lg:text-xl xl:text-3xl align-middle">
+        *See Limitations
             </h2>
           
 

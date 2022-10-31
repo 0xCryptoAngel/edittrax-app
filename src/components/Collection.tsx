@@ -77,9 +77,9 @@ const Collection = () => {
 
       
 
-<div className="font-mathias mt-24 mb-0 mx-6 text-center text-yellow-75 text-5xl sm:text-7xl">
+{/* <div className="font-mathias mt-24 mb-0 mx-6 text-center text-yellow-75 text-5xl sm:text-7xl">
         GENESIS COLLECTION
-      </div>
+      </div> */}
 
 
 
@@ -91,7 +91,7 @@ const Collection = () => {
           
           <div className="mr-auto ml-auto mt-0 mb-0 ml-0 gap-2 flex w-auto flex-col mx-0 h-auto items-center">
 
-            <img src={thumb} alt="founder_pic" className="w-2xl"/>
+            {/* <img src={thumb} alt="founder_pic" className="w-2xl"/> */}
 
             <div className="w-full text-center mt-0 opacity-0 h-0 md:ml-12">
 
