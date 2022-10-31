@@ -45,11 +45,11 @@ const ConnectWallet = () => {
   }, []);
 
   return activeAddress.length === 0 ? (
-    <button className="bg-black rounded text-yellow-75 font-bold py-2 w-40 hover:text-gray-300" onClick={onConnectWallet}>
+    <button className="font-mathias lg:text-4xl xl:text-4xl bg-orange-500 w-34 text-center w-full py-4 px-4  text-yellow-75 rounded-md hover:opacity-50 shadow-2xl bg-orange-900" onClick={onConnectWallet}>
       Connect Wallet
     </button>
   ) : (
-  <button className="bg-black rounded text-yellow-75 font-bold py-2 w-40 hover:text-gray-300" onClick={onDisconnectWallet}>
+  <button className="font-mathias lg:text-4xl xl:text-4xl w-34 text-center w-full py-4 px-4  text-yellow-75 rounded-md hover:opacity-50 shadow-2xl bg-orange-900 " onClick={onDisconnectWallet}>
     <div>{`${activeAddress.slice(0, -28)}...${activeAddress.substring(30)}`}</div>
   </button>
   );
