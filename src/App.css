@@ -114,6 +114,19 @@ width: 100%;
 
 .outline_button_main {
   border: solid black 2px;
+  /* max-width: 160px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: black; */
+}
+
+.outline_button_meta {
+  border: solid black 2px;
+  max-width: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 70px;
   /* background-color: black; */
 }
 
@@ -240,5 +253,39 @@ display: none !important;
   /* background-image: url(assets/QmPgdPxBpeMaWpUzjxxV4boeB9P4nC63zApn98TSn7MPoX.jpeg);*/
   /* background-color:red;  */
 }
+
+.Collapsible {
+
+  /* background-color: red; */
+  text-align: center;
+  /* font-size: 23px; */
+  margin-top: 8px;
+  width:100%;
+  min-height: 70px;
+  font-family: mathias;
+  border: solid black 2px;
+ padding-top: 8px;
+border-radius: 10px;
+padding-top: 21px;
+padding-left: 10px; 
+padding-right: 10px;
+
+}
+
+.Collapsible__contentInner {
+
+  font-family:Arial, Helvetica, sans-serif;
+/* background-color: red; */
+text-align: center;
+
+}
+
+
+
+/* padding: 10px; */
+  /* outline_button_main bg-yellow-75 text-center w-34 py-4 px-11 mt-0 text-black rounded-md mb-4 shadow-2xl */
+   
+  
+
 
 /* Media player style overwrite end */

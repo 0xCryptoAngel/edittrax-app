@@ -169,16 +169,16 @@ const Dashboard = (): JSX.Element => {
             <div className="mx-4 md:mx-0 h-iframeLoad">
             <iframe src={`${result?.imageUrl}${activeAddress}`} className="w-full h-iframe" ref={Iframe}/>
             </div>
-            <div className="bg-yellow-75 flex justify-center py-2 md:py-8 mx-4 md:mx-0 max-w-full">
+            <div className="bg-yellow-75 flex justify-center py-4 md:py-8 mx-4 md:mx-0 max-w-full font-bold text-xs" ref={dwnArrow}>
               {/* <button className="font-mathias text-md bg-black text-yellow-75 font-bold rounded px-16 md:px-64 sm:py-4"> */}
-              <img src={downArrow} alt="logo" id="logo_test" className="w-6 sm:w-10" ref={dwnArrow}/>
+              TRACK INFO &nbsp;<img src={downArrow} alt="logo" id="logo_test" className="w-3" ref={dwnArrow}/>
               {/* </button> */}
             </div>
           </div>
-          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 lg:mt-20 -mt-16">
+          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 lg:mt-20 -mt-12 sm:-mt-8">
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">10</div>
-              <div>Floor Price (Tez)</div>
+              <div>Floor (Tez)</div>
             </div>
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">{metaData?.totalSupply}</div>

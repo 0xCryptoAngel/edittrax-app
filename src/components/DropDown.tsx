@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { CaretDown } from "phosphor-react";
 
 const DropDown = () => {
     const [isExpanded, setIsExpanded] = useState(false)
@@ -6,15 +7,13 @@ const DropDown = () => {
     return (
         <div>
     <button onClick={() => setIsExpanded(true)}
-    className="bg-red-900 text-center px-4 py-4 shadow text-yellow-75 rounded-md  hover:opacity-50">
-        DROPDOWN
+    className="font-mathias text-center  text-black rounded-md w-auto hover:opacity-50">
+        Metadata <CaretDown />
     </button>
-    {isExpanded &&
-    <div className="bg-white">
-        is expanded
-    </div>
+    {/* {isExpanded &&
 
-    }
+
+    } */}
     </div>
   )
 }
