@@ -38,7 +38,7 @@ const miscellaneous = () => {
 <div className="mb-14 mx-3 py-3 lg:mx-24 rounded-lg lg:py-12">
 
 
-  <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-0 px-4 sm:px-6 sm:py-0 lg:max-w-7xl lg:grid-cols-2 lg:px-8 mt-0 mb-8 lg:mb-0 "><div>
+  <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-0 px-4 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8 mt-0 mb-8 lg:mb-0 "><div>
 
       <dl className="mt-0 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
         
@@ -88,7 +88,7 @@ Teia.art (Github)
     <div className="mx-auto md:max-w-6xl gap-0 flex flex-col md:flex-row items-center">
       <dl className="w-full h-full md:w-1/2 flex align-middle items-center">
         <div className="container mx-auto">
-          <div className=" mx-auto my-auto flex rounded-md shadow-sm align-middle center">
+          <div className=" mx-auto my-auto flex rounded-md shadow-sm align-middle center sm:max-w-sm">
             <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className=""/>
           </div>
       </div>  

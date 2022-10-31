@@ -169,14 +169,15 @@ const Dashboard = (): JSX.Element => {
             <div className="mx-4 md:mx-0 h-iframeLoad">
             <iframe src={`${result?.imageUrl}${activeAddress}`} className="w-full h-iframe" ref={Iframe}/>
             </div>
-            <div className="bg-yellow-75 flex justify-center py-6 md:py-8 mx-4 md:mx-0 max-w-full font-bold text-lg" ref={dwnArrow}>
+            <div className="bg-yellow-75 flex justify-center py-3 md:py-8 mx-4 md:mx-0 max-w-full font-bold text-lg" ref={dwnArrow}>
               {/* <button className="font-mathias text-md bg-black text-yellow-75 font-bold rounded px-16 md:px-64 sm:py-4"> */}
               ••• 
               {/* <img src={downArrow} alt="logo" id="logo_test" className="w-3" ref={dwnArrow}/> */}
               {/* </button> */}
             </div>
           </div>
-          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 lg:mt-20 -mt-12 sm:-mt-8">
+          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 -mt-28 sm:-mt-24 pt-24 md:mt-0 lg:mt-0">
+            
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">10</div>
               <div>Floor (Tez)</div>
