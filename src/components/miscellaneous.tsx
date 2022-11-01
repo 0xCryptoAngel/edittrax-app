@@ -4,7 +4,7 @@ import React, { Dispatch, SetStateAction, useState, useRef, useEffect, useCallba
 import handbook_2 from "../assets/handbook_2.png";
 import marketplace_2 from "../assets/marketplace_2.png";
 import github_2 from '../assets/github_2.png';
-import thumb from '../assets/founder.jpg';
+import thumb from '../assets/players.png';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import handbookCover from "@images/handbookCover.jpg";
@@ -93,12 +93,12 @@ Teia.art (Github)
       <dl className="w-full h-full md:w-1/2 flex align-middle items-center">
         <div className="container mx-auto">
           <div className=" mx-auto my-auto flex rounded-md shadow-sm align-middle center sm:max-w-sm">
-          <img src={thumb} alt="founder_pic" className="max-w-sm ml-auto mr-auto"/>
+          <img src={thumb} alt="founder_pic" className="-ml-4 max-w-sm ml-auto mr-auto px-10"/>
           </div>
-      </div>  
+        </div>  
       </dl>
       <dl className="w-full md:w-1/2 flex align-middle items-center email mb-12">
-          <iframe height="500px" src="https://cc76d0e7.sibforms.com/serve/MUIEAD-5OvrZ3hWptCPzI0E5OZK-ACJ-O-5HTgYvjHAsAX9Eto-TF4-AyEOXEVbbpZnQcpdT3Wn8vJPP0SSw8oMPhbYL6rVGBj8xmzV6mIM5AQnLSR1-djxxA0TK-_7cSoWZArh1iYIBj-rAb-eRPa79Pd3YyCg-JRVl5WGoQuzSsGM4gXNHqRXhw5F1VL9CF-aYQTtW3yKpntGb" scrolling="auto" className="block ml-auto mr-auto w-full"></iframe>
+          <iframe height="500px" src="https://cc76d0e7.sibforms.com/serve/MUIEAKsyKcK3BN2Bpj0k_DGd7ytzpdMNuXNl7XQkD8v71Pbn12FJmHkxTWvPmhJDzqFFptSwidodshWev5njpgLnUVKhBds3x0zqF14vZr5zDPqZiwB3R3rRNtOhVhrbV-yE7zeQ-VsyK1BLCNZjtRbJ2iy9I3CeaXPPflpjtgfjCMjMCyiXb7f12j0BIRGsTurt6yvAIl6HO8tI" scrolling="auto" className="block ml-auto mr-auto w-full"></iframe>
       </dl>
     </div>
 

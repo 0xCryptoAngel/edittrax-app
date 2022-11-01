@@ -176,7 +176,7 @@ const Dashboard = (): JSX.Element => {
               {/* </button> */}
             </div>
           </div>
-          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 -mt-28 sm:-mt-24 pt-24 md:mt-0 lg:mt-0">
+          <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 -mt-36 sm:-mt-24 pt-24 md:mt-0 lg:mt-0">
             
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">10</div>
