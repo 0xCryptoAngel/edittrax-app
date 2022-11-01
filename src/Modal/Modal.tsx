@@ -13,7 +13,7 @@ const Modal = (props : modalProps) => {
   return(
   <div className="modal" >
     <div className="modal-bg" onClick={props.onClose}/>
-    <div className="modal-content rounded-md p-5  text-center">
+    <div className="modal-content rounded-md p-5  text-center m-12">
       <div className="modal-header text-center">
         <div className="text-2xl modal-title font-mathias flex justify-center text-center">UNLOCK & DOWNLOAD:<br></br></div>
       </div>

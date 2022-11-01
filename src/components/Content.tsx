@@ -112,9 +112,9 @@ const data = useRef(null);
   
   return (
 
-  <section className="bg-yellow-75 flex flex-col items-center gap-0 px-2 py-9 mb-0 mx- md:mb-0 md:pb-0 md:mx-0 order-last" >
+  <section className="bg-yellow-75 flex flex-col items-center gap-0 px-2 py-9 mb-0 md:mb-0 md:pb-0 md:mx-0 order-last" >
               
-    <div className="flex flex-col items-center gap-0 md:flex-row md:gap-8 mb-0 lg:mt-14">
+    <div className="flex flex-col items-center gap-0 md:flex-row md:gap-8 mb-0 mt-10 lg:mt-14">
       <img src={et01_head} alt="rotating head" className="w-md max-w-xs rounded-md shadow-2xl"/>
       <div className="flex flex-col items-center md:items-start md:justify-end md:h-full">
         <div className="font-mathias text-7xl font-extrabold mt-8 text-center">{props.titleHardCode}</div>
@@ -142,21 +142,28 @@ const data = useRef(null);
       <div className="mx-auto gap-0 sm:gap-16 flex flex-col lg:flex-row ">
       <dl className="w-full lg:w-2/3 pt-16">
 
-<Collapsible className="outline_button_meta bg-black text-center w-34 text-yellow-75 rounded-md mb-4 shadow-2xl mt-36 hover:opacity-50 cursor-pointer " trigger="Metadata">
+<Collapsible className="outline_button_meta bg-yellow-75 text-black text-center w-34 rounded-md mb-4 shadow-2xl mt-36 cursor-pointer " trigger="Metadata">
 
-  <div className="font-mathias mt-8 ">          
-    <a href="https://objkt.com/asset/hicetnunc/612561" className="bg-black text-center px-4 py-2 text-yellow-75 rounded-md hover:opacity-50">
-    Contract on Tkz
-    </a>
+<div className="font-mathias mt-8 text-4xl  text-center px-4 py-2 text-black rounded-md ">          
+    OBJKT #{props.tokendId}
+
   </div>
-  
+
   <div className="font-mathias mt-6">
-    <a href="https://objkt.com/asset/hicetnunc/612561" className="bg-black text-center px-4 py-2 text-yellow-75 rounded-md hover:opacity-50">
-    Creative on IPFS
+    <a href="https://cloudflare-ipfs.com/ipfs/QmUymYLLq4sp82jrSerhgMuYhAWmEwiJQc8D4nYSfXrLhF" target="_blank" rel="noreferer" className="bg-black text-center px-4 py-2 text-yellow-75 rounded-md hover:opacity-50">
+    Metadata on IPFS
     </a>       
   </div>
 
+  <div className="font-mathias mt-8 ">          
+    <a href="https://cloudflare-ipfs.com/ipfs/QmYRBDjBixJczcXs6fNunG9EGPsHqQT62ifEBzYTS1SjGe/" target="_blank" rel="noreferer" className="bg-black text-center px-4 py-2 text-yellow-75 rounded-md hover:opacity-50">
+    Creative on IPFS
+    </a>
+  </div>
+  
+
   <div className="font-mathias mt-2 mb-2 text-lg mt-10 text-left">Description</div>
+
 
   <p className="text-justify">
   {props.description}
@@ -183,7 +190,7 @@ const data = useRef(null);
 
     <h2 className="font-mathias mb-4 mt-10 md:mt-0 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
     </h2>
-    <button className="font-mathias text-3xl lg:text-4xl xl:text-4xl outline_button_edit w-34 text-center py-4 w-full px-6 text-yellow-75 rounded-md  hover:opacity-50 shadow-2xl mb-0" onClick={()=> {setShow(true); disableScroll();}}>
+    <button className="font-mathias text-3xl lg:text-4xl xl:text-4xl outline_button_edit w-34 text-center py-4 w-full px-6 text-yellow-75 rounded-md mt-4 hover:opacity-50 shadow-2xl mb-0" onClick={()=> {setShow(true); disableScroll();}}>
       COLLECT
     </button>
     <Modal onClose = {() => {setShow(false); enableScroll()}} show={show}/>
@@ -203,8 +210,8 @@ const data = useRef(null);
     <ConnectWallet/>
 
     <h2 className="font-mathias align-middle flex content-center col mt-2 text-3xl lg:text-4xl xl:text-4xl font-extrabold mb-0">
-      <button className="outline_button_main w-34 text-center bg-black py-4 w-full px-6 text-yellow-75 rounded-md  hover:opacity-50 shadow-2xl mb-0" onClick={()=> {setShow(true); disableScroll();}}>
-        EDIT
+      <button className="outline_button_main w-34 text-center bg-black py-4 w-full px-6 text-yellow-75 rounded-md  hover:opacity-50 shadow-2xl mb-4" onClick={()=>scrollTop()}>
+        DOWNLOAD
       </button>
     </h2> 
 
@@ -227,7 +234,7 @@ const data = useRef(null);
     
 
   <h2 className="font-mathias  bg-yellow-75 text-center w-34  text-black rounded-md mb-2 shadow-2xl mt-3 lg:mt-24">
-          Explore Genesis Trax
+          Genesis Collection
         </h2>
 
 
