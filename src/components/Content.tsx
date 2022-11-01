@@ -361,7 +361,8 @@ const data = useRef(null);
   </div> */}
           
 
-<div className="h-screen">
+{/* <div className="h-screen">
+
   <h2 className="font-mathias text-center mr-0 mt-20 sm:mt-44 w-full text-5xl sm:text-4xl lg:text-7xl xl:text-7xl font-extrabold align-middle mb-6">
   Rapidly Edit <br></br>My Trax
   </h2>
@@ -369,13 +370,13 @@ const data = useRef(null);
 
   <img src={player_thumbnail}  alt="" className="main_image ml-auto mr-auto"/> 
   
-  </div>
+  </div> */}
 
 
   <h2 className=" mr-0 mb-0 mt-6 md:mt-12 text-center w-full text-xxs sm:text-sm align-middle">
   {/* *See embedded EditTrax Player above */}
   </h2>
-<div className="h-screen">
+{/* <div className="h-screen">
 
   <h2 className="font-mathias mt-28 text-center mr-0 md:mt-44 w-full text-5xl sm:text-4xl lg:text-7xl  font-extrabold align-middle">
   Across Any Tezos <br></br>Marketplace
@@ -383,21 +384,23 @@ const data = useRef(null);
 
   <img src={all_markets}  alt="" className="main_image ml-auto mr-auto mt-4"/> 
 
-  </div>
+  </div> */}
+
   <h2 className=" mr-auto ml-auto mb-0 md:mt-0 text-center w-full text-xxs sm:text-sm align-middle">
   {/* *EditTrax.com provides the best cross-device UX */}
   </h2>
         
 
   <h2 className=" mr-0 mb-2 md:mt-0 text-center w-full text-xxs sm:text-lg align-middle"></h2>
-
+{/* 
   <div className="h-screen">
   <h2 className="font-mathias mt-16 text-center mr-0 md:mt-44 w-full text-5xl font-extrabold align-middle sm:text-4xl lg:text-7xl">
   Download .wavs<br></br>On Any Device
   </h2>
 
   <img src={all_devices} alt="rotating head" className="main_image w-sm mb-2 mt-2 ml-auto mr-auto lg:w-2/3 mt-5"/>
-  </div>
+  </div> */}
+  
   <h2 className=" mr-0 mb-2 md:mt-0 text-center w-full text-xxs sm:text-sm  align-middle lg:pb-24">
   {/* *See Limitations */}
   </h2>
