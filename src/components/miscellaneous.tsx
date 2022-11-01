@@ -8,6 +8,7 @@ import thumb from '../assets/players.png';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import handbookCover from "@images/handbookCover.jpg";
+import canIuse from "@images/canIuse.jpg";
 import utility from "@images/utility.png";
 // import utility from '../assets/utility.png;
 
@@ -48,14 +49,14 @@ const miscellaneous = () => {
         
         {features1.map((feature) => (
           <div key={feature.name} className="">
-            <dt className="font-mathias text-2xl text-yellow-75 text-center">{feature.name}</dt>
-            <dd className="mt-2 text-sm text-gray-500 text-justify">{feature.description}</dd>
+            <dt className="font-mathias text-2xl lg:text-4xl text-yellow-75 text-center">{feature.name}</dt>
+            <dd className="mt-2 text-sm text-gray-500 text-center">{feature.description}</dd>
           </div>
         ))}
       </dl>
       
       </div>
-      <img src={utility} alt="load" className=""/>
+      <img src={utility} alt="load" className="main_image ml-auto mr-auto"/>
             
       <div className="bg-yellow-75 p-10 rounded-lg">
       
@@ -65,7 +66,7 @@ const miscellaneous = () => {
         <dl className="mt-22 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
           {features2.map((feature) => (
             <div key={feature.name} className="border-tpt-4">
-              <dt className="font-mathias text-2xl text-black ml-auto text-center">{feature.name}</dt>
+              <dt className="font-mathias text-2xl  lg:text-4xl text-black ml-auto text-center">{feature.name}</dt>
               <dd className="mt-2 text-sm text-gray-500 text-center">{feature.description}</dd>
           
             </div>
@@ -89,16 +90,35 @@ Teia.art (Github)
   </div>
 
 
-    <div className="mx-auto md:max-w-6xl gap-0 flex flex-col md:flex-row items-center">
-      <dl className="w-full h-full md:w-1/2 flex align-middle items-center">
-        <div className="container mx-auto">
-          <div className=" mx-auto my-auto flex rounded-md shadow-sm align-middle center sm:max-w-sm">
-          <img src={thumb} alt="founder_pic" className="-ml-4 max-w-sm ml-auto mr-auto px-10"/>
-          </div>
-        </div>  
+    <div className="mx-auto md:max-w-6xl gap-0 flex flex-col xlg:flex-row items-center">
+      <dl className="w-full md:w-1/2 flex col align-middle items-center mt-0">
+     
+      <div className="ml-auto mr-auto">
+
+               
+<div className="font-mathias mb-0 text-center align-middle text-center text-5xl ml-auto mr-auto text-yellow-75">
+      LIMITATIONS
+</div> 
+<div className="mt-2 mb-4 text-sm text-gray-500 w-full text-center ml-auto mr-auto content-center mt-0 px-6">
+See what features different Tezos maketplaces can accomodate.</div>
+
+<img src={canIuse} alt="load" className=""/>
+</div>
+
+
       </dl>
-      <dl className="w-full md:w-1/2 flex align-middle items-center email mb-12">
-          <iframe height="500px" src="https://cc76d0e7.sibforms.com/serve/MUIEAKsyKcK3BN2Bpj0k_DGd7ytzpdMNuXNl7XQkD8v71Pbn12FJmHkxTWvPmhJDzqFFptSwidodshWev5njpgLnUVKhBds3x0zqF14vZr5zDPqZiwB3R3rRNtOhVhrbV-yE7zeQ-VsyK1BLCNZjtRbJ2iy9I3CeaXPPflpjtgfjCMjMCyiXb7f12j0BIRGsTurt6yvAIl6HO8tI" scrolling="auto" className="block ml-auto mr-auto w-full"></iframe>
+      <dl className="w-full md:w-1/2 flex align-middle items-center email mt-0 mb-12">
+      <div className="ml-auto mr-auto w-full md:mr-0">
+
+               
+<div className="font-mathias mb-0 text-center align-middle text-center text-5xl ml-auto mr-auto text-yellow-75 mt-24">
+      SUBSCRIBE
+</div> 
+<div className="mt-2 text-sm text-gray-500 w-full text-center ml-auto mr-auto content-center mt-0 px-6">
+Be respectfully updated with EditTrax 411.</div>
+
+<iframe height="400px" src="https://cc76d0e7.sibforms.com/serve/MUIEABmPTk29QfL4yduTrrV_o12F8R0MeVMsDaQLt3I-jyNcLLMlD8iYTPuzZ3_je75sgz9XqKNwsY_khnb8qbt25ijulHmNf0nf_202ssBaBvrWVIjbKUlsaNMqU1NzpiZgLcGX8JLRE-Vxc1m-BRJXwXg6iD87OimUFLAyxtZ24Vk9Pn0m25j5fRYT2haz3_RpIOC6VKGmE-EK" scrolling="auto" className="newsletter block ml-auto mr-auto w-full -mt-12 bg-transparent"></iframe>
+</div>
       </dl>
     </div>
 
@@ -108,3 +128,4 @@ Teia.art (Github)
 };
 
 export default miscellaneous;
+

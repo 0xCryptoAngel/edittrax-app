@@ -17,8 +17,19 @@ body,
   height:auto;
 }
 
+.newsletter {
+  background-color: transparent !important;
+}
+
 .player_name {
   min-width:100px;
+}
+
+.main_image {
+  /* max-width: 800px;
+  min-width: 90vw; */
+  width:700px;
+  max-width: 90vw;
 }
 
 .helper {
