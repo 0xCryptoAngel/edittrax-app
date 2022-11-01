@@ -2,14 +2,14 @@ import et_horiz from "@images/et_horizontal.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-black p-10 dark:bg-gray-900">
+    <footer className="bg-black p-10 dark:bg-gray-900 -mt-12">
     <div className="md:flex md:justify-between">
-        <div className="mb-6 md:mb-0 flex flex-col align-middle items-center sm:items-start">
+        <div className="mb-6 md:mb-0 flex flex-col align-middle items-center sm:items-start mb-32">
         <a href="https://edittraxnft.on.fleek.co/" target="_blank"  rel="noreferrer"className="flex items-center">
-            <img src={et_horiz} alt="logo" id="logo_test" className="w-44 mb-8 ms:mb-0 w-80 sm:w-44"/>
+            <img src={et_horiz} alt="logo" id="logo_test" className="w-44 mb-8 ms:mb-0 w-42 mt-8 sm:w-44"/>
         </a>
         </div>
-        <div className="grid grid-cols-2 gap-2 sm:gap-8 sm:grid-cols-4">
+        <div className="grid grid-cols-1 gap-2 sm:gap-8 sm:grid-cols-4 text-center md:text-left">
             <div className="mb-6 md:mb-0 flex flex-col align-middle items-center sm:items-start">
                 <h2 className="font-mathias mb-6 text-lg font-semibold text-yellow-75 uppercase dark:text-white">ABOUT</h2>
                 <ul className="text-gray-600 dark:text-gray-400">
@@ -44,7 +44,7 @@ const Footer = () => {
                 </ul>
             </div>
             <div className="mb-6 md:mb-0 flex flex-col align-middle items-center sm:items-start">
-                <h2 className="font-mathias mb-6 text-lg font-semibold text-yellow-75 uppercase dark:text-white">Connect</h2>
+                <h2 className="font-mathias mb-6 text-lg font-semibold text-yellow-75 uppercase dark:text-white">CONTACT</h2>
                 <ul className="text-gray-600 dark:text-gray-400">
                     <li className="mb-4">
                         <a href="mailto:edittrax@protonmail.com" target="_blank"  rel="noreferrer" className="hover:underline ">Email</a>
@@ -57,8 +57,8 @@ const Footer = () => {
         </div>
     </div>
     <hr className="my-6 text-yellow-75 sm:mx-auto lg:my-8" />
-    <div className="sm:flex sm:items-center sm:justify-between">
-        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="" target="_blank"  className="hover:underline">EditTrax™</a>
+    <div className="flex col w-full items-center content-center flex-col md:flex-row sm:flex sm:items-start sm:justify-between lg:content-justify">
+        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">©2022 <a href="" target="_blank"  className="hover:underline">EditTrax™</a>
         </span>
         <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <a href="https://mobile.twitter.com/edittrax" target="_blank"  rel="noreferrer" className="text-yellow-75 hover:text-gray-900 dark:hover:text-white">

@@ -99,7 +99,7 @@ Teia.art (Github)
 <dl className="w-full md:w-1/2 flex align-middle items-center email mt-0 mb-12">
 <div className="ml-auto mr-auto w-full md:mr-0"> */}
 
-<div className=" mx-auto my-auto flex rounded-md shadow-sm align-middle center sm:max-w-sm">
+<div className=" mx-auto my-auto flex rounded-md shadow-sm align-middle center sm:max-w-sm mt-12">
 <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className=""/>
 </div>
 
