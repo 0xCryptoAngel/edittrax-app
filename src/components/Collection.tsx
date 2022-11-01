@@ -74,16 +74,10 @@ const Collection = () => {
   return (
 
     <section className="bg-black m-0 mb-0 sm:mt-0 md:mx-0 items-center flex flex-col justify-center pl-4 pr-4">
-
-      
-
-{/* <div className="font-mathias mt-24 mb-0 mx-6 text-center text-yellow-75 text-5xl sm:text-7xl">
-        GENESIS COLLECTION
-      </div> */}
-
-
-
-<div className="relative sm:mt-12 min-w-0 break-words gap-0 bg-black w-full mb-6 shadow-lg rounded-xl mt-4 text-yellow-75 flex flex-col lg:flex-row content-center">
+    {/* <div className="font-mathias mt-24 mb-0 mx-6 text-center text-yellow-75 text-5xl sm:text-7xl">
+            GENESIS COLLECTION
+          </div> */}
+    <div className="relative sm:mt-12 min-w-0 break-words gap-0 bg-black w-full mb-6 shadow-lg rounded-xl mt-4 text-yellow-75 flex flex-col lg:flex-row content-center">
       
       <div className="px-0 flex flex-col sm:flex-row items-center">
 
@@ -109,73 +103,37 @@ const Collection = () => {
                         <span className="text-sm text-slate-400">Following</span>
                     </div>
                 </div>
-            </div>
-
-        </div>
-        
-      </div>
-
-      <div className="mr-auto mt-0 mb-0 ml-0 gap-2 flex flex-col mx-0 h-auto items-center lg:items-left hidden">
-
-        <div className="w-full lg:w-2/3 lg:px-0">
-
-          <div className="pl-0 gap-0 flex flex-row items-center">
-
-            <div className="text-center sm:text-left mt-0 w-full">
-              {/* <h3 className="font-mathias text-5xl text-slate-700 font-bold leading-normal -mb-4 text-center sm:text-left">BAI-EE</h3> */}
-              <div className="text-xs mt-0 mb-2 text-slate-400 font-bold uppercase mt-2">
-                  {/* <i className="font-mathias fas text-left mb-0 fa-map-marker-alt mr-0 text-slate-400 opacity-75"></i> */}
-                  {/* Chicago, Il */}
               </div>
             </div>
-
           </div>
 
-          {/* <p className="font-light leading-relaxed text-slate-600 mb-4 text-justify text-xs ">   Bai-ee is a House Dj/producer, Live Performance Act and Record Label Owner based in Chicago. His Genesis Collection consists of 4 original tracks available for the first time as collectible music. Customize each track fro your own performance within within these interactive Music OBJKTs.</p> */}
-
-          {/* <div className="pl-0 gap-1 flex flex-row lg:content-left">
-            <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className="font-mathias bg-yellow-75 w-auto text-center px-4 py-1 text-black text-xs rounded-md hover:opacity-50">
-              Website
-            </a>
-            <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className="font-mathias bg-yellow-75 w-auto text-center px-4 py-1 text-black text-xs rounded-md hover:opacity-50">
-              Twitter
-            </a>
-            <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className="font-mathias bg-yellow-75  w-auto text-center px-4  py-1 text-black text-xs rounded-md hover:opacity-50">
-              Discogs
-            </a>
-          </div> */}
-
+          <div className="mr-auto mt-0 mb-0 ml-0 gap-2 flex flex-col mx-0 h-auto items-center lg:items-left hidden">
+            <div className="w-full lg:w-2/3 lg:px-0">
+              <div className="pl-0 gap-0 flex flex-row items-center">
+                <div className="text-center sm:text-left mt-0 w-full">
+                  {/* <h3 className="font-mathias text-5xl text-slate-700 font-bold leading-normal -mb-4 text-center sm:text-left">BAI-EE</h3> */}
+                  <div className="text-xs mt-0 mb-2 text-slate-400 font-bold uppercase mt-2">
+                      {/* <i className="font-mathias fas text-left mb-0 fa-map-marker-alt mr-0 text-slate-400 opacity-75"></i> */}
+                      {/* Chicago, Il */}
+                  </div>
+                </div>
+              </div>
+              {/* <p className="font-light leading-relaxed text-slate-600 mb-4 text-justify text-xs ">   Bai-ee is a House Dj/producer, Live Performance Act and Record Label Owner based in Chicago. His Genesis Collection consists of 4 original tracks available for the first time as collectible music. Customize each track fro your own performance within within these interactive Music OBJKTs.</p> */}
+              {/* <div className="pl-0 gap-1 flex flex-row lg:content-left">
+                <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className="font-mathias bg-yellow-75 w-auto text-center px-4 py-1 text-black text-xs rounded-md hover:opacity-50">
+                  Website
+                </a>
+                <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className="font-mathias bg-yellow-75 w-auto text-center px-4 py-1 text-black text-xs rounded-md hover:opacity-50">
+                  Twitter
+                </a>
+                <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className="font-mathias bg-yellow-75  w-auto text-center px-4  py-1 text-black text-xs rounded-md hover:opacity-50">
+                  Discogs
+                </a>
+              </div> */}
+            </div>
+          </div>  
         </div>
-
-
-
-</div>
-
-
-
-
-
       </div>
-
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-     
     </section>
   );
 };

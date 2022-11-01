@@ -41,7 +41,7 @@ const Dashboard = (): JSX.Element => {
       unlockable: 'https://i.postimg.cc/9Md31JmB/unlockable-burnt.png',
       tokendId: 781875,
       titleHardCode:"'BURNT'",
-      artist:"Producer: BAI-EE",
+      artist:"BAI-EE",
       origEdit: 'https://i.postimg.cc/rFHCppZT/original.png',
       lokt_612561:lockt_612561,
       player_thumbnail: et01_thumb
@@ -53,7 +53,7 @@ const Dashboard = (): JSX.Element => {
       unlockable: 'https://i.postimg.cc/MTyqnXmF/unlockable-alpha-test.png',
       tokendId: 612561,
       titleHardCode:"'ACID BEACH'",
-      artist:"Producer: BAI-EE",
+      artist:"BAI-EE",
       origEdit: 'https://i.postimg.cc/rFHCppZT/original.png',
       lokt_612561:lockt_612561,
       player_thumbnail: et01_thumb
@@ -153,7 +153,7 @@ const Dashboard = (): JSX.Element => {
                 </ul>
               </div>
               <div className="flex gap-4 items-center">
-              <button className="font-mathias sm:bg-black sm:rounded sm:text-yellow-75 px-2 sm:font-bold sm:py-2 sm:w-40 hover:text-gray-300 text-md" onClick={()=> {setShow(true); disableScroll();}}>DOWNLOAD
+              <button className="font-mathias sm:bg-black sm:rounded sm:text-yellow-75 px-2 sm:font-bold sm:py-2 sm:w-40 hover:text-gray-300 text-md hover:opacity-50" onClick={()=> {setShow(true); disableScroll();}}>HOW TO
               </button>
               <Modal onClose = {() => {setShow(false); enableScroll()}} show={show}/>
                 <div className="hidden">

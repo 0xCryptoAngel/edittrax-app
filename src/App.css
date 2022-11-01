@@ -143,10 +143,12 @@ width: 100%;
 
 .outline_button_all {
 
-  border: solid black 2px;
+  /* border: solid black 2px; */
 
 }
-
+.outline_button_edit {
+  background-color: #99854E;
+}
 
 
 .outline_tag {
@@ -271,6 +273,12 @@ display: none !important;
   /* background-color:red;  */
 }
 
+#collapsible-trigger-1667336467511{
+
+
+  color:red;
+}
+
 .Collapsible {
 
   /* background-color: red; */
@@ -286,6 +294,7 @@ border-radius: 10px;
 padding-top: 21px;
 padding-left: 10px; 
 padding-right: 10px;
+
 
 }
 

@@ -46,7 +46,7 @@ const ConnectWallet = () => {
 
   return activeAddress.length === 0 ? (
     <button className="outline_button_all font-mathias lg:text-4xl xl:text-4xl  w-34 text-center w-full py-4 px-4 text-3xl lg:text-4xl text-yellow-75 rounded-md hover:opacity-50 shadow-2xl bg-red-900" onClick={onConnectWallet}>
-      Unlock
+      CONNECT
     </button>
   ) : (
   <button className="outline_button_all font-mathias lg:text-4xl xl:text-4xl w-34 text-center w-full py-4 px-4 text-3xl lg:text-4xl text-yellow-75 rounded-md hover:opacity-50 shadow-2xl bg-red-900 " onClick={onDisconnectWallet}>
