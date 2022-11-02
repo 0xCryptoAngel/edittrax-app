@@ -142,7 +142,7 @@ const data = useRef(null);
       <div className="mx-auto gap-0 sm:gap-16 flex flex-col lg:flex-row ">
       <dl className="w-full lg:w-2/3 pt-16">
 
-<Collapsible className="outline_button_meta bg-yellow-75 text-black text-center w-34 rounded-md mb-4 shadow-2xl mt-36 cursor-pointer hover:opacity-50" trigger="Metadata">
+<Collapsible className="outline_button_meta bg-yellow-75 text-black text-center w-34 rounded-md mb-24 shadow-2xl mt-36 cursor-pointer hover:opacity-50" trigger="Metadata">
 
 <div className="font-mathias mt-8 text-4xl  text-center px-4 py-2 text-black rounded-md ">          
     OBJKT #{props.tokendId}
