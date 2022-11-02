@@ -47,22 +47,22 @@ const musicTracks: musicData[] = [
   {
     trackName: "ACID BEACH",
     artistName: 'Bai-ee',
-    src: "https://github.com/CryptoAngel1024/edittrax_beta_dapp/blob/master/src/assets/Bai-ee_(Burnt).mp3?raw=true"
-  },
-  {
-    trackName: "BURNT",
-    artistName: 'Bai-ee',
-    src: "https://github.com/Bai-ee/edittrax_beta_dapp-crypto-angel/blob/master/src/assets/Bai-ee_(Acid_Beach)_RADIO.mp3?raw=true"
+    src: "https://github.com/Bai-ee/edittrax_beta_dapp-crypto-angel/blob/master/src/assets/Bai-ee_(Acid_Beach)Preview.mp3?raw=true"
   },
   {
     trackName: "BOXXED",
     artistName: 'Bai-ee',
-    src: "../assets/Bai-ee_(Acid_Beach)_RADIO.mp3"
+    src: "https://github.com/Bai-ee/edittrax_beta_dapp-crypto-angel/blob/master/src/assets/Bai-ee_(Boxxed)Preview.mp3?raw=true"
+  },
+  {
+    trackName: "BURNT",
+    artistName: 'Bai-ee',
+    src: "https://github.com/Bai-ee/edittrax_beta_dapp-crypto-angel/blob/master/src/assets/Bai-ee_(Burnt)Preview.mp3?raw=true"
   },
   {
     trackName: "NO MILLS",
-    artistName: 'Bai-ee',
-    src: "../assets/Bai-ee_(Acid_Beach)_RADIO.mp3"
+    artistName: 'Secret Studio',
+    src: "https://github.com/Bai-ee/edittrax_beta_dapp-crypto-angel/blob/master/src/assets/Bai-ee_(No_Mills)Preview.mp3?raw=true"
   },
 ]
 
@@ -250,10 +250,10 @@ const data = useRef(null);
             <div>{musicTracks[0].artistName}</div>
             <div className="text-xxs">Acid Techno</div>
           </div>
-          <div className="border-0 align-middle border-black bg-yellow-75 text-black shadow-4xl leading-3 rounded-md px-1 py-1 mt-auto mb-auto hover:text-gray-300">
+          <div className="border-2 align-middle border-yellow-75 pt-2 sm:px-2 text-yellow-75 shadow-4xl leading-3 rounded-md px-1 py-1 mt-auto mb-auto hover:text-gray-300">
             <Link to="/edit-trax/burnt">
               <button className="uppercase leading-tight h-8 mt-auto text-sm" onClick={()=>scrollTop()}>
-              LOAD<br></br>TRACK
+              LOADED
               </button>
             </Link>
           </div>
@@ -272,19 +272,19 @@ const data = useRef(null);
 
         <div className="mb-2 bg-black rounded-lg border-5 px-2 border-yellow-75 shadow-2xl ">
         <div className="text-yellow-75 h-24 sm:h-28 border-0 border-yellow-75 flex flex-row rounded-md items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
-          <img src={et03} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
+          <img src={et02} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
           <div className="flex-row flex m-0 w-full justify-around md:mt-0">
           <div className="text-left w-auto pl-2 player_name">
             <div>{musicTracks[1].trackName}</div>
             <div>{musicTracks[1].artistName}</div>
             <div className="text-xxs">Acid Techno</div>
           </div>
-          <div className="border-0 border-black bg-yellow-75 text-black shadow-4xl leading-3 rounded-md px-1 py-1 mt-auto mb-auto">
-            <Link to="/edit-trax/burnt">
-              <button className="uppercase leading-tight h-8 mt-auto text-sm">
-              DROP<br></br>12/22
-              </button>
-            </Link>
+          <div className="border-0 border-black shadow-4xl leading-3 rounded-md px-1 py-1 mt-auto mb-auto">
+            {/* <Link to="/edit-trax/burnt"> */}
+            <div className="uppercase leading-tight h-8 mt-auto px-1 pt-2 sm:px-2 text-xs sm:text-sm bg-black rounded-md align-middle text-yellow-75">
+              PREVIEW
+              </div>
+            {/* </Link> */}
           </div>
           <AudioPlayer 
             autoPlay
@@ -309,14 +309,14 @@ const data = useRef(null);
             <div>{musicTracks[2].artistName}</div>
             <div className="text-xxs">Acid Techno</div>
           </div>
-          <div className="border-0 border-black bg-yellow-75 text-black shadow-4xl leading-3 rounded-md px-1 py-1 mt-auto mb-auto">
-            <Link to="/edit-trax/burnt">
-              <button className="uppercase leading-tight h-8 mt-auto text-sm">
-              DROP<br></br>12/22
-              </button>
-            </Link>
+          <div className="border-0 border-black shadow-4xl leading-3 rounded-md px-1 py-1 mt-auto mb-auto">
+            {/* <Link to="/edit-trax/burnt"> */}
+            <div className="uppercase leading-tight h-8 mt-auto px-1 pt-2 sm:px-2 text-xs sm:text-sm bg-black rounded-md align-middle text-yellow-75">
+            PREVIEW
+              </div>
+            {/* </Link> */}
           </div>
-          {/* <AudioPlayer 
+          <AudioPlayer 
             autoPlay
             style={{ backgroundColor:"#ffffff" }} // media player background color 
             src={musicTracks[2].src} // media source
@@ -324,14 +324,14 @@ const data = useRef(null);
             showFilledProgress={false} // show filled process color
             customVolumeControls={[]} // Volume control remove
             customAdditionalControls={[]} // addition control remove
-          /> */}
+          />
           </div>
         </div>
         </div>
 
         <div className="mb-2 bg-black  rounded- border-5 px-2 border-yellow-75 shadow-2xl">
         <div className="text-yellow-75 h-24 sm:h-28 border-0 border-yellow-75 flex flex-row rounded-lg items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
-          <img src={et02} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
+          <img src={et03} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
 
           <div className="flex-row flex m-0 w-full justify-around md:mt-0">
           <div className="text-left w-auto pl-2 player_name">
@@ -339,22 +339,22 @@ const data = useRef(null);
             <div>{musicTracks[3].artistName}</div>
             <div className="text-xxs">Acid Techno</div>
           </div>
-          <div className="border-0 border-black bg-yellow-75 text-black shadow-4xl leading-3 rounded-md px-1 py-1 mt-auto mb-auto">
-            <Link to="/edit-trax/burnt">
-              <button className="uppercase leading-tight h-8 mt-auto text-sm">
-              DROP<br></br>12/22
-              </button>
-            </Link>
+          <div className="border-0 border-black shadow-4xl leading-3 rounded-md px-1 py-1 mt-auto mb-auto">
+            {/* <Link to="/edit-trax/burnt"> */}
+              <div className="uppercase leading-tight h-8 mt-auto px-1 pt-2 sm:px-2 text-xs sm:text-sm bg-black rounded-md align-middle text-yellow-75">
+              PREVIEW
+              </div>
+            {/* </Link> */}
           </div>
-          {/* <AudioPlayer 
+          <AudioPlayer 
             autoPlay
             style={{ backgroundColor:"#ffffff" }} // media player background color 
-            src={musicTracks[4].src} // media source
+            src={musicTracks[3].src} // media source
             showJumpControls={false} // Jump control remove
             showFilledProgress={false} // show filled process color
             customVolumeControls={[]} // Volume control remove
             customAdditionalControls={[]} // addition control remove
-          /> */}
+          />
           </div>
         </div>
         </div>
