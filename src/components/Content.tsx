@@ -188,12 +188,21 @@ const data = useRef(null);
 <div className="bg-transparent mx-0 rounded-lg mb-4 w-auto rounded-sm px-0 mt-4 px-0 lg:mt-8 mt-42">  
   <div className="grid grid-cols-1 gap-2 mx-0 max-w-screen-xl hover:scale-75 h-auto">
 
-    <h2 className="font-mathias mb-4 mt-10 md:mt-0 w-full text-lg sm:text-lg lg:text-xl xl:text-3xl font-extrabold align-middle">
-    </h2>
-    <button className="font-mathias text-3xl lg:text-4xl xl:text-4xl outline_button_edit w-34 text-center py-4 w-full px-6 text-yellow-75 rounded-md mt-4 hover:opacity-50 shadow-2xl mb-0" onClick={()=> {setShow(true); disableScroll();}}>
+  <h2 className="font-mathias md:mt-0 w-full text-3xl sm:text-2xl w-full lg:text-4xl xl:text-4xl font-extrabold align-middle mb-0 pt-5">
+      <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className="">
+      <div className="font-mathias lg:text-4xl xl:text-4xl outline_button_edit w-34 text-center w-full py-4 px-4  text-yellow-75 rounded-md hover:opacity-50 shadow-2xl" >
       COLLECT
-    </button>
-    <Modal onClose = {() => {setShow(false); enableScroll()}} show={show}/>
+      </div>
+
+      </a>
+      </h2>
+    
+
+
+    {/* <button className="font-mathias text-3xl lg:text-4xl xl:text-4xl outline_button_edit w-34 text-center py-4 w-full px-6 text-yellow-75 rounded-md mt-4 hover:opacity-50 shadow-2xl mb-0" onClick={()=> {setShow(true); disableScroll();}}> */}
+      {/* COLLECT */}
+    {/* </button>
+    <Modal onClose = {() => {setShow(false); enableScroll()}} show={show}/> */}
 
     {/* <h2 className="font-mathias md:mt-0 w-full text-3xl sm:text-2xl w-full lg:text-4xl xl:text-4xl font-extrabold align-middle mb-0 ">
     <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className="">
@@ -235,7 +244,7 @@ const data = useRef(null);
 
   <h2 className="font-mathias  bg-yellow-75 text-center w-34  text-black rounded-md mb-2 shadow-2xl mt-3 lg:mt-24">
           Genesis Collection
-        </h2>
+  </h2>
 
 
 
@@ -250,9 +259,9 @@ const data = useRef(null);
             <div>{musicTracks[0].artistName}</div>
             <div className="text-xxs">Acid Techno</div>
           </div>
-          <div className="border-2 align-middle border-yellow-75 pt-2 sm:px-2 text-yellow-75 shadow-4xl leading-3 rounded-md px-1 py-1 mt-auto mb-auto hover:text-gray-300">
+          <div className="border-2 align-middle border-yellow-75 pt-2 sm:px-2 text-yellow-75 shadow-4xl leading-3 rounded-md px-2 py-1 mt-auto mb-auto hover:text-gray-300">
             <Link to="/edit-trax/burnt">
-              <button className="uppercase leading-tight h-8 mt-auto text-sm" onClick={()=>scrollTop()}>
+              <button className="uppercase leading-tight h-4 mt-auto text-sm" onClick={()=>scrollTop()}>
               LOADED
               </button>
             </Link>

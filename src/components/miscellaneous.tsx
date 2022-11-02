@@ -133,7 +133,7 @@ Teia.art (Github)
   <img src={wiki} alt="load" className="mt-4 w-72 ml-auto mr-auto mb-4"/>
 
     <a href="https://iris-termite-e82.notion.site/OBJKT-612561-824dbe0144744143b43ee26f79f6c50a" target="_blank" rel="noreferrer" className="uppercase font-mathias">
-    <button className="bg-red-900 text-white text-xl py-2 px-4 rounded-lg font-sans">Wiki</button>
+    <button className="bg-red-900 text-white text-xl py-2 px-4 rounded-lg font-sans mb-16">Wiki</button>
 
   </a>
 

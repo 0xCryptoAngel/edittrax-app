@@ -16,12 +16,12 @@ const Modal = (props : modalProps) => {
     <div className="modal-content rounded-md p-5  text-center m-5 -mt-14">
 
       <div className="font-black mt-4">
-      1) Collect players on any Tezos marketplace
+      1) Collect on any Tezos marketplace
       
     <br></br> 
       </div>
 
-      EditTrax recommends OBJKT.com
+      OBJKT is recommended
       <div className="text-xxs"></div>
 
       <h2 className="font-mathias md:mt-0 w-full text-3xl sm:text-2xl w-full lg:text-4xl xl:text-4xl font-extrabold align-middle mb-0 pt-5">
@@ -36,7 +36,7 @@ const Modal = (props : modalProps) => {
     <div className="pt-4 pb-4   text-center mt-4">
 
     <div className="font-black   text-center">
-      2) Download directly from your player <br></br> 
+      2) Unlock downloads from the player <br></br> 
       </div>
       EditTrax provides the best user experience
       <div className="text-xxs">
