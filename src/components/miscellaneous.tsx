@@ -157,7 +157,7 @@ Teia.art (Github)
   </div> 
 
   <div className="mt-2 text-sm text-gray-500 w-full text-center ml-auto mr-auto content-center mt-0 px-6">
- Respectful updates on music and feature releases.
+ Respectful updates / music and features.
 
   <a href="https://tell.ie/bai_ee/" target="_blank" rel="noreferrer" className="underline">
   {/* Bai-ee */}
