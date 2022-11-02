@@ -47,12 +47,12 @@ const musicTracks: musicData[] = [
   {
     trackName: "ACID BEACH",
     artistName: 'Bai-ee',
-    src: "https://github.com/Bai-ee/edittrax_beta_dapp-crypto-angel/blob/master/src/assets/Bai-ee_(Acid_Beach)_RADIO.mp3?raw=true"
+    src: "https://github.com/CryptoAngel1024/edittrax_beta_dapp/blob/master/src/assets/Bai-ee_(Burnt).mp3?raw=true"
   },
   {
     trackName: "BURNT",
     artistName: 'Bai-ee',
-    src: "https://github.com/Bai-ee/edittrax_beta_dapp-crypto-angel/blob/master/src/assets/Bai-ee_(Burnt).mp3?raw=true"
+    src: "https://github.com/Bai-ee/edittrax_beta_dapp-crypto-angel/blob/master/src/assets/Bai-ee_(Acid_Beach)_RADIO.mp3?raw=true"
   },
   {
     trackName: "BOXXED",
@@ -260,7 +260,7 @@ const data = useRef(null);
           <AudioPlayer 
             autoPlay
             style={{ backgroundColor:"#ffffff" }} // media player background color 
-            src={musicTracks[1].src} // media source
+            src={musicTracks[0].src} // media source
             showJumpControls={false} // Jump control remove
             showFilledProgress={false} // show filled process color
             customVolumeControls={[]} // Volume control remove
@@ -270,7 +270,7 @@ const data = useRef(null);
       </div>
     </div>
 
-        <div className="mb-2 bg-black rounded-lg border-5 px-2 border-yellow-75 shadow-2xl  opacity-10">
+        <div className="mb-2 bg-black rounded-lg border-5 px-2 border-yellow-75 shadow-2xl ">
         <div className="text-yellow-75 h-24 sm:h-28 border-0 border-yellow-75 flex flex-row rounded-md items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
           <img src={et03} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
           <div className="flex-row flex m-0 w-full justify-around md:mt-0">
@@ -279,27 +279,27 @@ const data = useRef(null);
             <div>{musicTracks[1].artistName}</div>
             <div className="text-xxs">Acid Techno</div>
           </div>
-          <div className="border-0 border-black bg-yellow-75 text-black shadow-4xl leading-3 rounded-md px-1 py-1 mt-auto mb-auto hover:text-gray-300">
+          <div className="border-0 border-black bg-yellow-75 text-black shadow-4xl leading-3 rounded-md px-1 py-1 mt-auto mb-auto">
             <Link to="/edit-trax/burnt">
-              {/* <button className="uppercase leading-tight h-8 mt-auto text-sm" onClick={()=>scrollTop()}>
-              EDIT<br></br>TRACK
-              </button> */}
+              <button className="uppercase leading-tight h-8 mt-auto text-sm">
+              DROP<br></br>12/22
+              </button>
             </Link>
           </div>
-          {/* <AudioPlayer 
+          <AudioPlayer 
             autoPlay
             style={{ backgroundColor:"#ffffff" }} // media player background color 
-            src={musicTracks[0].src} // media source
+            src={musicTracks[1].src} // media source
             showJumpControls={false} // Jump control remove
             showFilledProgress={false} // show filled process color
             customVolumeControls={[]} // Volume control remove
             customAdditionalControls={[]} // addition control remove
-          /> */}
+          />
           </div>
         </div>
         </div>
 
-        <div className="mb-2 bg-black  rounded-lg border-5 px-2 border-yellow-75 shadow-2xl  opacity-10">
+        <div className="mb-2 bg-black  rounded-lg border-5 px-2 border-yellow-75 shadow-2xl ">
         <div className="text-yellow-75 h-24 sm:h-28 border-0 border-yellow-75 flex flex-row rounded-md items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
           <img src={et01} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
 
@@ -309,17 +309,17 @@ const data = useRef(null);
             <div>{musicTracks[2].artistName}</div>
             <div className="text-xxs">Acid Techno</div>
           </div>
-          <div className="border-0 border-black bg-yellow-75 text-black shadow-4xl leading-3 rounded-md px-1 py-1 mt-auto mb-auto hover:text-gray-300">
+          <div className="border-0 border-black bg-yellow-75 text-black shadow-4xl leading-3 rounded-md px-1 py-1 mt-auto mb-auto">
             <Link to="/edit-trax/burnt">
-              {/* <button className="uppercase leading-tight h-8 mt-auto text-sm" onClick={()=>scrollTop()}>
-              EDIT<br></br>TRACK
-              </button> */}
+              <button className="uppercase leading-tight h-8 mt-auto text-sm">
+              DROP<br></br>12/22
+              </button>
             </Link>
           </div>
           {/* <AudioPlayer 
             autoPlay
             style={{ backgroundColor:"#ffffff" }} // media player background color 
-            src={musicTracks[0].src} // media source
+            src={musicTracks[2].src} // media source
             showJumpControls={false} // Jump control remove
             showFilledProgress={false} // show filled process color
             customVolumeControls={[]} // Volume control remove
@@ -329,7 +329,7 @@ const data = useRef(null);
         </div>
         </div>
 
-        <div className="mb-2 bg-black  rounded- border-5 px-2 border-yellow-75 shadow-2xl opacity-10">
+        <div className="mb-2 bg-black  rounded- border-5 px-2 border-yellow-75 shadow-2xl">
         <div className="text-yellow-75 h-24 sm:h-28 border-0 border-yellow-75 flex flex-row rounded-lg items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
           <img src={et02} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
 
@@ -339,17 +339,17 @@ const data = useRef(null);
             <div>{musicTracks[3].artistName}</div>
             <div className="text-xxs">Acid Techno</div>
           </div>
-          <div className="border-0 border-black bg-yellow-75 text-black shadow-4xl leading-3 rounded-md px-1 py-1 mt-auto mb-auto hover:text-gray-300">
+          <div className="border-0 border-black bg-yellow-75 text-black shadow-4xl leading-3 rounded-md px-1 py-1 mt-auto mb-auto">
             <Link to="/edit-trax/burnt">
-              {/* <button className="uppercase leading-tight h-8 mt-auto text-sm" onClick={()=>scrollTop()}>
-              EDIT<br></br>TRACK
-              </button> */}
+              <button className="uppercase leading-tight h-8 mt-auto text-sm">
+              DROP<br></br>12/22
+              </button>
             </Link>
           </div>
           {/* <AudioPlayer 
             autoPlay
             style={{ backgroundColor:"#ffffff" }} // media player background color 
-            src={musicTracks[0].src} // media source
+            src={musicTracks[4].src} // media source
             showJumpControls={false} // Jump control remove
             showFilledProgress={false} // show filled process color
             customVolumeControls={[]} // Volume control remove

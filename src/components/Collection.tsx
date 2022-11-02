@@ -35,26 +35,29 @@ type musicData = {
 
 // media player data
 const musicTracks: musicData[] = [
-  {
-    trackName: "ACID BEACH",
-    artistName: 'Bai-ee',
-    src: "https://ipfs.io/ipfs/QmVvvb2wbNgcQVsBVqPnKD5CQFXzr6fuRapviVyfKcEJ26?filename=Bai-ee_(Acid_Beach)_RADIO.mp3"
-  },
-  {
-    trackName: "BURNT",
-    artistName: 'Bai-ee',
-    src: "https://ipfs.io/ipfs/QmVvvb2wbNgcQVsBVqPnKD5CQFXzr6fuRapviVyfKcEJ26?filename=Bai-ee_(Acid_Beach)_RADIO.mp3"
-  },
-  {
-    trackName: "BOXXED",
-    artistName: 'Bai-ee',
-    src: "https://ipfs.io/ipfs/QmVvvb2wbNgcQVsBVqPnKD5CQFXzr6fuRapviVyfKcEJ26?filename=Bai-ee_(Acid_Beach)_RADIO.mp3"
-  },
-  {
-    trackName: "UNTITLED",
-    artistName: 'Bai-ee',
-    src: "https://ipfs.io/ipfs/QmVvvb2wbNgcQVsBVqPnKD5CQFXzr6fuRapviVyfKcEJ26?filename=Bai-ee_(Acid_Beach)_RADIO.mp3"
-  },
+  // {
+
+  //   trackName: "ACID BEACH",
+  //   artistName: 'Bai-ee',
+  //   src: "https://github.com/CryptoAngel1024/edittrax_beta_dapp/blob/master/src/assets/Bai-ee_(Burnt).mp3?raw=true"
+  //   //MY REPO LINK: https://github.com/Bai-ee/edittrax_beta_dapp-crypto-angel/blob/master/src/assets/Bai-ee_(Acid_Beach)_RADIO.mp3?raw=true
+  // },
+  // {
+  //   trackName: "BURNT",
+  //   artistName: 'Bai-ee',
+  //   src: "https://github.com/CryptoAngel1024/edittrax_beta_dapp/blob/master/src/assets/Bai-ee_(Acid_Beach)_RADIO.mp3?raw=true"
+  //       //MY REPO LINK: https://github.com/Bai-ee/edittrax_beta_dapp-crypto-angel/blob/master/src/assets/Bai-ee_(Burnt).mp3?raw=true
+  // },   
+  // {
+  //   trackName: "BOXXED",
+  //   artistName: 'Bai-ee',
+  //   src: "https://ipfs.io/ipfs/QmVvvb2wbNgcQVsBVqPnKD5CQFXzr6fuRapviVyfKcEJ26?filename=Bai-ee_(Acid_Beach)_RADIO.mp3"
+  // },
+  // {
+  //   trackName: "UNTITLED",
+  //   artistName: 'Bai-ee',
+  //   src: "https://ipfs.io/ipfs/QmVvvb2wbNgcQVsBVqPnKD5CQFXzr6fuRapviVyfKcEJ26?filename=Bai-ee_(Acid_Beach)_RADIO.mp3"
+  // },
 ]
 
 
