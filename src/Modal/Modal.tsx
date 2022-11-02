@@ -13,16 +13,24 @@ const Modal = (props : modalProps) => {
   return(
   <div className="modal" >
     <div className="modal-bg" onClick={props.onClose}/>
-    <div className="modal-content rounded-md p-5  text-center m-12">
-      <div className="modal-header text-center">
-        <div className="text-2xl modal-title font-mathias flex justify-center text-center">UNLOCK & DOWNLOAD:<br></br></div>
-      </div>
+    <div className="modal-content rounded-md p-5  text-center m-12 -mt-14">
+      {/* <div className="modal-header text-center">
+        
+        <div className="text-2xl modal-title font-mathias flex justify-center text-center">
+          UNLOCK & DOWNLOAD:<br></br>
+          </div>
+
+      </div> */}
 
       <div className="font-black mt-4">
-      1) Collect From Any Tezos Marketplace <br></br> 
+      1) EditTrax Players are tokens you collect and trade on the Tezos Blockchain.
+      
+      EditTrax
+      
+      From Any Tezos Marketplace <br></br> 
       </div>
 
-      We recommend OBJKT.com
+      EditTrax recommends OBJKT.com
       <div className="text-xxs">
         {/* The Marketplace must accommodate interactive OBJKTs */}
         </div>
@@ -38,7 +46,7 @@ const Modal = (props : modalProps) => {
     <div className="pt-4 pb-4   text-center mt-4">
 
     <div className="font-black   text-center">
-      2) Connect to any Tezos Marketplace <br></br> 
+      2) EditTrax players are tokens you connect to EditTrax for the Best User Experience <br></br> 
       </div>
 
       EditTrax.com provides the best user experience

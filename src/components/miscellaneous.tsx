@@ -96,30 +96,67 @@ Teia.art (Github)
 <div className="mx-auto md:max-w-6xl gap-0 flex flex-col xlg:flex-row items-center">
 <dl className="w-full md:w-1/2 flex col align-middle items-center mt-0">
 </dl>
-<dl className="w-full md:w-1/2 flex align-middle items-center email mt-0 mb-12">
-<div className="ml-auto mr-auto w-full md:mr-0"> */}
+*/}
 
-<div className=" mx-auto my-auto flex rounded-md shadow-sm align-middle center sm:max-w-sm mt-12">
+
+<div className=" mx-auto my-auto flex rounded-md shadow-sm align-middle center sm:max-w-sm mt-28">
 <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className=""/>
 </div>
 
-<div className="font-mathias mb-0 text-center align-middle text-center text-5xl ml-auto mr-auto text-yellow-75 mt-24">
-SUBSCRIBE <br></br>FOR TRAX
-</div> 
-<div className="mt-2 text-sm text-gray-500 w-full text-center ml-auto mr-auto content-center mt-0 px-6">
-Get respectfull updates from &nbsp; 
 
-<a href="https://tell.ie/bai_ee/" target="_blank" rel="noreferrer" className="underline">
-Bai-ee
-</a>
-&nbsp; 
+
+
+<div className="grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2">
+
+<div className="">
+
+  <div className="font-mathias mb-0 text-center align-middle text-center text-5xl ml-auto mr-auto text-yellow-75 mt-24">
+  WIKI <br></br>
+  </div> 
+
+  <div className="mt-2 text-sm text-gray-500 w-full text-center ml-auto mr-auto content-center mt-0 px-6">
+  Get up to date information
+
+  <a href="https://tell.ie/bai_ee/" target="_blank" rel="noreferrer" className="underline">
+  Bai-ee
+  </a>
+  &nbsp; 
+
+  </div>
+
+  {/* </div>
+  // </dl>
+  </div> */}
 
 </div>
 
-<iframe height="400px" src="https://cc76d0e7.sibforms.com/serve/MUIEABmPTk29QfL4yduTrrV_o12F8R0MeVMsDaQLt3I-jyNcLLMlD8iYTPuzZ3_je75sgz9XqKNwsY_khnb8qbt25ijulHmNf0nf_202ssBaBvrWVIjbKUlsaNMqU1NzpiZgLcGX8JLRE-Vxc1m-BRJXwXg6iD87OimUFLAyxtZ24Vk9Pn0m25j5fRYT2haz3_RpIOC6VKGmE-EK" scrolling="auto" className="newsletter block ml-auto mr-auto w-full -mt-12 bg-transparent"></iframe>
-{/* </div>
-</dl>
-</div> */}
+
+
+
+<div className="">
+
+  <div className="font-mathias mb-0 text-center align-middle text-center text-5xl ml-auto mr-auto text-yellow-75 mt-0 md:mt-24">
+  SUBSCRIBE <br></br>FOR TRAX
+  </div> 
+
+  <div className="mt-2 text-sm text-gray-500 w-full text-center ml-auto mr-auto content-center mt-0 px-6">
+  Get respectfull updates from&nbsp; 
+
+  <a href="https://tell.ie/bai_ee/" target="_blank" rel="noreferrer" className="underline">
+  Bai-ee
+  </a>
+  &nbsp; 
+
+  </div>
+
+  <iframe height="400px" src="https://cc76d0e7.sibforms.com/serve/MUIEABmPTk29QfL4yduTrrV_o12F8R0MeVMsDaQLt3I-jyNcLLMlD8iYTPuzZ3_je75sgz9XqKNwsY_khnb8qbt25ijulHmNf0nf_202ssBaBvrWVIjbKUlsaNMqU1NzpiZgLcGX8JLRE-Vxc1m-BRJXwXg6iD87OimUFLAyxtZ24Vk9Pn0m25j5fRYT2haz3_RpIOC6VKGmE-EK" scrolling="auto" className="newsletter block ml-auto mr-auto w-full -mt-12 bg-transparent"></iframe>
+  {/* </div>
+  // </dl>
+  </div> */}
+
+  </div>
+
+</div>
 
 </section>
 

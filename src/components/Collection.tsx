@@ -38,22 +38,22 @@ const musicTracks: musicData[] = [
   {
     trackName: "ACID BEACH",
     artistName: 'Bai-ee',
-    src: "https://www.bensound.com/bensound-music/bensound-memories.mp3"
+    src: "https://ipfs.io/ipfs/QmVvvb2wbNgcQVsBVqPnKD5CQFXzr6fuRapviVyfKcEJ26?filename=Bai-ee_(Acid_Beach)_RADIO.mp3"
   },
   {
     trackName: "BURNT",
     artistName: 'Bai-ee',
-    src: "https://www.bensound.com/bensound-music/bensound-memories.mp3"
+    src: "https://ipfs.io/ipfs/QmVvvb2wbNgcQVsBVqPnKD5CQFXzr6fuRapviVyfKcEJ26?filename=Bai-ee_(Acid_Beach)_RADIO.mp3"
   },
   {
     trackName: "BOXXED",
     artistName: 'Bai-ee',
-    src: "https://www.bensound.com/bensound-music/bensound-memories.mp3"
+    src: "https://ipfs.io/ipfs/QmVvvb2wbNgcQVsBVqPnKD5CQFXzr6fuRapviVyfKcEJ26?filename=Bai-ee_(Acid_Beach)_RADIO.mp3"
   },
   {
     trackName: "UNTITLED",
     artistName: 'Bai-ee',
-    src: "https://www.bensound.com/bensound-music/bensound-memories.mp3"
+    src: "https://ipfs.io/ipfs/QmVvvb2wbNgcQVsBVqPnKD5CQFXzr6fuRapviVyfKcEJ26?filename=Bai-ee_(Acid_Beach)_RADIO.mp3"
   },
 ]
 
