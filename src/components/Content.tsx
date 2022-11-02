@@ -47,12 +47,12 @@ const musicTracks: musicData[] = [
   {
     trackName: "ACID BEACH",
     artistName: 'Bai-ee',
-    src: "../assets/acidBeach.mp3"
+    src: "https://github.com/Bai-ee/edittrax_beta_dapp-crypto-angel/blob/master/src/assets/Bai-ee_(Acid_Beach)_RADIO.mp3?raw=true"
   },
   {
     trackName: "BURNT",
     artistName: 'Bai-ee',
-    src: "../assets/Bai-ee_(Acid_Beach)_RADIO.mp3"
+    src: "https://github.com/Bai-ee/edittrax_beta_dapp-crypto-angel/blob/master/src/assets/Bai-ee_(Burnt).mp3?raw=true"
   },
   {
     trackName: "BOXXED",

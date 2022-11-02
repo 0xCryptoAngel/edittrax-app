@@ -153,11 +153,11 @@ Teia.art (Github)
 <div className="">
 
   <div className="font-mathias mb-0 text-center align-middle text-center text-5xl ml-auto mr-auto text-yellow-75 mt-0 md:mt-24">
-  SUBSCRIBE <br></br>FOR TRAX
+  SUBSCRIBE <br></br>FOR MUSIC
   </div> 
 
   <div className="mt-2 text-sm text-gray-500 w-full text-center ml-auto mr-auto content-center mt-0 px-6">
- Respectfull updates on music and feature releases.
+ Respectful updates on music and feature releases.
 
   <a href="https://tell.ie/bai_ee/" target="_blank" rel="noreferrer" className="underline">
   {/* Bai-ee */}
