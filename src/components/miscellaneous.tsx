@@ -11,6 +11,7 @@ import handbookCover from "@images/handbookCover.jpg";
 import canIuse from "@images/canIuse.jpg";
 import utility from "@images/utility.png";
 // import utility from '../assets/utility.png;
+import wiki from "@images/wiki.png";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -30,6 +31,7 @@ const features2 = [
 const miscellaneous = () => {
 
   return (
+
 
 <section className="bg-black pt-0 px-0 pb-0 rounded-br mt-0 mx-2 md:mx-0">  
 
@@ -111,16 +113,31 @@ Teia.art (Github)
 <div className="">
 
   <div className="font-mathias mb-0 text-center align-middle text-center text-5xl ml-auto mr-auto text-yellow-75 mt-24">
-  WIKI <br></br>
+  HIT THE WIKI <br></br>FOR SUPPORT
+   <br></br>
+
   </div> 
 
   <div className="mt-2 text-sm text-gray-500 w-full text-center ml-auto mr-auto content-center mt-0 px-6">
-  Get up to date information
+  Real-time project information, updates and FAQ.
 
   <a href="https://tell.ie/bai_ee/" target="_blank" rel="noreferrer" className="underline">
-  Bai-ee
+  {/* Bai-ee */}
   </a>
   &nbsp; 
+
+  
+
+
+
+  <img src={wiki} alt="load" className="mt-4 w-72 ml-auto mr-auto mb-4"/>
+
+    <a href="https://iris-termite-e82.notion.site/OBJKT-612561-824dbe0144744143b43ee26f79f6c50a" target="_blank" rel="noreferrer" className="uppercase font-mathias">
+    <button className="bg-red-900 text-white text-xl py-2 px-4 rounded-lg font-sans">Wiki</button>
+
+  </a>
+
+  {/* <img src={wiki} className=""/> */}
 
   </div>
 
@@ -140,12 +157,14 @@ Teia.art (Github)
   </div> 
 
   <div className="mt-2 text-sm text-gray-500 w-full text-center ml-auto mr-auto content-center mt-0 px-6">
-  Get respectfull updates from&nbsp; 
+ Respectfull updates on music and feature releases.
 
   <a href="https://tell.ie/bai_ee/" target="_blank" rel="noreferrer" className="underline">
-  Bai-ee
+  {/* Bai-ee */}
   </a>
   &nbsp; 
+
+  
 
   </div>
 
@@ -153,6 +172,8 @@ Teia.art (Github)
   {/* </div>
   // </dl>
   </div> */}
+
+
 
   </div>
 

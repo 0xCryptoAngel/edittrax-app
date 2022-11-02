@@ -241,7 +241,7 @@ const data = useRef(null);
 
 {/* Player 1 */}
 
-    <div className="mb-2 bg-black rounded-lg border-5 px-2 border-yellow-75 shadow-2xl lg:mt-20">
+    <div className="mb-2 bg-black rounded-lg border-5 px-2 border-yellow-75 shadow-2xl lg:mt-24">
         <div className="text-yellow-75 h-24 sm:h-28 border-0 border-yellow-75 flex flex-row rounded-md items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
           <img src={et00} alt="icon1" className="w-20 p-0 ml-1 md:ml-0 shadow-2xl rounded-md"/>
           <div className="flex-row flex m-0 w-full justify-around md:mt-0">
