@@ -114,7 +114,7 @@ const data = useRef(null);
 
   <section className="bg-yellow-75 flex flex-col items-center gap-0 px-2 py-9 mb-0 md:mb-0 md:pb-0 md:mx-0 order-last" >
               
-    <div className="flex flex-col items-center gap-0 md:flex-row md:gap-8 mb-0 mt-10 lg:mt-14">
+    <div className="flex flex-col items-center gap-0 md:flex-row md:gap-8 mb-0 mt-4 lg:mt-14">
       <img src={et01_head} alt="rotating head" className="w-md max-w-xs rounded-md shadow-2xl"/>
       <div className="flex flex-col items-center md:items-start md:justify-end md:h-full">
         <div className="font-mathias text-7xl font-extrabold mt-8 text-center">{props.titleHardCode}</div>
@@ -142,7 +142,7 @@ const data = useRef(null);
       <div className="mx-auto gap-0 sm:gap-16 flex flex-col lg:flex-row ">
       <dl className="w-full lg:w-2/3 pt-16">
 
-<Collapsible className="outline_button_meta bg-yellow-75 text-black text-center w-34 rounded-md mb-20 lg:mb-26 shadow-2xl mt-30 cursor-pointer hover:opacity-50" trigger="Metadata">
+<Collapsible className="outline_button_meta bg-yellow-75 text-black text-center w-34 rounded-md mb-24 shadow-2xl mt-36 lg:mt-34 cursor-pointer hover:opacity-50" trigger="Metadata">
 
 <div className="font-mathias mt-8 text-4xl  text-center px-4 py-2 text-black rounded-md ">          
     OBJKT #{props.tokendId}
@@ -187,7 +187,7 @@ const data = useRef(null);
   <div className="bg-transparent mx-0 rounded-lg mb-4 w-auto rounded-sm px-0 mt-4 px-0 lg:mt-8 mt-42">  
     <div className="grid grid-cols-1 gap-2 mx-0 max-w-screen-xl hover:scale-75 h-auto">
 
-    <h2 className="font-mathias md:mt-0 w-full text-3xl sm:text-2xl w-full lg:text-4xl xl:text-4xl font-extrabold align-middle mb-0 pt-5">
+    <h2 className="font-mathias md:mt-0 w-full text-3xl sm:text-2xl w-full lg:text-4xl xl:text-4xl font-extrabold align-middle mb-0 pt-2">
       <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className="">
         <div className="font-mathias lg:text-4xl xl:text-4xl outline_button_edit w-34 text-center w-full py-4 px-4  text-yellow-75 rounded-md hover:opacity-50 shadow-2xl" >
         COLLECT
@@ -211,13 +211,13 @@ const data = useRef(null);
 </div>
 </dl> 
     
-  <dl className="w-full md:w-full ml:auto mr:auto mb-28 pt-4">
+  <dl className="w-full md:w-full ml:auto mr:auto mb-28">
 
     
 
     
 
-  <h2 className="font-mathias  bg-yellow-75 text-center w-34  text-black rounded-md mb-2 shadow-2xl mt-3 lg:mt-24">
+  <h2 className="font-mathias  bg-yellow-75 text-center w-34  text-black rounded-md lg:mt-0 mb-4 lg:mb-32 shadow-2xl mt-5 lg:mt-24">
           Genesis Collection
   </h2>
 
@@ -313,7 +313,7 @@ const data = useRef(null);
         </div>
         </div>
 
-        <div className="mb-2 bg-black  rounded- border-5 px-2 border-yellow-75 shadow-2xl">
+        <div className="mb-2 bg-black  rounded- border-5 px-2 border-yellow-75 shadow-2xl rounded-md">
         <div className="text-yellow-75 h-24 sm:h-28 border-0 border-yellow-75 flex flex-row rounded-lg items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
           <img src={et03} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
 
