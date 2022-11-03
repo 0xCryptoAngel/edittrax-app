@@ -35,8 +35,9 @@ const Dashboard = (): JSX.Element => {
       tokendId: 781874,
     },
     {
-      player: "burnt",
+      player: "burnt", 
       imageUrl: "https://ipfs.io/ipfs/QmTvcnqnBjcjMQ1gDoG5jSvap7id7t2nhvQLmLiCRqSFqq/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=781875&viewer=",
+      // imageUrl: "https://ipfs.io/ipfs/QmTvcnqnBjcjMQ1gDoG5jSvap7id7t2nhvQLmLiCRqSFqq/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=781875&viewer=",
       square: 'https://i.postimg.cc/9M55GvhM/square-burnt.jpg',
       unlockable: 'https://i.postimg.cc/9Md31JmB/unlockable-burnt.png',
       tokendId: 781875,
@@ -48,7 +49,7 @@ const Dashboard = (): JSX.Element => {
     },
     {
       player: "alpha-test",
-      imageUrl: "https://ipfs.io/ipfs/QmYRBDjBixJczcXs6fNunG9EGPsHqQT62ifEBzYTS1SjGe/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=612561&viewer=",
+      imageUrl: "https://et001.on.fleek.co/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=612561&viewer=",
       square: 'https://i.postimg.cc/rFHCppZT/square-alpha-test.jpg',
       unlockable: 'https://i.postimg.cc/MTyqnXmF/unlockable-alpha-test.png',
       tokendId: 612561,

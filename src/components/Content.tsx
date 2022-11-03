@@ -142,7 +142,7 @@ const data = useRef(null);
       <div className="mx-auto gap-0 sm:gap-16 flex flex-col lg:flex-row ">
       <dl className="w-full lg:w-2/3 pt-16">
 
-<Collapsible className="outline_button_meta bg-yellow-75 text-black text-center w-34 rounded-md mb-24 shadow-2xl mt-36 cursor-pointer hover:opacity-50" trigger="Metadata">
+<Collapsible className="outline_button_meta bg-yellow-75 text-black text-center w-34 rounded-md mb-20 lg:mb-26 shadow-2xl mt-30 cursor-pointer hover:opacity-50" trigger="Metadata">
 
 <div className="font-mathias mt-8 text-4xl  text-center px-4 py-2 text-black rounded-md ">          
     OBJKT #{props.tokendId}
@@ -182,61 +182,36 @@ const data = useRef(null);
   </h2>
   <img src={props.player_thumbnail} alt="icon1" className="w-full pb-4 md:ml-0 shadow-2xl rounded-md"/>
 
+  </Collapsible>
 
-</Collapsible>
+  <div className="bg-transparent mx-0 rounded-lg mb-4 w-auto rounded-sm px-0 mt-4 px-0 lg:mt-8 mt-42">  
+    <div className="grid grid-cols-1 gap-2 mx-0 max-w-screen-xl hover:scale-75 h-auto">
 
-<div className="bg-transparent mx-0 rounded-lg mb-4 w-auto rounded-sm px-0 mt-4 px-0 lg:mt-8 mt-42">  
-  <div className="grid grid-cols-1 gap-2 mx-0 max-w-screen-xl hover:scale-75 h-auto">
-
-  <h2 className="font-mathias md:mt-0 w-full text-3xl sm:text-2xl w-full lg:text-4xl xl:text-4xl font-extrabold align-middle mb-0 pt-5">
+    <h2 className="font-mathias md:mt-0 w-full text-3xl sm:text-2xl w-full lg:text-4xl xl:text-4xl font-extrabold align-middle mb-0 pt-5">
       <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className="">
-      <div className="font-mathias lg:text-4xl xl:text-4xl outline_button_edit w-34 text-center w-full py-4 px-4  text-yellow-75 rounded-md hover:opacity-50 shadow-2xl" >
-      COLLECT
-      </div>
-
+        <div className="font-mathias lg:text-4xl xl:text-4xl outline_button_edit w-34 text-center w-full py-4 px-4  text-yellow-75 rounded-md hover:opacity-50 shadow-2xl" >
+        COLLECT
+        </div>
       </a>
-      </h2>
-    
-
-
-    {/* <button className="font-mathias text-3xl lg:text-4xl xl:text-4xl outline_button_edit w-34 text-center py-4 w-full px-6 text-yellow-75 rounded-md mt-4 hover:opacity-50 shadow-2xl mb-0" onClick={()=> {setShow(true); disableScroll();}}> */}
-      {/* COLLECT */}
-    {/* </button>
-    <Modal onClose = {() => {setShow(false); enableScroll()}} show={show}/> */}
-
-    {/* <h2 className="font-mathias md:mt-0 w-full text-3xl sm:text-2xl w-full lg:text-4xl xl:text-4xl font-extrabold align-middle mb-0 ">
-    <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className="">
-      <div className="outline_button_main bg-yellow-75 w-full text-center w-34 py-4 px-11 mt-0 text-black rounded-md mb-0 shadow-2xl hover:opacity-50">
-      Collect
-      </div>
-      </a>
-
-    </h2> */}
-
-
+    </h2>
 
     <h2 className="font-mathias w-full text-3xl sm:text-2xl lg:text-4xl xl:text-4xl font-extrabold align-middle mb-4">
-    <ConnectWallet/>
-
-    <h2 className="font-mathias align-middle flex content-center col mt-2 text-3xl lg:text-4xl xl:text-4xl font-extrabold mb-0">
-      <button className="outline_button_main w-34 text-center bg-black py-4 w-full px-6 text-yellow-75 rounded-md  hover:opacity-50 shadow-2xl mb-4" onClick={()=>scrollTop()}>
-        DOWNLOAD
-      </button>
-    </h2> 
-
-    
-  
+      <ConnectWallet/>
+      <h2 className="font-mathias align-middle flex content-center col mt-2 text-3xl lg:text-4xl xl:text-4xl font-extrabold mb-0">
+        <button className="outline_button_main w-34 text-center bg-black py-4 w-full px-6 text-yellow-75 rounded-md  hover:opacity-50 shadow-2xl mb-4" onClick={()=>scrollTop()}>
+          DOWNLOAD
+        </button>
+      </h2>   
       {/* <button className="bg-orange-900 w-34 text-center w-full py-4 px-4  text-yellow-75 rounded-md hover:opacity-50 shadow-2xl" onClick={()=> {setShow(true); disableScroll();}}>
       Connect & Download
       </button> */}
       &nbsp;<br></br> 
     </h2>
-
-  </div>     
+  </div>
 </div>
 </dl> 
     
-  <dl className="w-full md:w-full ml:auto mr:auto mb-28">
+  <dl className="w-full md:w-full ml:auto mr:auto mb-28 pt-4">
 
     
 
@@ -250,7 +225,7 @@ const data = useRef(null);
 
 {/* Player 1 */}
 
-    <div className="mb-2 bg-black rounded-lg border-5 px-2 border-yellow-75 shadow-2xl lg:mt-24">
+    <div className="mb-2 bg-black rounded-lg border-5 px-2 border-yellow-75 shadow-2xl lg:mt-32">
         <div className="text-yellow-75 h-24 sm:h-28 border-0 border-yellow-75 flex flex-row rounded-md items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
           <img src={et00} alt="icon1" className="w-20 p-0 ml-1 md:ml-0 shadow-2xl rounded-md"/>
           <div className="flex-row flex m-0 w-full justify-around md:mt-0">
@@ -369,69 +344,6 @@ const data = useRef(null);
         </div>
       </dl>
     </div>
-
-  {/* <h2 className="font-mathias mt-20  mr-0 mb-0 w-full text-7xl md:text-9xl text-center lg:mt-44 font-extrabold align-middle uppercase"> */}
-  {/* BE A 1 OF 1 */}
-  {/* <br></br>SELECTOR */}
-  {/* </h2> */}
-
-  {/* <div className="text-left text-mathias mt-2 mb-1 leading-tight bg-black p-5 text-yellow-75 rounded-lg sm:text-2xl lg:text-3xl lg:max-w-2/3 sm:w-2/3 ml-auto mr-auto">
-    <a href="https://objkt.com/asset/hicetnunc/612561" className="uppercase font-mathias">
-      Interactive Music OBJKT #{props.tokendId} comes integrated with a looper, token gate and download button.
-    </a>
-  </div> */}
-          
-
-{/* <div className="h-screen">
-
-  <h2 className="font-mathias text-center mr-0 mt-20 sm:mt-44 w-full text-5xl sm:text-4xl lg:text-7xl xl:text-7xl font-extrabold align-middle mb-6">
-  Rapidly Edit <br></br>My Trax
-  </h2>
-
-
-  <img src={player_thumbnail}  alt="" className="main_image ml-auto mr-auto"/> 
-  
-  </div> */}
-
-
-  {/* <h2 className=" mr-0 mb-0 mt-6 md:mt-12 text-center w-full text-xxs sm:text-sm align-middle"> */}
-  {/* *See embedded EditTrax Player above */}
-  {/* </h2> */}
-{/* <div className="h-screen">
-
-  <h2 className="font-mathias mt-28 text-center mr-0 md:mt-44 w-full text-5xl sm:text-4xl lg:text-7xl  font-extrabold align-middle">
-  Across Any Tezos <br></br>Marketplace
-  </h2>
-
-  <img src={all_markets}  alt="" className="main_image ml-auto mr-auto mt-4"/> 
-
-  </div> */}
-
-  {/* <h2 className=" mr-auto ml-auto mb-0 md:mt-0 text-center w-full text-xxs sm:text-sm align-middle"> */}
-  {/* *EditTrax.com provides the best cross-device UX */}
-  {/* </h2> */}
-        
-
-  {/* <h2 className=" mr-0 mb-2 md:mt-0 text-center w-full text-xxs sm:text-lg align-middle"></h2> */}
-{/* 
-  <div className="h-screen">
-  <h2 className="font-mathias mt-16 text-center mr-0 md:mt-44 w-full text-5xl font-extrabold align-middle sm:text-4xl lg:text-7xl">
-  Download .wavs<br></br>On Any Device
-  </h2>
-
-  <img src={all_devices} alt="rotating head" className="main_image w-sm mb-2 mt-2 ml-auto mr-auto lg:w-2/3 mt-5"/>
-  </div> */}
-
-  {/* <h2 className=" mr-0 mb-2 md:mt-0 text-center w-full text-xxs sm:text-sm  align-middle lg:pb-24"> */}
-  {/* *See Limitations */}
-  {/* </h2> */}
-
-  {/* <h2 className="font-mathias mt-20  mr-0 mb-0 w-full text-7xl md:text-9xl text-center lg:mt-44 font-extrabold align-middle uppercase"> */}
-  {/* BE A 1 OF 1 */}
-  {/* <br></br>SELECTOR */}
-  {/* </h2> */}
-
-
 </div>
 
 

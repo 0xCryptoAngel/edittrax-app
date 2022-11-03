@@ -29,7 +29,6 @@ const features2 = [
 ]
 
 const miscellaneous = () => {
-
   return (
 
 
@@ -102,80 +101,54 @@ Teia.art (Github)
 
 
 <div className=" mx-auto my-auto flex rounded-md shadow-sm align-middle center sm:max-w-sm mt-28">
-<img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className=""/>
+  <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className=""/>
 </div>
-
-
-
-
 <div className="grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2">
 
 <div className="">
 
   <div className="font-mathias mb-0 text-center align-middle text-center text-5xl ml-auto mr-auto text-yellow-75 mt-24">
   HIT THE WIKI <br></br>FOR SUPPORT
-   <br></br>
+  <br></br>
+</div> 
 
-  </div> 
+<div className="mt-2 text-sm text-gray-500 w-full text-center ml-auto mr-auto content-center mt-0 px-6">
+Real-time project information, updates and FAQ.
 
-  <div className="mt-2 text-sm text-gray-500 w-full text-center ml-auto mr-auto content-center mt-0 px-6">
-  Real-time project information, updates and FAQ.
+<a href="https://tell.ie/bai_ee/" target="_blank" rel="noreferrer" className="underline">
+{/* Bai-ee */}
+</a>
+&nbsp; 
 
-  <a href="https://tell.ie/bai_ee/" target="_blank" rel="noreferrer" className="underline">
-  {/* Bai-ee */}
-  </a>
-  &nbsp; 
+<img src={wiki} alt="load" className="mt-4 w-72 ml-auto mr-auto mb-4"/>
 
-  
+<a href="https://iris-termite-e82.notion.site/OBJKT-612561-824dbe0144744143b43ee26f79f6c50a" target="_blank" rel="noreferrer" className="uppercase font-mathias">
+<button className="bg-red-900 text-white text-xl py-2 px-4 rounded-lg font-sans mb-16">EditTrax.Wiki</button>
 
-
-
-  <img src={wiki} alt="load" className="mt-4 w-72 ml-auto mr-auto mb-4"/>
-
-    <a href="https://iris-termite-e82.notion.site/OBJKT-612561-824dbe0144744143b43ee26f79f6c50a" target="_blank" rel="noreferrer" className="uppercase font-mathias">
-    <button className="bg-red-900 text-white text-xl py-2 px-4 rounded-lg font-sans mb-16">Wiki</button>
-
-  </a>
-
-  {/* <img src={wiki} className=""/> */}
-
-  </div>
-
-  {/* </div>
-  // </dl>
-  </div> */}
+</a>
 
 </div>
-
-
-
+</div>
 
 <div className="">
 
-  <div className="font-mathias mb-0 text-center align-middle text-center text-5xl ml-auto mr-auto text-yellow-75 mt-0 md:mt-24">
-  SUBSCRIBE <br></br>FOR MUSIC
-  </div> 
+<div className="font-mathias mb-0 text-center align-middle text-center text-5xl ml-auto mr-auto text-yellow-75 mt-0 md:mt-24">
+SUBSCRIBE <br></br>FOR NEW TRAX
+</div> 
 
-  <div className="mt-2 text-sm text-gray-500 w-full text-center ml-auto mr-auto content-center mt-0 px-6">
- Respectful updates / music and features.
+<div className="mt-2 text-sm text-gray-500 w-full text-center ml-auto mr-auto content-center mt-0 px-6">
+Respectful updates / music and features.
 
-  <a href="https://tell.ie/bai_ee/" target="_blank" rel="noreferrer" className="underline">
-  {/* Bai-ee */}
-  </a>
-  &nbsp; 
+<a href="https://tell.ie/bai_ee/" target="_blank" rel="noreferrer" className="underline">
+{/* Bai-ee */}
+</a>
+&nbsp; 
 
-  
+</div>
 
-  </div>
+<iframe height="400px" src="https://cc76d0e7.sibforms.com/serve/MUIEABmPTk29QfL4yduTrrV_o12F8R0MeVMsDaQLt3I-jyNcLLMlD8iYTPuzZ3_je75sgz9XqKNwsY_khnb8qbt25ijulHmNf0nf_202ssBaBvrWVIjbKUlsaNMqU1NzpiZgLcGX8JLRE-Vxc1m-BRJXwXg6iD87OimUFLAyxtZ24Vk9Pn0m25j5fRYT2haz3_RpIOC6VKGmE-EK" scrolling="auto" className="newsletter block ml-auto mr-auto w-full -mt-12 bg-transparent"></iframe>
 
-  <iframe height="400px" src="https://cc76d0e7.sibforms.com/serve/MUIEABmPTk29QfL4yduTrrV_o12F8R0MeVMsDaQLt3I-jyNcLLMlD8iYTPuzZ3_je75sgz9XqKNwsY_khnb8qbt25ijulHmNf0nf_202ssBaBvrWVIjbKUlsaNMqU1NzpiZgLcGX8JLRE-Vxc1m-BRJXwXg6iD87OimUFLAyxtZ24Vk9Pn0m25j5fRYT2haz3_RpIOC6VKGmE-EK" scrolling="auto" className="newsletter block ml-auto mr-auto w-full -mt-12 bg-transparent"></iframe>
-  {/* </div>
-  // </dl>
-  </div> */}
-
-
-
-  </div>
+</div>
 
 </div>
 
