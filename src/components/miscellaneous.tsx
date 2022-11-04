@@ -35,7 +35,8 @@ const miscellaneous = () => {
 
 
 <section className="bg-black pt-0 px-0 pb-0 rounded-br mt-0 mx-2 md:mx-0">  
-<img src={colorBar} alt="load" className="w-full"/>
+
+{/* <img src={colorBar} alt="color bar" className="w-full"/> */}
 
 {/* <div className=" mx-auto my-auto flex rounded-md shadow-sm align-middle center sm:max-w-sm">
 <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className=""/>

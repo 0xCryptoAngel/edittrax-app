@@ -34,6 +34,7 @@ import et01 from "../assets/square_alpha_test.png";
 import DropDown from "../components/DropDown";
 import Collapsible from 'react-collapsible';
 import ConnectWallet from "../components/ConnectWallet";
+import colorBar from "@images/color_bar.png";
 
 // media player data Type
 type musicData = {
@@ -126,7 +127,7 @@ const data = useRef(null);
   
   return (
 
-  <section className="bg-yellow-75 flex flex-col items-center gap-0 px-2 py-9 mb-0 md:mb-0 md:pb-0 md:mx-0 order-last" >
+  <section className="bg-yellow-75 flex flex-col items-center gap-0 px-0 py-9 pb-0 mb-0 md:mb-0 md:pb-0 md:mx-0 order-last" >
               
     <div className="flex flex-col items-center gap-0 md:flex-row md:gap-8 mb-0 mt-4 lg:mt-14">
       <img src={props.release_art} alt="rotating head" className="w-md max-w-xs rounded-md shadow-2xl"/>
@@ -370,6 +371,7 @@ const data = useRef(null);
     </div>
 </div>
 
+<img src={colorBar} alt="color bar" className="w-full h-3 pt-o mt-0 bottom-0"/>
 
 </section>
 
