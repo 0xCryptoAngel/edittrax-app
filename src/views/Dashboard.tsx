@@ -16,6 +16,13 @@ import Modal from "../Modal/Modal";
 import lockt_612561 from "@images/et001_loct.jpg";
 import et_player_thumb from "@images/et01_instructions.png";
 import et01_thumb from "@images/et001_thumbnail.jpg";
+import et02_thumb from "@images/et002_thumbnail.jpg";
+import et03_thumb from "@images/et003_thumbnail.jpg";
+import et04_thumb from "@images/et004_thumbnail.jpg";
+import et01_release from "@images/et01_releaseart.jpg";
+import et02_release from "@images/et02_releaseart.jpg";
+import et03_release from "@images/et03_releaseart.jpg";
+import et04_release from "@images/et04_releaseart.jpg";
 import et2_player_thumb from "../assets/et2_player.png";
 import { scrollTop } from "utils/scroll";
 
@@ -29,23 +36,32 @@ const Dashboard = (): JSX.Element => {
   const navbarMenu = [
     {
       player: "mechanism",
-      imageUrl: "https://ipfs.io/ipfs/QmSqWNSGuPCfZQ8uJwhi94aXZDXRDbP5a75MtR7YBgDYDS/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=781874&viewer=",
+      imageUrl: "https://et004.on.fleek.co/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=792753&viewer=",
       square: 'https://i.postimg.cc/7ZtqTshG/square-download-mechanism.jpg',
       unlockable: 'https://i.postimg.cc/1XKQRMbz/unlockable-download-mechanism.png',
-      tokendId: 781874,
+      tokendId: 792753,
+      titleHardCode:"'ANo Mills'",
+      artist:"BAI-EE",
+      origEdit: 'https://i.postimg.cc/rFHCppZT/original.png',
+      lokt_612561:lockt_612561,
+      player_thumbnail: et04_thumb,
+      release_art:et04_release,
+      mint_price:"5",
     },
     {
       player: "burnt", 
-      imageUrl: "https://ipfs.io/ipfs/QmTvcnqnBjcjMQ1gDoG5jSvap7id7t2nhvQLmLiCRqSFqq/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=781875&viewer=",
+      imageUrl: "https://et002.on.fleek.co/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=792752&viewer=",
       // imageUrl: "https://ipfs.io/ipfs/QmTvcnqnBjcjMQ1gDoG5jSvap7id7t2nhvQLmLiCRqSFqq/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=781875&viewer=",
       square: 'https://i.postimg.cc/9M55GvhM/square-burnt.jpg',
       unlockable: 'https://i.postimg.cc/9Md31JmB/unlockable-burnt.png',
-      tokendId: 781875,
+      tokendId: 792752,
       titleHardCode:"'BURNT'",
       artist:"BAI-EE",
       origEdit: 'https://i.postimg.cc/rFHCppZT/original.png',
       lokt_612561:lockt_612561,
-      player_thumbnail: et01_thumb
+      player_thumbnail: et02_thumb,
+      release_art:et02_release,
+      mint_price:"5",
     },
     {
       player: "alpha-test",
@@ -57,7 +73,9 @@ const Dashboard = (): JSX.Element => {
       artist:"BAI-EE",
       origEdit: 'https://i.postimg.cc/rFHCppZT/original.png',
       lokt_612561:lockt_612561,
-      player_thumbnail: et01_thumb
+      player_thumbnail: et01_thumb,
+      release_art:et01_release,
+      mint_price:"5",
       
       // loopPlay: 'https://i.postimg.cc/rFHCppZT/loop_play.png',
       // editLoop: 'https://i.postimg.cc/rFHCppZT/edit_loop.png',
@@ -66,10 +84,17 @@ const Dashboard = (): JSX.Element => {
     },
     {
       player: "dapp",
-      imageUrl: "https://hic-af.infura-ipfs.io/ipfs/QmSHtBDT86HBpZTpTGbbEUVQcjGzmrQyW2RbNaXTTqDxYu?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=612561&viewer=",
+      imageUrl: "https://et003.on.fleek.co/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=792748&viewer=",
       square: 'https://i.postimg.cc/QdwR3RVb/square-boxxed.jpg',
       unlockable: 'https://i.postimg.cc/d3sf6FSq/unlockable-boxxed.png',
-      tokendId: 612561,
+      tokendId: 792748,
+      titleHardCode:"'Boxxed'",
+      artist:"BAI-EE",
+      origEdit: 'https://i.postimg.cc/rFHCppZT/original.png',
+      lokt_612561:lockt_612561,
+      player_thumbnail: et04_thumb,
+      release_art:et04_release,
+      mint_price:"5",
     }
   ];
   const [isload, setIsload] = useState<boolean>(true)
@@ -180,7 +205,7 @@ const Dashboard = (): JSX.Element => {
           <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 -mt-36 sm:-mt-24 pt-24 md:-mt-10 lg:-mt-10">
             
             <div className="text-center space-y-0 font-bold">
-              <div className="text-7xl">10</div>
+              <div className="text-7xl">{result?.mint_price}</div>
               <div>Floor (Tez)</div>
             </div>
             <div className="text-center space-y-0 font-bold">
@@ -197,8 +222,10 @@ const Dashboard = (): JSX.Element => {
             </div>
           </section>
           <Content 
+            release_art={result?.release_art} 
             player_thumbnail={result?.player_thumbnail} 
             lokt_612561={result?.lokt_612561} 
+            mint_price={result?.mint_price} 
             tokendId={result?.tokendId} 
             artist={result?.artist} 
             titleHardCode={result?.titleHardCode} 

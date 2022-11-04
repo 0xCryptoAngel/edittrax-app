@@ -100,7 +100,7 @@ Teia.art (Github)
 */}
 
 
-<div className=" mx-auto my-auto flex rounded-md shadow-sm align-middle center sm:max-w-sm mt-28">
+<div className=" mx-auto my-auto flex rounded-md shadow-sm align-middle center sm:max-w-sm mt-28 md:mt-0">
   <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className=""/>
 </div>
 <div className="grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2">

@@ -20,17 +20,17 @@ import thumb from "@images/thumbnail.jpg";
 import all_markets from "@images/all_markets.png";
 import all_devices from "@images/all_devices.png";
 import { scrollTop } from "utils/scroll";
-import player_thumbnail from "@images/et01_instructions.png";
+// import player_thumbnail from "@images/et01_instructions.png";
 import howToImage from "../Modal/image_popup_howTo";
 import et01_head from "@images/square_alpha_test.png";
 import AudioPlayer from 'react-h5-audio-player'; // import react audio module 
 import 'react-h5-audio-player/lib/styles.css'; //css of it
 // import Marketplaces from "../Modal/Marketplaces";
 import { disableScroll, enableScroll } from "utils/scroll";
-import et03 from "../assets/square_download_mechanism.png";
-import et02 from "../assets/square_boxxed.png";
-import et01 from "../assets/square_burnt.png";
-import et00 from "../assets/square_alpha_test.png";
+import et04 from "../assets/square_download_mechanism.png";
+import et03 from "../assets/square_boxxed.png";
+import et02 from "../assets/square_burnt.png";
+import et01 from "../assets/square_alpha_test.png";
 import DropDown from "../components/DropDown";
 import Collapsible from 'react-collapsible';
 import ConnectWallet from "../components/ConnectWallet";
@@ -73,7 +73,9 @@ type WalletProps = {
   // masterPlay:  string | undefined,
   // lock:  string | undefined,
   // lokt_612561={result?.lokt_612561} 
+  mint_price:string | undefined,
   lokt_612561:string | undefined,
+  release_art:string | undefined,
   player_thumbnail:string | undefined,
   tokendId: string | undefined,
   artist: string | undefined,
@@ -115,7 +117,7 @@ const data = useRef(null);
   <section className="bg-yellow-75 flex flex-col items-center gap-0 px-2 py-9 mb-0 md:mb-0 md:pb-0 md:mx-0 order-last" >
               
     <div className="flex flex-col items-center gap-0 md:flex-row md:gap-8 mb-0 mt-4 lg:mt-14">
-      <img src={et01_head} alt="rotating head" className="w-md max-w-xs rounded-md shadow-2xl"/>
+      <img src={props.release_art} alt="rotating head" className="w-md max-w-xs rounded-md shadow-2xl"/>
       <div className="flex flex-col items-center md:items-start md:justify-end md:h-full">
         <div className="font-mathias text-7xl font-extrabold mt-8 text-center">{props.titleHardCode}</div>
        
@@ -227,7 +229,7 @@ const data = useRef(null);
 
     <div className="mb-2 bg-black rounded-lg border-5 px-2 border-yellow-75 shadow-2xl lg:mt-32">
         <div className="text-yellow-75 h-24 sm:h-28 border-0 border-yellow-75 flex flex-row rounded-md items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
-          <img src={et00} alt="icon1" className="w-20 p-0 ml-1 md:ml-0 shadow-2xl rounded-md"/>
+          <img src={et01} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
           <div className="flex-row flex m-0 w-full justify-around md:mt-0">
           <div className="text-left w-auto pl-2 player_name">
             <div>{musicTracks[0].trackName}</div>
@@ -235,9 +237,9 @@ const data = useRef(null);
             <div className="text-xxs">Acid Techno</div>
           </div>
           <div className="border-2 align-middle border-yellow-75 pt-2 sm:px-2 text-yellow-75 shadow-4xl leading-3 rounded-md px-2 py-1 mt-auto mb-auto hover:text-gray-300">
-            <Link to="/edit-trax/burnt">
+            <Link to="/edit-trax/alpha-test">
               <button className="uppercase leading-tight h-4 mt-auto text-sm" onClick={()=>scrollTop()}>
-              LOADED
+              LOAD
               </button>
             </Link>
           </div>
@@ -256,19 +258,19 @@ const data = useRef(null);
 
         <div className="mb-2 bg-black rounded-lg border-5 px-2 border-yellow-75 shadow-2xl ">
         <div className="text-yellow-75 h-24 sm:h-28 border-0 border-yellow-75 flex flex-row rounded-md items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
-          <img src={et02} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
+          <img src={et03} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
           <div className="flex-row flex m-0 w-full justify-around md:mt-0">
           <div className="text-left w-auto pl-2 player_name">
             <div>{musicTracks[1].trackName}</div>
             <div>{musicTracks[1].artistName}</div>
             <div className="text-xxs">Acid Techno</div>
           </div>
-          <div className="border-0 border-black shadow-4xl leading-3 rounded-md px-1 py-1 mt-auto mb-auto">
-            {/* <Link to="/edit-trax/burnt"> */}
-            <div className="uppercase leading-tight h-8 mt-auto px-1 pt-2 sm:px-2 text-xs sm:text-sm bg-black rounded-md align-middle text-yellow-75">
-              PREVIEW
-              </div>
-            {/* </Link> */}
+          <div className="border-2 align-middle border-yellow-75 pt-2 sm:px-2 text-yellow-75 shadow-4xl leading-3 rounded-md px-2 py-1 mt-auto mb-auto hover:text-gray-300">
+            <Link to="/edit-trax/dapp">
+            <button className="uppercase leading-tight h-4 mt-auto text-sm" onClick={()=>scrollTop()}>
+              LOAD
+              </button>
+            </Link>
           </div>
           <AudioPlayer 
             autoPlay
@@ -285,7 +287,7 @@ const data = useRef(null);
 
         <div className="mb-2 bg-black  rounded-lg border-5 px-2 border-yellow-75 shadow-2xl ">
         <div className="text-yellow-75 h-24 sm:h-28 border-0 border-yellow-75 flex flex-row rounded-md items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
-          <img src={et01} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
+          <img src={et02} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
 
           <div className="flex-row flex m-0 w-full justify-around md:mt-0">
           <div className="text-left w-auto pl-2 player_name">
@@ -293,12 +295,12 @@ const data = useRef(null);
             <div>{musicTracks[2].artistName}</div>
             <div className="text-xxs">Acid Techno</div>
           </div>
-          <div className="border-0 border-black shadow-4xl leading-3 rounded-md px-1 py-1 mt-auto mb-auto">
-            {/* <Link to="/edit-trax/burnt"> */}
-            <div className="uppercase leading-tight h-8 mt-auto px-1 pt-2 sm:px-2 text-xs sm:text-sm bg-black rounded-md align-middle text-yellow-75">
-            PREVIEW
-              </div>
-            {/* </Link> */}
+          <div className="border-2 align-middle border-yellow-75 pt-2 sm:px-2 text-yellow-75 shadow-4xl leading-3 rounded-md px-2 py-1 mt-auto mb-auto hover:text-gray-300">
+            <Link to="/edit-trax/burnt">
+            <button className="uppercase leading-tight h-4 mt-auto text-sm" onClick={()=>scrollTop()}>
+              LOAD
+              </button>
+            </Link>
           </div>
           <AudioPlayer 
             autoPlay
@@ -315,7 +317,7 @@ const data = useRef(null);
 
         <div className="mb-2 bg-black  rounded- border-5 px-2 border-yellow-75 shadow-2xl rounded-md">
         <div className="text-yellow-75 h-24 sm:h-28 border-0 border-yellow-75 flex flex-row rounded-lg items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
-          <img src={et03} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
+          <img src={et04} alt="icon1" className="w-20 p-0 ml-1 sm:ml-10 md:ml-0 shadow-2xl rounded-md"/>
 
           <div className="flex-row flex m-0 w-full justify-around md:mt-0">
           <div className="text-left w-auto pl-2 player_name">
@@ -323,12 +325,12 @@ const data = useRef(null);
             <div>{musicTracks[3].artistName}</div>
             <div className="text-xxs">Acid Techno</div>
           </div>
-          <div className="border-0 border-black shadow-4xl leading-3 rounded-md px-1 py-1 mt-auto mb-auto">
-            {/* <Link to="/edit-trax/burnt"> */}
-              <div className="uppercase leading-tight h-8 mt-auto px-1 pt-2 sm:px-2 text-xs sm:text-sm bg-black rounded-md align-middle text-yellow-75">
-              PREVIEW
-              </div>
-            {/* </Link> */}
+          <div className="border-2 align-middle border-yellow-75 pt-2 sm:px-2 text-yellow-75 shadow-4xl leading-3 rounded-md px-2 py-1 mt-auto mb-auto hover:text-gray-300">
+            <Link to="/edit-trax/mechanism">
+            <button className="uppercase leading-tight h-4 mt-auto text-sm" onClick={()=>scrollTop()}>
+              LOAD
+              </button>
+            </Link>
           </div>
           <AudioPlayer 
             autoPlay
