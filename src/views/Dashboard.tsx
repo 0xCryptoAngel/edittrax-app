@@ -195,7 +195,7 @@ const Dashboard = (): JSX.Element => {
                 </ul>
               </div>
               <div className="flex gap-4 items-center">
-              <button className="font-mathias sm:bg-black sm:rounded sm:text-yellow-75 px-2 sm:font-bold sm:py-2 sm:w-40 hover:text-gray-300 text-md hover:opacity-50" onClick={()=> {setShow(true); disableScroll();}}>HOW TO
+              <button className="font-mathias sm:bg-black sm:rounded sm:text-yellow-75 px-2 sm:font-bold sm:py-2 sm:w-40 hover:text-gray-300 text-md hover:opacity-50" onClick={()=> {setShow(true); disableScroll();}}>DOWNLOAD
               </button>
               <Modal onClose = {() => {setShow(false); enableScroll()}} show={show}/>
                 <div className="hidden">
