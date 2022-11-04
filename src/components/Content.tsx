@@ -141,8 +141,8 @@ const data = useRef(null);
         </a>
         </div>
 
-        <div className="mt-0 flex flex-wrap mb-0 sm:mb-0 pt-0 justify-left h-auto w-96">
-          <div className="mt-2 flex flex-wrap mb-0 sm:mb-2 pt-0 h-auto">
+        <div className="mt-0 flex flex-wrap mb-0 sm:mb-0 pt-0 justify-center md:justify-left h-auto w-96">
+          <div className="mt-2 flex flex-wrap mb-0 sm:mb-2 pt-0 h-auto justify-center lg:justify-start">
           { 
           props.keyValue?.map((item, i)=>
             <button className="rounded-3xl flex content-center text-yellow-75 px-2 py-1 text-xxs gap-y-1 ml-1 mt-1 mt-0 outline_button uppercase" key={i}>{item}</button>
