@@ -18,30 +18,33 @@ const Modal = (props : modalProps) => {
     <div className="modal-bg" onClick={props.onClose}/>
     <div className="modal-content rounded-md p-5  text-center m-5 -mt-14">
 
-      <div className="font-black mt-4">
-      1) Collect on any Tezos marketplace
+      <div className=" mt-4">
+      1) Collect EditTrax Players on any Tezos marketplace. 
       
     <br></br> 
       </div>
-
-      OBJKT is recommended
+      <a href="https://hic.af/o/792753"  target="_blank" rel="noreferrer" className="underline font-bold italic">
+      HIC.AF
+      </a>
+      
+      &nbsp; is recommended
       <div className="text-xxs"></div>
 
-      <h2 className="font-mathias md:mt-0 w-full text-3xl sm:text-2xl w-full lg:text-4xl xl:text-4xl font-extrabold align-middle mb-0 pt-5">
-      <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className="">
-      <div onClick={props.onClose} className="font-mathias lg:text-4xl xl:text-4xl outline_button_edit w-34 text-center w-full py-4 px-4  text-yellow-75 rounded-md hover:opacity-50 shadow-2xl" >
+      {/* <h2 className="font-mathias md:mt-0 w-full text-3xl sm:text-2xl w-full lg:text-4xl xl:text-4xl font-extrabold align-middle mb-0 pt-5">
+      <a href="https://hic.af/o/792753"  target="_blank" rel="noreferrer" className="">
+      <div onClick={props.onClose} className="font-mathias text-sm w-34 text-center w-full py-4 px-4 bg-yellow-75 underline  text-black rounded-md hover:opacity-50 shadow-2xl" >
         COLLECT
       </div>
 
       </a>
-      </h2>
+      </h2> */}
     
-    <div className="pt-4 pb-4   text-center mt-4">
+    <div className="pt-4 pb-0   text-center mt-0 mb-4">
 
-    <div className="font-black   text-center">
-      2) Unlock downloads from the player <br></br> 
+    <div className="text-center">
+      2) Unlock downloads from your player when connected. <br></br> 
       </div>
-      EditTrax provides the best user experience
+      <b>EditTrax.com provides the best user experience</b> 
       <div className="text-xxs">
         
       </div>

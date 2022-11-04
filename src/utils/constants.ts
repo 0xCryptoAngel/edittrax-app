@@ -13,7 +13,7 @@ export const Tezos = new TezosToolkit(TEZOS_COLLECT_RPC_URL);
 
 // Create a new DAppClient instance
 export const TEZOS_COLLECT_WALLET = new BeaconWallet({
-  name: "Renegade Dj Edits",
+  name: "EditTrax by BAI-EE",
   preferredNetwork: TEZOS_COLLECT_NETWORK.type,
   colorMode: ColorMode.DARK,
 });

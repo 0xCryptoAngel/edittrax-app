@@ -12,6 +12,8 @@ import canIuse from "@images/canIuse.jpg";
 import utility from "@images/utility.png";
 // import utility from '../assets/utility.png;
 import wiki from "@images/wiki.png";
+import colorBar from "@images/color_bar.jpg";
+
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -33,6 +35,7 @@ const miscellaneous = () => {
 
 
 <section className="bg-black pt-0 px-0 pb-0 rounded-br mt-0 mx-2 md:mx-0">  
+<img src={colorBar} alt="load" className="w-full"/>
 
 {/* <div className=" mx-auto my-auto flex rounded-md shadow-sm align-middle center sm:max-w-sm">
 <img src="https://i.postimg.cc/zfDJcy2h/load.gif" alt="load" className=""/>

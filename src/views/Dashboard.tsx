@@ -46,8 +46,8 @@ const Dashboard = (): JSX.Element => {
       lokt_612561:lockt_612561,
       player_thumbnail: et04_thumb,
       release_art:et04_release,
-      mint_price:"X",
-      floor_price:"X",
+      mint_price:"4",
+      floor_price:"4",
       collect_url:"https://objkt.com/asset/hicetnunc/792753",
       metadata_url:"https://cloudflare-ipfs.com/ipfs/QmT3EBYug1yYST2NKgv1bMAYM91qjpCyDDjjGP4kge79YY",
       creative_url:"https://cloudflare-ipfs.com/ipfs/QmUeU4Wgsv9Hoh7Uyfys23TTZnHQyZYTfBxESkzQ5sjbyp"
