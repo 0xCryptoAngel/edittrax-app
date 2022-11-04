@@ -19,7 +19,7 @@ import et01_thumb from "@images/et001_thumbnail.jpg";
 import et02_thumb from "@images/et002_thumbnail.jpg";
 import et03_thumb from "@images/et003_thumbnail.jpg";
 import et04_thumb from "@images/et004_thumbnail.jpg";
-import et01_release from "@images/et01_releaseart.jpg";
+import et01_release from "@images/square_alpha_test.png";
 import et02_release from "@images/et02_releaseart.jpg";
 import et03_release from "@images/et03_releaseart.jpg";
 import et04_release from "@images/et04_releaseart.jpg";
@@ -35,21 +35,25 @@ const Dashboard = (): JSX.Element => {
   const { activeAddress } = useTezosCollectStore();
   const navbarMenu = [
     {
-      player: "mechanism",
+      player: "et004",
       imageUrl: "https://et004.on.fleek.co/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=792753&viewer=",
       square: 'https://i.postimg.cc/7ZtqTshG/square-download-mechanism.jpg',
       unlockable: 'https://i.postimg.cc/1XKQRMbz/unlockable-download-mechanism.png',
       tokendId: 792753,
-      titleHardCode:"'ANo Mills'",
+      titleHardCode:"'No Mills'",
       artist:"BAI-EE",
       origEdit: 'https://i.postimg.cc/rFHCppZT/original.png',
       lokt_612561:lockt_612561,
       player_thumbnail: et04_thumb,
       release_art:et04_release,
-      mint_price:"5",
+      mint_price:"X",
+      floor_price:"X",
+      collect_url:"https://objkt.com/asset/hicetnunc/792753",
+      metadata_url:"https://cloudflare-ipfs.com/ipfs/QmT3EBYug1yYST2NKgv1bMAYM91qjpCyDDjjGP4kge79YY",
+      creative_url:"https://cloudflare-ipfs.com/ipfs/QmUeU4Wgsv9Hoh7Uyfys23TTZnHQyZYTfBxESkzQ5sjbyp"
     },
     {
-      player: "burnt", 
+      player: "et002", 
       imageUrl: "https://et002.on.fleek.co/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=792752&viewer=",
       // imageUrl: "https://ipfs.io/ipfs/QmTvcnqnBjcjMQ1gDoG5jSvap7id7t2nhvQLmLiCRqSFqq/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=781875&viewer=",
       square: 'https://i.postimg.cc/9M55GvhM/square-burnt.jpg',
@@ -61,10 +65,14 @@ const Dashboard = (): JSX.Element => {
       lokt_612561:lockt_612561,
       player_thumbnail: et02_thumb,
       release_art:et02_release,
-      mint_price:"5",
+      mint_price:"X",
+      floor_price:"X",
+      collect_url:"https://objkt.com/asset/hicetnunc/792752",
+      metadata_url:"https://cloudflare-ipfs.com/ipfs/QmSGaV4SmMMmVTaetk9DwvM3YH5tMp4GmmEbqz2JLTYV3K",
+      creative_url:"https://cloudflare-ipfs.com/ipfs/QmWXaD6JbX3wxgJtDGGZqVG8sksPqn5D9d1rSfBP4wMFk7/"
     },
     {
-      player: "alpha-test",
+      player: "et001",
       imageUrl: "https://et001.on.fleek.co/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=612561&viewer=",
       square: 'https://i.postimg.cc/rFHCppZT/square-alpha-test.jpg',
       unlockable: 'https://i.postimg.cc/MTyqnXmF/unlockable-alpha-test.png',
@@ -75,7 +83,11 @@ const Dashboard = (): JSX.Element => {
       lokt_612561:lockt_612561,
       player_thumbnail: et01_thumb,
       release_art:et01_release,
-      mint_price:"5",
+      mint_price:"1.5",
+      floor_price:"10",
+      collect_url:"https://objkt.com/asset/hicetnunc/612561",
+      metadata_url:"",
+      creative_url:""
       
       // loopPlay: 'https://i.postimg.cc/rFHCppZT/loop_play.png',
       // editLoop: 'https://i.postimg.cc/rFHCppZT/edit_loop.png',
@@ -83,7 +95,7 @@ const Dashboard = (): JSX.Element => {
       // lock: 'https://i.postimg.cc/rFHCppZT/lock.png'
     },
     {
-      player: "dapp",
+      player: "et003",
       imageUrl: "https://et003.on.fleek.co/?creator=tz1cpiv1qgjzNsMbqHYyUdH8XzZ672bjdm2E&objkt=792748&viewer=",
       square: 'https://i.postimg.cc/QdwR3RVb/square-boxxed.jpg',
       unlockable: 'https://i.postimg.cc/d3sf6FSq/unlockable-boxxed.png',
@@ -92,9 +104,13 @@ const Dashboard = (): JSX.Element => {
       artist:"BAI-EE",
       origEdit: 'https://i.postimg.cc/rFHCppZT/original.png',
       lokt_612561:lockt_612561,
-      player_thumbnail: et04_thumb,
-      release_art:et04_release,
-      mint_price:"5",
+      player_thumbnail: et03_thumb,
+      release_art:et03_release,
+      mint_price:"X",
+      floor_price:"10",
+      collect_url:"https://objkt.com/asset/hicetnunc/792748",
+      metadata_url:"https://cloudflare-ipfs.com/ipfs/QmZ1b4WKThayRbSsja75dBpVkXDmVxzEpmhFsF69SPAH49",
+      creative_url:"https://cloudflare-ipfs.com/ipfs/QmYQzipzWR5FPsdK3fn9ShbDCqoMz5mjRFfBVPU53f4wMd/"
     }
   ];
   const [isload, setIsload] = useState<boolean>(true)
@@ -104,14 +120,14 @@ const Dashboard = (): JSX.Element => {
   useEffect(()=>{
     const searchResult = navbarMenu.find(item => item.player == param.id)
     setResult(searchResult)
-    console.log("searchResult", searchResult)
+    // console.log("searchResult", searchResult)
     fetchMetadata(searchResult?.tokendId);
     setIsload(false);
   }, [param])
 
   const fetchMetadata =async (_tokenId:number | undefined) => {
     const res = await axios.get(`https://api.tzkt.io/v1/tokens?tokenId=${_tokenId}&contract=KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton`)
-    console.log("res.data[0]", res.data[0])
+    // console.log("res.data[0]", res.data[0])
     setMetaData(res.data[0])
   }
 
@@ -206,15 +222,15 @@ const Dashboard = (): JSX.Element => {
             
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">{result?.mint_price}</div>
-              <div>Floor (Tez)</div>
-            </div>
-            <div className="text-center space-y-0 font-bold">
-              <div className="text-7xl">{metaData?.totalSupply}</div>
-              <div>Sold</div>
+              <div>Tez</div>
             </div>
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">{metaData?.totalMinted}</div>
-              <div>Minted</div>
+              <div>Editions</div>
+            </div>
+            <div className="text-center space-y-0 font-bold">
+              <div className="text-7xl">{result?.floor_price}</div>
+              <div>Floor</div>
             </div>
             <div className="text-center space-y-0 font-bold">
               <div className="text-7xl">{metaData?.holdersCount}</div>
@@ -225,6 +241,10 @@ const Dashboard = (): JSX.Element => {
             release_art={result?.release_art} 
             player_thumbnail={result?.player_thumbnail} 
             lokt_612561={result?.lokt_612561} 
+            creative_url={result?.collect_url} 
+            metadata_url={result?.collect_url} 
+            collect_url={result?.collect_url} 
+            floor_price={result?.mint_price} 
             mint_price={result?.mint_price} 
             tokendId={result?.tokendId} 
             artist={result?.artist} 

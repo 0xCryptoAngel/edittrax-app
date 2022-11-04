@@ -61,7 +61,7 @@ const musicTracks: musicData[] = [
   },
   {
     trackName: "NO MILLS",
-    artistName: 'Secret Studio',
+    artistName: 'Bai-ee',
     src: "https://github.com/Bai-ee/edittrax_beta_dapp-crypto-angel/blob/master/src/assets/Bai-ee_(No_Mills)Preview.mp3?raw=true"
   },
 ]
@@ -73,6 +73,10 @@ type WalletProps = {
   // masterPlay:  string | undefined,
   // lock:  string | undefined,
   // lokt_612561={result?.lokt_612561} 
+  metadata_url:string | undefined,
+  creative_url:string | undefined,  
+  collect_url:string | undefined,
+  floor_price:string | undefined,
   mint_price:string | undefined,
   lokt_612561:string | undefined,
   release_art:string | undefined,
@@ -92,7 +96,12 @@ type WalletProps = {
 
 gsap.registerPlugin(ScrollTrigger)
 
+
+
+
 const Content = (props:WalletProps) => {
+
+  // console.log(props.collect_url);
 
 const data = useRef(null);
 
@@ -110,6 +119,9 @@ const data = useRef(null);
 
   const [show, setShow] = useState<boolean>(false)
 
+  // const openInNewTab = url => {
+  //   window.open(url, '_blank', 'noopener,noreferrer');
+  // };
 
   
   return (
@@ -119,7 +131,8 @@ const data = useRef(null);
     <div className="flex flex-col items-center gap-0 md:flex-row md:gap-8 mb-0 mt-4 lg:mt-14">
       <img src={props.release_art} alt="rotating head" className="w-md max-w-xs rounded-md shadow-2xl"/>
       <div className="flex flex-col items-center md:items-start md:justify-end md:h-full">
-        <div className="font-mathias text-7xl font-extrabold mt-8 text-center">{props.titleHardCode}</div>
+        <div className="font-mathias text-7xl font-extrabold mt-8 text-center">{props.titleHardCode}       
+        </div>
        
        <div className="flex col">
         <div className="font-mathias mt-0 text-3xl text-center" >Producer: &nbsp;</div>
@@ -128,8 +141,8 @@ const data = useRef(null);
         </a>
         </div>
 
-        <div className="mt-0 flex flex-wrap mb-0 sm:mb-0 pt-0 justify-center h-auto">
-          <div className="mt-2 flex flex-wrap mb-0 sm:mb-2 pt-0 justify-center h-auto">
+        <div className="mt-0 flex flex-wrap mb-0 sm:mb-0 pt-0 justify-left h-auto w-96">
+          <div className="mt-2 flex flex-wrap mb-0 sm:mb-2 pt-0 h-auto">
           { 
           props.keyValue?.map((item, i)=>
             <button className="rounded-3xl flex content-center text-yellow-75 px-2 py-1 text-xxs gap-y-1 ml-1 mt-1 mt-0 outline_button uppercase" key={i}>{item}</button>
@@ -137,6 +150,7 @@ const data = useRef(null);
           }
           </div>
         </div>
+
       </div>
     </div>
         
@@ -152,15 +166,17 @@ const data = useRef(null);
   </div>
 
   <div className="font-mathias mt-6">
-    <a href="https://cloudflare-ipfs.com/ipfs/QmUymYLLq4sp82jrSerhgMuYhAWmEwiJQc8D4nYSfXrLhF" target="_blank" rel="noreferer" className="bg-black text-center px-4 py-2 text-yellow-75 rounded-md hover:opacity-50">
+    <button className="bg-black text-center px-4 py-2 text-yellow-75 rounded-md hover:opacity-50"
+    onClick={ () => window.open(props.metadata_url, '_blank') }>
     Metadata on IPFS
-    </a>       
+    </button>       
   </div>
 
-  <div className="font-mathias mt-8 ">          
-    <a href="https://cloudflare-ipfs.com/ipfs/QmYRBDjBixJczcXs6fNunG9EGPsHqQT62ifEBzYTS1SjGe/" target="_blank" rel="noreferer" className="bg-black text-center px-4 py-2 text-yellow-75 rounded-md hover:opacity-50">
+  <div className="font-mathias mt-2 ">          
+    <button className="bg-black text-center px-4 py-2 text-yellow-75 rounded-md hover:opacity-50"
+     onClick={ () => window.open(props.creative_url, '_blank')  }>
     Creative on IPFS
-    </a>
+    </button>
   </div>
   
 
@@ -188,19 +204,23 @@ const data = useRef(null);
 
   <div className="bg-transparent mx-0 rounded-lg mb-4 w-auto rounded-sm px-0 mt-4 px-0 lg:mt-8 mt-42">  
     <div className="grid grid-cols-1 gap-2 mx-0 max-w-screen-xl hover:scale-75 h-auto">
-
+    
     <h2 className="font-mathias md:mt-0 w-full text-3xl sm:text-2xl w-full lg:text-4xl xl:text-4xl font-extrabold align-middle mb-0 pt-2">
-      <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className="">
-        <div className="font-mathias lg:text-4xl xl:text-4xl outline_button_edit w-34 text-center w-full py-4 px-4  text-yellow-75 rounded-md hover:opacity-50 shadow-2xl" >
+      {/* <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className=""> */}
+        <button className=" w-34 text-center bg-orange-900 py-4 w-full px-6 text-yellow-75 rounded-md  hover:opacity-50 shadow-2xl mb-0" 
+        onClick={ () => window.open(props.collect_url, '_blank') }>
         COLLECT
-        </div>
-      </a>
+        </button>
+      {/* </a> */}
     </h2>
 
     <h2 className="font-mathias w-full text-3xl sm:text-2xl lg:text-4xl xl:text-4xl font-extrabold align-middle mb-4">
       <ConnectWallet/>
       <h2 className="font-mathias align-middle flex content-center col mt-2 text-3xl lg:text-4xl xl:text-4xl font-extrabold mb-0">
-        <button className="outline_button_main w-34 text-center bg-black py-4 w-full px-6 text-yellow-75 rounded-md  hover:opacity-50 shadow-2xl mb-4" onClick={()=>scrollTop()}>
+        <button className="outline_button_main w-34 text-center bg-black py-4 w-full px-6 text-yellow-75 rounded-md  hover:opacity-50 shadow-2xl mb-4"
+        // onClick={() => openInNewTab('https://google.com')}
+        onClick={()=>scrollTop()}
+        >
           DOWNLOAD
         </button>
       </h2>   
@@ -234,10 +254,12 @@ const data = useRef(null);
           <div className="text-left w-auto pl-2 player_name">
             <div>{musicTracks[0].trackName}</div>
             <div>{musicTracks[0].artistName}</div>
-            <div className="text-xxs">Acid Techno</div>
+            <div className="text-xxs">
+              Acid House            
+            </div>
           </div>
           <div className="border-2 align-middle border-yellow-75 pt-2 sm:px-2 text-yellow-75 shadow-4xl leading-3 rounded-md px-2 py-1 mt-auto mb-auto hover:text-gray-300">
-            <Link to="/edit-trax/alpha-test">
+            <Link to="/edit-trax/et001">
               <button className="uppercase leading-tight h-4 mt-auto text-sm" onClick={()=>scrollTop()}>
               LOAD
               </button>
@@ -263,10 +285,10 @@ const data = useRef(null);
           <div className="text-left w-auto pl-2 player_name">
             <div>{musicTracks[1].trackName}</div>
             <div>{musicTracks[1].artistName}</div>
-            <div className="text-xxs">Acid Techno</div>
+            <div className="text-xxs">Beat Track</div>
           </div>
           <div className="border-2 align-middle border-yellow-75 pt-2 sm:px-2 text-yellow-75 shadow-4xl leading-3 rounded-md px-2 py-1 mt-auto mb-auto hover:text-gray-300">
-            <Link to="/edit-trax/dapp">
+            <Link to="/edit-trax/et003">
             <button className="uppercase leading-tight h-4 mt-auto text-sm" onClick={()=>scrollTop()}>
               LOAD
               </button>
@@ -296,7 +318,7 @@ const data = useRef(null);
             <div className="text-xxs">Acid Techno</div>
           </div>
           <div className="border-2 align-middle border-yellow-75 pt-2 sm:px-2 text-yellow-75 shadow-4xl leading-3 rounded-md px-2 py-1 mt-auto mb-auto hover:text-gray-300">
-            <Link to="/edit-trax/burnt">
+            <Link to="/edit-trax/et002">
             <button className="uppercase leading-tight h-4 mt-auto text-sm" onClick={()=>scrollTop()}>
               LOAD
               </button>
@@ -326,7 +348,7 @@ const data = useRef(null);
             <div className="text-xxs">Acid Techno</div>
           </div>
           <div className="border-2 align-middle border-yellow-75 pt-2 sm:px-2 text-yellow-75 shadow-4xl leading-3 rounded-md px-2 py-1 mt-auto mb-auto hover:text-gray-300">
-            <Link to="/edit-trax/mechanism">
+            <Link to="/edit-trax/et004">
             <button className="uppercase leading-tight h-4 mt-auto text-sm" onClick={()=>scrollTop()}>
               LOAD
               </button>

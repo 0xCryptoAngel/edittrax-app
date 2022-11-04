@@ -2,7 +2,7 @@ import et_horiz from "@images/et_horizontal.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-black p-10 dark:bg-gray-900 -mt-12">
+    <footer className="bg-black p-10 dark:bg-gray-900 lg:mt-18">
     <div className="md:flex md:justify-between">
         <div className="mb-6 md:mb-0 flex flex-col align-middle items-center sm:items-start mb-24">
         <a href="https://edittraxnft.on.fleek.co/" target="_blank"  rel="noreferrer"className="flex items-center">

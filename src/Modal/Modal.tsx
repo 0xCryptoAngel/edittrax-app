@@ -2,11 +2,14 @@
 // import DropDown from "../components/DropDown";
 import ConnectWallet from "../components/ConnectWallet";
 
+import walletProps from "../components/Content";
+
 type modalProps = {
   onClose: () => void;
   show: boolean;
 }
 const Modal = (props : modalProps) => {
+
   if (!props.show){
     return null
   }
@@ -27,7 +30,7 @@ const Modal = (props : modalProps) => {
       <h2 className="font-mathias md:mt-0 w-full text-3xl sm:text-2xl w-full lg:text-4xl xl:text-4xl font-extrabold align-middle mb-0 pt-5">
       <a href="https://objkt.com/asset/hicetnunc/612561"  target="_blank" rel="noreferrer" className="">
       <div onClick={props.onClose} className="font-mathias lg:text-4xl xl:text-4xl outline_button_edit w-34 text-center w-full py-4 px-4  text-yellow-75 rounded-md hover:opacity-50 shadow-2xl" >
-      COLLECT
+        COLLECT
       </div>
 
       </a>

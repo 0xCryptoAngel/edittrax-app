@@ -29,7 +29,7 @@ const App = () => {
         <MetamaskProvider>
           <BrowserRouter>
             <Routes>
-              <Route path="/" element={ <Navigate to="/edit-trax/alpha-test"/> }/>
+              <Route path="/" element={ <Navigate to="/edit-trax/et004"/> }/>
               <Route path="/edit-trax/:id" element={<Dashboard/>} />
               <Route path="/test" element={<DashEther/>}/>
             </Routes>
