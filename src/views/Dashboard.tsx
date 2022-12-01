@@ -57,7 +57,7 @@ const Dashboard = (): JSX.Element => {
       release_art: et04_release,
       mint_price: "4",
       floor_price: "4",
-      collect_url: "https://objkt.com/asset/hicetnunc/792753",
+      collect_url: "https://hic.af/o/792753",
       metadata_url:
         "https://cloudflare-ipfs.com/ipfs/QmT3EBYug1yYST2NKgv1bMAYM91qjpCyDDjjGP4kge79YY",
       creative_url:
@@ -79,7 +79,7 @@ const Dashboard = (): JSX.Element => {
       release_art: et02_release,
       mint_price: "X",
       floor_price: "X",
-      collect_url: "https://objkt.com/asset/hicetnunc/792752",
+      collect_url: "https://hic.af/o/792752",
       metadata_url:
         "https://cloudflare-ipfs.com/ipfs/QmSGaV4SmMMmVTaetk9DwvM3YH5tMp4GmmEbqz2JLTYV3K",
       creative_url:
@@ -100,7 +100,7 @@ const Dashboard = (): JSX.Element => {
       release_art: et01_release,
       mint_price: "1.5",
       floor_price: "10",
-      collect_url: "https://objkt.com/asset/hicetnunc/612561",
+      collect_url: "https://hic.af/o/612561",
       metadata_url: "",
       creative_url: "",
 
@@ -124,7 +124,7 @@ const Dashboard = (): JSX.Element => {
       release_art: et03_release,
       mint_price: "X",
       floor_price: "10",
-      collect_url: "https://objkt.com/asset/hicetnunc/792748",
+      collect_url: "https://hic.af/o/792748",
       metadata_url:
         "https://cloudflare-ipfs.com/ipfs/QmZ1b4WKThayRbSsja75dBpVkXDmVxzEpmhFsF69SPAH49",
       creative_url:
