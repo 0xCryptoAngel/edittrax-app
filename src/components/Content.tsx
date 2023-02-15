@@ -423,7 +423,7 @@ const Content = (props: WalletProps) => {
               </div>
             </div>
 
-            <div className="mb-2 bg-black  rounded- border-5 px-2 border-yellow-75 shadow-2xl rounded-md">
+            {/* <div className="mb-2 bg-black  rounded- border-5 px-2 border-yellow-75 shadow-2xl rounded-md">
               <div className="text-yellow-75 h-24 sm:h-28 border-0 border-yellow-75 flex flex-row rounded-lg items-center font-mathias justify-evenly py-0 px-0 md:p-4 bg-transparent player1">
                 <img
                   src={et04}
@@ -458,7 +458,8 @@ const Content = (props: WalletProps) => {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
+
           </dl>
         </div>
       </div>

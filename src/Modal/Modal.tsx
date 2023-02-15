@@ -19,32 +19,37 @@ const Modal = (props : modalProps) => {
     <div className="modal-content rounded-md p-5  text-center m-5 -mt-14">
 
       <div className=" mt-4">
-      1) Collect EditTrax Players on any Tezos marketplace. 
-      
-    <br></br> 
+
+      1) Collect an EditTrax Player (
+        <a href="https://hic.af/bai-ee"  target="_blank" rel="noreferrer" className="italic">HIC.AF&nbsp;</a>is recommended). 
+             
       </div>
-      <a href="https://hic.af/o/792753"  target="_blank" rel="noreferrer" className="underline font-bold italic">
+
+      {/* <a href="https://hic.af/o/792753"  target="_blank" rel="noreferrer" className="underline font-bold italic">
       HIC.AF
-      </a>
+      </a> */}
       
-      &nbsp; is recommended
+      {/* &nbsp; */}
+
       <div className="text-xxs"></div>
 
-      {/* <h2 className="font-mathias md:mt-0 w-full text-3xl sm:text-2xl w-full lg:text-4xl xl:text-4xl font-extrabold align-middle mb-0 pt-5">
-      <a href="https://hic.af/o/792753"  target="_blank" rel="noreferrer" className="">
-      <div onClick={props.onClose} className="font-mathias text-sm w-34 text-center w-full py-4 px-4 bg-yellow-75 underline  text-black rounded-md hover:opacity-50 shadow-2xl" >
+      <h2 className="font-mathias md:mt-0 w-full text-3xl sm:text-2xl w-full lg:text-4xl xl:text-4xl font-extrabold align-middle mb-0 pt-5">
+      <a href="https://hic.af/bai-ee"  target="_blank" rel="noreferrer" className="">
+      <div onClick={props.onClose}
+      
+        className=" w-34 text-center bg-orange-900 py-4 w-full px-6 text-yellow-75 rounded-md  hover:opacity-50 shadow-2xl mb-0">
+      
         COLLECT
       </div>
-
       </a>
-      </h2> */}
+      </h2>
     
     <div className="pt-4 pb-0   text-center mt-0 mb-4">
 
     <div className="text-center">
       2) Unlock downloads from your player when connected. <br></br> 
       </div>
-      <b>EditTrax.com provides the best user experience</b> 
+      {/* <b>EditTrax.com provides the best user experience</b>  */}
       <div className="text-xxs">
         
       </div>

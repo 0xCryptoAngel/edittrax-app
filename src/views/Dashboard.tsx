@@ -2,10 +2,12 @@ import React, {
   Dispatch,
   SetStateAction,
   useState,
+  useContext,
   useRef,
   useEffect,
   useCallback,
 } from "react";
+
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import et_new_logo from "@images/et_new_logo.png";
@@ -36,9 +38,57 @@ import { scrollTop } from "utils/scroll";
 import downArrow from "@images/arrovw_down.svg";
 import { useTezosCollectStore } from "store";
 import { disableScroll, enableScroll } from "utils/scroll";
+
+import {
+  Link,
+  useNavigate
+} from "react-router-dom";
+import Auth from "./../Login";
+import { AuthContext } from "./../context/AuthContext";
+import auth from "./../firebaseSetup";
+
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import CheckoutForm from "../payment/CheckOutForm.js";
+import "./payment.css";
+
+const promise = loadStripe("pk_test_YVzIqUTwiCYcEXO1DPqDrM98");
+
+
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Dashboard = (): JSX.Element => {
+  const user = useContext(AuthContext);
+  const navigate = useNavigate();
+  const signOut = async () => {
+    await auth.signOut();
+    navigate('/');
+  }
+
+  const [clientSecret, setClientSecret] = useState("");
+
+  useEffect(() => {
+    // Create PaymentIntent as soon as the page loads
+    fetch("/create-payment-intent", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ items: [{ id: "xl-tshirt" }] }),
+    })
+      .then((res) => res.json())
+      .then((data) => setClientSecret(data.clientSecret));
+  }, []);
+
+  const appearance = {
+    theme: 'stripe',
+  };
+  const options = {
+    clientSecret,
+    appearance,
+  };
+
+
   const { activeAddress } = useTezosCollectStore();
   const navbarMenu = [
     {
@@ -122,8 +172,8 @@ const Dashboard = (): JSX.Element => {
       lokt_612561: lockt_612561,
       player_thumbnail: et03_thumb,
       release_art: et03_release,
-      mint_price: "X",
-      floor_price: "10",
+      mint_price: "8",
+      floor_price: "8",
       collect_url: "https://hic.af/o/792748",
       metadata_url:
         "https://cloudflare-ipfs.com/ipfs/QmZ1b4WKThayRbSsja75dBpVkXDmVxzEpmhFsF69SPAH49",
@@ -275,6 +325,30 @@ const Dashboard = (): JSX.Element => {
               >
                 DOWNLOAD
               </button>
+              
+              {!user ? (
+              <button
+                className="font-mathias sm:bg-black sm:rounded sm:text-yellow-75 px-2 sm:font-bold sm:py-2 sm:w-40 hover:text-gray-300 text-md hover:opacity-50"
+                // onClick={() => {
+                  
+                // }}
+              >
+                <Link to={"/auth"}>
+                  Login/Signup
+                </Link>
+                
+              </button>
+                  ) : (
+              <button
+                className="font-mathias sm:bg-black sm:rounded sm:text-yellow-75 px-2 sm:font-bold sm:py-2 sm:w-40 hover:text-gray-300 text-md hover:opacity-50"
+                onClick={() => {
+                  signOut();
+                }}
+              >
+                Logout
+              </button>
+                  )}
+              
               <Modal
                 onClose={() => {
                   setShow(false);
@@ -282,7 +356,7 @@ const Dashboard = (): JSX.Element => {
                 }}
                 show={show}
               />
-              <div className="">
+              {/* <div className="">
                 {active ? (
                   <button
                     className="bg-black rounded text-yellow-75 font-bold py-2 w-40 hover:text-gray-300"
@@ -300,7 +374,7 @@ const Dashboard = (): JSX.Element => {
                     Etereum
                   </button>
                 )}
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="mx-4 md:mx-0 h-iframeLoad">
@@ -346,6 +420,13 @@ const Dashboard = (): JSX.Element => {
             <div>Collectors</div>
           </div>
         </section>
+        <section className="text-yellow-75 grid grid-cols-2 md:grid-cols-4 gap-4 font-mathias mb-16 -mt-36 sm:-mt-24 pt-24 md:-mt-10 lg:-mt-10">
+          <div className="App">
+            <Elements stripe={promise}>
+              <CheckoutForm />
+            </Elements>
+          </div>
+        </section>
         <Content
           release_art={result?.release_art}
           player_thumbnail={result?.player_thumbnail}
@@ -376,6 +457,7 @@ const Dashboard = (): JSX.Element => {
         <Collection />
         <Miscellaneous />
         <Footer />
+        
       </div>
       {/* } */}
     </div>
